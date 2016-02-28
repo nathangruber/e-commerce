@@ -36,7 +36,6 @@
                   <tbody>
                   <?php
                    require_once '../database.php';
-                   require_once '../footer.php';
                    require_once '../navbar.php';
                    $pdo = Database::connect();
                    $sql = 'SELECT * FROM address ORDER BY id DESC';
@@ -66,3 +65,6 @@
     </div> <!-- /container -->
   </body>
 </html>
+<?php
+require_once '../footer.php';
+?>

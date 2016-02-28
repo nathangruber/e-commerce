@@ -1,6 +1,5 @@
 <?php
     require_once '../database.php';
-    require_once '../footer.php';
     require_once '../navbar.php';
     $id = 0;
      

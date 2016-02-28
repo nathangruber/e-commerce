@@ -1,7 +1,7 @@
 <?php
+    
     require_once '../database.php';
     require_once '../navbar.php';
-    require_once '../footer.php';
     if ( !empty($_POST)) {
         // keep track validation errors
         $nameError = null;
@@ -167,3 +167,6 @@
     </div> <!-- /container -->
   </body>
 </html>
+<?php
+require_once '../footer.php';
+?>

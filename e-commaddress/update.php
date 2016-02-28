@@ -1,9 +1,9 @@
 <?php
+   
     require_once '../database.php';
-    require_once '../footer.php';
     require_once '../navbar.php';
     if ( !isset($_GET['id']) || empty($_GET['id'])) {
-        header("Location: index.php");
+       // header("Location: index.php");
     } 
     $id = $_GET['id'];
      
@@ -186,3 +186,6 @@
                  
     </div> <!-- /container -->
   </body>
+  <?php
+  require_once '../footer.php';
+  ?>
