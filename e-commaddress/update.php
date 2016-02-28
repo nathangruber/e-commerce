@@ -1,4 +1,5 @@
 <?php
+    require_once '../navbar.php';
     require '../database.php';
  
     if ( !isset($_GET['id']) || empty($_GET['id'])) {
@@ -180,3 +181,6 @@
                  
     </div> <!-- /container -->
   </body>
+<?php
+require_once '../footer.php';
+?>

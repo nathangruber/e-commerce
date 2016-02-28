@@ -30,6 +30,7 @@
                   </thead>
                   <tbody>
                   <?php
+                   require_once '../navbar.php';
                    require '../database.php';
                    $pdo = Database::connect();
                    $sql = 'SELECT * FROM address ORDER BY id DESC';
@@ -59,3 +60,6 @@
     </div> <!-- /container -->
   </body>
 </html>
+<?php
+require_once '../footer.php';
+?>

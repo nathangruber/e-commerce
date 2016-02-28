@@ -1,5 +1,5 @@
 <?php
-     
+    require_once '../navbar.php';
     require '../database.php';
  
     if ( !empty($_POST)) {
@@ -162,3 +162,6 @@
     </div> <!-- /container -->
   </body>
 </html>
+<?php
+require_once '../footer.php';
+?>
