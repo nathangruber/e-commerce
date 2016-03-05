@@ -1,5 +1,5 @@
 <?php
-require_once('inlcudes/database.php');
+require_once('database.php');
 	if(!empty($_POST['username']) && isset($_POST['username'])){
 		if(!empty($_POST['password']) && isset($_POST['password'])){
 			
