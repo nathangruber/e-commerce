@@ -14,14 +14,14 @@
   <body>
 
   <?php 
-    require_once('includes/navbar.php');
+    //require_once('includes/navbar.php');
     require_once('includes/database.php');
     error_reporting(E_ALL);
   ?>
 
   <div class="container">
     <div class="row">
-      <h3>Update User Information</h3>
+      <h3>Update Your Information</h3>
     </div>
     <div class="row">
       <table class="table table-striped table-bordered">
@@ -35,7 +35,7 @@
             <th>Username</th>
             <th>Password</th>
             <th>Update</th>
-           <th>Delete</th>
+            <th>Delete</th>
          </tr>
         </thead>
         <tbody>
@@ -70,7 +70,7 @@ echo '</tr>';
   }
         
 Database::disconnect();
-print_r($query);
+//print_r($query);
 
           ?>
         </tbody>
