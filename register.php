@@ -94,6 +94,7 @@
 </head>
  
 <body>
+   <?php require_once('includes/navbar.php');?>
     <div class="container">
      
                 <div class="span10 offset1">

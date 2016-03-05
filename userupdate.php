@@ -29,4 +29,4 @@
         $q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$username,$id));
       Database::disconnect();
       header("Location: update.php");
-    },
+    }

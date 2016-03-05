@@ -1,6 +1,6 @@
 <?php
-    require_once '../database.php';
-    require_once '../navbar.php';
+    require_once 'includes/database.php';
+    require_once 'includes/navbar.php';
     $id = 0;
      
     if ( !empty($_GET['id'])) {
@@ -52,5 +52,5 @@
     </div> <!-- /container -->
   </body>
   <?php
-require_once '../footer.php';
+require_once 'includes/footer.php';
 ?>
