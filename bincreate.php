@@ -5,12 +5,12 @@
     if ( !empty($_POST)) {
         // keep track validation errors
         $nameError = null;
-        $descriptionError = null;
         
+
         // keep track post values
         $name = $_POST['name'];
-        $description = $_POST['description'];
         
+      
         // validate input
        $valid = true;
         if (empty($name)) {
@@ -18,20 +18,15 @@
             $valid = false;
         }
          
-        if (empty($description)) {
-            $descriptionError = 'Description';
-            $valid = false;
-         }
          
-        
-       
+
         // insert data
         if (true) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO category (name,description) values(?, ?)";
+            $sql = "INSERT INTO bin (name) values(?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($name,$description));
+            $q->execute(array($name));
             Database::disconnect();
             header("Location: index.php");
         }
@@ -49,7 +44,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Category</h3>
+                        <h3>Create Bin</h3>
                     </div>
              
                     <form class="form-horizontal" action="create.php" method="post">
@@ -62,17 +57,11 @@
                             <?php endif; ?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($descriptionError)?'error':'';?>">
-                        <label class="control-label">Description</label>
-                        <div class="controls">
-                            <input name="description" type="text" placeholder="Description" value="<?php echo !empty($description)?$description:'';?>">
-                            <?php if (!empty($descriptionError)): ?>
-                                <span class="help-inline"><?php echo $descriptionError;?></span>
-                            <?php endif;?>
-                        </div>
-                      </div>
-                    
-                            <div class="form-actions">
+                      
+
+
+
+                      <div class="form-actions">
                           <button type="submit" class="btn btn-success">Create</button>
                           <a class="btn" href="index.php">Back</a>
                         </div>

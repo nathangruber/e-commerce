@@ -1,5 +1,5 @@
 <?php
-    require_once '../database.php';
+    require '../database.php';
  
     if ( !isset($_GET['id']) || empty($_GET['id'])) {
         header("Location: index.php");
@@ -9,15 +9,16 @@
     if ( !empty($_POST)) {
         // keep track validation errors
         $nameError = null;
-        $descriptionError = null;
-        $priceError = null;
-        $category_fkError = null;
-        
+        $cardnumberError = null;
+        $expiration_dateError = null;
+        $security_codeError= null;
+      
+         
         // keep track post values
         $name = $_POST['name'];
-        $description = $_POST['description'];
-        $price = $_POST['price'];
-        $category_fk = $_POST['category_fk'];
+        $cardnumber = $_POST['cardnumber'];
+        $expiration_date = $_POST['expiration_date'];
+        $security_code = $_POST['security_code'];
         // validate input
         $valid = true;
         if (empty($name)) {
@@ -25,43 +26,43 @@
             $valid = false;
         }
          
-        if (empty($description)) {
-            $descriptionError = 'Please enter Description';
+        if (empty($cardnumber)) {
+            $cardnumberError = 'Please enter Credit Card Number';
             $valid = false;
       //email verification was here
         }
-        if (empty($price)) {
-            $priceError = 'Please enter Price';
-            $valid = false; 
+         
+        if (empty($expiration_date)) {
+            $expiration_dateError = 'Please enter Expiration Date';
+            $valid = false;
         }
-       if (empty($category_fk)) {
-            $category_fkError = 'Please enter Category';
-            $valid = false; 
+        if (empty($security_code)) {
+            $security_codeError = 'Please enter Security Code';
+            $valid = false;
         }
         // update data
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "UPDATE product set name = ?, description = ?, price = ?, category_fk = ? WHERE id = ?";
+            $sql = "UPDATE customers  set name = ?, cardnumber = ?, expiration_date =?, security_code = ? WHERE id = ?";
             $q = $pdo->prepare($sql);
-            $q->execute(array($name,$description,$price,$category_fk,$id));
+            $q->execute(array($name,$cardnumber,$expiration_date,$security_code,$id));
             Database::disconnect();
             header("Location: index.php");
         }
     } else {
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "SELECT * FROM product where id = ?";
+        $sql = "SELECT * FROM creditcard where id = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
-        //$data = $q->fetch(PDO::FETCH_ASSOC);
         if(($data = $q->fetch(PDO::FETCH_ASSOC)) == false){
             header("Location: index.php");
         }
         $name = $data['name'];
-        $description = $data['description'];
-        $price = $data['price'];
-        $category_fk = $data['category_fk'];
+        $cardnumber = $data['cardnumber'];
+        $expiration_date = $data['expiration_date'];
+        $security_code = $data['security_code'];
         Database::disconnect();
     }
 ?>
@@ -78,7 +79,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Update Product</h3>
+                        <h3>Update a Customer</h3>
                     </div>
              
                     <form class="form-horizontal" action="update.php?id=<?php echo $id?>" method="post">
@@ -91,36 +92,34 @@
                             <?php endif; ?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($descriptionError)?'error':'';?>">
-                        <label class="control-label">Description</label>
+                      <div class="control-group <?php echo !empty($cardnumberError)?'error':'';?>">
+                        <label class="control-label">Credit Card Number</label>
                         <div class="controls">
-                            <input name="description" type="text" placeholder="Description" value="<?php echo !empty($description)?$description:'';?>">
-                            <?php if (!empty($descriptionError)): ?>
-                                <span class="help-inline"><?php echo $descriptionError;?></span>
+                            <input name="cardnumber" type="text" placeholder="Credit Card Number" value="<?php echo !empty($cardnumber)?$cardnumber:'';?>">
+                            <?php if (!empty($cardnumberError)): ?>
+                                <span class="help-inline"><?php echo $cardnumberError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($priceError)?'error':'';?>">
-                        <label class="control-label">Price</label>
+                      <div class="control-group <?php echo !empty($expiration_dateError)?'error':'';?>">
+                        <label class="control-label">Expiration Date</label>
                         <div class="controls">
-                            <input name="price" type="text"  placeholder="Price" value="<?php echo !empty($price)?$price:'';?>">
-                            <?php if (!empty($priceError)): ?>
-                                <span class="help-inline"><?php echo $priceError;?></span>
+                            <input name="expiration_date" type="text"  placeholder="Expiration Date" value="<?php echo !empty($expiration_date)?$expiration_date:'';?>">
+                            <?php if (!empty($expiration_dateError)): ?>
+                                <span class="help-inline"><?php echo $expiration_dateError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($category_fkError)?'error':'';?>">
-                        <label class="control-label">Category</label>
+                      <div class="control-group <?php echo !empty($security_codeError)?'error':'';?>">
+                        <label class="control-label">Security Code</label>
                         <div class="controls">
-                            <input name="category_fk" type="text"  placeholder="Category" value="<?php echo !empty($category)?$category:'';?>">
-                            <?php if (!empty($categoryError)): ?>
-                                <span class="help-inline"><?php echo $categoryError;?></span>
+                            <input name="security_code" type="text"  placeholder="Security Code" value="<?php echo !empty($security_code)?$security_code:'';?>">
+                            <?php if (!empty($security_codeError)): ?>
+                                <span class="help-inline"><?php echo $security_codeError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
-                      
-
-                        <div class="form-actions">
+                      <div class="form-actions">
                           <button type="submit" class="btn btn-success">Update</button>
                           <a class="btn" href="index.php">Back</a>
                         </div>
@@ -129,3 +128,4 @@
                  
     </div> <!-- /container -->
   </body>
+</html>

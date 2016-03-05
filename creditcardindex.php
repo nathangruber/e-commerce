@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
 <body>
     <div class="container">
             <div class="row">
-                <h3>Address</h3>
+                <h3>Credit Card</h3>
             </div>
             <div class="row">
               <p>
@@ -21,30 +20,23 @@
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Street Address</th>
-                      <th>Street Address</th>
-                      <th>City</th>
-                      <th>State</th>
-                      <th>Zip Code</th>
-                      <th>Country</th>
+                      <th>Credit Card Number</th>
+                      <th>Expiration Date</th>
+                      <th>Security Code</th>
                     </tr>
                   </thead>
                   <tbody>
                   <?php
-                   require_once '../database.php';
-                   require_once '../navbar.php';
+                   include '../database.php';
                    $pdo = Database::connect();
-                   $sql = 'SELECT * FROM address ORDER BY id DESC';
+                   $sql = 'SELECT * FROM creditcard ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
                             echo '<tr>';
                             echo '<td>'. $row['name'] . '</td>';
-                            echo '<td>'. $row['street_1'] . '</td>';
-                            echo '<td>'. $row['street_2'] . '</td>';
-                            echo '<td>'. $row['city'] . '</td>';
-                            echo '<td>'. $row['state'] . '</td>';
-			                      echo '<td>'. $row['zip_code'].'</td>'; 	
-                            echo '<td>'. $row['country'] . '</td>';
-                            echo '<td width=250>';
+                            echo '<td>'. $row['cardnumber'] . '</td>';
+                            echo '<td>'. $row['expiration_date'] . '</td>';
+                            echo '<td>'. $row['security_code'] . '</td>';
+                           echo '<td width=250>';
                                 echo '<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';
                                 echo ' ';
                                 echo '<a class="btn btn-success" href="update.php?id='.$row['id'].'">Update</a>';
@@ -61,6 +53,3 @@
     </div> <!-- /container -->
   </body>
 </html>
-<?php
-require_once '../footer.php';
-?>

@@ -9,7 +9,7 @@
 <body>
     <div class="container">
             <div class="row">
-                <h3>Address</h3>
+                <h3>Transaction Products</h3>
             </div>
             <div class="row">
               <p>
@@ -20,30 +20,24 @@
                 <table class="table table-striped table-bordered">
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Street Address</th>
-                      <th>Street Address</th>
-                      <th>City</th>
-                      <th>State</th>
-                      <th>Zip Code</th>
-                      <th>Country</th>
-                    </tr>
+                      <th>Quantity</th>
+                      <th>Transaction Subtotal</th>
+                      <th>Product</th>
+                      <th>Transaction</th>
+                      </tr>
                   </thead>
                   <tbody>
                   <?php
-                   require_once '../database.php';
-                   require_once '../navbar.php';
+                   require '../database.php';
                    $pdo = Database::connect();
-                   $sql = 'SELECT * FROM address ORDER BY id DESC';
+                   $sql = 'SELECT * FROM transaction_products ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
                             echo '<tr>';
-                            echo '<td>'. $row['name'] . '</td>';
-                            echo '<td>'. $row['street_1'] . '</td>';
-                            echo '<td>'. $row['street_2'] . '</td>';
-                            echo '<td>'. $row['city'] . '</td>';
-                            echo '<td>'. $row['state'] . '</td>';
-			                      echo '<td>'. $row['zip_code'].'</td>'; 	
-                            echo '<td>'. $row['country'] . '</td>';
+                            echo '<td>'. $row['quantity'] . '</td>';
+                            echo '<td>'. $row['transaction_subtotal'] . '</td>';
+                            echo '<td>'. $row['product_fk'] . '</td>';
+                            echo '<td>'. $row['transaction_fk'] . '</td>';
+                           
                             echo '<td width=250>';
                                 echo '<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';
                                 echo ' ';
@@ -61,6 +55,3 @@
     </div> <!-- /container -->
   </body>
 </html>
-<?php
-require_once '../footer.php';
-?>

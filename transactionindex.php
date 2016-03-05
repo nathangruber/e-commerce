@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
 <body>
@@ -21,24 +20,28 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Name</th>
-                      <th>Description</th>
-                      <th>Price</th>
-                      <th>Category</th>
+                      <th>Subtotal</th>
+                      <th>Tax</th>
+                      <th>Date</th>
+                      <th>Cart</th>
+                      <th>Customer</th>
+                      <th>Credit Card</th>
                     </tr>
                   </thead>
                   <tbody>
                   <?php
                    require_once '../database.php';
                    $pdo = Database::connect();
-                   $sql = 'SELECT * FROM product ORDER BY id DESC';
+                   $sql = 'SELECT * FROM transaction ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
                              echo '<tr>';
                              echo '<td>'. $row['id'] . '</td>';
-                             echo '<td>'. $row['name'] . '</td>';
-                             echo '<td>'. $row['description'] . '</td>';
-                             echo '<td>'. $row['price'] . '</td>';
-                             echo '<td>'. $row['category_fk'] . '</td>';
+                             echo '<td>'. $row['subtotal'] . '</td>';
+                             echo '<td>'. $row['tax'] . '</td>';
+                             echo '<td>'. $row['date_'] . '</td>';
+                             echo '<td>'. $row['cart'] . '</td>';
+                             echo '<td>'. $row['customer_fk'] . '</td>';
+                             echo '<td>'. $row['creditcard_fk'] . '</td>';
                              echo '<td width=250>';
                              echo '<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';
                              echo ' ';

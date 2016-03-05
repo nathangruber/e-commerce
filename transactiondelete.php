@@ -1,6 +1,5 @@
 <?php
     require_once '../database.php';
-    require_once '../navbar.php';
     $id = 0;
      
     if ( !empty($_GET['id'])) {
@@ -14,7 +13,7 @@
         // delete data
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM address  WHERE id = ?";
+        $sql = "DELETE FROM transaction WHERE id = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
         Database::disconnect();
@@ -36,7 +35,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Delete a Address</h3>
+                        <h3>Delete Product</h3>
                     </div>
                      
                     <form class="form-horizontal" action="delete.php" method="post">
@@ -51,6 +50,3 @@
                  
     </div> <!-- /container -->
   </body>
-  <?php
-require_once '../footer.php';
-?>
