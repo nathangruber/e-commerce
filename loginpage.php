@@ -12,7 +12,8 @@
  </head>
   
   <body>
-    <?php require_once('includes/navbar.php');?>
+    <?php require_once 'includes/database.php';?>
+    <?php require_once 'includes/navbar.php';?>
 
     
     <div class="container">
@@ -37,10 +38,11 @@
       </div>
     </div>
 
-    <?php require_once('includes/footer.php');?>
-
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
 
   </body>
 </html>
+<?php
+require_once 'includes/footer.php';
+?>

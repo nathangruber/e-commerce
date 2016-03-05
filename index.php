@@ -1,5 +1,4 @@
 <?php require_once('includes/session.php');?>
-
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -14,7 +13,7 @@
  </head>
 
   <body>
-    <?php require_once('includes/navbar.php');?>
+    <?php require_once 'includes/navbar.php';?>
 
     <div class="container" >
       <div class="starter-template">
@@ -65,3 +64,6 @@
   <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
+<?php
+require_once 'includes/footer.php';
+?>

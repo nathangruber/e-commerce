@@ -1,5 +1,6 @@
 <?php
-    require_once '../database.php';
+    require_once 'includes/database.php';
+    require_once 'includes/navbar.php';
  
     if ( !isset($_GET['id']) || empty($_GET['id'])) {
         header("Location: index.php");
@@ -163,3 +164,7 @@
                  
     </div> <!-- /container -->
   </body>
+</html>
+<?php
+require_once 'includes/footer.php';
+?>

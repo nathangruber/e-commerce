@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
 <body>
@@ -27,7 +28,8 @@
                   </thead>
                   <tbody>
                   <?php
-                   include '../database.php';
+                   require_once 'includes/database.php';
+                   require_once 'includes/navbar.php';
                    $pdo = Database::connect();
                    $sql = 'SELECT * FROM creditcard ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
@@ -53,3 +55,6 @@
     </div> <!-- /container -->
   </body>
 </html>
+<?php
+require_once 'includes/footer.php';
+?>

@@ -1,5 +1,6 @@
 <?php
-    require '../database.php';
+    require_once 'includes/database.php';
+    require_once 'includes/navbar.php';
     $id = null;
     if ( !empty($_GET['id'])) {
         $id = $_REQUEST['id'];
@@ -55,3 +56,6 @@
     </div> <!-- /container -->
   </body>
 </html>
+<?php
+require_once 'includes/footer.php';
+?>

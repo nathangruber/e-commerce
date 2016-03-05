@@ -30,7 +30,8 @@
                   </thead>
                   <tbody>
                   <?php
-                   require_once '../database.php';
+                   require_once 'includes/database.php';
+                   require_once 'includes/navbar.php';
                    $pdo = Database::connect();
                    $sql = 'SELECT * FROM transaction ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
@@ -59,3 +60,6 @@
     </div> <!-- /container -->
   </body>
 </html>
+<?php
+require_once 'includes/footer.php';
+?>
