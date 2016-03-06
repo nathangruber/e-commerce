@@ -1,4 +1,7 @@
 <a href="index.php"><img src="assets/img/bbs.png"></a>
+<div class="navbar navbar-fixed-top">
+       <div class="navbar-inner">
+         <div class="container">
 <nav class="navbar navbar-inverse navbar-fixed-top">
    <div class="container">
      <div class="navbar-header">
