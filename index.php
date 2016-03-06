@@ -7,24 +7,23 @@
       <header class="main-header" role="banner">
   <img src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image" width="1500" height="400">
      </header> 
-</div>
-</div>
-            <div class="container">
-           <div class = "row">
-         <div class="col-md-6">
-      <div class = "home">       
+      
+      <div class = "container">       
 <p>Blake’s is a locally-owned skateboard shop.</p><br>
      </div>
        <div class="container">
  <div class="img-responsive col-sm-2">
    <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" class="img-rounded" alt="Skateboard" height="187" width="333">
  </div>
+ <br>
  <div class="img-responsive col-sm-2">
    <img id="long" src="assets/img/18752831476_4634222c05_b.jpg" class="img-rounded" alt="Longboard" height="187" width="333">
  </div>
+ <br>
  <div class="img-responsive col-sm-2">
    <img id="truck" src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Skate Wheel" height="187" width="333">
  </div>
+ <br>
 </div> 
       <div class="container" >
       <div class="starter-template">
