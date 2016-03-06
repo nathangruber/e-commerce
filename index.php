@@ -15,15 +15,15 @@
  <div class="img-responsive col-sm-2">
    <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" class="img-rounded" alt="Skateboard" height="187" width="333">
  </div>
- <br>
+ 
  <div class="img-responsive col-sm-2">
    <img id="long" src="assets/img/18752831476_4634222c05_b.jpg" class="img-rounded" alt="Longboard" height="187" width="333">
  </div>
- <br>
+ 
  <div class="img-responsive col-sm-2">
    <img id="truck" src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Skate Wheel" height="187" width="333">
  </div>
- <br>
+ 
 </div> 
       <div class="container" >
       <div class="starter-template">
