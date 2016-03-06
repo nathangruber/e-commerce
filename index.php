@@ -6,7 +6,7 @@
     <?php require_once 'includes/navbar.php';?>
       <header class="main-header" role="banner">
   <h1><img src="assets/img/bbs.png" title="Blake's Board Shop Logo" alt="Blake's Board Shop Logo"></h1><div class = "bbstext">       
-<p>Blake’s is a locally-owned skateboard shop.</p><br>
+<p>Blake’s is a locally-owned skateboard shop.</p></h1>
      </div>
   <img id="banner" src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image">
      </header> 
@@ -25,9 +25,7 @@
    <img id="truck" src="assets/img/maxresdefault.jpg" alt="Skate Truck" height="187" width="333">
  </div>
  </div> 
-       <div class = "bbstext">       
-<p>Blake’s is a locally-owned skateboard shop.</p><br>
-     </div>
+       
       <div class ="bbstext1">
       <div class="container" >
       <div class="starter-template">
