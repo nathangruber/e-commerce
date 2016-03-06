@@ -17,13 +17,13 @@
      </div>
        <div class="container" style="width: 100%;">
  <div class="theme-table-image col-sm-2">
-   <img src="assets/img/6796009882_074f87df69_b.jpg" class="img-rounded" alt="Skateboard" height="187" width="333">
+   <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" class="img-rounded" alt="Skateboard" height="187" width="333">
  </div>
  <div class="theme-table-image col-sm-2">
-   <img src="assets/img/18752831476_4634222c05_b.jpg" class="img-rounded" alt="Longboard" height="187" width="333">
+   <img id="long" src="assets/img/18752831476_4634222c05_b.jpg" class="img-rounded" alt="Longboard" height="187" width="333">
  </div>
  <div class="theme-table-image col-sm-2">
-   <img src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Skate Wheel" height="187" width="333">
+   <img id="truck" src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Skate Wheel" height="187" width="333">
  </div>
 </div> 
       <div class="container" >
