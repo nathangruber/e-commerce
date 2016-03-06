@@ -16,11 +16,14 @@
 <p>Blake’s is a locally-owned skateboard shop.</p><br>
      </div>
        <div class="container" style="width: 100%;">
- <div class="theme-table-image col-sm-6">
-   <img src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Computer Code" height="375" width="667">
+ <div class="theme-table-image col-sm-4">
+   <img src="assets/img/6796009882_074f87df69_b.jpg" class="img-rounded" alt="Skateboard" height="375" width="667">
  </div>
- <div class="theme-table-image col-sm-6">
-   <img src="assets/img/Liverpool-Logo-Wallpaper-Download-1024x576.jpg" class="img-rounded" alt="Liverpool Logo" height="375" width="667">
+ <div class="theme-table-image col-sm-4">
+   <img src="assets/img/18752831476_4634222c05_b.jpg" class="img-rounded" alt="Longboard" height="375" width="667">
+ </div>
+ <div class="theme-table-image col-sm-4">
+   <img src="assets/img/loose-skateboard-truck-nut.jpg" class="img-rounded" alt="Skate Wheel" height="375" width="667">
  </div>
 </div> 
       <div class="container" >
@@ -65,10 +68,6 @@
         ?>
       </div>
     </div><!-- /.container -->
-<?php
-require_once 'includes/footer.php';
-?>
-   
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
