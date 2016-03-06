@@ -19,7 +19,7 @@
       <div class="container" >
       <div class="starter-template">
         <h1></h1>
-        <p class="lead"><small>Please Login or click Register to set up an account with Blake's.<br></p>
+        <p class="lead"><small>Please Login or click Register to set up an account with Blake's.</small><br></p>
       </div>
       <div>
         <center>
@@ -67,4 +67,6 @@ require_once 'includes/footer.php';
   <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
-
+<?php
+require_once 'includes/footer.php';
+?>

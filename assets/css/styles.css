@@ -5,3 +5,10 @@ form{
   font-size: 12px;
   background-color:#00ffff
 }
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;
+}
