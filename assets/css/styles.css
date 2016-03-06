@@ -1,26 +1,21 @@
-form{
-  width: 18px;
-  height: 12px;
-  font-family: sans-serif;
-  font-size: 12px;
-  background-color:#00ffff
-}
+
 #board{
     padding-top: 20px;
     padding-right: 50px;
     padding-bottom: 20px;
-    
+    padding-left: 10px;
 
 }
 #long{
     padding-top: 20px;
     padding-right: 50px;
     padding-bottom: 50px;
+    padding-left: 10px;
 }    
 #truck{
     padding-top: 20px;
     padding-right: 50px;
     padding-bottom: 20px;
-   
+    padding-left: 10px;
 
 }
