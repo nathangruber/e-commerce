@@ -9,9 +9,7 @@
   <img id="banner" src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image">
      </header> 
       
-      <div class = "bbstext">       
-<p>Blake’s is a locally-owned skateboard shop.</p><br>
-     </div>
+      
        <div class="container">
  <div class="img-responsive col-sm-4">
    <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" alt="Skateboard" height="187" width="333">
@@ -24,9 +22,11 @@
  <div class="img-responsive col-sm-4">
    <img id="truck" src="assets/img/maxresdefault.jpg" alt="Skate Truck" height="187" width="333">
  </div>
- 
-</div> 
-      <div class ="bbstext">
+ </div> 
+       <div class = "bbstext">       
+<p>Blake’s is a locally-owned skateboard shop.</p><br>
+     </div>
+      <div class ="bbstext1">
       <div class="container" >
       <div class="starter-template">
         <h1></h1>
