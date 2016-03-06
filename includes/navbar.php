@@ -1,3 +1,5 @@
+<link rel="icon" type="image/x-icon" href="file:///Users/ngruber/Dropbox/github/e-commerce/assets/img/bbs.png"/>
+   <h1><img src="assets/img/bbs.png" title="Blake's Board Shop Logo" alt="Blake's Board Shop Logo" width="400"/></h1>
 <nav class="navbar navbar-inverse navbar-fixed-top">
    <div class="container">
      <div class="navbar-header">
