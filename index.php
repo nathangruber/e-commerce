@@ -11,7 +11,7 @@
 </div>
             <div class="container">
            <div class = "row">
-         <div class="col-md-6s">
+         <div class="col-md-6">
       <div class = "home">       
 <p>Blake’s is a locally-owned skateboard shop.</p><br>
      </div>
@@ -19,7 +19,7 @@
       <div class="container" >
       <div class="starter-template">
         <h1></h1>
-        <p class="lead"><small>Please Login or click Register to set up an account with us.<br></p>
+        <p class="lead"><small>Please Login or click Register to set up an account with Blake's.<br></p>
       </div>
       <div>
         <center>
