@@ -29,7 +29,8 @@
       <div class="starter-template">
         <h1></h1>
       <center>  
-        <p class="lead"><img class="img-responsive logo" src="assets/img/bbs.png" height="27" width="27"><small>Please Login or click Register to set up an account with Blake's.</small><br></p>
+        <p class="lead"><img class="img-responsive logo" src="assets/img/bbs.png" height="27" width="27">Please Login or click Register to set up an account with Blake's.<br></p>
+      <small>Our members get access to coupons and free stuff</small>
       </center>
       </div>
       <div>
