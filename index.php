@@ -4,7 +4,7 @@
  <?php require_once 'includes/header.php';?>
   <body>
     <?php require_once 'includes/navbar.php';?>
-<header class="main-header" role="banner">
+      <header class="main-header" role="banner">
   <img src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image" width="1500" height="400">
      </header> 
 </div>
@@ -23,7 +23,7 @@
       </div>
       <div>
         <center>
-<form action="loginpage.php" method="post" style="background-color:#00ffff">
+<form action="loginpage.php" method="post" style="background-color:#00ffff" width="200">
           <input type="submit" value="Login">
         </form>
       </div>
