@@ -88,10 +88,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">      
-</head>
+<?php require_once 'includes/header.php';?>
  
 <body>
    <?php require_once('includes/navbar.php');?>
