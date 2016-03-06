@@ -5,7 +5,7 @@
   <body>
     <?php require_once 'includes/navbar.php';?>
       <header class="main-header" role="banner">
-  <h1><img src="assets/img/bbs.png" title="Blake's Board Shop Logo" alt="Blake's Board Shop Logo" width="400"/></h1>
+  <h1><img src="assets/img/bbs.png" title="Blake's Board Shop Logo" alt="Blake's Board Shop Logo"></h1>
   <img id="banner" src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image">
      </header> 
       
