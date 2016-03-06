@@ -5,7 +5,7 @@
   <body>
     <?php require_once 'includes/navbar.php';?>
       <header class="main-header" role="banner">
-  <img src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image" width="1500" height="400">
+  <img id="banner" src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image">
      </header> 
       
       <div class = "container">       
