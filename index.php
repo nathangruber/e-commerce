@@ -12,15 +12,15 @@
 <p>Blake’s is a locally-owned skateboard shop.</p><br>
      </div>
        <div class="container">
- <div class="img-responsive col-sm-2">
+ <div class="img-responsive col-sm-4">
    <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" class="img-rounded" alt="Skateboard" height="187" width="333">
  </div>
  
- <div class="img-responsive col-sm-2">
+ <div class="img-responsive col-sm-4">
    <img id="long" src="assets/img/18752831476_4634222c05_b.jpg" class="img-rounded" alt="Longboard" height="187" width="333">
  </div>
  
- <div class="img-responsive col-sm-2">
+ <div class="img-responsive col-sm-4">
    <img id="truck" src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Skate Wheel" height="187" width="333">
  </div>
  
@@ -35,7 +35,7 @@
       <div>
         <center>
 <form action="loginpage.php" method="post">
-          <input type="submit" src="assets/img/bbs.png" height="27" width="27" value="Login">
+          <input type="submit" value="Login">
         </form>
       </div>
       <br>
