@@ -5,10 +5,11 @@
   <body>
     <?php require_once 'includes/navbar.php';?>
       <header class="main-header" role="banner">
+  <h1><img src="assets/img/bbs.png" title="Blake's Board Shop Logo" alt="Blake's Board Shop Logo" width="400"/></h1>
   <img id="banner" src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image">
      </header> 
       
-      <div class = "container">       
+      <div class = "bbstext">       
 <p>Blake’s is a locally-owned skateboard shop.</p><br>
      </div>
        <div class="container">
@@ -25,6 +26,7 @@
  </div>
  
 </div> 
+      <div class ="bbstext">
       <div class="container" >
       <div class="starter-template">
         <h1></h1>
@@ -33,7 +35,9 @@
       <small>Our members get access to coupons and free stuff</small><br>
       </center>
       </div>
-      <div>
+    </div>
+    </div>
+       <div>
         <center>
 <form action="loginpage.php" method="post">
           <input type="submit" value="Login">
@@ -56,7 +60,7 @@
         </form>
       </div>
      </center>
-</div>
+
         <?php
           if ($logged) {
             echo "You are logged in succesfully.";
