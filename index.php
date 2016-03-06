@@ -4,8 +4,19 @@
  <?php require_once 'includes/header.php';?>
   <body>
     <?php require_once 'includes/navbar.php';?>
-
-    <div class="container" >
+<header class="main-header" role="banner">
+  <img src="assets/img/beef-506456_1280.jpg" alt="Banner Image" width="1500" height="300">
+     </header> 
+</div>
+</div>
+            <div class="container">
+           <div class = "row">
+         <div class="col-md-6s">
+      <div class = "home">       
+<p><small>Blake’s is a locally-owned skateboard shop.</p><br>
+     </div>
+        
+      <div class="container" >
       <div class="starter-template">
         <h1></h1>
         <p class="lead">Please Login or click Register to set up an account with us.<br></p>
