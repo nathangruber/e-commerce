@@ -6,22 +6,21 @@ form{
   background-color:#00ffff
 }
 #board{
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    
 
 }
 #long{
-    padding-top: 50px;
-    padding-right: 30px;
+    padding-top: 20px;
+    padding-right: 50px;
     padding-bottom: 50px;
-    padding-left: 80px;
-}
+}    
 #truck{
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+   
 
 }
