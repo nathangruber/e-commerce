@@ -53,7 +53,7 @@
         </form>
       </div>
      </center>
-
+</div>
         <?php
           if ($logged) {
             echo "You are logged in succesfully.";
