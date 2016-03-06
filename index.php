@@ -35,7 +35,7 @@
       <div>
         <center>
 <form action="loginpage.php" method="post">
-          <input type="submit" value="Login">
+          <input type="submit" src="assets/img/bbs.png" height="27" width="27" value="Login">
         </form>
       </div>
       <br>
