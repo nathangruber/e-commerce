@@ -15,7 +15,7 @@
       <div class = "home">       
 <p>Blake’s is a locally-owned skateboard shop.</p><br>
      </div>
-       <div class="container" style="width: 100%;">
+       <div class="container">
  <div class="img-responsive col-sm-2">
    <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" class="img-rounded" alt="Skateboard" height="187" width="333">
  </div>
