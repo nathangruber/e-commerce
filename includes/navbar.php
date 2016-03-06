@@ -1,5 +1,3 @@
-<link rel="icon" type="image/x-icon" href="file:///Users/ngruber/Dropbox/github/e-commerce/assets/img/bbs.png"/>
-   <h1><img src="assets/img/bbs.png" title="Blake's Board Shop Logo" alt="Blake's Board Shop Logo" width="400"/></h1>
 <nav class="navbar navbar-inverse navbar-fixed-top">
    <div class="container">
      <div class="navbar-header">
@@ -9,7 +7,7 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </button>
-       <a class="navbar-brand" href="index.php" id="black"><img class="img-responsive logo" src="assets/img/bbs.png"></a>
+       <a class="navbar-brand" href="index.php" id="black"><img class="img-responsive logo" src="assets/img/bbs.png" height="42" width="42"></a>
      </div>
      <div id="navbar" class="collapse navbar-collapse">
        <ul class="nav navbar-nav">
