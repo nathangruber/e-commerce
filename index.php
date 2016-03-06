@@ -23,7 +23,7 @@
    <img src="assets/img/18752831476_4634222c05_b.jpg" class="img-rounded" alt="Longboard" height="375" width="667">
  </div>
  <div class="theme-table-image col-sm-4">
-   <img src="assets/img/loose-skateboard-truck-nut.jpg" class="img-rounded" alt="Skate Wheel" height="375" width="667">
+   <img src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Skate Wheel" height="375" width="667">
  </div>
 </div> 
       <div class="container" >
