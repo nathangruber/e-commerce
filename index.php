@@ -23,7 +23,7 @@
       </div>
       <div>
         <center>
-<form action="loginpage.php" method="post" style="background-color:#00ffff" width="200">
+<form action="loginpage.php" method="post">
           <input type="submit" value="Login">
         </form>
       </div>
@@ -31,7 +31,7 @@
        </center>
 <center>
        <div>
-<form action="includes/logout.php" method="post" style="background-color:#00ffff"> 
+<form action="includes/logout.php" method="post"> 
           <input type="submit" value="Logout">
         </form>
       </div>
@@ -39,7 +39,7 @@
       <center>
       <div>
         <br>
-<form action="register.php" method="post" style="background-color:#00ffff">
+<form action="register.php" method="post">
           <input type="submit" value="Register">
         </form>
       </div>
