@@ -5,7 +5,7 @@
   <body>
     <?php require_once 'includes/navbar.php';?>
 <header class="main-header" role="banner">
-  <img src="assets/img/beef-506456_1280.jpg" alt="Banner Image" width="1500" height="300">
+  <img src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image" width="1500" height="300">
      </header> 
 </div>
 </div>
@@ -13,13 +13,13 @@
            <div class = "row">
          <div class="col-md-6s">
       <div class = "home">       
-<p><small>Blake’s is a locally-owned skateboard shop.</p><br>
+<p>Blake’s is a locally-owned skateboard shop.</p><br>
      </div>
         
       <div class="container" >
       <div class="starter-template">
         <h1></h1>
-        <p class="lead">Please Login or click Register to set up an account with us.<br></p>
+        <p class="lead"><small>Please Login or click Register to set up an account with us.<br></p>
       </div>
       <div>
         <center>
