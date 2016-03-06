@@ -15,7 +15,14 @@
       <div class = "home">       
 <p>Blake’s is a locally-owned skateboard shop.</p><br>
      </div>
-        
+       <div class="container" style="width: 100%;">
+ <div class="theme-table-image col-sm-6">
+   <img src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Computer Code" height="375" width="667">
+ </div>
+ <div class="theme-table-image col-sm-6">
+   <img src="assets/img/Liverpool-Logo-Wallpaper-Download-1024x576.jpg" class="img-rounded" alt="Liverpool Logo" height="375" width="667">
+ </div>
+</div> 
       <div class="container" >
       <div class="starter-template">
         <h1></h1>
