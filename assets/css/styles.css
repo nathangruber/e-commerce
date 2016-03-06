@@ -32,3 +32,22 @@ div.bbstext1{
 font-family: 'Libre Baskerville', serif;
 	font-size: 20px;	
 }
+#container {
+overflow:hidden;
+position:relative;
+width:90%;
+margin-bottom:20px;
+margin-top:20px;
+margin-left:auto;
+margin-right:auto;
+}
+.leftimage {
+width:70%;
+display: inline-block;
+float: left;
+}
+.righttext { 
+height: auto;
+width: 30%;
+display: inline;
+}

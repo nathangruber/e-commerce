@@ -5,9 +5,21 @@
   <body>
     <?php require_once 'includes/navbar.php';?>
       <header class="main-header" role="banner">
-  <h1><img src="assets/img/bbs.png" title="Blake's Board Shop Logo" alt="Blake's Board Shop Logo"><div class = "bbstext">       
-<p>Blake’s is a locally-owned skateboard shop.</p></h1>
-     </div>
+  
+  
+
+<div id="container">
+
+<div class="leftimage"><img src="assets/img/bbs.png"></div>
+<div class="righttext">Blake’s is a locally-owned skateboard shop.</div> 
+
+</div>
+
+
+
+
+
+
   <img id="banner" src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image">
      </header> 
       
