@@ -9,7 +9,7 @@
        </button>
        <div>
        <a class="navbar-brand" href="index.php" id="black"><img class="img-responsive logo" src="assets/img/bbs.png" height="12" width="27"></a>
-      </di>v
+      </div>
      </div>
      <div id="navbar" class="collapse navbar-collapse">
        <ul class="nav navbar-nav">
