@@ -11,7 +11,7 @@
 <div id="container">
 
 <div class="leftimage"><img src="assets/img/bbs.png"></div>
-<div class="righttext"><p>Blake’s is a locally-owned skateboard shop.</p></div> 
+<div class="righttext">Blake’s is a locally-owned skateboard shop.</div> 
 
 </div>
 
