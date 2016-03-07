@@ -40,6 +40,7 @@ margin-top:20px;
 margin-left:auto;
 margin-right:auto;
 padding-top:50px;
+padding-bottom:50px;
 }
 .leftimage {
 width:70%;
@@ -51,5 +52,5 @@ font-family: 'Libre Baskerville', serif;
 height: auto;
 width: 30%;
 display: inline;
-padding-top:100px;
+padding-top:200px;
 }
