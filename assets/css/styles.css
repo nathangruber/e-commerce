@@ -47,7 +47,9 @@ display: inline-block;
 float: left;
 }
 .righttext { 
+font-family: 'Libre Baskerville', serif;
 height: auto;
 width: 30%;
 display: inline;
+padding-top:100px;
 }
