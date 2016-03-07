@@ -2,13 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
  <?php require_once 'includes/header.php';?>
-  <body>
+<body>
     <?php require_once 'includes/navbar.php';?>
-      <header class="main-header" role="banner">
+<header class="main-header" role="banner">
   
-  
-
-<div id="container">
+  <div id="container">
 
 <div class="leftimage"><img src="assets/img/bbs.png"></div>
 <div class="righttext">Blake’s is a family-owned skateboard shop. <a href="https://twitter.com/bbshop" class="twitter-follow-button" data-show-count="false">Follow @bbshop</a>
@@ -16,32 +14,26 @@
    </div> 
 
 </div>
-
-
-
-
-
-
-  <img id="banner" src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image">
-     </header> 
+      <img id="banner" src="assets/img/skateboard-447147_1920.jpg" alt="Banner Image">
+</header> 
       
       
-       <div class="container">
- <div class="img-responsive col-sm-4">
-   <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" alt="Skateboard" height="187" width="333">
- </div>
+ <div class="container">
+   <div class="img-responsive col-sm-4">
+    <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" alt="Skateboard" height="187" width="333">
+   </div>
  
- <div class="img-responsive col-sm-4">
-   <img id="long" src="assets/img/18752831476_4634222c05_b.jpg" alt="Longboard" height="187" width="333">
- </div>
+   <div class="img-responsive col-sm-4">
+    <img id="long" src="assets/img/18752831476_4634222c05_b.jpg" alt="Longboard" height="187" width="333">
+   </div>
  
- <div class="img-responsive col-sm-4">
-   <img id="truck" src="assets/img/maxresdefault.jpg" alt="Skate Truck" height="187" width="333">
- </div>
+   <div class="img-responsive col-sm-4">
+    <img id="truck" src="assets/img/maxresdefault.jpg" alt="Skate Truck" height="187" width="333">
+   </div>
  </div> 
        
-      <div class ="bbstext1">
-      <div class="container" >
+  <div class ="bbstext1">
+    <div class="container" >
       <div class="starter-template">
         <h1></h1>
       <center>  
@@ -50,7 +42,7 @@
       </center>
       </div>
     </div>
-    </div>
+  </div>
        <div>
         <center>
 <form action="loginpage.php" method="post">
@@ -91,7 +83,7 @@
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
-  </body>
+</body>
 </html>
 <?php
 require_once 'includes/footer.php';
