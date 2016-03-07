@@ -33,7 +33,6 @@ font-family: 'Libre Baskerville', serif;
 	font-size: 20px;	
 }
 #container {
-overflow:hidden;
 position:relative;
 width:90%;
 margin-bottom:20px;
