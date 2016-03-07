@@ -1,3 +1,7 @@
+
+body {
+    background-color: lightgrey;
+}
 #banner {
                 position: static;
                 top: 0px;
@@ -51,7 +55,6 @@ padding-bottom:30px;
 }
 .righttext { 
 font-family: 'Libre Baskerville', serif;
-
 width: 30%;
 display: inline;
 padding-top:200px;
