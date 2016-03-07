@@ -8,7 +8,7 @@
   
   <div id="container">
 
-<div class="leftimage"><img src="assets/img/bbs.png"></div>
+<div class="leftimage"><img src="assets/img/bbs1.png"></div>
 <div class="righttext">Blake’s is a family-owned skateboard shop. <a href="https://twitter.com/bbshop" class="twitter-follow-button" data-show-count="false">Follow @bbshop</a>
  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
    </div> 
