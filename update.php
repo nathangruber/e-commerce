@@ -14,6 +14,7 @@
   <div class="container">
     <div class="row">
       <h3>Update Your Information</h3>
+      <p>Update Your Information</p>
     </div>
     <div class="row">
       <table class="table table-striped table-bordered">
@@ -48,6 +49,45 @@ echo '</tr>';
 }
 Database::disconnect();
 ?>
+<div class="container">
+    <div class="row">
+      <h3>Update Your Information</h3>
+      <p>Update Your Address</p>
+    </div>
+    <div class="row">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Street Address</th>
+            <th>Street Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+            <th>Country</th>
+         </tr>
+        </thead>
+        <tbody>
+          <?php
+          if($logged) {
+              $pdo = Database::connect();
+              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+              $sql = 'SELECT * FROM customer WHERE id = ?';
+              $q = $pdo->prepare($sql);
+              $q->execute(array($_SESSION["id"]));
+              $query = $q->fetch(PDO::FETCH_ASSOC);
 
+echo '<tr>';
+echo '<form method="POST" action="userupdate.php">';
+echo '<td><input type="text" name="Street Address" value="'.$query['street_1'].'"></td>';
+echo '<td><input type="text" name="Street Address" value="'.$query['street_2'].'"></td>';
+echo '<td><input type="text" name="City" value="'.$query['city'].'"></td>';
+echo '<td><input type="text" name="State" value="'.$query['state'].'"></td>';
+echo '<td><input type="text" name="Country" value="'.$query['country'].'"></td>';
+echo '<td><input type="submit" value="Update"></td>';
+echo '</form>';
+echo '</tr>';
+}
+Database::disconnect();
+?>
 </body>
 </html>
