@@ -21,7 +21,6 @@
           <tr>
             <th>Name</th>
             <th>Birthdate</th>
-            <th>Gender</th>
             <th>Phone Number</th>
             <th>Email Address</th>
             <th>Update</th>
