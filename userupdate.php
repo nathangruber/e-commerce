@@ -9,7 +9,7 @@
       $birth_date = $_POST['birth_date'];
       $phone_number = $_POST['phone_number'];
       $email_address = $_POST['email_address'];
-      
+      }
          
       function valid($uservar){
         return ( !empty($uservar) && isset($uservar) );
@@ -28,4 +28,4 @@
         $q->execute(array($name,$birth_date,$phone_number,$email_address,$id));
       Database::disconnect();
       header("Location: update.php");
-    }
+    
