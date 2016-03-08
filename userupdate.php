@@ -4,18 +4,18 @@
  
     if ( !empty($_POST)) {
       // keep track post values
-      $id = $_POST['id'];
+      $id = $_SESSION['id'];
       $name = $_POST['name'];
       $birth_date = $_POST['birth_date'];
       $gender = $_POST['gender'];
       $phone_number = $_POST['phone_number'];
       $email_address = $_POST['email_address'];
-      $username = $_POST['username'];
+      
          
       function valid($uservar){
         return ( !empty($uservar) && isset($uservar) );
       }
-      if (!valid($name) || !valid($birth_date) || !valid($gender) || !valid($phone_number) || !valid($email_address) || valid($username) {
+      if (!valid($name) || !valid($birth_date) || !valid($gender) || !valid($phone_number) || !valid($email_address) {
         header("Location: update.php");
       } else if (!valid($email_address)) {
         header("Location: update.php");
@@ -24,9 +24,9 @@
       }
       $pdo = Database::connect();
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "UPDATE customer SET name = ?, birth_date = ?, gender = ?, phone_number = ?, email_address = ?, username = ? WHERE id = ?";
+        $sql = "UPDATE customer SET name = ?, birth_date = ?, gender = ?, phone_number = ?, email_address = ? WHERE id = ?";
         $q = $pdo->prepare($sql);
-        $q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$username,$id));
+        $q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$id));
       Database::disconnect();
       header("Location: update.php");
     }

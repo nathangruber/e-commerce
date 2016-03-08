@@ -24,38 +24,26 @@
             <th>Gender</th>
             <th>Phone Number</th>
             <th>Email Address</th>
-            <th>Username</th>
-            <th>Password</th>
             <th>Update</th>
-            <th>Delete</th>
          </tr>
         </thead>
         <tbody>
           <?php
           if($logged) {
               $pdo = Database::connect();
-              $user_name = $_POST['name'];
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-              $sql = 'SELECT * FROM customer WHERE name = ?';
+              $sql = 'SELECT * FROM customer WHERE id = ?';
               $q = $pdo->prepare($sql);
-              $q->execute(array($user_name));
+              $q->execute(array($_SESSION["id"]));
               $query = $q->fetch(PDO::FETCH_ASSOC);
 
 echo '<tr>';
 echo '<form method="POST" action="userupdate.php">';
-echo '<input type="hidden" name="id" value="' . $query['id'] . '">';
 echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
 echo '<td><input type="text" name="birth_date" value="'.$query['birth_date'].'"></td>';
 echo '<td><input type="text" name="phone_number" value="'.$query['phone_number'].'"></td>';
 echo '<td><input type="text" name="email_address" value="'.$query['email_address'].'"></td>';
-echo '<td><input type="text" name="username" value="'.$query['username'].'"></td>';
-echo '<td><input type="text" name="password" value="'.$query['password'].'"></td>';
-echo '<td>********</td>';
 echo '<td><input type="submit" value="Update"></td>';
-echo '</form>';
-echo '<form method="POST" action="userdelete.php">';
-echo '<input type="hidden" name="id" value="' . $query['id'] . '">';
-echo '<td><input type="submit" value="Delete"></td>';
 echo '</form>';
 echo '</tr>';
 }
