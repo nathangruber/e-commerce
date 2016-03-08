@@ -26,7 +26,7 @@
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "UPDATE customer SET name = ?, birth_date = ?, phone_number = ?, email_address = ? WHERE id = ?";
         $q = $pdo->prepare($sql);
-        $q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$id));
+        $q->execute(array($name,$birth_date,$phone_number,$email_address,$id));
       Database::disconnect();
       header("Location: update.php");
     }
