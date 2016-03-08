@@ -7,7 +7,7 @@
       $id = $_SESSION['id'];
       $name = $_POST['name'];
       $birth_date = $_POST['birth_date'];
-      $gender = $_POST['gender'];
+     // $gender = $_POST['gender'];
       $phone_number = $_POST['phone_number'];
       $email_address = $_POST['email_address'];
       
@@ -15,7 +15,7 @@
       function valid($uservar){
         return ( !empty($uservar) && isset($uservar) );
       }
-      if (!valid($name) || !valid($birth_date) || !valid($gender) || !valid($phone_number) || !valid($email_address) {
+      if (!valid($name) || !valid($birth_date) || !valid($phone_number) || !valid($email_address) {
         header("Location: update.php");
       } else if (!valid($email_address)) {
         header("Location: update.php");
@@ -24,7 +24,7 @@
       }
       $pdo = Database::connect();
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "UPDATE customer SET name = ?, birth_date = ?, gender = ?, phone_number = ?, email_address = ? WHERE id = ?";
+        $sql = "UPDATE customer SET name = ?, birth_date = ?, phone_number = ?, email_address = ? WHERE id = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$id));
       Database::disconnect();
