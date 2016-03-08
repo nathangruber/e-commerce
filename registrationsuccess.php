@@ -8,8 +8,9 @@
 <?php require_once 'includes/navbar.php'; ?>
 
 <center>
-<h3>Succesfully Registered</h3>
+<h3>Successfully Registered</h3>
 <br><br><br>
+<p>Successfully Registered</p>
 <p>go <a href="index.php">back</a> or <a href="loginpage.php">login</a>.</p>
 </center>
 
