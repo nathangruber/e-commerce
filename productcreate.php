@@ -48,13 +48,16 @@
                 Database::disconnect();
                 header("Location: index.php");
            } catch (PDOException $e) {
-               // echo "msg: " . $e->getMessage();
-                //die();
                 Database::disconnect();
-                header("Location: index.php");
+                echo "msg: " . $e->getMessage();
+                die();
             }
-	}
-    }
+        }
+
+
+
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

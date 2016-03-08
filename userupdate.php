@@ -7,7 +7,6 @@
       $id = $_SESSION['id'];
       $name = $_POST['name'];
       $birth_date = $_POST['birth_date'];
-     // $gender = $_POST['gender'];
       $phone_number = $_POST['phone_number'];
       $email_address = $_POST['email_address'];
       
