@@ -85,21 +85,21 @@
                             <?php endif; ?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($priceError)?'error':'';?>">
-                        <label class="control-label">Price</label>
-                        <div class="controls">
-                            <input name="price" type="text" placeholder="Price" value="<?php echo !empty($price)?$price:'';?>">
-                            <?php if (!empty($priceError)): ?>
-                                <span class="help-inline"><?php echo $priceError;?></span>
-                            <?php endif;?>
-                        </div>
-                      </div>
                       <div class="control-group <?php echo !empty($descriptionError)?'error':'';?>">
                         <label class="control-label">Description</label>
                         <div class="controls">
                             <input name="description" type="text"  placeholder="Description" value="<?php echo !empty($description)?$description:'';?>">
                             <?php if (!empty($descriptionError)): ?>
                                 <span class="help-inline"><?php echo $descriptionError;?></span>
+                            <?php endif;?>
+                        </div>
+                      </div>
+                       <div class="control-group <?php echo !empty($priceError)?'error':'';?>">
+                        <label class="control-label">Price</label>
+                        <div class="controls">
+                            <input name="price" type="text" placeholder="Price" value="<?php echo !empty($price)?$price:'';?>">
+                            <?php if (!empty($priceError)): ?>
+                                <span class="help-inline"><?php echo $priceError;?></span>
                             <?php endif;?>
                         </div>
                       </div>
