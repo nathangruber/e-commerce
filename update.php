@@ -6,7 +6,7 @@
   <body>
 
   <?php 
-    //require_once('includes/navbar.php');
+    require_once('includes/navbar.php');
     require_once('includes/database.php');
     error_reporting(E_ALL);
   ?>
@@ -44,7 +44,7 @@
 echo '<tr>';
 echo '<form method="POST" action="userupdate.php">';
 echo '<input type="hidden" name="id" value="' . $query['id'] . '">';
-echo '<td><input type="text" name="first_name" value="'.$query['name'].'"></td>';
+echo '<td><input type="text" name="username" value="'.$query['username'].'"></td>';
 echo '<td><input type="text" name="birth_date" value="'.$query['birth_date'].'"></td>';
 echo '<td><input type="text" name="phone_number" value="'.$query['phone_number'].'"></td>';
 echo '<td><input type="text" name="email_address" value="'.$query['email_address'].'"></td>';
@@ -58,13 +58,9 @@ echo '<input type="hidden" name="id" value="' . $query['id'] . '">';
 echo '<td><input type="submit" value="Delete"></td>';
 echo '</form>';
 echo '</tr>';
-                
-  }
-        
+}
 Database::disconnect();
-//print_r($query);
-
-          ?>
+?>
         </tbody>
       </table>
     </div>
