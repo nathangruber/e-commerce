@@ -34,9 +34,9 @@
           <?php
           if($logged) {
               $pdo = Database::connect();
-              $user_name = $_POST['username'];
+              $user_name = $_POST['name'];
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-              $sql = 'SELECT * FROM customer WHERE username = ?';
+              $sql = 'SELECT * FROM customer WHERE name = ?';
               $q = $pdo->prepare($sql);
               $q->execute(array($user_name));
               $query = $q->fetch(PDO::FETCH_ASSOC);
@@ -44,7 +44,7 @@
 echo '<tr>';
 echo '<form method="POST" action="userupdate.php">';
 echo '<input type="hidden" name="id" value="' . $query['id'] . '">';
-echo '<td><input type="text" name="username" value="'.$query['username'].'"></td>';
+echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
 echo '<td><input type="text" name="birth_date" value="'.$query['birth_date'].'"></td>';
 echo '<td><input type="text" name="phone_number" value="'.$query['phone_number'].'"></td>';
 echo '<td><input type="text" name="email_address" value="'.$query['email_address'].'"></td>';
