@@ -48,6 +48,9 @@ echo '</tr>';
 }
 Database::disconnect();
 ?>
+<br>
+<br>
+
 <div class="row">
       <h3>Update Address</h3>
     </div>
@@ -111,7 +114,8 @@ Database::disconnect();
         </tbody>
       </table>
     </div>
-
+<br>
+<br>
 
     <div class="row">
       <h3>Update Credit Card Information</h3>
