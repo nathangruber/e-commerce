@@ -76,18 +76,17 @@
               $q = $pdo->prepare($sql);
               $q->execute(array($_SESSION["id"]));
               $query = $q->fetch(PDO::FETCH_ASSOC);
-              foreach ($query as $row) {
               echo '<tr>';
               echo '<form method="POST" action="addressupdate.php">';
-              echo '<td><input type="text" name="street_1" value="'.$row['street_1'].'"></td>';
-              echo '<td><input type="text" name="street_2" value="'.$row['street_2'].'"></td>';
-              echo '<td><input type="text" name="city" value="'.$row['city'].'"></td>';
-              echo '<td><input type="text" name="state" value="'.$row['state'].'"></td>';
-              echo '<td><input type="text" name="zip_code" value="'.$row['zip_code'].'"></td>';
+              echo '<td><input type="text" name="street_1" value="'.$query['street_1'].'"></td>';
+              echo '<td><input type="text" name="street_2" value="'.$query['street_2'].'"></td>';
+              echo '<td><input type="text" name="city" value="'.$query['city'].'"></td>';
+              echo '<td><input type="text" name="state" value="'.$query['state'].'"></td>';
+              echo '<td><input type="text" name="zip_code" value="'.$query['zip_code'].'"></td>';
               echo '<td><input type="submit" value="Update"></td>';
               echo '</form>';
               echo '</tr>';
-            }
+            
           }
           ?>
 <div class="container">
@@ -129,17 +128,16 @@
             $q = $pdo->prepare($sql);
             $q->execute(array($_SESSION["id"]));
             $query = $q->fetch(PDO::FETCH_ASSOC);
-            foreach ($query as $row) {
             echo '<tr>';
             echo '<form method="POST" action="ccupdate.php">';
-            echo '<td><input type="text" name="name" value="'.$row['name'].'"></td>';
-            echo '<td><input type="text" name="cardnumber" value="'.$row['cardnumber'].'"></td>';
-            echo '<td><input type="text" name="expiration_date" value="'.$row['expiration_date'].'"></td>';
-            echo '<td><input type="text" name="security_code" value="'.$row['security_code'].'"></td>';
+            echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
+            echo '<td><input type="text" name="cardnumber" value="'.$query['cardnumber'].'"></td>';
+            echo '<td><input type="text" name="expiration_date" value="'.$query['expiration_date'].'"></td>';
+            echo '<td><input type="text" name="security_code" value="'.$query['security_code'].'"></td>';
             echo '<td><input type="submit" value="Update"></td>';
             echo '</form>';
             echo '</tr>';
-         }
+         
           ?>
 </body>
 </html>
