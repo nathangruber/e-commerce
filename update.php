@@ -75,7 +75,7 @@
               $q->execute(array($_SESSION["id"]));
               $query = $q->fetch(PDO::FETCH_ASSOC);
               echo '<tr>';
-              echo '<form method="POST" action="addressupdate.php">';
+              echo '<form method="POST" action="addyupdate.php">';
               echo '<td><input type="text" name="street_1" value="'.$query['street_1'].'"></td>';
               echo '<td><input type="text" name="street_2" value="'.$query['street_2'].'"></td>';
               echo '<td><input type="text" name="city" value="'.$query['city'].'"></td>';
