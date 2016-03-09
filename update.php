@@ -64,7 +64,7 @@
             <th>City</th>
             <th>State</th>
             <th>Zip Code</th>
-            <th>Add/Update</th>
+            <th>Update</th>
          </tr>
         </thead>
         <tbody>
@@ -90,7 +90,6 @@
     <div class="row">
       <?php
           if ($logged) {
-            echo "Add Your Address";
             echo '<form method="POST" action="addycreate.php">';
             echo '<input type="submit" value="Add Your Address">';
             echo '</form>';
@@ -106,13 +105,12 @@
             <th>Credit Card Number</th>
             <th>Expiration Date</th>
             <th>Security Code</th>
-            <th>Add/Update</th>
+            <th>Update</th>
          </tr>
         </thead>
         <tbody>
           <?php
           if ($logged) {
-            echo "Add Credit Card";
             echo '<form method="POST" action="cccreate.php">';
             echo '<input type="submit" value="Add Credit Card">';
             echo '</form>';
