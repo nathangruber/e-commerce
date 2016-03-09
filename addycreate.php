@@ -151,7 +151,7 @@
          
           <div class="form-actions">
             <button type="submit" class="btn btn-success">Add Address</button>
-            <!-- no longer need a button to go back as this is the page being updated   <a class="btn" href="index.php">Back</a>   -->
+            <a class="btn" href="index.php">Back</a> 
           </div>
         </form>
       </div>
