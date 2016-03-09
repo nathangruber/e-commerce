@@ -13,8 +13,6 @@
 
   <div class="container">
     <div class="row">
-    </div>
-    <div class="row">
       <table class="table table-striped table-bordered">
         <thead>
           <tr>

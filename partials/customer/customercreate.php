@@ -1,7 +1,9 @@
 <?php
-     
-    require_once 'includes/database.php';
-    require_once 'includes/navbar.php';
+	 
+ require_once 'includes/database.php';
+require_once 'includes/navbar.php';
+ 	
+	
     if ( !empty($_POST)) {
         // keep track validation errors
         $nameError = null;
@@ -12,6 +14,8 @@
         $permissionsError = null;
         $usernameError = null;
         $passwordError = null;
+        
+         
         // keep track post values
         $name = $_POST['name'];
         $birth_date = $_POST['birth_date'];
@@ -21,9 +25,10 @@
         $permissions = $_POST['permissions'];
         $username = $_POST['username'];
         $password = $_POST['password'];
+       
         // validate input
-       $valid = true;
-        if (empty($name)) {
+        $valid = true;
+         if (empty($name)) {
             $nameError = 'Please enter Name';
             $valid = false;
         }
@@ -63,20 +68,13 @@
        
         // insert data
         if ($valid) {
-           try {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO customer (name,birth_date,gender,phone_number,email_address,permissions,username,password) values(?, ?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO customer (name,birth_date,gender,phone_numnber,email_address,permissions,username,password) values(?, ?, ?, ?, ?, ?, ?, ?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$permissions,$username,$password));
             Database::disconnect();
             header("Location: index.php");
-        } catch (PDOException $e) {
-            echo "msg: " . $e->getMessage();
-            die);
-            Database::disconnect();
-            header("Location: index.php");
-        }
         }
     }
 ?>
