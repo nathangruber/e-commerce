@@ -1,7 +1,7 @@
 <?php 
   require_once('includes/session.php');
   if(!$logged){
-    header("Location: index.php");
+    header("location: index.php");
     die(); // just in case
   }
   require_once('includes/database.php');
