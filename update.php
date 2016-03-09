@@ -51,7 +51,7 @@ Database::disconnect();
 ?>
 <div class="container">
     <div class="row">
-      <h3>Update Your Information</h3>
+     
       <p>Please Add Or Update Your Address</p>
     </div>
     <div class="row">
@@ -92,7 +92,7 @@ Database::disconnect();
 <div class="container">
     <div class="row">
       
-      <p>Please Add Or Update Your Credit Card Information</p>
+     
     </div>
     <div class="row">
       <table class="table table-striped table-bordered">
