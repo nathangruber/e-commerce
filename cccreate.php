@@ -98,7 +98,7 @@
           <div class="control-group <?php echo !empty($cardnumberError)?'error':'';?>">
             <label class="control-label">Credit Card Number</label>
             <div class="controls">
-              <input name="cardnumber" type="text" placeholder="Credit Card Number" value="<?php echo !empty($card_number)?$cardnumber:'';?>">
+              <input name="cardnumber" type="text" placeholder="Credit Card Number" value="<?php echo !empty($cardnumber)?$cardnumber:'';?>">
               <?php if (!empty($cardnumberError)): ?>
                 <span class="help-inline"><?php echo $cardnumberError;?></span>
               <?php endif;?>
