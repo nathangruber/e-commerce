@@ -69,11 +69,14 @@
         </thead>
         <tbody>
           <?php
+           if($logged) {
+
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-              $sql = 'SELECT * FROM address WHERE id = ?';
+              $sql = 'SELECT * FROM address WHERE id IN (SELECT address_fk FROM customer_address WHERE customer_fk = ?)';
               $q = $pdo->prepare($sql);
               $q->execute(array($_SESSION["id"]));
               $query = $q->fetch(PDO::FETCH_ASSOC);
+foreach ($query as $row) {
 
               echo '<tr>';
               echo '<form method="POST" action="addressupdate.php">';
@@ -85,6 +88,8 @@
               echo '<td><input type="submit" value="Update"></td>';
               echo '</form>';
               echo '</tr>';
+            }
+          
           ?>
 <div class="container">
     <div class="row">
@@ -121,10 +126,11 @@
         ?>
           <?php
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = 'SELECT * FROM creditcard WHERE id = ?';
+            $sql = 'SELECT * FROM creditcard IN (SELECT creditcard_fk FROM customer_creditcard WHERE customer_fk = ?)';
             $q = $pdo->prepare($sql);
             $q->execute(array($_SESSION["id"]));
             $query = $q->fetch(PDO::FETCH_ASSOC);
+            foreach ($query as $row) {
             echo '<tr>';
             echo '<form method="POST" action="ccupdate.php">';
             echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
@@ -134,6 +140,7 @@
             echo '<td><input type="submit" value="Update"></td>';
             echo '</form>';
             echo '</tr>';
+         }
           ?>
 </body>
 </html>
