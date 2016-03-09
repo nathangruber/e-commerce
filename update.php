@@ -18,7 +18,6 @@
   <div class="container">
     <div class="row">
       <h3>Update User Information</h3>
-      <p><?php echo $_SESSION["id"] ?></p>
     </div>
     <div class="row">
       <table class="table table-striped table-bordered">

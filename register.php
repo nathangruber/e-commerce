@@ -10,7 +10,6 @@
         $genderError = null;
         $phone_numberError = null;
         $email_addressError = null;
-        $permissionsError = null;
         $usernameError = null;
         $passwordError = null;
 
@@ -20,7 +19,6 @@
         $gender = $_POST['gender'];
         $phone_number = $_POST['phone_number'];
         $email_address = $_POST['email_address'];
-        $permissions = $_POST['permissions'];
         $username = $_POST['username'];
         $password = $_POST['password'];
 
@@ -51,10 +49,7 @@
             $email_addressError = 'Please enter a valid Email Address';
             $valid = false;
         }
-         if (empty($permissions)) {
-            $permissionsError = 'Please enter Permissions';
-            $valid = false;
-        }
+
         if (empty($username)) {
             $usernameError = 'Please enter your Username';
             $valid = false;
@@ -71,7 +66,7 @@
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $sql = "INSERT INTO customer (name,birth_date,gender,phone_number,email_address,permissions,username,password) values(?, ?, ?, ?, ?, ?, ?, ?)";
                 $q = $pdo->prepare($sql);
-                $q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$permissions,$username,$password));
+                $q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,0,$username,$password));
                 Database::disconnect();
                 header("Location: registrationsuccess.php");
             } catch (PDOException $e) {
@@ -148,15 +143,6 @@
                         </div>
                       </div>
 
-                      <div class="control-group <?php echo !empty($permissionsError)?'error':'';?>">
-                        <label class="control-label">Permissions</label>
-                        <div class="controls">
-                            <input name="permissions" type="text"  placeholder="Permissions" value="<?php echo !empty($permissions)?$permissions:'';?>">
-                            <?php if (!empty($permissionsError)): ?>
-                                <span class="help-inline"><?php echo $permissionsError;?></span>
-                            <?php endif;?>
-                        </div>
-                      </div>
                       <div class="control-group <?php echo !empty($usernameError)?'error':'';?>">
                         <label class="control-label">Username</label>
                         <div class="controls">
