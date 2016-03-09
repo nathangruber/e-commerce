@@ -30,7 +30,7 @@
     try {
       
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $sql = "UPDATE creditcard SET name = ?, cardnumber = ?, expiration_date = ?, security_code= ? WHERE id = ?";
+      $sql = " UPDATE creditcard SET name = ?, cardnumber = ?, expiration_date = ?, security_code= ? WHERE id = ?";
       $q = $pdo->prepare($sql);
       $q->execute(array($name,$cardnumber,$expiration_date,$security_code,$id));
       
