@@ -1,7 +1,12 @@
-<?php
-  error_reporting(E_ALL);
-  require_once 'includes/database.php';
+<?php 
   require_once('includes/session.php');
+  if(!$logged){
+    header("Location: index.php");
+    die(); // just in case
+  }
+  require_once('includes/database.php');
+  $pdo = Database::connect();
+
 
   if ( !empty($_POST)) {
 
@@ -23,18 +28,18 @@
     }
 
     try {
-      $pdo = Database::connect();
+      
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       $sql = "UPDATE creditcard SET name = ?, cardnumber = ?, expiration_date = ?, security_code= ? WHERE id = ?";
       $q = $pdo->prepare($sql);
       $q->execute(array($name,$cardnumber,$expiration_date,$security_code,$id));
-      Database::disconnect();
+      
       //echo "queried";
       //die();
       header("Location: update.php");
     } catch (PDOException $error){
       echo "Error: " . $error->getMessage();
-      Database::disconnect();
+      
       die();
     }
 
@@ -43,3 +48,4 @@
     //die();
     header("Location: update.php");
   }
+  <?php Database::disconnect(); ?>
