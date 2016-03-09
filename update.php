@@ -27,7 +27,7 @@
             <th>Birthdate</th>
             <th>Phone Number</th>
             <th>Email Address</th>
-            <th>Update</th>
+            <th>Add/Update</th>
          </tr>
         </thead>
         <tbody>
@@ -95,7 +95,7 @@
             <th>Credit Card Number</th>
             <th>Expiration Date</th>
             <th>Security Code</th>
-            <th>Update</th>
+            <th>Add/Update</th>
          </tr>
         </thead>
         <tbody>
