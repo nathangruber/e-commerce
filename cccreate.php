@@ -24,7 +24,7 @@
       $valid = true;
         
       if (empty($name)) {
-        $nameError = 'Please enter Name as it appears on card)';
+        $nameError = 'Name on Card)';
         $valid = false;
       }
       if (empty($cardnumber)) {
