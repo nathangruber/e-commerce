@@ -10,8 +10,10 @@
     require_once('includes/database.php');
     error_reporting(E_ALL);
   ?>
-
-  <div class="container">
+<div class="container">
+    <div class="row">
+      <h3>Update User Information</h3>
+    </div>
     <div class="row">
       <table class="table table-striped table-bordered">
         <thead>
