@@ -27,7 +27,7 @@
             <th>Birthdate</th>
             <th>Phone Number</th>
             <th>Email Address</th>
-            <th>Add/Update</th>
+            <th>Update</th>
          </tr>
         </thead>
         <tbody>
@@ -64,7 +64,7 @@
             <th>City</th>
             <th>State</th>
             <th>Zip Code</th>
-            <th>Update</th>
+            <th>Add/Update</th>
          </tr>
         </thead>
         <tbody>
