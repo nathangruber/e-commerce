@@ -10,7 +10,7 @@
     require_once('includes/database.php');
     error_reporting(E_ALL);
   ?>
-<h3></h3>
+
   <div class="container">
     <div class="row">
       <table class="table table-striped table-bordered">
@@ -24,6 +24,8 @@
          </tr>
         </thead>
         <tbody>
+        </div>
+
           <?php
           if($logged) {
               $pdo = Database::connect();
@@ -86,10 +88,6 @@ echo '</tr>';
 Database::disconnect();
 ?>
 <div class="container">
-    <div class="row">
-      
-     
-    </div>
     <div class="row">
       <table class="table table-striped table-bordered">
         <thead>
