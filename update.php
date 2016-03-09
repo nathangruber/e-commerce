@@ -69,8 +69,6 @@
         </thead>
         <tbody>
           <?php
-           if($logged) {
-
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               $sql = 'SELECT * FROM address WHERE id IN (SELECT address_fk FROM customer_address WHERE customer_fk = ?)';
               $q = $pdo->prepare($sql);
@@ -86,8 +84,7 @@
               echo '<td><input type="submit" value="Update"></td>';
               echo '</form>';
               echo '</tr>';
-            
-          }
+          
           ?>
 <div class="container">
     <div class="row">
