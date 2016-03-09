@@ -83,6 +83,16 @@
               echo '<td><input type="text" name="state" value="'.$query['state'].'"></td>';
               echo '<td><input type="text" name="zip_code" value="'.$query['zip_code'].'"></td>';
               echo '<td><input type="submit" value="Add/Update"></td>';
+               <?php
+          if ($logged) {
+            echo '<form method="POST" action="cccreate.php">';
+            echo '<input type="submit" value="Add Credit Cards">';
+            echo '</form>';
+          
+          } else {
+            echo "You are logged out.";
+          }
+        ?>
               echo '</form>';
               echo '</tr>';
           ?>
