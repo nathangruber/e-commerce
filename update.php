@@ -88,6 +88,17 @@
           ?>
 <div class="container">
     <div class="row">
+      <?php
+          if ($logged) {
+            echo "Add Credit Card";
+            echo '<form method="POST" action="cccreate.php">';
+            echo '<input type="submit" value="Add Credit Card">';
+            echo '</form>';
+          
+          } else {
+            echo "You are logged out.";
+          }
+        ?>
       <table class="table table-striped table-bordered">
         <thead>
           <tr>
