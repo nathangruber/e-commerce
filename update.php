@@ -76,8 +76,6 @@
               $q = $pdo->prepare($sql);
               $q->execute(array($_SESSION["id"]));
               $query = $q->fetch(PDO::FETCH_ASSOC);
-foreach ($query as $row) {
-
               echo '<tr>';
               echo '<form method="POST" action="addressupdate.php">';
               echo '<td><input type="text" name="street_1" value="'.$query['street_1'].'"></td>';
@@ -130,7 +128,6 @@ foreach ($query as $row) {
             $q = $pdo->prepare($sql);
             $q->execute(array($_SESSION["id"]));
             $query = $q->fetch(PDO::FETCH_ASSOC);
-            foreach ($query as $row) {
             echo '<tr>';
             echo '<form method="POST" action="ccupdate.php">';
             echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
@@ -140,7 +137,7 @@ foreach ($query as $row) {
             echo '<td><input type="submit" value="Update"></td>';
             echo '</form>';
             echo '</tr>';
-         }
+         
           ?>
 </body>
 </html>
