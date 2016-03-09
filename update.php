@@ -91,7 +91,7 @@ Database::disconnect();
 ?>
 <div class="container">
     <div class="row">
-      <h3>Update Your Information</h3>
+      
       <p>Please Add Or Update Your Credit Card Information</p>
     </div>
     <div class="row">
@@ -102,6 +102,7 @@ Database::disconnect();
             <th>Credit Card Number</th>
             <th>Expiration Date</th>
             <th>Security Code</th>
+            <th>Update</th>
          </tr>
         </thead>
         <tbody>
