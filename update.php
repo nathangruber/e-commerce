@@ -93,10 +93,7 @@
             echo '<form method="POST" action="addycreate.php">';
             echo '<input type="submit" value="Add Your Address">';
             echo '</form>';
-          
-          } else {
-            echo "You are logged out.";
-          }
+           } 
         ?>
       <table class="table table-striped table-bordered">
         <thead>
@@ -114,10 +111,7 @@
             echo '<form method="POST" action="cccreate.php">';
             echo '<input type="submit" value="Add Credit Card">';
             echo '</form>';
-          
-          } else {
-            echo "You are logged out.";
-          }
+          } 
         ?>
           <?php
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
