@@ -136,7 +136,7 @@
               // foreach ($address as $row) {
               // echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
             //  }
-              echo "</select>";
+             // echo "</select>";
             } catch (PDOException $e) {
               echo $e->getMessage();
             }
