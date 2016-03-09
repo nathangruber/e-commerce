@@ -13,8 +13,6 @@
 
   <div class="container">
     <div class="row">
-      <h3>Update Your Information</h3>
-      <p>Update Your Information</p>
     </div>
     <div class="row">
       <table class="table table-striped table-bordered">
@@ -52,7 +50,7 @@ Database::disconnect();
 <div class="container">
     <div class="row">
      
-      <p>Please Add Or Update Your Address</p>
+      <p>Please Add Or Update Your User Information</p>
     </div>
     <div class="row">
       <table class="table table-striped table-bordered">
