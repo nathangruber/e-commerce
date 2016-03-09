@@ -133,9 +133,9 @@
               $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` LEFT JOIN `customer_address` ON `address`.`id`=`customer_address`.`address_fk` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
               $address = $pdo->query($sql);
               echo "<select name='address_fk'>";
-              foreach ($address as $row) {
-                echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
-              }
+              // foreach ($address as $row) {
+              // echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
+            //  }
               echo "</select>";
             } catch (PDOException $e) {
               echo $e->getMessage();
