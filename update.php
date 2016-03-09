@@ -63,7 +63,7 @@ Database::disconnect();
             <th>City</th>
             <th>State</th>
             <th>Zip Code</th>
-            <th>Country</th>
+            <th>Update</th>
          </tr>
         </thead>
         <tbody>
@@ -82,7 +82,6 @@ echo '<td><input type="text" name="street_1" value="'.$query['street_1'].'"></td
 echo '<td><input type="text" name="street_2" value="'.$query['street_2'].'"></td>';
 echo '<td><input type="text" name="city" value="'.$query['city'].'"></td>';
 echo '<td><input type="text" name="state" value="'.$query['state'].'"></td>';
-echo '<td><input type="text" name="country" value="'.$query['country'].'"></td>';
 echo '<td><input type="submit" value="Update"></td>';
 echo '</form>';
 echo '</tr>';
