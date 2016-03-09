@@ -52,7 +52,7 @@ Database::disconnect();
 <div class="container">
     <div class="row">
       <h3>Update Your Information</h3>
-      <p>Update Your Address</p>
+      <p>Please Add Or Update Your Address</p>
     </div>
     <div class="row">
       <table class="table table-striped table-bordered">
@@ -78,11 +78,48 @@ Database::disconnect();
 
 echo '<tr>';
 echo '<form method="POST" action="userupdate.php">';
-echo '<td><input type="text" name="Street Address" value="'.$query['street_1'].'"></td>';
-echo '<td><input type="text" name="Street Address" value="'.$query['street_2'].'"></td>';
-echo '<td><input type="text" name="City" value="'.$query['city'].'"></td>';
-echo '<td><input type="text" name="State" value="'.$query['state'].'"></td>';
-echo '<td><input type="text" name="Country" value="'.$query['country'].'"></td>';
+echo '<td><input type="text" name="street_1" value="'.$query['street_1'].'"></td>';
+echo '<td><input type="text" name="street_2" value="'.$query['street_2'].'"></td>';
+echo '<td><input type="text" name="city" value="'.$query['city'].'"></td>';
+echo '<td><input type="text" name="state" value="'.$query['state'].'"></td>';
+echo '<td><input type="text" name="country" value="'.$query['country'].'"></td>';
+echo '<td><input type="submit" value="Update"></td>';
+echo '</form>';
+echo '</tr>';
+}
+Database::disconnect();
+?>
+<div class="container">
+    <div class="row">
+      <h3>Update Your Information</h3>
+      <p>Please Add Or Update Your Credit Card Information</p>
+    </div>
+    <div class="row">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Credit Card Number</th>
+            <th>Expiration Date</th>
+            <th>Security Code</th>
+         </tr>
+        </thead>
+        <tbody>
+          <?php
+          if($logged) {
+              $pdo = Database::connect();
+              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+              $sql = 'SELECT * FROM creditcard WHERE id = ?';
+              $q = $pdo->prepare($sql);
+              $q->execute(array($_SESSION["id"]));
+              $query = $q->fetch(PDO::FETCH_ASSOC);
+
+echo '<tr>';
+echo '<form method="POST" action="userupdate.php">';
+echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
+echo '<td><input type="text" name="cardnumber" value="'.$query['cardnumber'].'"></td>';
+echo '<td><input type="text" name="expiration_date" value="'.$query['expiration_date'].'"></td>';
+echo '<td><input type="text" name="security_code" value="'.$query['security_code'].'"></td>';
 echo '<td><input type="submit" value="Update"></td>';
 echo '</form>';
 echo '</tr>';
