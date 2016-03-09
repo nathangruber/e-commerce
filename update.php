@@ -82,7 +82,7 @@
               echo '<td><input type="text" name="city" value="'.$query['city'].'"></td>';
               echo '<td><input type="text" name="state" value="'.$query['state'].'"></td>';
               echo '<td><input type="text" name="zip_code" value="'.$query['zip_code'].'"></td>';
-              echo '<td><input type="submit" value="Update"></td>';
+              echo '<td><input type="submit" value="Add/Update"></td>';
               echo '</form>';
               echo '</tr>';
           ?>
@@ -111,7 +111,7 @@
             echo '<td><input type="text" name="cardnumber" value="'.$query['cardnumber'].'"></td>';
             echo '<td><input type="text" name="expiration_date" value="'.$query['expiration_date'].'"></td>';
             echo '<td><input type="text" name="security_code" value="'.$query['security_code'].'"></td>';
-            echo '<td><input type="submit" value="Update"></td>';
+            echo '<td><input type="submit" value="Add/Update"></td>';
             echo '</form>';
             echo '</tr>';
           ?>
