@@ -41,7 +41,7 @@
       }
          
       if ($valid) {
-        //try {
+        try {
          
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sql = "INSERT INTO creditcard (name,cardnumber,expiration_date,security_code,address_fk) values(?, ?, ?, ?, ?)";
@@ -53,9 +53,9 @@
           $q = $pdo->prepare($sql);
           $q->execute(array($ccID, $_SESSION['id']));
           header("Location: update.php");
-        //} catch (PDOException $e) {
-         // echo $e->getMessage();
-        //}
+          } catch (PDOException $e) {
+           echo $e->getMessage();
+        }
       }
     }
 ?>
