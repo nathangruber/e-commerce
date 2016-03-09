@@ -130,11 +130,11 @@
           <?php
             try {
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-              $sql = "SELECT `address`.`id`, `address`.`street1` FROM `address` LEFT JOIN `customer_address` ON `address`.`id`=`customer_address`.`address_fk` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
+              $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` LEFT JOIN `customer_address` ON `address`.`id`=`customer_address`.`address_fk` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
               $address = $pdo->query($sql);
               echo "<select name='address_fk'>";
               foreach ($address as $row) {
-                echo "<option value='" . $row['id'] . "'>" . $row['street1'] . "</option>";
+                echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
               }
               echo "</select>";
             } catch (PDOException $e) {
