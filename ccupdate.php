@@ -48,4 +48,5 @@
     //die();
     header("Location: update.php");
   }
+  ?>
   <?php Database::disconnect(); ?>
