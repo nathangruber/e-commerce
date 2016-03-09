@@ -111,6 +111,17 @@
         </thead>
         <tbody>
           <?php
+          if ($logged) {
+            echo "Add Credit Card";
+            echo '<form method="POST" action="cccreate.php">';
+            echo '<input type="submit" value="Add Credit Card">';
+            echo '</form>';
+          
+          } else {
+            echo "You are logged out.";
+          }
+        ?>
+          <?php
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = 'SELECT * FROM creditcard WHERE id = ?';
             $q = $pdo->prepare($sql);
