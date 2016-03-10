@@ -47,11 +47,11 @@
           $sql = "INSERT INTO creditcard (name,cardnumber,expiration_date,security_code,address_fk) values(?, ?, ?, ?, ?)";
           $q = $pdo->prepare($sql);
           $q->execute(array($name,$cardnumber,$expiration_date,$security_code,$address_fk));
-          $addressid = $pdo->lastInsertId();
+          $creditcardID = $pdo->lastInsertId();
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sql = "INSERT INTO customer_creditcard (creditcard_fk,customer_fk) values(?,?)";
           $q = $pdo->prepare($sql);
-          $q->execute(array($addressid, $_SESSION['id']));
+          $q->execute(array($creditcardID, $_SESSION['id']));
           header("Location: update.php");
           } catch (PDOException $e) {
            echo $e->getMessage();
