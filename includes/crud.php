@@ -41,7 +41,6 @@ class Database {
 
 */
 
-/*
 
 public class customerAddress {	
 
@@ -50,7 +49,7 @@ public class customerAddress {
 	public function __construct($customer_id){
 		$this->customer_id = $customer_id;
 	}
-
+/*
 	public function create($street_one, $street_two, $city, $state, $zip, $country){
 		if (!valid($street_one) || !valid($street_two) || !valid($city) || !valid($state) || !valid($zip) || !valid($country)) {
 			return false;
@@ -70,7 +69,7 @@ public class customerAddress {
 			return true;
 		}
 	}
-
+*/
 	public function read(){
 		try{
 			$pdo = Database::connect();
@@ -89,7 +88,7 @@ public class customerAddress {
 		}
 
     }
-
+/*
 	public function update($street_one, $street_two, $city, $state, $zip, $country, $address_id){
 		if (!valid($street_one) || !valid($street_two) || !valid($city) || !valid($state) || !valid($zip) || !valid($country)) {
 			return false;
@@ -113,7 +112,7 @@ public class customerAddress {
         return true;
 
 	}
-
+*/
 }
 
-*/
+
