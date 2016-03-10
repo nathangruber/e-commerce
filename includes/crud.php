@@ -41,7 +41,7 @@ class Database {
 
 */
 
-public class customerAddress {	
+class customerAddress {	
 
 
 	public $customer_id;
