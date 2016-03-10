@@ -2,12 +2,12 @@
 
 // helper function for validation
 
-/*
+
 function valid($varname){
 	return ( !empty($varname) && isset($varname) );
 }
 
-
+/*
 class Database {
 
 	private static $dbName = 'e-commerce' ; 
