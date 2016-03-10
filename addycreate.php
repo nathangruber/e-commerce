@@ -1,53 +1,77 @@
-<?php
-public class customerAddress {  
-
-
-  public $customer_id = NULL;
-
-  public function __construct($customer_id){
-    $this->customer_id = $customer_id;
+<?php 
+  require_once('includes/session.php');
+  if(!$logged){
+    header("Location: index.php");
+    die(); // just in case
   }
+  require_once('includes/database.php');
+  $pdo = Database::connect();
 
-  public function create($street_1, $street_2, $city, $state, $zip_code){
-    if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code)) {
-      return false;
-    } else {
-
-      $pdo = Database::connect();
-      $sql = "INSERT INTO address (street_1,street_2,city,state,zip_code) values(?, ?, ?, ?, ?)";
-      $q = $pdo->prepare($sql);
-      $q->execute(array($street_one,$street_two,$city,$state,$zip_code));
-      $address_id = $pdo->lastInsertId();
-
-      $sql = "INSERT INTO customer_address (address_fk, customer_fk) values(?, ?)";
-      $q = $pdo->prepare($sql);
-      $q->execute(array($address_id, $this->customer_id)); 
-
-      Database::disconnect();
-      return true;
+ 
+    if ( !empty($_POST)) {
+        // keep track validation errors
+      $street_1Error = null;
+      $street_2Error = null;
+      $cityError = null;
+      $stateError = null;
+      $zip_codeError = null;
+         
+        // keep track post values
+      $street_1 = $_POST['street_1'];
+      $street_2 = $_POST['street_2'];
+      $city = $_POST['city'];
+      $state = $_POST['state'];
+      $zip_code = $_POST['zip_code'];
+    
+         
+        // validate input
+      $valid = true;
+        
+      if (empty($street_1)) {
+        $street_1Error = 'Please enter Street Number';
+        $valid = false;
+      }
+      if (empty($street_2)) {
+        $street_2Error = 'Please enter Street Number';
+        $valid = false;
+      }
+      if (empty($city)) {
+        $cityError = 'Please enter City';
+        $valid = false;
+      }
+      if (empty($state)) {
+        $stateError = 'Please enter State';
+        $valid = false;
+      }
+      if (empty($zip_code)) {
+        $zip_codeError = 'Please enter Zip Code';
+        $valid = false;
+      }
+      
+      if ($valid) {
+        try {
+          
+          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          $sql = "INSERT INTO address (street_1,street_2,city,state,zip_code) values(?, ?, ?, ?, ?)";
+          $q = $pdo->prepare($sql);
+          $q->execute(array($street_1,$street_2,$city,$state,$zip_code));
+          $addressID = $pdo->lastInsertId();
+          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          $sql = "INSERT INTO customer_address (address_fk,customer_fk) values(?,?)";
+          $q = $pdo->prepare($sql);
+          $q->execute(array($addressID, $_SESSION['id']));
+          //$query = $q->fetch(PDO::FETCH_ASSOC);
+          //print_r($query);
+          //echo $addressID;
+          //die();
+          header("Location: update.php");
+        } catch (PDOException $e) {
+          echo $e->getMessage();
+        }
+      }
     }
-  }
-
-  public function read(){
-    try{
-      $pdo = Database::connect();
-      $sql = 'SELECT * FROM address WHERE id IN (SELECT address_fk FROM customer_address WHERE customer_fk = ?) ORDER BY id DESC';
-      $q = $pdo->prepare($sql);
-      $q->execute(array($this->customer_id));
-      $data = $q->fetchAll(PDO::FETCH_ASSOC);
-          Database::disconnect();
-          return $data;
-    } catch (PDOException $error){
-
-      header( "Location: 500.php" );
-      //echo $error->getMessage();
-      die();
-
-    }
-
-    }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
  <head>

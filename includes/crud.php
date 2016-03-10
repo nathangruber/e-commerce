@@ -51,13 +51,13 @@ class customerAddress {
 		$this->customer_id = $customer_id;
 	}
 
-	public function create($street_one, $street_two, $city, $state, $zip ){
-		if (!valid($street_one) || !valid($street_two) || !valid($city) || !valid($state) || !valid($zip) ) {
+	public function create($street_1, $street_2, $city, $state, $zip_code ){
+		if (!valid($street_one) || !valid($street_two) || !valid($city) || !valid($state) || !valid($zip_code) ) {
 			return false;
 		} else {
 
 			$pdo = Database::connect();
-			$sql = "INSERT INTO address (street_1,street_2,city,state,zip_code) values(?, ?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO address (street_1,street_2,city,state,zip_code) values(?, ?, ?, ?, ?)";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($street_one,$street_two,$city,$state,$zip));
 			$address_id = $pdo->lastInsertId();
