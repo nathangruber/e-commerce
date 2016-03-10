@@ -75,18 +75,18 @@ class customer {
 
     }
 
-	public function update($street_, $street_2, $city, $state, $zip_code, $c_id){
-		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {
-			return false;
-		} else {
-			$pdo = Database::connect();
-			$sql = "UPDATE customer SET name = ?, birth_date = ?, gender = ?, phone_number = ?, email_address, username, password = ? WHERE id = ?";
-			$q = $pdo->prepare($sql);
-			$q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$username,$password,$id));
-			Database::disconnect();
-			return true;
-		}
-	}
+	//public function update($street_, $street_2, $city, $state, $zip_code, $c_id){
+		//if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {
+		//	return false;
+		//} else {
+		//	$pdo = Database::connect();
+		//	$sql = "UPDATE customer SET name = ?, birth_date = ?, gender = ?, phone_number = ?, email_address, username, password = ? WHERE id = ?";
+		//	$q = $pdo->prepare($sql);
+		//	$q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$username,$password,$id));
+		//	Database::disconnect();
+			//return true;
+		//}
+	//}
 
 	public function delete($customer_id){
 
@@ -169,6 +169,80 @@ class customerAddress {
         $sql = "DELETE FROM customer_address WHERE address_fk = ?"; //taken from SQL query on phpMyAdmin
         $q = $pdo->prepare($sql);
         $q->execute(array($address_id));
+        Database::disconnect();
+        return true;
+
+	}
+
+}
+class customerCreditcards {	
+
+
+	public $customer_id;
+
+
+	public function __construct($customer_id){
+		$this->customer_id = $customer_id;
+	}
+
+	public function create($name, $cardnumber, $expiration_date, $security_code ){
+		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code)) {
+			return false;
+		} else {
+
+			$pdo = Database::connect();
+			$sql = "INSERT INTO creditcard (name,cardnumber,expiration_date,security_code) values(?, ?, ?, ?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($street_1,$street_2,$city,$state,$zip_code));
+			$creditcard_id = $pdo->lastInsertId();
+
+			$sql = "INSERT INTO customer_creditcard (creditcard_fk, customer_fk) values(?, ?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($creditcard_id, $this->customer_id)); 
+
+			Database::disconnect();
+			return true;
+		}
+	}
+
+	public function read(){
+		try{
+			$pdo = Database::connect();
+			$sql = 'SELECT * FROM creditcard WHERE id IN (SELECT creditcard_fk FROM customer_creditcard WHERE customer_fk = ?) ORDER BY id DESC';
+			$q = $pdo->prepare($sql);
+			$q->execute(array($this->customer_id));
+			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+	        Database::disconnect();
+	        return $data;
+		} catch (PDOException $error){
+
+			header( "Location: 500.php" );
+			//echo $error->getMessage();
+			die();
+
+		}
+
+    }
+
+	//public function update($street_1, $street_2, $city, $state, $zip_code, $address_id){
+		//if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {
+		//	return false;
+		//} else {
+		//	$pdo = Database::connect();
+		//	$sql = "UPDATE address SET street_1 = ?, street_2 = ?, city = ?, state = ?, zip_code = ? WHERE id = ?";
+		//	$q = $pdo->prepare($sql);
+		//	$q->execute(array($street_1,$street_2,$city,$state,$zip_code,$address_id));
+		//	Database::disconnect();
+		//	return true;
+		//}
+	//}
+
+	public function delete($creditcard_id){
+
+        $pdo = Database::connect();
+        $sql = "DELETE FROM customer_creditcard WHERE creditcard_fk = ?"; //taken from SQL query on phpMyAdmin
+        $q = $pdo->prepare($sql);
+        $q->execute(array($creditcard_id));
         Database::disconnect();
         return true;
 
