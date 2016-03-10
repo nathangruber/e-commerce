@@ -11,7 +11,7 @@
   if ( !empty($_POST)) {
 
     // keep track post values
-    $id = $_SESSION['id'];
+    $cc_id = $_POST['cc_id'];
     $name = $_POST['name'];
     $cardnumber = $_POST['cardnumber'];
     $expiration_date = $_POST['expiration_date'];
@@ -32,7 +32,7 @@
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       $sql = " UPDATE creditcard SET name = ?, cardnumber = ?, expiration_date = ?, security_code= ? WHERE id = ?";
       $q = $pdo->prepare($sql);
-      $q->execute(array($name,$cardnumber,$expiration_date,$security_code,$id));
+      $q->execute(array($name,$cardnumber,$expiration_date,$security_code,$cc_id));//need credit card id
       
       //echo "queried";
       //die();

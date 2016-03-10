@@ -11,7 +11,7 @@
   if ( !empty($_POST)) {
 
     // keep track post values
-    $id = $_SESSION['id'];
+    $addy_id = $_POST['addy_id'];
     $street_1 = $_POST['street_1'];
     $street_2 = $_POST['street_2'];
     $city = $_POST['city'];
@@ -35,7 +35,7 @@
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       $sql = "UPDATE address SET street_1 = ?, street_2 = ?, city = ?, state = ?, zip_code = ? WHERE id = ?";
       $q = $pdo->prepare($sql);
-      $q->execute(array($street_1,$street_2,$city,$state,$zip_code,$id));
+      $q->execute(array($street_1,$street_2,$city,$state,$zip_code,$addy_id));
       //echo "queried";
       //die();
       header("Location: update.php");

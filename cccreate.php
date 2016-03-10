@@ -81,7 +81,7 @@
     <div class="container">
       <div class="span10 offset1">
         <div class="row">
-          <h3>Complete all fields to add credit cards</h3>
+          <h3>Complete All Fields</h3>
         </div>           
         <form class="form-horizontal" action="cccreate.php" method="post"> 
 
