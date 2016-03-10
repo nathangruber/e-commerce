@@ -72,7 +72,7 @@
         </thead>
         <tbody>
           <?php
-          /*
+          
               $myAddresses = new customerAddress($_SESSION['id']);
 
               foreach ($myAddresses->read() as $address) {
@@ -90,7 +90,7 @@
                 echo '</tr>';
 
               }
-*/
+
           
           ?>
         </tbody>

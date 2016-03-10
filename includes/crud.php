@@ -46,20 +46,20 @@ class customerAddress {
 
 	public $customer_id;
 
-/*
+
 	public function __construct($customer_id){
 		$this->customer_id = $customer_id;
 	}
 
-	public function create($street_one, $street_two, $city, $state, $zip, $country){
-		if (!valid($street_one) || !valid($street_two) || !valid($city) || !valid($state) || !valid($zip) || !valid($country)) {
+	public function create($street_one, $street_two, $city, $state, $zip ){
+		if (!valid($street_one) || !valid($street_two) || !valid($city) || !valid($state) || !valid($zip) ) {
 			return false;
 		} else {
 
 			$pdo = Database::connect();
-			$sql = "INSERT INTO address (street_one,street_two,city,state,zip,country) values(?, ?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO address (street_1,street_2,city,state,zip_code) values(?, ?, ?, ?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($street_one,$street_two,$city,$state,$zip,$country));
+			$q->execute(array($street_one,$street_two,$city,$state,$zip));
 			$address_id = $pdo->lastInsertId();
 
 			$sql = "INSERT INTO customer_address (address_fk, customer_fk) values(?, ?)";
@@ -90,14 +90,14 @@ class customerAddress {
 
     }
 
-	public function update($street_one, $street_two, $city, $state, $zip, $country, $address_id){
-		if (!valid($street_one) || !valid($street_two) || !valid($city) || !valid($state) || !valid($zip) || !valid($country)) {
+	public function update($street_one, $street_two, $city, $state, $zip, $address_id){
+		if (!valid($street_one) || !valid($street_two) || !valid($city) || !valid($state) || !valid($zip) ) {
 			return false;
 		} else {
 			$pdo = Database::connect();
-			$sql = "UPDATE address SET street_one = ?, street_two = ?, city = ?, state = ?, zip = ?, country = ? WHERE id = ?";
+			$sql = "UPDATE address SET street_1 = ?, street_2 = ?, city = ?, state = ?, zip_code = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($street_one,$street_two,$city,$state,$zip,$country,$address_id));
+			$q->execute(array($street_one,$street_two,$city,$state,$zip,$address_id));
 			Database::disconnect();
 			return true;
 		}
@@ -113,7 +113,7 @@ class customerAddress {
         return true;
 
 	}
-*/
+
 }
 
 
