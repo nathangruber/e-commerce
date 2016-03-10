@@ -52,14 +52,14 @@ class customerAddress {
 	}
 
 	public function create($street_1, $street_2, $city, $state, $zip_code ){
-		if (!valid($street_one) || !valid($street_two) || !valid($city) || !valid($state) || !valid($zip_code) ) {
+		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {
 			return false;
 		} else {
 
 			$pdo = Database::connect();
 			$sql = "INSERT INTO address (street_1,street_2,city,state,zip_code) values(?, ?, ?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($street_one,$street_two,$city,$state,$zip));
+			$q->execute(array($street_1,$street_2,$city,$state,$zip_code));
 			$address_id = $pdo->lastInsertId();
 
 			$sql = "INSERT INTO customer_address (address_fk, customer_fk) values(?, ?)";
@@ -90,14 +90,14 @@ class customerAddress {
 
     }
 
-	public function update($street_one, $street_two, $city, $state, $zip, $address_id){
-		if (!valid($street_one) || !valid($street_two) || !valid($city) || !valid($state) || !valid($zip) ) {
+	public function update($street_1, $street_2, $city, $state, $zip_code, $address_id){
+		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {
 			return false;
 		} else {
 			$pdo = Database::connect();
 			$sql = "UPDATE address SET street_1 = ?, street_2 = ?, city = ?, state = ?, zip_code = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($street_one,$street_two,$city,$state,$zip,$address_id));
+			$q->execute(array($street_1,$street_2,$city,$state,$zip_code,$address_id));
 			Database::disconnect();
 			return true;
 		}
