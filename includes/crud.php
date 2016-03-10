@@ -44,7 +44,6 @@ class Database {
 
 public class customerAddress {	
 
-
 	public $customer_id = NULL;
 
 	public function __construct($customer_id){
@@ -115,16 +114,5 @@ public class customerAddress {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
