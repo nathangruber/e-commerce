@@ -68,6 +68,7 @@
             <th>State</th>
             <th>Zip Code</th>
             <th>Update</th>
+            <th>Delete</th>
          </tr>
         </thead>
         <tbody>
@@ -79,7 +80,7 @@
 
                 echo '<tr>';
                 echo '<form method="POST" action="addyupdate.php">';
-                echo '<input type="hidden" name="cc_id" value="'.$address['id'].'">';
+                echo '<input type="hidden" name="addy_id" value="'.$address['id'].'">';
                 echo '<td><input type="text" name="street_1" value="'.$address['street_1'].'"></td>';
                 echo '<td><input type="text" name="street_2" value="'.$address['street_2'].'"></td>';
                 echo '<td><input type="text" name="city" value="'.$address['city'].'"></td>';
@@ -87,6 +88,16 @@
                 echo '<td><input type="text" name="zip_code" value="'.$address['zip_code'].'"></td>';
                 echo '<td><input type="submit" value="Update"></td>';
                 echo '</form>';
+
+
+                echo '<form method="POST" action="addydelete.php">';
+                echo '<input type="hidden" name="addy_id" value="'.$address['id'].'">';
+                echo '<td><input type="submit" value="Delete"></td>';
+                echo '</form>';
+
+
+
+
                 echo '</tr>';
 
               }
@@ -133,7 +144,7 @@
             $query = $q->fetch(PDO::FETCH_ASSOC);
             echo '<tr>';
             echo '<form method="POST" action="ccupdate.php">';
-            echo '<input type="hidden" name="addy_id" value="'.$query['id'].'">';
+            echo '<input type="hidden" name="cc_id" value="'.$query['id'].'">';
             echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
             echo '<td><input type="text" name="cardnumber" value="'.$query['cardnumber'].'"></td>';
             echo '<td><input type="text" name="expiration_date" value="'.$query['expiration_date'].'"></td>';
