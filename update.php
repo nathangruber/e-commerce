@@ -5,6 +5,7 @@
     die(); // just in case
   }
   require_once('includes/database.php');
+  require_once('includes/crud.php');
   $pdo = Database::connect();
 ?>
 
@@ -31,7 +32,6 @@
          </tr>
         </thead>
         <tbody>
-        </div>
 
             <?php
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -50,11 +50,14 @@
               echo '</form>';
               echo '</tr>';
             ?>
-<div class="container">
-    <div class="row">
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
      
-      <p>Please Add Or Update Your User Information</p>
-    </div>
+        <p>Please Add Or Update Your User Information</p>
+      </div>
+
     <div class="row">
       <table class="table table-striped table-bordered">
         <thead>
@@ -69,24 +72,32 @@
         </thead>
         <tbody>
           <?php
-              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-              $sql = 'SELECT * FROM address WHERE id IN (SELECT address_fk FROM customer_address WHERE customer_fk = ?)';
-              $q = $pdo->prepare($sql);
-              $q->execute(array($_SESSION["id"]));
-              $query = $q->fetch(PDO::FETCH_ASSOC);
-              echo '<tr>';
-              echo '<form method="POST" action="addyupdate.php">';
-              echo '<input type="hidden" name="cc_id" value="'.$query['id'].'">';
-              echo '<td><input type="text" name="street_1" value="'.$query['street_1'].'"></td>';
-              echo '<td><input type="text" name="street_2" value="'.$query['street_2'].'"></td>';
-              echo '<td><input type="text" name="city" value="'.$query['city'].'"></td>';
-              echo '<td><input type="text" name="state" value="'.$query['state'].'"></td>';
-              echo '<td><input type="text" name="zip_code" value="'.$query['zip_code'].'"></td>';
-              echo '<td><input type="submit" value="Update"></td>';
-              echo '</form>';
-              echo '</tr>';
+              $myAddresses = new customerAddress($_SESSION['customer_id']);
+
+              foreach ($myAddresses->read() as $address) {
+
+                echo '<tr>';
+                echo '<form method="POST" action="addyupdate.php">';
+                echo '<input type="hidden" name="cc_id" value="'.$address['id'].'">';
+                echo '<td><input type="text" name="street_1" value="'.$address['street_1'].'"></td>';
+                echo '<td><input type="text" name="street_2" value="'.$address['street_2'].'"></td>';
+                echo '<td><input type="text" name="city" value="'.$address['city'].'"></td>';
+                echo '<td><input type="text" name="state" value="'.$address['state'].'"></td>';
+                echo '<td><input type="text" name="zip_code" value="'.$address['zip_code'].'"></td>';
+                echo '<td><input type="submit" value="Update"></td>';
+                echo '</form>';
+                echo '</tr>';
+
+              }
+
+
           ?>
-<div class="container">
+        </tbody>
+      </table>
+    </div>
+
+
+
     <div class="row">
       <?php
           if ($logged) {
@@ -131,6 +142,10 @@
             echo '</tr>';
          
           ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>
 <?php Database::disconnect(); ?>
