@@ -41,6 +41,7 @@ class Database {
 
 */
 
+/*
 
 public class customerAddress {	
 
@@ -115,4 +116,4 @@ public class customerAddress {
 
 }
 
-
+*/
