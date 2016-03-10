@@ -137,4 +137,3 @@ public class customerAddress {
 
  </body>
 </html>
-<?php Database::disconnect(); ?>
