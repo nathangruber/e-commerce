@@ -28,15 +28,15 @@
         $valid = false;
       }
       if (empty($cardnumber)) {
-        $cardnumberError = 'Please enter Card Number';
+        $cardnumberError = 'Enter Card Number';
         $valid = false;
       }
       if (empty($expiration_date)) {
-        $expiration_dateError = 'Please enter Expiration Date';
+        $expiration_dateError = 'Enter Expiration Date';
         $valid = false;
       }
       if (empty($security_code)) {
-        $security_codeError = 'Please enter CVV Code (3 digit code found on back of card)';
+        $security_codeError = 'Enter CVV Code (3 digit code found on back of card)';
         $valid = false;
       }
          
@@ -47,11 +47,11 @@
           $sql = "INSERT INTO creditcard (name,cardnumber,expiration_date,security_code,address_fk) values(?, ?, ?, ?, ?)";
           $q = $pdo->prepare($sql);
           $q->execute(array($name,$cardnumber,$expiration_date,$security_code,$address_fk));
-          $ccID = $pdo->lastInsertId();
+          $cc_id = $pdo->lastInsertId();
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sql = "INSERT INTO customer_creditcard (creditcard_fk,customer_fk) values(?,?)";
           $q = $pdo->prepare($sql);
-          $q->execute(array($ccID, $_SESSION['id']));
+          $q->execute(array($cc_id, $_SESSION['id']));
           header("Location: update.php");
           } catch (PDOException $e) {
            echo $e->getMessage();
