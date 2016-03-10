@@ -193,7 +193,7 @@ class customerCreditcards {
 			$pdo = Database::connect();
 			$sql = "INSERT INTO creditcard (name,cardnumber,expiration_date,security_code) values(?, ?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($street_1,$street_2,$city,$state,$zip_code));
+			$q->execute(array($name,$cardnumber,$expiration_date,$security_code));
 			$creditcard_id = $pdo->lastInsertId();
 
 			$sql = "INSERT INTO customer_creditcard (creditcard_fk, customer_fk) values(?, ?)";
@@ -224,18 +224,18 @@ class customerCreditcards {
 
     }
 
-	//public function update($street_1, $street_2, $city, $state, $zip_code, $address_id){
-		//if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {
-		//	return false;
-		//} else {
-		//	$pdo = Database::connect();
-		//	$sql = "UPDATE address SET street_1 = ?, street_2 = ?, city = ?, state = ?, zip_code = ? WHERE id = ?";
-		//	$q = $pdo->prepare($sql);
-		//	$q->execute(array($street_1,$street_2,$city,$state,$zip_code,$address_id));
-		//	Database::disconnect();
-		//	return true;
-		//}
-	//}
+	public function update($name, $cardnumber, $expiration_date, $security_code){
+		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code)) {
+			return false;
+		} else {
+			$pdo = Database::connect();
+			$sql = "UPDATE creditcard SET name = ?, cardnumber = ?, expiration_date = ?, security_code = ? WHERE id = ?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($name,$cardnumber,$expiration_date,$security_code));
+			Database::disconnect();
+			return true;
+		}
+	}
 
 	public function delete($creditcard_id){
 
@@ -249,9 +249,3 @@ class customerCreditcards {
 	}
 
 }
-
-
-
-
-
-

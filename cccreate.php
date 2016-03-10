@@ -49,7 +49,7 @@
           $q->execute(array($name,$cardnumber,$expiration_date,$security_code,$address_fk));
           $creditcardID = $pdo->lastInsertId();
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql = "INSERT INTO customer_creditcard (customer_fk,creditcard_fk) values(?,?)";
+          $sql = "INSERT INTO customer_creditcard (creditcard_fk,customer_fk) values(?,?)";
           $q = $pdo->prepare($sql);
           $q->execute(array($creditcardID, $_SESSION['id']));
           header("Location: update.php");
