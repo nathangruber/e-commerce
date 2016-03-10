@@ -21,7 +21,7 @@
       <h3>Update User Information</h3>
     </div>
     <div class="row">
-      <table class="table table-striped table-bordered">
+      <table class="table table-bordered">
         <thead>
           <tr>
             <th>Name</th>
@@ -59,7 +59,7 @@
       </div>
 
     <div class="row">
-      <table class="table table-striped table-bordered">
+      <table class="table table-bordered">
         <thead>
           <tr>
             <th>Street Address</th>
@@ -107,7 +107,7 @@
             echo '</form>';
            } 
         ?>
-      <table class="table table-striped table-bordered">
+      <table class="table table-bordered">
         <thead>
           <tr>
             <th>Name</th>
