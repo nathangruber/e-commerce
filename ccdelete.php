@@ -19,13 +19,13 @@
        // header('Location: update.php');
      // }
    // }
-    if($response){
-      echo "success";
-    } else {
-      echo "failure";
-    }
+    //if($response){
+     // echo "success";
+   // } else {
+      //echo "failure";
+    //}
 
-  } else {
+ // } else {
     // redirect
-    echo "didn't get param";
-  }
+   // echo "didn't get param";
+  //}
