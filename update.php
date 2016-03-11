@@ -17,7 +17,6 @@
    <?php require_once('includes/navbar.php'); ?>
     <div class="row">
       <h3>Update User Information</h3>
-   <p><?php echo $_SESSION["id"]; ?></p>
     </div>
     <div class="row">
       <table class="table table-bordered">
@@ -33,18 +32,10 @@
         <tbody>
 
             <?php
-            /*
-              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-              $sql = 'SELECT * FROM customer WHERE id = ?';
-              $q = $pdo->prepare($sql);
-              $q->execute(array($_SESSION["id"]));
-              $query = $q->fetch(PDO::FETCH_ASSOC);
-              print_r($query);
-              */
               $me = new customer();
-              $myInfo = $me->read($_SESSION["id"]);
+              $myInfo = $me->read(75);
+
               if(isset($myInfo)){
-                print_r($myInfo);
                 echo '<tr>';
                 echo '<form method="POST" action="userupdate.php">';
                 echo '<td><input type="text" name="name" value="'.$myInfo['name'].'"></td>';
