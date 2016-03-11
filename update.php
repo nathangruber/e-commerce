@@ -10,14 +10,14 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php require_once 'includes/header.php';?>
+ <?php require_once 'includes/header.php';?>
   <body>
 
-  <?php require_once('includes/navbar.php'); ?>
-
   <div class="container">
+   <?php require_once('includes/navbar.php'); ?>
     <div class="row">
       <h3>Update User Information</h3>
+   <p><?php echo $_SESSION["id"]; ?></p>
     </div>
     <div class="row">
       <table class="table table-bordered">
