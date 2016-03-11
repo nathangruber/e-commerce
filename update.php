@@ -8,7 +8,7 @@
   require_once('includes/crud.php');
 
 ?>
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <?php require_once 'includes/header.php';?>
   <body>
@@ -101,6 +101,7 @@
         </tbody>
       </table>
     </div>
+  </div>
 
 
 
