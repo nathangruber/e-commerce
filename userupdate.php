@@ -12,18 +12,17 @@
   if ( !empty($_POST)) {
 
     // keep track post values
-    $id = $_POST['id'];
     $name = $_POST['name'];
     $birth_date = $_POST['birth_date'];
     $phone_number = $_POST['phone_number'];
     $email_address = $_POST['email_address'];
     
-     $updatecustomer = new customer($_SESSION['id']);
-      $response = $updatecustomer->update($name,$birth_date,$phone_number,$email_address,$id);
+     $updatecustomer = new customer();
+      $response = $updatecustomer->update($name,$birth_date,$phone_number,$email_address,$_SESSION['id']);
       if ($response) {
         header('Location: update.php');
       } else {
-        header('Location: update.php');
+        header('Location: update.php?error=1');
       }
     }  
 
