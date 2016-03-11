@@ -33,7 +33,7 @@
 
             <?php
               $me = new customer();
-              $myInfo = $me->read(75);
+              $myInfo = $me->read($_SESSION["id"]);
 
               if(!empty($myInfo)){
                 echo '<tr>';
