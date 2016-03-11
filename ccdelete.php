@@ -13,13 +13,13 @@
     $myCreditcards = new customerCreditcards($_SESSION['id']);
     $response = $myCreditcards->delete($_POST['creditcard_id']);
   
-  if ($response) {
-        header('Location: update.php');
-      } else {
-        header('Location: update.php');
-      }
-    }
-    /*if($response){
+  //if ($response) {
+       // header('Location: update.php');
+     // } else {
+       // header('Location: update.php');
+     // }
+   // }
+    if($response){
       echo "success";
     } else {
       echo "failure";
