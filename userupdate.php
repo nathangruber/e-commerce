@@ -17,6 +17,7 @@
     $phone_number = $_POST['phone_number'];
     $email_address = $_POST['email_address'];
     $gender = $_POST['gender'];
+    $username = $_POST['username'];
     
     $updatecustomer = new customer();
     $response = $updatecustomer->update($name,$birth_date,$gender,$phone_number,$email_address,$username,$_SESSION['id']);
