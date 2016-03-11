@@ -105,6 +105,60 @@
       </table>
     </div>
 
+    <div class="row">
+      <?php
+          if ($logged) {
+            echo '<form method="POST" action="addycreate.php">';
+            echo '<input type="submit" value="Add Your Address">';
+            echo '</form>';
+           } 
+        ?>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Credit Card Number</th>
+            <th>Expiration Date</th>
+            <th>Security Code</th>
+            <th>Update</th>
+         </tr>
+        </thead>
+        <tbody>
+          <?php
+          if ($logged) {
+            echo '<form method="POST" action="cccreate.php">';
+            echo '<input type="submit" value="Add Credit Card">';
+            echo '</form>';
+          } 
+        ?>
+          <?php
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = 'SELECT * FROM creditcard WHERE id IN (SELECT creditcard_fk FROM customer_creditcard WHERE customer_fk = ?)';
+            $q = $pdo->prepare($sql);
+            $q->execute(array($_SESSION["id"]));
+            $query = $q->fetch(PDO::FETCH_ASSOC);
+            echo '<tr>';
+            echo '<form method="POST" action="ccupdate.php">';
+            echo '<input type="hidden" name="creditcard_id" value="'.$query['id'].'">';
+            echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
+            echo '<td><input type="text" name="cardnumber" value="'.$query['cardnumber'].'"></td>';
+            echo '<td><input type="text" name="expiration_date" value="'.$query['expiration_date'].'"></td>';
+            echo '<td><input type="text" name="security_code" value="'.$query['security_code'].'"></td>';
+            echo '<td><input type="submit" value="Update"></td>';
+            echo '</form>';
+            echo '</tr>';
+            echo '<form method="POST" action="ccdelete.php">';
+            echo '<input type="hidden" name="creditcard_id" value="'.$query['id'].'">';
+            echo '<td><input type="submit" value="Delete"></td>';
+            echo '</form>';
+
+
+         
+          ?>
+        </tbody>
+      </table>
+    </div>
+
 
 
 
