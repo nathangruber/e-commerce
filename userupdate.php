@@ -19,7 +19,7 @@
     $gender = $_POST['gender'];
     
     $updatecustomer = new customer();
-    $response = $updatecustomer->update($name,$birth_date,$gender, $phone_number,$email_address,$_SESSION['id']);
+    $response = $updatecustomer->update($name,$birth_date,$gender,$phone_number,$email_address,$username,$_SESSION['id']);
     if ($response) {
       header('Location: update.php');
     } else {
