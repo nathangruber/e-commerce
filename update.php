@@ -35,7 +35,7 @@
               $me = new customer();
               $myInfo = $me->read(75);
 
-              if(isset($myInfo)){
+              if(!empty($myInfo)){
                 echo '<tr>';
                 echo '<form method="POST" action="userupdate.php">';
                 echo '<td><input type="text" name="name" value="'.$myInfo['name'].'"></td>';
