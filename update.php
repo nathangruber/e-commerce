@@ -52,11 +52,11 @@
           </tbody>
         </table>
       </div>
-      
+
 <div class="row">
      
         <p>Please Add Or Update Your User Information</p>
-      </div>
+</div>
 
     <div class="row">
       <table class="table table-bordered">
@@ -104,15 +104,6 @@
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<?php require_once 'includes/header.php';?>
-  <body>
 
-  <?php require_once('includes/navbar.php'); ?>
-
-  <div class="container">
-
-  </div>
 </body>
 </html>
