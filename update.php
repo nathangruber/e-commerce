@@ -26,6 +26,7 @@
             <th>Birthdate</th>
             <th>Phone Number</th>
             <th>Email Address</th>
+            <th>Gender</th>
             <th>Update</th>
          </tr>
         </thead>
@@ -41,6 +42,7 @@
                 echo '<form method="POST" action="userupdate.php">';
                 echo '<td><input type="text" name="name" value="'.$myInfo['name'].'"></td>';
                 echo '<td><input type="text" name="birth_date" value="'.$myInfo['birth_date'].'"></td>';
+                echo '<td><input type="text" name="gender" value="'.$myInfo['gender'].'"></td>';
                 echo '<td><input type="text" name="phone_number" value="'.$myInfo['phone_number'].'"></td>';
                 echo '<td><input type="text" name="email_address" value="'.$myInfo['email_address'].'"></td>';
                 echo '<td><input type="submit" value="Update"></td>';
