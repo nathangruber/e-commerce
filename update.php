@@ -152,9 +152,8 @@
             echo '<td><input type="submit" value="Update"></td>';
             echo '</form>';
             echo '</tr>';
-
             echo '<form method="POST" action="ccdelete.php">';
-            echo '<input type="hidden" name="creditcard_id" value="'.$address['id'].'">';
+            echo '<input type="hidden" name="creditcard_id" value="'.$creditcard['id'].'">';
             echo '<td><input type="submit" value="Delete"></td>';
             echo '</form>';
 
