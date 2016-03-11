@@ -18,9 +18,18 @@
     $phone_number = $_POST['phone_number'];
     $email_address = $_POST['email_address'];
     
+     $updatecustomer = new customer($_SESSION['id']);
+      $response = $updatecustomer->update($name,$birth_date,$phone_number,$email_address,$id);
+      if ($response) {
+        header('Location: update.php');
+      } else {
+        header('Location: update.php');
+      }
+    }  
+
     //echo $id . "<br>" . $name . "<br>" . $birth_date . "<br>" . $phone_number . "<br>" . $email_address . "<br>";
 
-    function valid($uservar){
+   /* function valid($uservar){
       return ( !empty($uservar) && isset($uservar) );
     }
 
