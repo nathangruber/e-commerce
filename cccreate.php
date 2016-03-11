@@ -5,10 +5,10 @@
 
     if ( !empty($_POST)) {
         // keep track validation errors
-      //$nameError = null;
-      //$cardnumberError = null;
-     // $expiration_dateError = null;
-      //$security_codeError = null;
+      $nameError = null;
+      $cardnumberError = null;
+      $expiration_dateError = null;
+      $security_codeError = null;
          
         // keep track post values
       $name = $_POST['name'];
@@ -137,7 +137,7 @@
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` LEFT JOIN `customer_address` ON `address`.`id`=`customer_address`.`address_fk` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
               $address = $pdo->query($sql);
-              echo "Please choose an Address";
+              echo "dropdown text";
               echo "<br>";
               echo "<select name='address_fk'>";
               foreach ($address as $row) {
