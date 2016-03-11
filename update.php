@@ -33,21 +33,31 @@
         <tbody>
 
             <?php
+            /*
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               $sql = 'SELECT * FROM customer WHERE id = ?';
               $q = $pdo->prepare($sql);
               $q->execute(array($_SESSION["id"]));
               $query = $q->fetch(PDO::FETCH_ASSOC);
+              print_r($query);
+              */
+              $me = new customer();
+              $myInfo = $me->read($_SESSION["id"]);
+              if(isset($myInfo)){
+                print_r($myInfo);
+                echo '<tr>';
+                echo '<form method="POST" action="userupdate.php">';
+                echo '<td><input type="text" name="name" value="'.$myInfo['name'].'"></td>';
+                echo '<td><input type="text" name="birth_date" value="'.$myInfo['birth_date'].'"></td>';
+                echo '<td><input type="text" name="phone_number" value="'.$myInfo['phone_number'].'"></td>';
+                echo '<td><input type="text" name="email_address" value="'.$myInfo['email_address'].'"></td>';
+                echo '<td><input type="submit" value="Update"></td>';
+                echo '</form>';
+                echo '</tr>';
+              } else {
+                echo "<p>Could not fetch customer information.</p>";
+              }
 
-              echo '<tr>';
-              echo '<form method="POST" action="userupdate.php">';
-              echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
-              echo '<td><input type="text" name="birth_date" value="'.$query['birth_date'].'"></td>';
-              echo '<td><input type="text" name="phone_number" value="'.$query['phone_number'].'"></td>';
-              echo '<td><input type="text" name="email_address" value="'.$query['email_address'].'"></td>';
-              echo '<td><input type="submit" value="Update"></td>';
-              echo '</form>';
-              echo '</tr>';
             ?>
           </tbody>
         </table>
