@@ -5,8 +5,8 @@
     die(); // just in case
   }
   require_once('includes/database.php');
-  require_once('includes/crud.php');
-  $pdo = Database::connect();
+ //require_once('includes/crud.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -21,4 +21,3 @@
   </div>
 </body>
 </html>
-<?php Database::disconnect(); ?>
