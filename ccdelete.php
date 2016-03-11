@@ -1,8 +1,12 @@
-<?php
-  require_once('includes/database.php');
+ <?php
   require_once('includes/session.php');
+  if(!$logged){
+    header("Location: index.php");
+    die(); // just in case
+  }
+  require_once('includes/database.php');
   require_once('includes/crud.php');
-
+  $pdo = Database::connect();
  
   if ( !empty($_POST['creditcard_id']) && isset($_POST['creditcard_id'])) {
 

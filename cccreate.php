@@ -26,7 +26,7 @@
       }
     }
 ?>
-<?php
+
         // validate input
       $valid = true;
         
@@ -46,7 +46,7 @@
         $security_codeError = 'Enter CVV Code (3 digit code found on back of card)';
         $valid = false;
       }
-       ?>  
+       
     /* if ($valid) {
        try {
          

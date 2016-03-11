@@ -144,7 +144,7 @@
             $query = $q->fetch(PDO::FETCH_ASSOC);
             echo '<tr>';
             echo '<form method="POST" action="ccupdate.php">';
-            echo '<input type="hidden" name="cc_id" value="'.$query['id'].'">';
+            echo '<input type="hidden" name="creditcard_id" value="'.$query['id'].'">';
             echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
             echo '<td><input type="text" name="cardnumber" value="'.$query['cardnumber'].'"></td>';
             echo '<td><input type="text" name="expiration_date" value="'.$query['expiration_date'].'"></td>';
@@ -152,6 +152,13 @@
             echo '<td><input type="submit" value="Update"></td>';
             echo '</form>';
             echo '</tr>';
+
+            echo '<form method="POST" action="ccdelete.php">';
+            echo '<input type="hidden" name="creditcard_id" value="'.$address['id'].'">';
+            echo '<td><input type="submit" value="Delete"></td>';
+            echo '</form>';
+
+
          
           ?>
         </tbody>

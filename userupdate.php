@@ -1,17 +1,18 @@
 <?php 
   require_once('includes/session.php');
   if(!$logged){
-    header("location: index.php");
+    header("Location: index.php");
     die(); // just in case
   }
   require_once('includes/database.php');
+  require_once('includes/crud.php');
   $pdo = Database::connect();
 
 
   if ( !empty($_POST)) {
 
     // keep track post values
-    $id = $_SESSION['id'];
+    $id = $_POST['id'];
     $name = $_POST['name'];
     $birth_date = $_POST['birth_date'];
     $phone_number = $_POST['phone_number'];
