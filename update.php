@@ -5,7 +5,7 @@
     die(); // just in case
   }
   require_once('includes/database.php');
- //require_once('includes/crud.php');
+  require_once('includes/crud.php');
 
 ?>
 

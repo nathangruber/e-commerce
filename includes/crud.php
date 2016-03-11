@@ -210,7 +210,7 @@ class customerCreditcards {
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
 	        Database::disconnect();
 	        return $data;
-		} catch (PDOException $error){
+			} catch (PDOException $error){
 
 			header( "Location: 500.php" );
 			//echo $error->getMessage();
@@ -223,7 +223,7 @@ class customerCreditcards {
 	public function update($name, $cardnumber, $expiration_date, $security_code, $address_id){
 		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code)) {
 			return false;
-		} else {
+			} else {
 			$pdo = Database::connect();
 			$sql = "UPDATE creditcard SET name = ?, cardnumber = ?, expiration_date = ?, security_code, address_fk = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
@@ -241,9 +241,10 @@ class customerCreditcards {
         $q->execute(array($creditcard_id, $this->customer_id));
         Database::disconnect();
         return true;
-     }catch (PDOException $error){
+     	}catch (PDOException $error){
 		echo $error->getMessage();
 		return false;
-
+		}
+	}
 }
 /////////////////////////////////////////////
