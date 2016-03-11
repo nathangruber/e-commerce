@@ -52,6 +52,58 @@
           </tbody>
         </table>
       </div>
+      
+<div class="row">
+     
+        <p>Please Add Or Update Your User Information</p>
+      </div>
+
+    <div class="row">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Street Address</th>
+            <th>Street Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+            <th>Update</th>
+            <th>Delete</th>
+         </tr>
+        </thead>
+        <tbody>
+          <?php
+          
+              $myAddresses = new customerAddress($_SESSION['id']);
+
+              foreach ($myAddresses->read() as $address) {
+
+                echo '<tr>';
+                echo '<form method="POST" action="addyupdate.php">';
+                echo '<input type="hidden" name="addy_id" value="'.$address['id'].'">';
+                echo '<td><input type="text" name="street_1" value="'.$address['street_1'].'"></td>';
+                echo '<td><input type="text" name="street_2" value="'.$address['street_2'].'"></td>';
+                echo '<td><input type="text" name="city" value="'.$address['city'].'"></td>';
+                echo '<td><input type="text" name="state" value="'.$address['state'].'"></td>';
+                echo '<td><input type="text" name="zip_code" value="'.$address['zip_code'].'"></td>';
+                echo '<td><input type="submit" value="Update"></td>';
+                echo '</form>';
+                echo '<form method="POST" action="addydelete.php">';
+                echo '<input type="hidden" name="addy_id" value="'.$address['id'].'">';
+                echo '<td><input type="submit" value="Delete"></td>';
+                echo '</form>';
+                echo '</tr>';
+
+              }
+
+          
+          ?>
+        </tbody>
+      </table>
+    </div>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'includes/header.php';?>
