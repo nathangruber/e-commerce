@@ -1,6 +1,6 @@
 <?php
 	 
- require_once 'includes/database.php';
+require_once 'includes/database.php';
 require_once 'includes/navbar.php';
  	
 	
@@ -83,7 +83,8 @@ require_once 'includes/navbar.php';
 <head>
     <meta charset="utf-8">
    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">      
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
 <body>

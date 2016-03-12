@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 'On');
+    error_reporting(E_ALL);
+// READ PAGE
     require_once 'includes/database.php';
     require_once 'includes/navbar.php';
     $id = null;
@@ -11,7 +14,7 @@
     } else {
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "SELECT * FROM customer where id = ?";
+        $sql = "SELECT * FROM payment where id = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
         $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -23,7 +26,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
@@ -32,86 +36,66 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Customer Information</h3>
+                        <h3>Payment Overview</h3>
                     </div>
                      
                     <div class="form-horizontal" >
                       <div class="control-group">
-                        <label class="control-label">Name</label>
+                        <label class="control-label">Full Name</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['name'];?>
+                                <?php echo $data['card_full_name'];?>
                             </label>
                         </div>
                       </div>
                       <div class="control-group">
-                        <label class="control-label">Date of Birth</label>
+                        <label class="control-label">Card Number</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['birth_date'];?>
+                                <?php echo $data['card_number'];?>
                             </label>
                         </div>
                       </div>
                       <div class="control-group">
-                        <label class="control-label">Gender</label>
+                        <label class="control-label">Card Security</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['gender'];?>
+                                <?php echo $data['card_security'];?>
                             </label>
                         </div>
                       </div>
                       <div class="control-group">
-                        <label class="control-label">Phone Number</label>
+                        <label class="control-label">Expiration Month</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['phone_number'];?>
-                            </label>
-                        </div>
-                      </div>
-                        <div class="control-group">
-                        <label class="control-label">Email Address</label>
-                        <div class="controls">
-                            <label class="checkbox">
-                                <?php echo $data['email_address'];?>
-                            </label>
-                        </div>
-                      </div>
-
-                      <div class="control-group">
-                        <label class="control-label">Permissions</label>
-                        <div class="controls">
-                            <label class="checkbox">
-                                <?php echo $data['permissions'];?>
+                                <?php echo $data['expires_month'];?>
                             </label>
                         </div>
                       </div>
                       <div class="control-group">
-                        <label class="control-label">Username</label>
+                        <label class="control-label">Expiration Year</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['username'];?>
+                                <?php echo $data['expires_year'];?>
                             </label>
                         </div>
                       </div>
                       <div class="control-group">
-                        <label class="control-label">Password</label>
+                        <label class="control-label">Type</label>
                         <div class="controls">
                             <label class="checkbox">
-                                <?php echo $data['password'];?>
+                                <?php echo $data['type'];?>
                             </label>
                         </div>
                       </div>
-                         <div class="form-actions">
+                        <div class="form-actions">
                           <a class="btn" href="index.php">Back</a>
                        </div>
                      
-                     
-                      </div>
+                      
+                    </div>
                 </div>
                  
     </div> <!-- /container -->
   </body>
 </html>
-<?php
-require_once 'includes/footer.php';
-?>

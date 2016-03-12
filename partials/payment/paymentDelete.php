@@ -1,6 +1,9 @@
 <?php
-    require_once 'includes/database.php';
-    require_once 'includes/navbar.php';
+    ini_set('display_errors', 'On');
+    error_reporting(E_ALL);
+
+   require_once 'includes/database.php';
+   require_once 'includes/navbar.php';
     $id = 0;
      
     if ( !empty($_GET['id'])) {
@@ -14,7 +17,7 @@
         // delete data
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM customer WHERE id = ?";
+        $sql = "DELETE FROM payment WHERE id = ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
         Database::disconnect();
@@ -27,7 +30,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">  
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
@@ -37,7 +40,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Delete a Customer</h3>
+                        <h3>Delete a Payment</h3>
                     </div>
                      
                     <form class="form-horizontal" action="delete.php" method="post">
@@ -53,6 +56,3 @@
     </div> <!-- /container -->
   </body>
 </html>
-<?php
-require_once 'includes/footer.php';
-?>
