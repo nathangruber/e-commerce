@@ -16,17 +16,14 @@
                     <a href="create.php" class="btn btn-success">Create</a>
                 </p>
                 
-
-                <table class="table table-striped table-bordered">
+                  <table class="table table-striped table-bordered">
                   <thead>
                     <tr>
-                      <th>Name</th>
                       <th>Street Address</th>
                       <th>Street Address</th>
                       <th>City</th>
                       <th>State</th>
                       <th>Zip Code</th>
-                      <th>Country</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -37,21 +34,22 @@
                    $sql = 'SELECT * FROM address ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
                             echo '<tr>';
-                            echo '<td>'. $row['name'] . '</td>';
-                            echo '<td>'. $row['street_1'] . '</td>';
-                            echo '<td>'. $row['street_2'] . '</td>';
-                            echo '<td>'. $row['city'] . '</td>';
-                            echo '<td>'. $row['state'] . '</td>';
-			                      echo '<td>'. $row['zip_code'].'</td>'; 	
-                            echo '<td>'. $row['country'] . '</td>';
-                            echo '<td width=250>';
-                                echo '<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';
-                                echo ' ';
-                                echo '<a class="btn btn-success" href="update.php?id='.$row['id'].'">Update</a>';
-                                echo ' ';
-                                echo '<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Delete</a>';
-                                echo '</td>';
-                                echo '</tr>';
+                            echo '<form action="update.php" method="post">';
+                            echo '<td><input type="text" name="street_1" value="' . $row["street_1"] . '"></td>';
+                            echo '<td><input type="text" name="street_2" value="' . $row["street_2"] . '"></td>';
+                            echo '<td><input type="text" name="city" size="12" value="' . $row["city"] . '"></td>';
+                            echo '<td><input type="text" name="state" value="' . $row["state"] . '"></td>';
+                            echo '<td><input type="text" name="zip_code" value="' . $row["zip_code"] . '"></td>';
+                            echo '<input type="hidden" name="id" value="'.$row["id"].'">';
+                            echo '<td>';
+                            echo '<input type="submit" class="btn-success" value="update">';
+                            echo '</form>';
+                            echo '<form action="delete.php" method="post">';
+                            echo '<input type="hidden" name="id" value="'.$row["id"].'">';
+                            echo '<input type="submit" class="btn-danger" value="delete">';
+                            echo '</form>';
+                            echo '</td>';
+                            echo '</tr>';
                    }
                    Database::disconnect();
                   ?>
