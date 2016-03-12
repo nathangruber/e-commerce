@@ -23,7 +23,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
 <body>
@@ -31,18 +33,10 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Read a Customer</h3>
+                        <h3>Address</h3>
                     </div>
                      
                     <div class="form-horizontal" >
-                      <div class="control-group">
-                        <label class="control-label">Name</label>
-                        <div class="controls">
-                            <label class="checkbox">
-                                <?php echo $data['name'];?>
-                            </label>
-                        </div>
-                      </div>
                       <div class="control-group">
                         <label class="control-label">Street Address</label>
                         <div class="controls">
@@ -84,18 +78,11 @@
                             </label>
                         </div>
                       </div>
-                      <div class="control-group">
-                        <label class="control-label">Country</label>
-                        <div class="controls">
-                            <label class="checkbox">
-                                <?php echo $data['country'];?>
-                            </label>
-                        </div>
-                      </div>
-                     
-                      
+                   <div class="form-actions">
+                          <a class="btn" href="index.php">Back</a>
                     </div>
                 </div>
+              </div>
                  
     </div> <!-- /container -->
   </body>
