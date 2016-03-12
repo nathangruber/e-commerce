@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
 <body>
@@ -20,7 +22,6 @@
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Description</th>
                       
                     </tr>
                   </thead>
@@ -31,18 +32,21 @@
                    $pdo = Database::connect();
                    $sql = 'SELECT * FROM category ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
-                            echo '<tr>';
-                            echo '<td>'. $row['name'] . '</td>';
-                            echo '<td>'. $row['description'] . '</td>';
-                            
-                           echo '<td width=250>';
-                                echo '<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';
-                                echo ' ';
-                                echo '<a class="btn btn-success" href="update.php?id='.$row['id'].'">Update</a>';
-                                echo ' ';
-                                echo '<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Delete</a>';
-                                echo '</td>';
-                                echo '</tr>';
+                      echo '<tr>';
+                            echo '<form action="update.php" method="post">';
+                            echo '<td><input type="text" name="name" value="' . $row["name"] . '"></td>';
+                            echo '<input type="hidden" name="id" value="'.$row["id"].'">';
+           
+                            echo '<td>';
+                            echo '<input type="submit" class="btn-success" value="update">';
+                            echo '</form>';
+          
+                            echo '<form action="delete.php" method="post">';
+                            echo '<input type="hidden" name="id" value="'.$row["id"].'">';
+                            echo '<input type="submit" class="btn-danger" value="delete">';
+                            echo '</form>';
+                            echo '</td>';
+                            echo '</tr>';
                    }
                    Database::disconnect();
                   ?>

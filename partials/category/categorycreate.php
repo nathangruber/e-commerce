@@ -1,36 +1,28 @@
 <?php
      require_once 'includes/database.php';
      require_once 'includes/navbar.php';
-    if ( !empty($_POST)) {
+
+ if ( !empty($_POST)) {
         // keep track validation errors
         $nameError = null;
-        $descriptionError = null;
         
-        // keep track post values
+    // keep track post values
         $name = $_POST['name'];
-        $description = $_POST['description'];
-        
+         
         // validate input
-       $valid = true;
+        $valid = true;
         if (empty($name)) {
             $nameError = 'Please enter Name';
             $valid = false;
         }
          
-        if (empty($description)) {
-            $descriptionError = 'Description';
-            $valid = false;
-         }
-         
-        
-       
         // insert data
-        if (true) {
+        if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO category (name,description) values(?, ?)";
+            $sql = "INSERT INTO category (name) values(?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($name,$description));
+            $q->execute(array($name));
             Database::disconnect();
             header("Location: index.php");
         }
@@ -40,7 +32,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
 <body>
@@ -48,7 +42,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Category</h3>
+                        <h3>Create a Category</h3>
                     </div>
              
                     <form class="form-horizontal" action="create.php" method="post">
@@ -61,17 +55,7 @@
                             <?php endif; ?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($descriptionError)?'error':'';?>">
-                        <label class="control-label">Description</label>
-                        <div class="controls">
-                            <input name="description" type="text" placeholder="Description" value="<?php echo !empty($description)?$description:'';?>">
-                            <?php if (!empty($descriptionError)): ?>
-                                <span class="help-inline"><?php echo $descriptionError;?></span>
-                            <?php endif;?>
-                        </div>
-                      </div>
-                    
-                            <div class="form-actions">
+                      <div class="form-actions">
                           <button type="submit" class="btn btn-success">Create</button>
                           <a class="btn" href="index.php">Back</a>
                         </div>

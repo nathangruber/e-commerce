@@ -28,6 +28,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">  
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
@@ -36,7 +37,7 @@
      
                 <div class="span10 offset1">
                     <div class="row">
-                        <h3>Delete a Category</h3>
+                        <h3>Delete a Tag</h3>
                     </div>
                      
                     <form class="form-horizontal" action="delete.php" method="post">

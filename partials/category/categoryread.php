@@ -23,7 +23,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
 <body>
@@ -43,16 +45,9 @@
                             </label>
                         </div>
                       </div>
-                      <div class="control-group">
-                        <label class="control-label">Description</label>
-                        <div class="controls">
-                            <label class="checkbox">
-                                <?php echo $data['description'];?>
-                            </label>
-                        </div>
-                      </div>
-                      
-                      </div>
+                        <div class="form-actions">
+
+                    </div>
                 </div>
                  
     </div> <!-- /container -->
