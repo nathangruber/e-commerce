@@ -112,6 +112,7 @@ class customerAddress {
 
 	public function create($street_1, $street_2, $city, $state, $zip_code, $customer_id){
 		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) || !valid($customer_id) ) {
+			echo 'we have received: '.$street_1.$street_2.$city.$state.$zip_code.$customer_id.'and one is missing';
 			return false;
 		} else {
 
