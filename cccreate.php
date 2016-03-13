@@ -6,6 +6,10 @@
   }
   require_once('includes/database.php');
   require_once('includes/crud.php');
+  
+
+
+/*
   $pdo = Database::connect();
  
 
@@ -71,9 +75,10 @@
         }
       }
     }
+    */
 ?>
 
-*/
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -137,7 +142,25 @@
               <?php endif;?>
             </div>
           </div>
-          <?php
+
+
+          <div class="control-group <?php echo !empty($security_codeError)?'error':'';?>">
+            <label class="control-label">Address</label>
+            <div class="controls">
+              <select name='address_fk'>
+                <option value='1'>option 1</option>
+                <option value='2'>option 2</option>
+                <option value='3'>option 3</option>
+              </select>
+             </div>
+          </div>
+
+
+
+
+
+
+          <?php/*
             try {
               $pdo = Database::connect();
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -154,7 +177,7 @@
             } catch (PDOException $e) {
               echo $e->getMessage();
               Database::disconnect();
-            }
+            }*/
           ?>
           <br>
           <br>
