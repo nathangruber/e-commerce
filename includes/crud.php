@@ -5,14 +5,14 @@
 
 function valid($varname){
 	if(empty($varname)){
-		echo $varname.'is the problem<br>';
+		echo $varname.'is the problem1<br>';
 		return false;
 	}
 	if(!isset($varname)){
-		echo $varname.'is the superproblem<br>';
+		echo $varname.'is the superproblem2<br>';
 		return false;
 	}
-	echo $varname.' works<br>';
+	echo $varname.' works3<br>';
 	return true;
 	//return ( !empty($varname) && isset($varname) );
 }
