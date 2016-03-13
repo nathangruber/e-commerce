@@ -24,7 +24,7 @@
     $thecustomer = new customer();
     $read_response = $thecustomer->read($_SESSION['id']);
     print_r($read_response);
-    $response = $thecustomer->update($name,$birth_date,$gender,$phone_number,$email_address,$username,$_SESSION['id']);
+    $response = $thecustomer->update($name,$birth_date,$gender,$phone_number,$email_address,$read_response['user_name'],$_SESSION['id']);
     if ($response) {
       //header('Location: update.php');
       echo 'response is true';
