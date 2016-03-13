@@ -153,7 +153,7 @@ class customerAddress {
     }
 
 	public function update($street_1, $street_2, $city, $state, $zip_code, $address_id){
-		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {
+		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) || !valid($address_id) ) {
 			return false;
 		} else {
 			$pdo = Database::connect();

@@ -55,7 +55,7 @@
                 echo '<td><input type="text" name="gender" value="'.$myInfo['gender'].'"></td>';
                 echo '<td><input type="text" name="phone_number" value="'.$myInfo['phone_number'].'"></td>';
                 echo '<td><input type="text" name="email_address" value="'.$myInfo['email_address'].'"></td>';
-                echo '<td><input type="submit" value="Update"></td>';
+                echo '<td><input class="btn btn-default" type="submit" value="Update"></td>';
                 echo '</form>';
                 echo '</tr>';
               } else {
@@ -106,7 +106,7 @@
                 echo '</form>';
                 echo '<form method="POST" action="addydelete.php">';
                 echo '<input type="hidden" name="addy_id" value="'.$address['id'].'">';
-                echo '<td><input class="btn btn-error" type="submit" value="Delete"></td>';
+                echo '<td><input class="btn btn-danger" type="submit" value="Delete"></td>';
                 echo '</form>';
                 echo '</tr>';
 
