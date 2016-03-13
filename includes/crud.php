@@ -235,7 +235,7 @@ class customerCreditcards {
 	public function delete($creditcard_id){
 	  try{
         $pdo = Database::connect();
-        $sql = "DELETE FROM `e-commerce`.`customer_creditcard` WHERE `creditcard_fk` = ? AND `customer_fk` = ?"; //taken from SQL query on phpMyAdmin
+        $sql = "DELETE FROM creditcard WHERE id=? and customer_fk = ?"; //taken from SQL query on phpMyAdmin
         $q = $pdo->prepare($sql);
         $q->execute(array($creditcard_id, $this->customer_id));
         Database::disconnect();
