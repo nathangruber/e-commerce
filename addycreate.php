@@ -10,7 +10,7 @@
 
   if(!empty($_POST)){
     $customeraddress = new customerAddress($_SESSION['id']);
-    print_r($POST);
+    print_r($_POST);
 
   }
 
