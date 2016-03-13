@@ -55,80 +55,8 @@
           header('Location: update.php?feedbackcreditcardaddes=error');
         }
       }
-*/
-
-
+      */
   }
-
-
-
-
-/*
-  $pdo = Database::connect();
- 
-
-    if ( !empty($_POST)) {
-        // keep track validation errors
-     //$nameError = null;
-      //$cardnumberError = null;
-      //$expiration_dateError = null;
-      //$security_codeError = null;
-         
-        // keep track post values
-      $name = $_POST['name'];
-      $cardnumber = $_POST['cardnumber'];
-      $expiration_date = $_POST['expiration_date'];
-      $security_code = $_POST['security_code'];
-      $address_fk = $_POST['address_fk'];
-       
-      $createCC = new customerCreditcards($_SESSION['id']);
-      $response = $createCC->create($name,$cardnumber,$expiration_date,$security_code,$address_fk);
-      if ($response) {
-        header('Location: update.php');
-      } else {
-        header('Location: update.php');
-      }
-    }
-
-        // validate input
-      $valid = true;
-        
-      if (empty($name)) {
-        $nameError = 'Name on Card)';
-        $valid = false;
-     }
-      if (empty($cardnumber)) {
-        $cardnumberError = 'Enter Card Number';
-       $valid = false;
-      }
-     if (empty($expiration_date)) {
-       $expiration_dateError = 'Enter Expiration Date';
-       $valid = false;
-      }
-      if (empty($security_code)) {
-        $security_codeError = 'Enter CVV Code (3 digit code found on back of card)';
-        $valid = false;
-      }
-       
-    /* if ($valid) {
-       try {
-         
-          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql = "INSERT INTO creditcard (name,cardnumber,expiration_date,security_code,address_fk) values(?, ?, ?, ?, ?)";
-          $q = $pdo->prepare($sql);
-          $q->execute(array($name,$cardnumber,$expiration_date,$security_code,$address_fk));
-          $creditcardID = $pdo->lastInsertId();
-          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql = "INSERT INTO customer_creditcard (creditcard_fk,customer_fk) values(?,?)";
-          $q = $pdo->prepare($sql);
-          $q->execute(array($creditcardID, $_SESSION['id']));
-          header("Location: update.php");
-          } catch (PDOException $e) {
-           echo $e->getMessage();
-        }
-      }
-    }
-    */
 ?>
 
 
