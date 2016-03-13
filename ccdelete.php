@@ -25,19 +25,3 @@
 
 
   }
-  //if ($response) {
-       // header('Location: update.php');
-     // } else {
-       // header('Location: update.php');
-     // }
-   // }
-    //if($response){
-     // echo "success";
-   // } else {
-      //echo "failure";
-    //}
-
- // } else {
-    // redirect
-   // echo "didn't get param";
-  //}

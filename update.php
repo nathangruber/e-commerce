@@ -169,6 +169,18 @@
             echo '<td><input type="text" name="cardnumber" value="'.$creditcard['cardnumber'].'"></td>';
             echo '<td><input type="text" name="expiration_date" value="'.$creditcard['expiration_date'].'"></td>';
             echo '<td><input type="text" name="security_code" value="'.$creditcard['security_code'].'"></td>';
+            echo '<td>';
+            ?>
+              <select name='address_fk'>
+                <?php
+                  $myAddresses = new customerAddress($_SESSION['id']);
+                  foreach ($myAddresses->read() as $address) {
+                    echo "<option value='" . $address['id'] . "'>" . $address['street_1'] . "</option>";
+                  }
+                ?>
+              </select>
+            <?php 
+            echo '</td>';
             echo '<td><input class="btn btn-default" type="submit" value="Update"></td>';
             echo '</form>';
             
