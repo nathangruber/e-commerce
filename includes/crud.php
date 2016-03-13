@@ -136,7 +136,7 @@ class customerAddress {
 	public function read(){
 		try{
 			$pdo = Database::connect();
-			$sql = 'SELECT * FROM address WHERE id IN (SELECT address_fk FROM customer_address WHERE customer_fk = ?) ORDER BY id DESC';
+			$sql = 'SELECT * FROM address where customer_id = ?';
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->customer_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
