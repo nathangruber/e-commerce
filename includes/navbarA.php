@@ -66,7 +66,7 @@
                         <li><i class="icon-user"></i><a class="btn" href="logout.php">Logout</a></li>
                   <?php } 
                       else{ ?>
-                      <li><i class="icon-user"></i><a class="btn" href="login.php">Login</a></li>
+                      <li><i class="icon-user"></i><a class="btn" href="index.php">Login</a></li>
                       <li><i class=""></i><a class="btn" href="register.php">Register</a></li>
                   <?php } ?>
         		  </ul>
