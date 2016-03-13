@@ -4,7 +4,14 @@
 
 
 function valid($varname){
-	return ( !empty($varname) && isset($varname) );
+	if(empty($varname)){
+		return false;
+	}
+	if(!isset($varname)){
+		return false;
+	}
+	return true;
+	//return ( !empty($varname) && isset($varname) );
 }
 
 /*
