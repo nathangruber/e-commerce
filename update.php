@@ -120,13 +120,7 @@
     </div>
 
     <div class="row">
-      <?php
-          if ($logged) {
-            echo '<form method="POST" action="add-address.php">';
-            echo '<input type="submit" value="Add Your Address">';
-            echo '</form>';
-           } 
-        ?>
+     
 
       <table class="table table-bordered">
         <thead>
@@ -139,13 +133,6 @@
          </tr>
         </thead>
         <tbody>
-          <?php
-          if ($logged) {
-            echo '<form method="POST" action="cccreate.php">';
-            echo '<input type="submit" value="Add Credit Card">';
-            echo '</form>';
-          } 
-        ?>
           <?php
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = 'SELECT * FROM creditcard WHERE id IN (SELECT creditcard_fk FROM customer_creditcard WHERE customer_fk = ?)';
