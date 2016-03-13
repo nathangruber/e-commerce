@@ -143,13 +143,30 @@
           </div>
 
 
-          <div class="control-group <?php echo !empty($security_codeError)?'error':'';?>">
+
+          <?php
+            try{
+              $pdo = Database::connect();
+              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+              $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
+              $address = $pdo->query($sql);
+              Database::disconnect();
+            } catch (PDOException $e) {
+              echo $e->getMessage();
+              Database::disconnect();
+            }
+
+          ?>
+
+          <div class="control-group <?php echo !empty($security_addres_fk?'error':'';?>">
             <label class="control-label">Address</label>
             <div class="controls">
               <select name='address_fk'>
-                <option value='1'>option 1</option>
-                <option value='2'>option 2</option>
-                <option value='3'>option 3</option>
+                <?php
+                  foreach ($address as $row) {
+                    echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
+                  }
+                ?>
               </select>
              </div>
           </div>
@@ -173,11 +190,8 @@
                 echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
               }
               echo "</select>";
-              Database::disconnect();
-            } catch (PDOException $e) {
-              echo $e->getMessage();
-              Database::disconnect();
-            }*/
+              
+              */
           ?>
           <br>
           <br>
