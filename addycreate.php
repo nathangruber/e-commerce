@@ -9,8 +9,50 @@
   
 
   if(!empty($_POST)){
-    $customeraddress = new customerAddress($_SESSION['id']);
-    print_r($_POST);
+
+    // validate input
+    $valid = true;
+      
+    if (empty($street_1)) {
+      $street_1Error = 'Please enter Street Number';
+      $valid = false;
+    }
+    if (empty($street_2)) {
+      $street_2Error = 'Please enter Street Number';
+      $valid = false;
+    }
+    if (empty($city)) {
+      $cityError = 'Please enter City';
+      $valid = false;
+    }
+    if (empty($state)) {
+      $stateError = 'Please enter State';
+      $valid = false;
+    }
+    if (empty($zip_code)) {
+      $zip_codeError = 'Please enter Zip Code';
+      $valid = false;
+    }
+
+
+
+    if($valid){
+    //print_r($_POST);
+
+    //$customeraddress = new customerAddress($_SESSION['id']);
+    //$customeraddress->create($_POST[''])
+
+      echo 'we are going to use the crud';
+
+
+    }
+
+
+
+
+
+    
+    
 
   }
 

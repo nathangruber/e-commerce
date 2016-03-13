@@ -110,19 +110,15 @@ class customerAddress {
 		$this->customer_id = $customer_id;
 	}
 
-	public function create($street_1, $street_2, $city, $state, $zip_code ){
-		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {
+	public function create($street_1, $street_2, $city, $state, $zip_code, $customer_id){
+		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) || !valid($customer_id) ) {
 			return false;
 		} else {
 
 			$pdo = Database::connect();
-			$sql = "INSERT INTO address (street_1,street_2,city,state,zip_code) values(?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO address (street_1,street_2,city,state,zip_code,customer_id) values(?, ?, ?, ?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($street_1,$street_2,$city,$state,$zip_code));
-			$address_id = $pdo->lastInsertId();
-			$sql = "INSERT INTO customer_address (address_fk, customer_fk) values(?, ?)";
-			$q = $pdo->prepare($sql);
-			$q->execute(array($address_id, $this->customer_id)); 
+			$q->execute(array($street_1,$street_2,$city,$state,$zip_code,$customer_id));
 			
 			Database::disconnect();
 			return true;
