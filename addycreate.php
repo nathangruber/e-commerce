@@ -6,7 +6,7 @@
   }
   require_once('includes/database.php');
   require_once('includes/crud.php');
-  $pdo = Database::connect();
+  /*$pdo = Database::connect();
 
  
     if ( !empty($_POST)) {
@@ -16,7 +16,7 @@
       $cityError = null;
       $stateError = null;
       $zip_codeError = null;
-      */   
+        
         // keep track post values
       $street_1 = $_POST['street_1'];
       $street_2 = $_POST['street_2'];
@@ -24,15 +24,15 @@
       $state = $_POST['state'];
       $zip_code = $_POST['zip_code'];
     
-     /$updateAddress = new customerAddress($_SESSION['id']);
+      $updateAddress = new customerAddress();   //$_SESSION['id'] removed from param
       $response = $updateAddress->update($street_1,$street_2,$city,$state,$zip_code);
       if ($response) {
-       header('Location: update.php');
+       //header('Location: update.php');
       } else {
-        header('Location: update.php');
+        //header('Location: update.php');
       }
     }  
-?>
+
 
         // validate input
      $valid = true;
@@ -79,7 +79,7 @@
           echo $e->getMessage();
         }
       }
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>

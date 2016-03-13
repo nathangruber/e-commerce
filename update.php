@@ -70,7 +70,7 @@
 
       <div class="row">
         <div class="span12">
-          <a class="btn btn" href="addycreate.php">Add new address</a>
+          <a class="btn btn-default" href="addycreate.php">Add new address</a>
         </div>
         
       </div>
