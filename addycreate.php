@@ -60,7 +60,7 @@
       $customeraddress = new customerAddress($_SESSION['id']);
       $response = $customeraddress->create($street_1, $street_2, $city, $state, $zip_code);
       if($response){
-        echo 'everything was ok';
+        header('Location: update.php');
       }else{
         echo 'error';
       }
@@ -79,85 +79,6 @@
 
 
   
-
-
-
-
-
-  /*$pdo = Database::connect();
-
- 
-    if ( !empty($_POST)) {
-        // keep track validation errors
-      /*$street_1Error = null;
-      $street_2Error = null;
-      $cityError = null;
-      $stateError = null;
-      $zip_codeError = null;
-        
-        // keep track post values
-      $street_1 = $_POST['street_1'];
-      $street_2 = $_POST['street_2'];
-      $city = $_POST['city'];
-      $state = $_POST['state'];
-      $zip_code = $_POST['zip_code'];
-    
-      $updateAddress = new customerAddress();   //$_SESSION['id'] removed from param
-      $response = $updateAddress->update($street_1,$street_2,$city,$state,$zip_code);
-      if ($response) {
-       //header('Location: update.php');
-      } else {
-        //header('Location: update.php');
-      }
-    }  
-
-
-        // validate input
-     $valid = true;
-        
-      if (empty($street_1)) {
-        $street_1Error = 'Please enter Street Number';
-        $valid = false;
-      }
-      if (empty($street_2)) {
-        $street_2Error = 'Please enter Street Number';
-        $valid = false;
-      }
-      if (empty($city)) {
-        $cityError = 'Please enter City';
-        $valid = false;
-      }
-      if (empty($state)) {
-        $stateError = 'Please enter State';
-        $valid = false;
-      }
-      if (empty($zip_code)) {
-        $zip_codeError = 'Please enter Zip Code';
-        $valid = false;
-      }
-      
-      if ($valid) {
-        try {
-          
-          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql = "INSERT INTO address (street_1,street_2,city,state,zip_code) values(?, ?, ?, ?, ?)";
-          $q = $pdo->prepare($sql);
-          $q->execute(array($street_1,$street_2,$city,$state,$zip_code));
-          $addressID = $pdo->lastInsertId();
-          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql = "INSERT INTO customer_address (address_fk,customer_fk) values(?,?)";
-          $q = $pdo->prepare($sql);
-          $q->execute(array($addressID, $_SESSION['id']));
-          //$query = $q->fetch(PDO::FETCH_ASSOC);
-          //print_r($query);
-          //echo $addressID;
-          //die();
-          header("Location: update.php");
-        } catch (PDOException $e) {
-          echo $e->getMessage();
-        }
-      }
-    }*/
 ?>
 
 <!DOCTYPE html>
