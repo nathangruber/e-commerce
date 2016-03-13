@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 // helper function for validation
 
 
@@ -188,7 +189,7 @@ class customerCreditcards {
 		$this->customer_id = $customer_id;
 	}
 
-	public function create($name, $cardnumber, $expiration_date, $security_code, address_fk){
+	public function create($name, $cardnumber, $expiration_date, $security_code, $address_fk){
 		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_fk)) {
 			return false;
 		} else {
