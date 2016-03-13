@@ -49,9 +49,9 @@
         $createCC = new customerCreditcards($_SESSION['id']);
         $response = $createCC->create($name,$cardnumber,$expiration_date,$security_code,$address_fk);
         if ($response) {
-          header('Location: update.php?feedbackcreditcardaddes=ok');
+          header('Location: update.php?feedbackcreditcardadded=ok');
         } else {
-          header('Location: update.php?feedbackcreditcardaddes=error');
+          header('Location: update.php?feedbackcreditcardadded=error');
         }
       }
       

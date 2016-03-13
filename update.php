@@ -35,8 +35,8 @@
       }
     }
 
-    if(isset($_GET['feedbackcreditcardaddesfeedbackcreditcardaddes'])){
-      if($_GET['feedbackcreditcardaddes']=='ok'){
+    if(isset($_GET['feedbackcreditcardadded'])){
+      if($_GET['feedbackcreditcardadded']=='ok'){
         echo 'The credit card was added successfully!';
       }else{
         echo 'The credit card was not added.';
