@@ -35,7 +35,6 @@
         header('Location: update.php');
       }
     }
-?>
 
         // validate input
       $valid = true;
@@ -160,7 +159,8 @@
 
 
 
-          <?php/*
+          <?php
+          /*
             try {
               $pdo = Database::connect();
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
