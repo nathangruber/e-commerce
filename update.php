@@ -27,6 +27,13 @@
         echo 'Your information was not updated probably one param is empty.';
       }
     }
+    if(isset($_GET['feedbackdeleted'])){
+      if($_GET['feedbackdeleted']=='ok'){
+        echo 'The information was deleted successfully!';
+      }else{
+        echo 'Your information was not deleted.';
+      }
+    }
 
 
 
@@ -122,6 +129,13 @@
         </tbody>
       </table>
     </div>
+
+    <div class="row">
+        <div class="span12">
+          <a class="btn btn-default" href="cccreate.php">Add new credit card</a>
+        </div>
+        
+      </div>
 
     <div class="row">
      
