@@ -19,6 +19,8 @@
     $gender = $_POST['gender'];
     $username = $_POST['username'];
     
+    echo 'The session id is: '.$_SESSION['id'].'<br>';
+
     $updatecustomer = new customer();
     $response = $updatecustomer->update($name,$birth_date,$gender,$phone_number,$email_address,$username,$_SESSION['id']);
     if ($response) {
