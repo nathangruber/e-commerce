@@ -203,7 +203,7 @@ class customerCreditcards {
 	public function read(){
 		try{
 			$pdo = Database::connect();
-			$sql = 'SELECT * FROM creditcard WHERE id IN (SELECT creditcard_fk FROM customer_creditcard WHERE customer_fk = ?) ORDER BY id DESC';
+			$sql = 'SELECT * FROM creditcard WHERE customer_fk = ?';
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->customer_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);

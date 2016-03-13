@@ -159,26 +159,26 @@
         </thead>
         <tbody>
           <?php
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = 'SELECT * FROM creditcard WHERE id IN (SELECT creditcard_fk FROM customer_creditcard WHERE customer_fk = ?)';
-            $q = $pdo->prepare($sql);
-            $q->execute(array($_SESSION["id"]));
-            $query = $q->fetch(PDO::FETCH_ASSOC);
+            $myCreditCards = new customerCreditcards($_SESSION['id']);
+            foreach ($myCreditCards->read() as $creditcard) {
+            
             echo '<tr>';
             echo '<form method="POST" action="ccupdate.php">';
-            echo '<input type="hidden" name="creditcard_id" value="'.$query['id'].'">';
-            echo '<td><input type="text" name="name" value="'.$query['name'].'"></td>';
-            echo '<td><input type="text" name="cardnumber" value="'.$query['cardnumber'].'"></td>';
-            echo '<td><input type="text" name="expiration_date" value="'.$query['expiration_date'].'"></td>';
-            echo '<td><input type="text" name="security_code" value="'.$query['security_code'].'"></td>';
-            echo '<td><input type="submit" value="Update"></td>';
+            echo '<input type="hidden" name="creditcard_id" value="'.$creditcard['id'].'">';
+            echo '<td><input type="text" name="name" value="'.$creditcard['name'].'"></td>';
+            echo '<td><input type="text" name="cardnumber" value="'.$creditcard['cardnumber'].'"></td>';
+            echo '<td><input type="text" name="expiration_date" value="'.$creditcard['expiration_date'].'"></td>';
+            echo '<td><input type="text" name="security_code" value="'.$creditcard['security_code'].'"></td>';
+            echo '<td><input class="btn btn-default" type="submit" value="Update"></td>';
+            echo '</form>';
+            
+            echo '<form method="POST" action="ccdelete.php">';
+            echo '<input type="hidden" name="creditcard_id" value="'.$creditcard['id'].'">';
+            echo '<td><input class="btn btn-danger" type="submit" value="Delete"></td>';
             echo '</form>';
             echo '</tr>';
-            echo '<form method="POST" action="ccdelete.php">';
-            echo '<input type="hidden" name="creditcard_id" value="'.$query['id'].'">';
-            echo '<td><input type="submit" value="Delete"></td>';
-            echo '</form>';
 
+          }
 
          
           ?>
