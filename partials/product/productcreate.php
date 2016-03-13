@@ -38,23 +38,24 @@
             $valid = false;
         }       
         // insert data
+        
         if ($valid) {
-	       try {
-                $pdo = Database::connect();
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $sql = "INSERT INTO product (name,description,price,category_fk) values(?, ?, ?, ?)";
-                $q = $pdo->prepare($sql);
-                $q->execute(array($name,$description,$price,$category_fk));
-                Database::disconnect();
-                header("Location: index.php");
-           } catch (PDOException $e) {
-                Database::disconnect();
-                echo "msg: " . $e->getMessage();
-                die();
-            }
+            $pdo = Database::connect();
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "INSERT INTO product (name,description,price,category_fk) values(?, ?, ?, ?)";
+            $q = $pdo->prepare($sql);
+            $q->execute(array($name,$description,$price,$category_fk));
+            $last_id = $pdo->lastInsertId();
+            $sql2 = "INSERT INTO image (image,description,featured,product_fk) values(?, ?, ?, ?)";
+            $q2 = $pdo->prepare($sql2);
+            $q2->execute(array($name,$cost,$description,$last_id));
+            $sql3 = "INSERT INTO product_bin (product_fk,bin_fk) values(?, ?)";
+            $q3 = $pdo->prepare($sql3);
+            $q3->execute(array($last_id,$bin_fk));
+            Database::disconnect();
+            header("Location: index.php");
         }
-
-
+    }
 
 
 }
@@ -64,6 +65,7 @@
 <head>
     <meta charset="utf-8">
    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">       
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
  
@@ -103,7 +105,7 @@
                             <?php endif;?>
                         </div>
                       </div>
-                      <div class="control-group <?php echo !empty($categoryError)?'error':'';?>">
+                      <div class="control-group <?php echo !empty($category_fkError)?'error':'';?>">
                         <label class="control-label">Category</label>
                         <div class="controls">
                             <input name="category_fk" type="text"  placeholder="Category" value="<?php echo !empty($category_fk)?$category_fk:'';?>">
@@ -112,7 +114,19 @@
                             <?php endif;?>
                         </div>
                       </div>
-
+                     <label class="control-label">Bin ID</label>
+                      <br>
+                        <select name="bin_id">
+                            <?php
+                                $pdo = Database::connect();
+                                $sql = 'SELECT * FROM bin ORDER BY id DESC';                         
+                                   foreach ($pdo->query($sql) as $row) {
+                                            echo '<option name="bin_id" value="' . $row["id"] . '">' . $row["name"] . '</option>';
+                                  }
+                                   Database::disconnect();
+                                  ?>
+                        </select>
+                      <br>
 
 
                       <div class="form-actions">
