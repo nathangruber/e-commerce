@@ -44,7 +44,7 @@
         $valid = false;
       }
 
-      /*if($valid){
+      if($valid){
 
         $createCC = new customerCreditcards($_SESSION['id']);
         $response = $createCC->create($name,$cardnumber,$expiration_date,$security_code,$address_fk);
@@ -54,7 +54,7 @@
           header('Location: update.php?feedbackcreditcardaddes=error');
         }
       }
-      */
+      
   }
 ?>
 
