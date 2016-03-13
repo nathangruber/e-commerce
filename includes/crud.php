@@ -5,9 +5,11 @@
 
 function valid($varname){
 	if(empty($varname)){
+		echo $varname.'is the problem';
 		return false;
 	}
 	if(!isset($varname)){
+		echo $varname.'is the superproblem';
 		return false;
 	}
 	return true;
@@ -86,15 +88,15 @@ class customer {
 		if (!valid($name) || !valid($birth_date) || !valid($gender) || !valid($phone_number) || !valid($email_address)|| !valid($username) || !valid($customer_id) ) {
 			echo 'one param is not valid';
 			return false;
-	} else {
-		$pdo = Database::connect();
-		$sql = "UPDATE customer SET name = ?, birth_date = ?, gender = ?, phone_number = ?, email_address, username = ? WHERE id = ?";
-		$q = $pdo->prepare($sql);
-		$q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$username,$customer_id));
-			Database::disconnect();
-			return true;
+		} else {
+			$pdo = Database::connect();
+			$sql = "UPDATE customer SET name = ?, birth_date = ?, gender = ?, phone_number = ?, email_address = ?, username = ? WHERE id = ?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$username,$customer_id));
+				Database::disconnect();
+				return true;
+			}
 		}
-	}
 
 	public function delete($customer_id){
 
