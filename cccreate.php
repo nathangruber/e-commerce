@@ -7,7 +7,8 @@
   require_once('includes/database.php');
   require_once('includes/crud.php');
   
-
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
 
 
   if(!empty($_POST)){
