@@ -191,19 +191,14 @@ class customerCreditcards {
 		$this->customer_id = $customer_id;
 	}
 
-	public function create($name, $cardnumber, $expiration_date, $security_code, $address_fk ){
-		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_fk)) {
+	public function create($name, $cardnumber, $expiration_date, $security_code){
+		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code)) {
 			return false;
 		} else {
 			$pdo = Database::connect();
-			$sql = "INSERT INTO creditcard (name,cardnumber,expiration_date,security_code,address_fk) values(?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO  `E-Commerce`.`creditcard` (`name` ,`cardnumber` ,`expiration_date` ,`security_code` ,`customer_fk`) VALUES (?, ?, ?,?,?);";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($name,$cardnumber,$expiration_date,$security_code,$address_fk));
-			$creditcard_id = $pdo->lastInsertId();
-			$sql = "INSERT INTO customer_creditcard (creditcard_fk, customer_fk) values(?,?)";
-			$q = $pdo->prepare($sql);
-			$q->execute(array($creditcard_id, $this->customer_id)); 
-
+			$q->execute(array($name,$cardnumber,$expiration_date,$security_code,$this->customer_id));
 			Database::disconnect();
 			return true;
 		}
