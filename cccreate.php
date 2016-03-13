@@ -164,9 +164,9 @@
             <div class="controls">
               <select name='address_fk'>
                 <?php
-                  foreach ($address as $row) {
+                  /*foreach ($address as $row) {
                     echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
-                  }
+                  }*/
                 ?>
               </select>
              </div>
