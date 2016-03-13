@@ -13,9 +13,9 @@
     $response = $myAddresses->delete($_POST['addy_id']);
 
     if ($response) {
-      header('Location: update.php?feedback=ok');
+      header('Location: update.php?feedbackdeleted=ok');
     } else {
-      header('Location: update.php?feedback=error');
+      header('Location: update.php?feedbackdeleted=error');
     }
 
   } else {

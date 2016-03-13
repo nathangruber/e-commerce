@@ -168,7 +168,7 @@ class customerAddress {
 	public function delete($address_id){
 
         $pdo = Database::connect();
-        $sql = "DELETE FROM customer_address WHERE address_fk = ?"; //taken from SQL query on phpMyAdmin
+        $sql = "DELETE FROM address WHERE id = ?"; //taken from SQL query on phpMyAdmin
         $q = $pdo->prepare($sql);
         $q->execute(array($address_id));
         Database::disconnect();
