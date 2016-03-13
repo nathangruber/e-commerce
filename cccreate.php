@@ -145,7 +145,7 @@
 
 
           <?php
-          echo "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
+          echo "dont like it";
            /* try{
               //$pdo = Database::connect();
               $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
@@ -158,7 +158,7 @@
             }
             */
           ?>
-
+          <!--
           <div class="control-group <?php echo !empty($security_addres_fk?'error':'';?>">
             <label class="control-label">Address</label>
             <div class="controls">
@@ -171,7 +171,7 @@
               </select>
              </div>
           </div>
-
+          -->
 
 
 
