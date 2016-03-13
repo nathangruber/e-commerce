@@ -92,7 +92,7 @@
           <?php
           
               $myAddresses = new customerAddress($_SESSION['id']);
-
+              print_r($myAddresses->read());
               foreach ($myAddresses->read() as $address) {
 
                 echo '<tr>';
