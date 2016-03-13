@@ -145,17 +145,18 @@
 
 
           <?php
-            try{
+          echo "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
+           /* try{
               //$pdo = Database::connect();
               $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
               echo $sql;
-              /*$address = $pdo->query($sql);
+              $address = $pdo->query($sql);
               Database::disconnect();
             } catch (PDOException $e) {
               echo $e->getMessage();
-              Database::disconnect();*/
+              Database::disconnect();
             }
-
+            */
           ?>
 
           <div class="control-group <?php echo !empty($security_addres_fk?'error':'';?>">
