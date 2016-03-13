@@ -88,7 +88,7 @@
 <body>
    <?php require_once('includes/navbarA.php');?>
     <div class="container">
-     
+                <?php if(!$logged){ ?>
                 <div class="span10 offset1">
                     <div class="row">
                         <h3>Register</h3>
@@ -168,6 +168,9 @@
                           <a class="btn" href="index.php">Back</a>
                         </div>
                     </form>
+                    <?php }else{ ?>
+                        <h3>You are logged, you need to log out in order to create a new user.</h3>
+                    <?php  } ?>
                 </div>
                  
     </div> <!-- /container -->
