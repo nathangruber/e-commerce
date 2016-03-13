@@ -15,6 +15,15 @@
 
   <div class="container">
    <?php require_once('includes/navbar.php'); ?>
+   <?php
+    if(isset($_GET['feedback'])){
+      if($_GET['feedback']=='ok'){
+        echo 'The information was updated successfully!';
+      }else{
+        echo 'Your information was not updated probably one param is empty.';
+      }
+    }
+   ?>
     <div class="row">
       <h3>Update User Information</h3>
     </div>
