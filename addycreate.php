@@ -58,7 +58,7 @@
     //;
     //$customeraddress->create($_POST[''])
       $customeraddress = new customerAddress($_SESSION['id']);
-      $response = $customeraddress->create($street_1, $street_2, $city, $state, $zip_code, $_SESSION['customer_id']);
+      $response = $customeraddress->create($street_1, $street_2, $city, $state, $zip_code);
       if($response){
         echo 'everything was ok';
       }else{

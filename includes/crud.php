@@ -111,7 +111,7 @@ class customerAddress {
 	}
 
 	public function create($street_1, $street_2, $city, $state, $zip_code, $customer_id){
-		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) || !valid($customer_id) ) {
+		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {
 			echo 'we have received: '.$street_1.$street_2.$city.$state.$zip_code.$customer_id.'and one is missing';
 			return false;
 		} else {
@@ -119,7 +119,7 @@ class customerAddress {
 			$pdo = Database::connect();
 			$sql = "INSERT INTO address (street_1,street_2,city,state,zip_code,customer_id) values(?, ?, ?, ?, ?, ?)";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($street_1,$street_2,$city,$state,$zip_code,$customer_id));
+			$q->execute(array($street_1,$street_2,$city,$state,$zip_code,$this->customer_id));
 			
 			Database::disconnect();
 			return true;
