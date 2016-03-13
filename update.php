@@ -69,8 +69,10 @@
       </div>
 
       <div class="row">
-     
-        <p>Please Add Or Update Your User Information</p>
+        <div class="span12">
+          <a class="btn btn" href="addycreate.php">Add new address</a>
+        </div>
+        
       </div>
 
     <div class="row">
@@ -120,11 +122,12 @@
     <div class="row">
       <?php
           if ($logged) {
-            echo '<form method="POST" action="addycreate.php">';
+            echo '<form method="POST" action="add-address.php">';
             echo '<input type="submit" value="Add Your Address">';
             echo '</form>';
            } 
         ?>
+
       <table class="table table-bordered">
         <thead>
           <tr>
