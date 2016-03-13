@@ -22,9 +22,9 @@
     $updateAddress = new customerAddress($_SESSION['id']);
     $response = $updateAddress->update($street_1,$street_2,$city,$state,$zip_code,$id);
     if ($response) {
-      header('Location: update.php?feedbackupdatedaddress=ok');
+      header('Location: update.php?feedback=ok');
     } else {
-      header('Location: update.php?feedbackupdatedaddress=error');
+      header('Location: update.php?feedback=error');
     }
   } 
 ?>

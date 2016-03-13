@@ -12,10 +12,10 @@
     $myAddresses = new customerAddress($_SESSION['id']);
     $response = $myAddresses->delete($_POST['addy_id']);
 
-    if($response){
-      echo "success";
+    if ($response) {
+      header('Location: update.php?feedback=ok');
     } else {
-      echo "failure";
+      header('Location: update.php?feedback=error');
     }
 
   } else {

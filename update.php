@@ -27,6 +27,11 @@
         echo 'Your information was not updated probably one param is empty.';
       }
     }
+
+
+
+
+
    ?>
     <div class="row">
       <table class="table table-bordered">
