@@ -82,6 +82,7 @@ class customer {
     }
 
 	public function update($name, $birth_date, $gender, $phone_number, $email_address, $username, $customer_id){
+		echo $name.$birth_date.$gender.$phone_number.$email_address.$username.$customer_id;
 		if (!valid($name) || !valid($birth_date) || !valid($gender) || !valid($phone_number) || !valid($email_address)|| !valid($username) || !valid($customer_id) ) {
 			echo 'one param is not valid';
 			return false;
