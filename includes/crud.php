@@ -122,19 +122,16 @@ class customerAddress {
 			$address_id = $pdo->lastInsertId();
 			$sql = "INSERT INTO customer_address (address_fk, customer_fk) values(?, ?)";
 			$q = $pdo->prepare($sql);
-			//$q->execute(array($address_id, $this->customer_id)); 
+			$q->execute(array($address_id, $this->customer_id)); 
 			
-			//Database::disconnect();
-			//return true;
-		   $q->execute(array($addressID, $_SESSION['id']));
-           //$query = $q->fetch(PDO::FETCH_ASSOC);
-           //print_r($query);
-           //echo $addressID;
-          //die();
-           header("Location: update.php");
-           } catch (PDOException $e) {
-           echo $e->getMessage();
-        }
+			Database::disconnect();
+			return true;
+		  
+           $query = $q->fetch(PDO::FETCH_ASSOC);
+           print_r($query);
+           echo $addressID;
+          die();
+          
         
 	}
 }
