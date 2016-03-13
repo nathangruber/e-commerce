@@ -175,7 +175,13 @@
                 <?php
                   $myAddresses = new customerAddress($_SESSION['id']);
                   foreach ($myAddresses->read() as $address) {
-                    echo "<option value='" . $address['id'] . "'"; if($address['id']==$creditcard['address_fk']){echo 'selected'} echo ">" . $address['street_1'] . "</option>";
+                    echo "<option value='" . $address['id'] . "'";
+                    
+                    if($address['id']==$creditcard['address_fk']){
+                      echo 'selected';
+                    }
+                    
+                    echo ">" . $address['street_1'] . "</option>";
                   }
                 ?>
               </select>
