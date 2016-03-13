@@ -6,6 +6,21 @@
   }
   require_once('includes/database.php');
   require_once('includes/crud.php');
+  
+
+  if(!empty($_POST)){
+    $customeraddress = new customerAddress($_SESSION['id']);
+    print_r($POST);
+
+  }
+
+
+  
+
+
+
+
+
   /*$pdo = Database::connect();
 
  
