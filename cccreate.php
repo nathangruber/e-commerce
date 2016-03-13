@@ -144,7 +144,35 @@
 
 
 
-          
+          <?php
+          echo "dont like it";
+           /* try{
+              //$pdo = Database::connect();
+              $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
+              echo $sql;
+              $address = $pdo->query($sql);
+              Database::disconnect();
+            } catch (PDOException $e) {
+              echo $e->getMessage();
+              Database::disconnect();
+            }
+            */
+          ?>
+          <!--
+          <div class="control-group <?php //echo !empty($security_addres_fk?'error':'';?>">
+            <label class="control-label">Address</label>
+            <div class="controls">
+              <select name='address_fk'>
+                <?php
+                  /*foreach ($address as $row) {
+                    echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
+                  }*/
+                ?>
+              </select>
+             </div>
+          </div>
+          -->
+
 
 
 
