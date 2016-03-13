@@ -154,7 +154,9 @@
             <th>Credit Card Number</th>
             <th>Expiration Date</th>
             <th>Security Code</th>
+            <th>Address</th>
             <th>Update</th>
+            <th>Delete</th>
          </tr>
         </thead>
         <tbody>
