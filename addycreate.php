@@ -10,11 +10,11 @@
  
     if ( !empty($_POST)) {
         // keep track validation errors
-     // $street_1Error = null;
-     // $street_2Error = null;
-     // $cityError = null;
-     // $stateError = null;
-     // $zip_codeError = null;
+      $street_1Error = null;
+      $street_2Error = null;
+      $cityError = null;
+      $stateError = null;
+      $zip_codeError = null;
          
         // keep track post values
       $street_1 = $_POST['street_1'];
