@@ -145,7 +145,7 @@
 
 
           <?php
-          echo "dont like it";
+          echo "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
            /* try{
               //$pdo = Database::connect();
               $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
