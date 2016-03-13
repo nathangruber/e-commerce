@@ -22,10 +22,14 @@
     $updatecustomer = new customer();
     $response = $updatecustomer->update($name,$birth_date,$gender,$phone_number,$email_address,$username,$_SESSION['id']);
     if ($response) {
-      header('Location: update.php');
+      //header('Location: update.php');
+      echo 'response is true';
     } else {
-      header('Location: update.php?error=1');
+      echo 'response is false';
+      //header('Location: update.php?error=1');
     }
+  }else{
+    header('Location: update.php');
   }  
 
     
