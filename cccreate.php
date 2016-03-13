@@ -45,10 +45,10 @@
         $valid = false;
       }
 
-      if($valid){
+      /*if($valid){
 
         $createCC = new customerCreditcards($_SESSION['id']);
-        /*$response = $createCC->create($name,$cardnumber,$expiration_date,$security_code,$address_fk);
+        $response = $createCC->create($name,$cardnumber,$expiration_date,$security_code,$address_fk);
         if ($response) {
           header('Location: update.php?feedbackcreditcardaddes=ok');
         } else {
