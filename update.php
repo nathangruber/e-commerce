@@ -102,11 +102,11 @@
                 echo '<td><input type="text" name="city" value="'.$address['city'].'"></td>';
                 echo '<td><input type="text" name="state" value="'.$address['state'].'"></td>';
                 echo '<td><input type="text" name="zip_code" value="'.$address['zip_code'].'"></td>';
-                echo '<td><input type="submit" value="Update"></td>';
+                echo '<td><input class="btn btn-default" type="submit" value="Update"></td>';
                 echo '</form>';
                 echo '<form method="POST" action="addydelete.php">';
                 echo '<input type="hidden" name="addy_id" value="'.$address['id'].'">';
-                echo '<td><input type="submit" value="Delete"></td>';
+                echo '<td><input class="btn btn-error" type="submit" value="Delete"></td>';
                 echo '</form>';
                 echo '</tr>';
 
