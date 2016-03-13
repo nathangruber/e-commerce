@@ -150,6 +150,7 @@
             <div class="controls">
               <select name='address_fk'>
                 <?php
+                  $myAddresses = new customerAddress($_SESSION['id']);
                   foreach ($myAddresses->read() as $address) {
                     echo "<option value='" . $address['id'] . "'>" . $address['street_1'] . "</option>";
                   }
@@ -158,7 +159,7 @@
              </div>
           </div>
 
-         
+
           <br>
           <br>
           <br>
