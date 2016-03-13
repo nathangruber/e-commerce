@@ -15,7 +15,11 @@
 
   <div class="container">
    <?php require_once('includes/navbar.php'); ?>
-   <?php
+
+    <div class="row">
+      <h3>Update User Information</h3>
+    </div>
+    <?php
     if(isset($_GET['feedback'])){
       if($_GET['feedback']=='ok'){
         echo 'The information was updated successfully!';
@@ -24,9 +28,6 @@
       }
     }
    ?>
-    <div class="row">
-      <h3>Update User Information</h3>
-    </div>
     <div class="row">
       <table class="table table-bordered">
         <thead>
