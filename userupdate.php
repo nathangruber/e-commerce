@@ -19,15 +19,13 @@
     $gender = $_POST['gender'];
     $username = $_POST['username'];
     
-    echo 'The session id is: '.$_SESSION['id'].'<br>';
+ 
 
     $thecustomer = new customer();
     $read_response = $thecustomer->read($_SESSION['id']);
-    print_r($read_response);
     $response = $thecustomer->update($name,$birth_date,$gender,$phone_number,$email_address,$read_response['username'],$_SESSION['id']);
     if ($response) {
-      //header('Location: update.php');
-      echo 'response is true';
+      header('Location: update.php');
     } else {
       echo 'response is false';
       //header('Location: update.php?error=1');

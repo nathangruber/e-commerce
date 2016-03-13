@@ -4,17 +4,7 @@
 
 
 function valid($varname){
-	if(empty($varname)){
-		echo $varname.'is the problem1<br>';
-		return false;
-	}
-	if(!isset($varname)){
-		echo $varname.'is the superproblem2<br>';
-		return false;
-	}
-	echo $varname.' works3<br>';
-	return true;
-	//return ( !empty($varname) && isset($varname) );
+	return ( !empty($varname) && isset($varname) );
 }
 
 /*
@@ -85,9 +75,7 @@ class customer {
     }
 
 	public function update($name, $birth_date, $gender, $phone_number, $email_address, $username, $customer_id){
-		echo 'Received: '.$name.$birth_date.$gender.$phone_number.$email_address.$username.$customer_id.'<br>';
 		if (!valid($name) || !valid($birth_date) || !valid($gender) || !valid($phone_number) || !valid($email_address)|| !valid($username) || !valid($customer_id) ) {
-			echo 'one param is not valid';
 			return false;
 		} else {
 			$pdo = Database::connect();
