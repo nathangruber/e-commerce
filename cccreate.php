@@ -144,56 +144,21 @@
 
 
 
-          <?php
-          echo "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
-           /* try{
-              //$pdo = Database::connect();
-              $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
-              echo $sql;
-              $address = $pdo->query($sql);
-              Database::disconnect();
-            } catch (PDOException $e) {
-              echo $e->getMessage();
-              Database::disconnect();
-            }
-            */
-          ?>
-          <!--
-          <div class="control-group <?php //echo !empty($security_addres_fk?'error':'';?>">
+
+          <div class="control-group">
             <label class="control-label">Address</label>
             <div class="controls">
               <select name='address_fk'>
                 <?php
-                  /*foreach ($address as $row) {
-                    echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
-                  }*/
+                  foreach ($myAddresses->read() as $address) {
+                    echo "<option value='" . $address['id'] . "'>" . $address['street_1'] . "</option>";
+                  }
                 ?>
               </select>
              </div>
           </div>
-          -->
 
-
-
-
-
-          <?php
-          /*
-            try {
-              $pdo = Database::connect();
-              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-              $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` LEFT JOIN `customer_address` ON `address`.`id`=`customer_address`.`address_fk` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
-              $address = $pdo->query($sql);
-              echo "dropdown text";
-              echo "<br>";
-              echo "<select name='address_fk'>";
-              foreach ($address as $row) {
-                echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
-              }
-              echo "</select>";
-              
-              */
-          ?>
+         
           <br>
           <br>
           <br>
