@@ -188,14 +188,14 @@ class customerCreditcards {
 		$this->customer_id = $customer_id;
 	}
 
-	public function create($name, $cardnumber, $expiration_date, $security_code){
-		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code)) {
+	public function create($name, $cardnumber, $expiration_date, $security_code, address_fk){
+		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_fk)) {
 			return false;
 		} else {
 			$pdo = Database::connect();
-			$sql = "INSERT INTO  `E-Commerce`.`creditcard` (`name` ,`cardnumber` ,`expiration_date` ,`security_code` ,`customer_fk`) VALUES (?, ?, ?,?,?);";
+			$sql = "INSERT INTO  `E-Commerce`.`creditcard` (`name` ,`cardnumber` ,`expiration_date` ,`security_code` ,`customer_fk` ,`address_fk`) VALUES (?, ?, ?, ?, ?, ?);";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($name,$cardnumber,$expiration_date,$security_code,$this->customer_id));
+			$q->execute(array($name,$cardnumber,$expiration_date,$security_code,$this->customer_id,$address_fk));
 			Database::disconnect();
 			return true;
 		}
