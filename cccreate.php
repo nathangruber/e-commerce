@@ -7,56 +7,7 @@
   require_once('includes/database.php');
   require_once('includes/crud.php');
   
-  error_reporting(E_ALL);
-  ini_set('display_errors', 1);
-
-
-  if(!empty($_POST)){
-      // keep track validation errors
-      $nameError = null;
-      $cardnumberError = null;
-      $expiration_dateError = null;
-      $security_codeError = null;
-         
-      // keep track post values
-      $name = $_POST['name'];
-      $cardnumber = $_POST['cardnumber'];
-      $expiration_date = $_POST['expiration_date'];
-      $security_code = $_POST['security_code'];
-      $address_fk = $_POST['address_fk'];
-
-       // validate input
-      $valid = true;
-        
-      if (empty($name)) {
-        $nameError = 'Name on Card)';
-        $valid = false;
-      }
-      if (empty($cardnumber)) {
-        $cardnumberError = 'Enter Card Number';
-       $valid = false;
-      }
-      if (empty($expiration_date)) {
-       $expiration_dateError = 'Enter Expiration Date';
-       $valid = false;
-      }
-      if (empty($security_code)) {
-        $security_codeError = 'Enter CVV Code (3 digit code found on back of card)';
-        $valid = false;
-      }
-
-      /*if($valid){
-
-        $createCC = new customerCreditcards($_SESSION['id']);
-        $response = $createCC->create($name,$cardnumber,$expiration_date,$security_code,$address_fk);
-        if ($response) {
-          header('Location: update.php?feedbackcreditcardaddes=ok');
-        } else {
-          header('Location: update.php?feedbackcreditcardaddes=error');
-        }
-      }
-      */
-  }
+  
 ?>
 
 
