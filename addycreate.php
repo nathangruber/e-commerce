@@ -23,9 +23,17 @@
       $state = $_POST['state'];
       $zip_code = $_POST['zip_code'];
     
-         
+      $updateAddress = new customerAddress($_SESSION['id']);
+      $response = $updateAddress->update($street_1,$street_2,$city,$state,$zip_code,$id);
+      if ($response) {
+        header('Location: update.php');
+      } else {
+        header('Location: update.php');
+      }
+    }  
+?>
         // validate input
-      $valid = true;
+      /*$valid = true;
         
       if (empty($street_1)) {
         $street_1Error = 'Please enter Street Number';
@@ -71,7 +79,7 @@
       }
     }
 ?>
-
+*/
 <!DOCTYPE html>
 <html lang="en">
  <head>
