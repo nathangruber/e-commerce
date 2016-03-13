@@ -86,7 +86,7 @@
 <?php require_once 'includes/header.php';?>
  
 <body>
-   <?php require_once('includes/navbar.php');?>
+   <?php require_once('includes/navbarA.php');?>
     <div class="container">
      
                 <div class="span10 offset1">
