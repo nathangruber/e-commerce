@@ -147,8 +147,8 @@
           <?php
             try{
               $pdo = Database::connect();
-              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
+              echo $sql;
               $address = $pdo->query($sql);
               Database::disconnect();
             } catch (PDOException $e) {
