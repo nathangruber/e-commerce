@@ -146,14 +146,14 @@
 
           <?php
             try{
-              $pdo = Database::connect();
+              //$pdo = Database::connect();
               $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE (`customer_address`.`customer_fk` = ". $_SESSION['id'] . ")";
               echo $sql;
-              $address = $pdo->query($sql);
+              /*$address = $pdo->query($sql);
               Database::disconnect();
             } catch (PDOException $e) {
               echo $e->getMessage();
-              Database::disconnect();
+              Database::disconnect();*/
             }
 
           ?>
