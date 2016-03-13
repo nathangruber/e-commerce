@@ -127,10 +127,10 @@ class customerAddress {
 			Database::disconnect();
 			return true;
 		  
-           $query = $q->fetch(PDO::FETCH_ASSOC);
-           print_r($query);
-           echo $addressID;
-          die();
+           //$query = $q->fetch(PDO::FETCH_ASSOC);
+          // print_r($query);
+           //echo $addressID;
+         // die();
           
         
 	}

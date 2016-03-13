@@ -10,11 +10,11 @@
  
     if ( !empty($_POST)) {
         // keep track validation errors
-      $street_1Error = null;
-      $street_2Error = null;
-      $cityError = null;
-      $stateError = null;
-      $zip_codeError = null;
+     // $street_1Error = null;
+     // $street_2Error = null;
+     // $cityError = null;
+     // $stateError = null;
+     // $zip_codeError = null;
          
         // keep track post values
       $street_1 = $_POST['street_1'];
@@ -23,17 +23,17 @@
       $state = $_POST['state'];
       $zip_code = $_POST['zip_code'];
     
-      //$updateAddress = new customerAddress($_SESSION['id']);
-      //$response = $updateAddress->update($street_1,$street_2,$city,$state,$zip_code,$id);
-      //if ($response) {
-       //header('Location: update.php');
-      //} else {
-       // header('Location: update.php');
-      //}
-    //}  
-
+      $updateAddress = new customerAddress($_SESSION['id']);
+      $response = $updateAddress->update($street_1,$street_2,$city,$state,$zip_code);
+      if ($response) {
+       header('Location: update.php');
+      } else {
+        header('Location: update.php');
+      }
+    }  
+?>
         // validate input
-      $valid = true;
+     /* $valid = true;
         
       if (empty($street_1)) {
         $street_1Error = 'Please enter Street Number';
@@ -79,7 +79,7 @@
       }
     }
 ?>
-
+*/
 <!DOCTYPE html>
 <html lang="en">
  <head>
