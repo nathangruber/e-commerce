@@ -46,7 +46,7 @@
        <div>
         <center>
 <form action="loginpage.php" method="post">
-          <input type="submit" value="Login">
+          <input class="btn btn-default" type="submit" value="Login">
         </form>
       </div>
       <br>
@@ -54,7 +54,7 @@
 <center>
        <div>
 <form action="includes/logout.php" method="post"> 
-          <input type="submit" value="Logout">
+          <input class="btn btn-default" type="submit" value="Logout">
         </form>
       </div>
       </center>
@@ -62,7 +62,7 @@
       <div>
         <br>
 <form action="register.php" method="post">
-          <input type="submit" value="Register">
+          <input class="btn btn-default" type="submit" value="Register">
         </form>
       </div>
      </center>
@@ -71,8 +71,8 @@
           if ($logged) {
             echo "You are logged in succesfully.";
             echo '<form method="POST" action="update.php">';
-            echo '<input type="submit" value="Update User Info">';
-            echo '</form>';
+            echo '<input class="btn btn-default" type="submit" value="Update User Info">';
+            echo '</form>' ;
           
           } else {
             echo "You are logged out.";
