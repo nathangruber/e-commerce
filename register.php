@@ -25,7 +25,7 @@
         // validate input
        $valid = true;
         if (empty($name)) {
-            $nameError = 'Please enter Name';
+            $nameError = 'Please enter your Name';
             $valid = false;
         }
          
@@ -43,7 +43,7 @@
             $valid = false;
         }
          if (empty($email_address)) {
-            $email_addressError = 'Please enter Email Address';
+            $email_addressError = 'Please enter a valid Email Address';
             $valid = false;
         } else if ( !filter_var($email_address,FILTER_VALIDATE_EMAIL) ) {
             $email_addressError = 'Please enter a valid Email Address';
@@ -169,7 +169,7 @@
                         </div>
                     </form>
                     <?php }else{ ?>
-                        <h3>You are logged, you need to log out in order to create a new user.</h3>
+                        <h3>You are currently logged in, please log out in order to create a new user.</h3>
                     <?php  } ?>
                 </div>
                  

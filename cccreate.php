@@ -79,7 +79,7 @@
     <div class="container">
       <div class="span10 offset1">
         <div class="row">
-          <h3>Complete All Fields</h3>
+          <h3><small>Complete All Fields</small></h3>
         </div>           
         <form class="form-horizontal" action="cccreate.php" method="post"> 
 

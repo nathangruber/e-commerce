@@ -30,23 +30,23 @@
     $valid = true;
       
     if (empty($street_1)) {
-      $street_1Error = 'Please enter Street Number';
+      $street_1Error = 'Please enter your Street Number';
       $valid = false;
     }
     if (empty($street_2)) {
-      $street_2Error = 'Please enter Street Number';
+      $street_2Error = 'Please enter your Street Number';
       $valid = false;
     }
     if (empty($city)) {
-      $cityError = 'Please enter City';
+      $cityError = 'Please enter your City';
       $valid = false;
     }
     if (empty($state)) {
-      $stateError = 'Please enter State';
+      $stateError = 'Please enter your State';
       $valid = false;
     }
     if (empty($zip_code)) {
-      $zip_codeError = 'Please enter Zip Code';
+      $zip_codeError = 'Please enter your Zip Code';
       $valid = false;
     }
 
@@ -64,18 +64,8 @@
       }else{
         echo 'error';
       }
-
-
-    }
-
-
-
-
-
-    
-    
-
-  }
+   }
+}
 
 
   

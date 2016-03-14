@@ -22,24 +22,24 @@
     <?php
     if(isset($_GET['feedback'])){
       if($_GET['feedback']=='ok'){
-        echo 'The information was updated successfully!';
+        echo 'Your information was updated successfully!';
       }else{
-        echo 'Your information was not updated probably one param is empty.';
+        echo 'Update unsuccesful.';
       }
     }
     if(isset($_GET['feedbackdeleted'])){
       if($_GET['feedbackdeleted']=='ok'){
-        echo 'The information was deleted successfully!';
+        echo 'Your information was deleted successfully!';
       }else{
-        echo 'Your information was not deleted.';
+        echo 'Please try again.';
       }
     }
 
     if(isset($_GET['feedbackcreditcardadded'])){
       if($_GET['feedbackcreditcardadded']=='ok'){
-        echo 'The credit card was added successfully!';
+        echo 'Your credit card was added successfully!';
       }else{
-        echo 'The credit card was not added.';
+        echo 'your credit card add was unsuccesful.';
       }
     }
 
