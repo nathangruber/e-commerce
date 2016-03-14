@@ -86,7 +86,7 @@
 <?php require_once 'includes/header.php';?>
  
 <body>
-   <?php require_once('includes/navbarA.php');?>
+   <?php require_once('includes/navbar.php');?>
     <div class="container">
                 <?php if(!$logged){ ?>
                 <div class="span10 offset1">
