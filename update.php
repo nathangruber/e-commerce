@@ -87,7 +87,6 @@
         <div class="span12">
           <a class="btn btn-default" href="addycreate.php">Add new address</a>
         </div>
-        
       </div>
 
     <div class="row">
