@@ -24,14 +24,14 @@
       if($_GET['feedback']=='ok'){
         echo 'Your information was updated successfully!';
       }else{
-        echo 'Update unsuccesful.';
+        echo 'Please check fields and try again.';
       }
     }
     if(isset($_GET['feedbackdeleted'])){
       if($_GET['feedbackdeleted']=='ok'){
         echo 'Your information was deleted successfully!';
       }else{
-        echo 'Please try again.';
+        echo 'Please check fields and try again.';
       }
     }
 
@@ -39,14 +39,10 @@
       if($_GET['feedbackcreditcardadded']=='ok'){
         echo 'Your credit card was added successfully!';
       }else{
-        echo 'your credit card add was unsuccesful.';
+        echo 'Please check fields and try again.';
       }
     }
-
-
-
-
-   ?>
+    ?>
     <div class="row">
       <table class="table table-bordered">
         <thead>
@@ -205,13 +201,6 @@
         </tbody>
       </table>
     </div>
-
-
-
-
-
-
-
   </div>
 </body>
 </html>

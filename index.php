@@ -51,21 +51,21 @@
       </div>
       <br>
        </center>
-<center>
-       <div>
+       <center>
+      <div>
 <form action="includes/logout.php" method="post"> 
           <input class="btn btn-default" type="submit" value="Logout">
         </form>
       </div>
       </center>
       <center>
-      <div>
+    <div>
         <br>
 <form action="register.php" method="post">
           <input class="btn btn-default" type="submit" value="Register">
         </form>
       </div>
-     </center>
+      </center>
 
         <?php
           if ($logged) {
