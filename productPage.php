@@ -2,6 +2,7 @@
 require_once'includes/session.php';
 require_once'includes/database.php';
 require_once'includes/crud.php';
+require_once'includes/navbar.php';
  error_reporting(E_ALL);
  Database::connect();
 ?>
@@ -9,7 +10,6 @@ require_once'includes/crud.php';
 <html lang="en">
  <head>
 	 <?php require_once 'includes/header.php';?>
-	  <require_once'includes/navbar.php';
 	  <title>Products</title>
  </head>
 
