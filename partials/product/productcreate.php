@@ -1,14 +1,19 @@
 <?php
-     
-    require_once 'includes/database.php';
-    require_once 'includes/navbar.php';
+  
+  require_once('includes/session.php');
+  if(!$logged){
+    header("Location: index.php");
+    die(); // just in case
+  }
+  require_once('includes/database.php');
+  require_once('includes/crud.php');
  
     if ( !empty($_POST)) {
         // keep track validation errors
         $nameError = null;
         $descriptionError = null;
         $priceError = null;
-        $category_fkError = null;
+   
         
         // keep track post values
         $name = $_POST['name'];
@@ -38,7 +43,7 @@
             $valid = false;
         }       
         // insert data
-        
+        //////////////add crud oop///////////////
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
