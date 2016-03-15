@@ -12,7 +12,7 @@
  <?php require_once 'includes/header.php';?>
      <title>About Blake's Board Shop</title>
  </head>
-<body>
+
 
       <div class="container">
         <div class = "row">
