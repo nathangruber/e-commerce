@@ -49,7 +49,6 @@
             $email_addressError = 'Please enter a valid Email Address';
             $valid = false;
         }
-
         if (empty($username)) {
             $usernameError = 'Please enter your Username';
             $valid = false;
