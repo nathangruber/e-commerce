@@ -20,7 +20,7 @@ require_once'includes/navbar.php';
 	      <h3>List of all Products</h3>
 	    </div>
 	    <div class="row">
-	      <table class="table table-striped table-bordered">
+	      <table class="table table-bordered">
 	        <thead>
 	          <tr>
 	            <th>Name</th>
