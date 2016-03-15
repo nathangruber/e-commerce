@@ -44,11 +44,11 @@ require_once'includes/crud.php';
 	                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
 	                echo '<td><input type="text" name="product_name" value="'.$row['product_name'].'"></td>'; 
 	                echo '<td><input type="text" name="price" value="'.$row['price'].'"></td>';
-	                echo '<td><input type="submit" value="More Details"></td>';
+	                echo '<td><input class="btn btn-default" type="submit" value="More Details"></td>';
 	                echo '</form>';
 	                echo '<form method="POST" action="////////addToCart.php">';
 	                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-	                echo '<td><input type="submit" value="Add to Cart"></td>';
+	                echo '<td><input class="btn btn-default" type="submit" value="Add to Cart"></td>';
 	                echo '</form>';
 	                echo '</tr>';
 	            }
@@ -62,9 +62,7 @@ require_once'includes/crud.php';
 	    </div>
 
         <div>
-          <a href="index.php">Return to Index</a>
-        </div>
-        <br>
+          <a href="index.php">Return to Blake's home page.
         <br>
         <br>
         <br>

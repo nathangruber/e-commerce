@@ -46,7 +46,7 @@ require_once'includes/crud.php';
                   echo '<td><input type="text" name="product_name" value="'.$row['product_name'].'"></td>'; 
                   echo '<td><input type="text" name="description" value="'.$row['description'].'"></td>'; 
                   echo '<td><input type="text" name="price" value="'.$row['price'].'"></td>';
-                  echo '<td><input type="submit" value="Add to Cart"></td>';
+                  echo '<td><input class="btn btn-default" type="submit" value="Add to Cart"></td>';
                   echo '</form>';
                   echo '</tr>';
                 }
