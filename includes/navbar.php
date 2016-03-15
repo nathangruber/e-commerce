@@ -18,6 +18,7 @@
          <li><a href="register.php" class="black">Register</a></li>
          <li><a href="productPage.php" class="black">Products</a></li> 
          <li><a href="about.php" class="black">About</a></li>
+         <li><a href="contact.php" class="black">Contact Us</a></li>
        </ul>
      </div>
    </div>
