@@ -1,9 +1,9 @@
 <?php
 session_start();
 	
-	$loggedin = false;
+	$logged = false;
 	if (!empty($_SESSION['id']) && !empty($_SESSION['user_name'])) {
-		$loggedin = true;
+		$logged = true;
 	}
 	$admin = false;
 	if (!empty($_SESSION['id']) && ($_SESSION['permission']) == 1 ) {
