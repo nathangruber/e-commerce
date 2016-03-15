@@ -44,6 +44,20 @@
         }       
         // insert data
         //////////////add crud oop///////////////
+         if($valid){
+
+        $createProduct = new product($_SESSION['id']);
+        $response = $createProduct->create($name,$description,$price,$category_fk);
+        if ($response) {
+          header('Location: update.php?feedbackproductadded=ok');
+        } else {
+          header('Location: update.php?feedbackproductadded=error');
+        }
+      }
+      
+  }
+?>
+
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
