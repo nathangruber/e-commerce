@@ -32,11 +32,10 @@
 <ul>
   <li> Introduction to Blake's Butcher Shop</li>
   <li> Photos</li>
- 
-</ul>
-<p><a href="contact.php">Contact Us</a></p>
+ </ul>
+<p><a href="register.php">Register</a></p>
 <ul>
-  <li> Email Form</li>
+  <li> Register</li>
 </ul>
  <p><a href="product.php">Our Boards</a></p>
 <ul>
@@ -48,9 +47,11 @@
 <ul>
   <li> Meet Blake's Board Shop</li>
   <li> Photo</li>
-  
+  </ul>
+  <p><a href="contact.php">Contact Us</a></p>
+<ul>
+  <li> Email Form</li>
 </ul>
-
        </div>
        </div>
 
