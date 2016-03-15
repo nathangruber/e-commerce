@@ -22,7 +22,7 @@ require_once'includes/crud.php';
       ?> 
       <div class="container">
 	    <div class="row">
-	      <h3>List of all Products</h3>
+	      <h3>Products</h3>
 	    </div>
 	    <div class="row">
 	      <table class="table table-bordered">

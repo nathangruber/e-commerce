@@ -37,7 +37,7 @@ error_reporting(E_ALL);
           </thead>
           <tbody>
             <?php
-            if($loggedin) {
+            if($logged) {
                 $pdo = Database::connect();
                 $id = $_GET['id'];
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
