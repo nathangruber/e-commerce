@@ -247,3 +247,88 @@ class customerCreditcards {
 	}
 }
 /////////////////////////////////////////////
+class product {	
+
+
+	public $customer_id;
+
+
+	public function __construct($customer_id){
+		$this->customer_id = $customer_id;
+	}
+
+	public function create($name, $description, $price, $category_fk){
+		if (!valid($name) || !valid($description) || !valid($price) || !valid($category_fk)) {
+			return false;
+		} else {
+			$pdo = Database::connect();
+			$sql = "INSERT INTO  `E-Commerce`.`product` (`name` ,`description` ,`price` ,`category_fk`) VALUES (?, ?, ?, ?);";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($name,$description,$price,$category_fk,$this->customer_id,$category_fk));
+			$sql2 = "INSERT INTO `E-Commerce`.`image` (`image`, `description`, `featured`, `product_fk`) VALUES (?, ?, ?, ?)";
+            $q2 = $pdo->prepare($sql2);
+            $q2->execute(array($name,$cost,$description,$last_id));
+            $sql3 = "INSERT INTO `E-Commerce`.`product_bin` (`product_fk`, `bin_fk`) VALUES (NULL, ?, ?)";
+            $q3 = $pdo->prepare($sql3);
+            $q3->execute(array($last_id,$binid));
+			Database::disconnect();
+			return true;	
+	}
+}
+
+	public function read(){
+		try{
+			$pdo = Database::connect();
+			$sql = 'SELECT * FROM product WHERE category_fk = ?';
+			$q = $pdo->prepare($sql);
+			$q->execute(array($this->customer_id));
+			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+	        Database::disconnect();
+	        return $data;
+			} catch (PDOException $error){
+
+			header( "Location: 500.php" );
+			//echo $error->getMessage();
+			die();
+
+		}
+
+    }
+
+	public function update($id,$name, $description, $price, $category_id){
+		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_id)) {
+			return false;
+			} else {
+			$pdo = Database::connect();
+			$sql = "UPDATE product SET name = ?, description = ?, price = ?, category_id = ? WHERE id = ?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($name,$description,$price,$category_id,$id));
+			
+			$sql2 = "UPDATE image SET image = ?, description = ?, featured = ?, product_id = ? WHERE id = ?";
+			$q = $pdo->prepare($sql2);
+			$q->execute(array($image,$description,$featured,$product_id,$id));
+
+            $sql3 = "UPDATE product_bin SET product_id = ?, bin_id = ? WHERE id = ?";
+			$q = $pdo->prepare($sql3);
+			$q->execute(array($product_id,$bin_id,$id));
+
+
+			Database::disconnect();
+			return true;
+		}
+	}
+
+	public function delete($product_id){
+	  try{
+        $pdo = Database::connect();
+        $sql = "DELETE FROM product WHERE id=? and category_fk = ?"; //taken from SQL query on phpMyAdmin
+        $q = $pdo->prepare($sql);
+        $q->execute(array($product_id, $this->customer_id));
+        Database::disconnect();
+        return true;
+     	}catch (PDOException $error){
+		echo $error->getMessage();
+		return false;
+		}
+	}
+}
