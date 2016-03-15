@@ -9,31 +9,14 @@
         // delete data
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM image WHERE product_id = ?";
+        $sql = "DELETE FROM `ecommerce`.`product` WHERE `id` = ?"; //taken from SQL query on phpMyAdmin
         $q = $pdo->prepare($sql);
         $q->execute(array($id));
-        $sql2 = "DELETE FROM product_tag WHERE product_id = ?";
-        $q2 = $pdo->prepare($sql2);
-        $q2->execute(array($id));
-        $sql3 = "DELETE FROM transaction_products WHERE product_id = ?";
-        $q3 = $pdo->prepare($sql3);
-        $q3->execute(array($id));
-        $sql5 = "DELETE FROM product_bin WHERE product_id = ?";
-        $q5 = $pdo->prepare($sql5);
-        $q5->execute(array($id));
-        $sql4 = "DELETE FROM product  WHERE id = ?";
-        $q4 = $pdo->prepare($sql4);
-        $q4->execute(array($id));
         Database::disconnect();
-        header("Location: index.php");
-         
-    }  catch (PDOException $e){
-        Database::disconnect();
-        echo $e->getMessage();
-        die();
+        header("Location: Update.php");
+      } catch (PDOException $e) { 
+        //echo "Syntax Error: ".$e->getMessage() . "<br />\n"; 
+        //die();
+        header("Location: Update.php?error=1");
+      }
     }
-} else {
-    echo "failed.";
-    die();
-}
-    

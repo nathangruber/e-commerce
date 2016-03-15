@@ -62,7 +62,7 @@ require_once'includes/navbar.php';
 	    </div>
 
         <div>
-          <a href="index.php">Return to Blake's home page.
+          <a href="index.php">Return to BBS home page
         <br>
         <br>
         <br>

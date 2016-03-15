@@ -262,15 +262,13 @@ class customerCreditcards {
 			return false;
 		} else {
 			$pdo = Database::connect();
-			$sql = "INSERT INTO  `E-Commerce`.`product` (`name` ,`description` ,`price` ,`category_fk`) VALUES (?, ?, ?, ?);";
+			$sql = "INSERT INTO  `E-Commerce`.`product` (`name` ,`description` ,`price` ,`category_fk`,`bin_fk`) VALUES (?, ?, ?, ?, ?);";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($name,$description,$price,$category_fk,$this->customer_id,$category_fk));
-			$sql2 = "INSERT INTO `E-Commerce`.`image` (`image`, `description`, `featured`, `product_fk`) VALUES (?, ?, ?, ?)";
-            $q2 = $pdo->prepare($sql2);
-            $q2->execute(array($name,$cost,$description,$last_id));
-            $sql3 = "INSERT INTO `E-Commerce`.`product_bin` (`product_fk`, `bin_fk`) VALUES (NULL, ?, ?)";
-            $q3 = $pdo->prepare($sql3);
-            $q3->execute(array($last_id,$binid));
+			$q->execute(array($name,$description,$price,$category_fk,$this->customer_id,$category_fk,$bin_fk));
+			
+
+
+
 			Database::disconnect();
 			return true;	
 	}
@@ -295,23 +293,18 @@ class customerCreditcards {
 
     }
 
-	public function update($id,$name, $description, $price, $category_id){
-		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_id)) {
+	public function update($id,$name, $description, $price, $category_id, $bin_id){
+		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_id) || !valid($bin_id)) {
 			return false;
 			} else {
 			$pdo = Database::connect();
-			$sql = "UPDATE product SET name = ?, description = ?, price = ?, category_id = ? WHERE id = ?";
+			$sql = "UPDATE product SET name = ?, description = ?, price = ?, category_id = ?, bin_id = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($name,$description,$price,$category_id,$id));
 			
-			$sql2 = "UPDATE image SET image = ?, description = ?, featured = ?, product_id = ? WHERE id = ?";
-			$q = $pdo->prepare($sql2);
-			$q->execute(array($image,$description,$featured,$product_id,$id));
+			
 
-            $sql3 = "UPDATE product_bin SET product_id = ?, bin_id = ? WHERE id = ?";
-			$q = $pdo->prepare($sql3);
-			$q->execute(array($product_id,$bin_id,$id));
-
+			
 
 			Database::disconnect();
 			return true;
