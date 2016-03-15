@@ -38,14 +38,11 @@
 <ul>
   <li> Email Form</li>
 </ul>
- <p><a href="products.php">Our Boards</a></p>
+ <p><a href="product.php">Our Boards</a></p>
 <ul>
-  <li>Our Meat</li>
-  <li>The Animals</li>
-  <li>Health Benefits</li>
-  <li>Envionmental Effect</li>
-  <li>Affordability</li>
-  <li>Grass Fed vs. Grain Fed</li>
+  <li>Skateboards</li>
+  <li>Longboards</li>
+  <li>Hardware</li>
 </ul>      
 <p><a href="about.php">About Blake's</a></p>
 <ul>
