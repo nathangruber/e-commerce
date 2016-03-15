@@ -8,7 +8,7 @@
   require_once('includes/database.php');
   require_once('includes/crud.php');
  
-    if ( !empty($_POST)) {
+   /* if ( !empty($_POST)) {
         // keep track validation errors
         $nameError = null;
         $descriptionError = null;
@@ -78,6 +78,8 @@
 
 
 }
+?>
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
