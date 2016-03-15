@@ -7,7 +7,6 @@ require_once('includes/session.php');?>
     } else {
       require_once'includes/navbar.php';
     }
-require_once('navbar.php');
 
 echo $_POST['email'];
  
