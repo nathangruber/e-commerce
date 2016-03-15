@@ -10,7 +10,7 @@
     }
     ?>
 <body>
-    <div class="container">
+    
       <?php
       if ($logged) {
         echo "Welcome Back, ";
