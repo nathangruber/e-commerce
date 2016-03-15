@@ -26,7 +26,7 @@
     </div>
         
 <div class="image">
-<img src="assets/img/bbs1.png" class="img-rounded" alt="Thumbs up" width="144" height="126">
+<img src="assets/img/bbs1.png" width="144" height="126">
 </div>
 
 
