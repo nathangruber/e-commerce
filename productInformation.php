@@ -2,9 +2,7 @@
 require_once'includes/session.php';
 require_once'includes/database.php';
 require_once'includes/crud.php';
-//require_once'includes/navbar.php';
-
- error_reporting(E_ALL);
+error_reporting(E_ALL);
  Database::connect();
 ?>
 <!DOCTYPE html>

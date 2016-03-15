@@ -13,12 +13,12 @@
 
     <div class="container">
       <?php
-      if ($loggedin) {
+      if ($logged) {
         echo "Welcome Back, ";
         echo $_SESSION['name'];
       }
       ?>
-   /////had original navbar here
+  
 <header class="main-header" role="banner">
   
   <div id="container">

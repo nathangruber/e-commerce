@@ -22,7 +22,6 @@
   ?>
 
   <div class="container">
-   ////orig navbar was here
 
     <div class="row">
       <h3>Update User Information</h3>
