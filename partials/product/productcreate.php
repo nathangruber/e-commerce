@@ -8,7 +8,7 @@
   require_once('includes/database.php');
   require_once('includes/crud.php');
  
-   /* if ( !empty($_POST)) {
+        if ( !empty($_POST)) {
         // keep track validation errors
         $nameError = null;
         $descriptionError = null;
@@ -135,10 +135,10 @@
                             <?php endif;?>
                         </div>
                       </div>
-                     <label class="control-label">Bin ID</label>
+                     <lbael class="control-label">Bin ID</label>
                       <br>
                         <select name="bin_id">
-                            <?php
+                             <?php
                                 $pdo = Database::connect();
                                 $sql = 'SELECT * FROM bin ORDER BY id DESC';                         
                                    foreach ($pdo->query($sql) as $row) {
