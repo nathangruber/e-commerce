@@ -247,7 +247,7 @@ class customerCreditcards {
 	}
 }
 /////////////////////////////////////////////
-class product {	
+/*class product {	
 
 
 	public $customer_id;
