@@ -12,9 +12,17 @@
 <html lang="en">
  <?php require_once 'includes/header.php';?>
   <body>
+<?php 
+    if ($admin) {
+      require_once'includes/adminNavbar.php';
+    } else {
+      require_once'includes/navbar.php';
+    }
+    error_reporting(E_ALL);
+  ?>
 
   <div class="container">
-   <?php require_once('includes/navbar.php'); ?>
+   ////orig navbar was here
 
     <div class="row">
       <h3>Update User Information</h3>

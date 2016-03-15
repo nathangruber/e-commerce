@@ -2,7 +2,7 @@
 require_once'includes/session.php';
 require_once'includes/database.php';
 require_once'includes/crud.php';
-require_once'includes/navbar.php';
+//require_once'includes/navbar.php';
 
  error_reporting(E_ALL);
  Database::connect();
@@ -15,7 +15,13 @@ require_once'includes/navbar.php';
  </head>
 
  <body>
-	  
+	 <?php 
+       if ($admin) {
+         require_once'includes/adminNavbar.php';
+       } else {
+         require_once'includes/navbar.php';
+       }
+      ?> 
     <div class="container">
       <div class="row">
         <h3>Product Information</h3>

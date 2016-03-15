@@ -3,7 +3,22 @@
 <html lang="en">
  <?php require_once 'includes/header.php';?>
 <body>
-    <?php require_once 'includes/navbar.php';?>
+   <?php 
+    if ($admin) {
+      require_once'includes/adminNavbar.php';
+    } else {
+      require_once'includes/navbar.php';
+    }
+    ?>
+
+    <div class="container">
+      <?php
+      if ($loggedin) {
+        echo "Welcome Back, ";
+        echo $_SESSION['name'];
+      }
+      ?>
+   /////had original navbar here
 <header class="main-header" role="banner">
   
   <div id="container">
