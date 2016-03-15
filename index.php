@@ -2,15 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
  <?php require_once 'includes/header.php';?>
-<body>
-   <?php 
+<?php 
     if ($admin) {
       require_once'includes/adminNavbar.php';
     } else {
       require_once'includes/navbar.php';
     }
     ?>
-
+<body>
     <div class="container">
       <?php
       if ($logged) {
