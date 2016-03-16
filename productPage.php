@@ -6,6 +6,17 @@
 
 			<?php require_once 'includes/navbar.php';?>
 
+				<div class="dropdown">
+			   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categories
+			   <span class="caret"></span></button>
+			   <ul class="dropdown-menu">
+			     <li><a href="#">Skateboards</a></li>
+			     <li><a href="#">Longboards</a></li>
+			     <li><a href="#">Hardware</a></li>
+			   </ul>
+			  </div>
+
+
 				<?php	
 					$id = $_GET['productid'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -30,10 +41,6 @@
 					$image = $data['image'];
 					$imagedescription = $data['description'];
 			?>
-					
-
-<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
-       <ul class="dropdown-menu">
 
 			
 
