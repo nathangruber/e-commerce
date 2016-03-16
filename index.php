@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
  <?php require_once 'includes/header.php';?>
-<link rel="icon" type="image/x-icon" href="ms-icon-310x310.png"/>
 <body>
     <?php 
     if ($admin) {

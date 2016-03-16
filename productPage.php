@@ -81,3 +81,6 @@ require_once'includes/crud.php';
   <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
+<?php
+require_once('includes/footer.php');
+?>

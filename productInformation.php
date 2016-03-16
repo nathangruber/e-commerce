@@ -80,3 +80,6 @@ error_reporting(E_ALL);
   <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
+<?php
+require_once('includes/footer.php');
+?>
