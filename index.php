@@ -34,6 +34,7 @@
    <div class="img-responsive col-sm-4">
     <a href="productPage.php">
     <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" class="img-rounded" alt="Skateboard" height="187" width="333">
+   </a>
    </div>
  
    <div class="img-responsive col-sm-4">
@@ -44,7 +45,7 @@
     <img id="truck" src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Skate Truck" height="187" width="333">
    </div>
  </div> 
-     <div class="container">  
+ 
   <div class ="bbstext1">
     <div class="container" >
       <div class="starter-template">
