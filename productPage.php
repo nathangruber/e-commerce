@@ -7,7 +7,7 @@
 			<?php require_once 'includes/navbar.php';?>
 <div class="dropdown col-sm-4">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
+    Skateboards
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="Skateboards">
@@ -18,7 +18,7 @@
 </div>
 <div class="dropdown col-sm-4">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
+    Longboards
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu " aria-labelledby="Longboards">
@@ -31,7 +31,7 @@
 </div>
 <div class="dropdown col-sm-4">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
+    Hardware
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="Hardware">
