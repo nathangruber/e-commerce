@@ -17,15 +17,14 @@
          <li><a href="index.php" class="black">Blake's Board Shop</a></li>
          <li><a href="register.php" class="black">Register</a></li>
          <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Products
+   data-toggle="dropdown">Products
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
       <li><a href="#">Skateboards</a></li>
       <li><a href="#">Longboards</a></li>
       <li><a href="#">Hardware</a></li>
     </ul>
-  </div>
-         <li><a href="productPage.php" class="black">Products</a></li> 
+  </div> 
          <li><a href="about.php" class="black">About</a></li>
          <li><a href="contact.php" class="black">Contact Us</a></li>
        </ul>
