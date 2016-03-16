@@ -5,40 +5,46 @@
 		<body>
 
 			<?php require_once 'includes/navbar.php';?>
-
-				<?php	
-					$id = $_GET['productid'];
-			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			        $sql = "SELECT * FROM product WHERE id = ? ";
-			        $q = $pdo->prepare($sql);
-			        $q->execute(array($id));
-			        $data = $q->fetch(PDO::FETCH_ASSOC);
-			        $name = $data['name'];
-			        $cost = $data['cost'];
-			        $description = $data['description']; 
-			       
-			?>
-
-			<?php
-					$id = $_GET['productid'];
-					$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-					$sql = "SELECT * FROM image WHERE product_id = ?";
-					$q = $pdo->prepare($sql);
-					$q->execute(array($id));
-				    $data = $q->fetch(PDO::FETCH_ASSOC);
-					$image = $data['image'];
-					$imagedescription = $data['description'];
-			?>
-			            <h3> Product </h3>
-
-			      	 <h4> <?php echo $name; ?> </h4>
-
-			       	<p> <?php echo $cost; ?> </p>
-
-			       	<p> <?php echo $description; ?> </p>
-
-			     	 <p> <?php echo $imagedescription; ?> </p>
-			
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+				
 		</body>
 	</html>
 	<?php require_once 'includes/footer.php';?>
