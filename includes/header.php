@@ -6,6 +6,4 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
-		<link rel="icon" href="favicon (2).ico" type="image/x-icon">
-        <link rel="shortcut icon" href="favicon (2).ico" type="image/x-icon">
 </head>
