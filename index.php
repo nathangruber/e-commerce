@@ -1,6 +1,7 @@
 <?php require_once('includes/session.php');?>
 <!DOCTYPE html>
 <html lang="en">
+ <link rel="icon" type="image/x-icon" href="ms-icon-310x310.png"/>
  <?php require_once 'includes/header.php';?>
 <body>
     <?php 
