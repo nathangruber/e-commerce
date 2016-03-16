@@ -16,7 +16,7 @@
          <li><a href="index.php" class="img-responsive logo" src="assets/img/bbs.png"></a></li>
          <li><a href="index.php" class="black">Blake's Board Shop</a></li>
          <li><a href="register.php" class="black">Register</a></li>
-         <li><a href="productPage.php" class="black">Products</a></li>
+         <li><a href="category.php" class="black">Products</a></li>
          <li><a href="about.php" class="black">About</a></li>
          <li><a href="contact.php" class="black">Contact Us</a></li>
        </ul>

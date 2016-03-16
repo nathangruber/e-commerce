@@ -10,12 +10,15 @@
 			<?php	
 					$id = $_GET['catid'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			        $sql = "SELECT id, name, cat_description FROM category WHERE category_id = ? ";
+			        $sql = "SELECT * FROM `category` WHERE category_fk = ?";
 			        $q = $pdo->prepare($sql);
-			        $q->execute(array($id))
-			      
-			    ?>
-        			
+			        $q->execute(array($id));
+			        $category_fk = $q->fetchAll();
+			        
+			    
+			?>
+					
+
+			<?php require_once 'includes/footer.php';?>
 		</body>
 	</html>
-<?php require_once 'includes/footer.php';?>
