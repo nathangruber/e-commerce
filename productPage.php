@@ -25,9 +25,9 @@
           $sql = "SELECT * FROM image WHERE product_id = ?";
           $q = $pdo->prepare($sql);
           $q->execute(array($id));
-            $data = $q->fetch(PDO::FETCH_ASSOC);
+          $data = $q->fetch(PDO::FETCH_ASSOC);
           $image = $data['image'];
-          $imagedescription = $data['description'];
+          $image_description = $data['image_description'];
       ?>
           <h3> Product </h3>
 
