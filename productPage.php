@@ -7,12 +7,12 @@
       <?php require_once 'includes/navbar.php';?>
 
         <?php 
-          $id = $_GET['product_id'];
+          $id = $_GET['productid'];
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sql = "SELECT * FROM product WHERE id = ? ";
           $q = $pdo->prepare($sql);
           $q->execute(array($id));
-          $data = $q->fetch(PDO::FETCH_ASSOC);
+          $data = $q->fetch(PDO::FETCH_ASSOC); ///returns an array indexed by column name as returned in your result set
           $product_name = $data['product_name'];
           $description = $data['description'];
           $price = $data['price']; 
@@ -20,7 +20,7 @@
       ?>
 
       <?php
-          $id = $_GET['product_id'];
+          $id = $_GET['productid'];
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sql = "SELECT * FROM image WHERE product_fk = ?";
           $q = $pdo->prepare($sql);
