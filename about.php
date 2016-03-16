@@ -11,7 +11,7 @@
     ?>
  <?php require_once 'includes/header.php';?>
      <title>About Blake's Board Shop</title>
- </head>
+ 
 
 
       <div class="container">
@@ -28,17 +28,9 @@
 <div class="image">
 <img src="assets/img/bbs1.png" width="144" height="126">
 </div>
-
-
-
-
-
    
+    </body>
+  </html>
 <?php
 require_once('footer.php');
 ?>
-   
-
-   
-  </body>
-</html>
