@@ -44,7 +44,7 @@
     <img id="truck" src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Skate Truck" height="187" width="333">
    </div>
  </div> 
-       
+     <div class="container">  
   <div class ="bbstext1">
     <div class="container" >
       <div class="starter-template">
