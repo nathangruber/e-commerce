@@ -7,7 +7,7 @@
       <?php require_once 'includes/navbar.php';?>
 
         <?php 
-          $id = $_GET['productid'];
+          $id = $_GET['product_id'];
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sql = "SELECT * FROM product WHERE id = ? ";
           $q = $pdo->prepare($sql);
@@ -20,7 +20,7 @@
       ?>
 
       <?php
-          $id = $_GET['productid'];
+          $id = $_GET['product_id'];
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sql = "SELECT * FROM image WHERE product_fk = ?";
           $q = $pdo->prepare($sql);
