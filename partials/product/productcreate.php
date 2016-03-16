@@ -46,7 +46,8 @@
         //////////////add crud oop///////////////
          if($valid){
 
-        $createProduct = new product($_SESSION['id']);
+       /*
+       $createProduct = new product($_SESSION['id']);
         $response = $createProduct->create($name,$description,$price,$category_fk);
         if ($response) {
           header('Location: update.php?feedbackproductadded=ok');
@@ -57,7 +58,7 @@
       
   }
 ?>
-
+*/
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -79,7 +80,7 @@
 
 }
 ?>
-*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
