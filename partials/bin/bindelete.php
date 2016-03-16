@@ -1,36 +1,30 @@
-<?php
-    require_once 'includes/database.php';
-    require_once 'includes/navbar.php';
-  
-  if ( !empty($_POST['id']) && isset($_POST['id'])) {
-    // keep track post values
-    
-    
-    try{
-        // delete data
-        $pdo = Database::connect();
-        $id = $_POST['id'];
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "DELETE FROM product_bin WHERE bin_id = ?";
-        $q = $pdo->prepare($sql);
-        $q->execute(array($id));
-        $sql = "DELETE FROM bin WHERE id = ?";
-        $q = $pdo->prepare($sql);
-        $q->execute(array($id));
-        
-        Database::disconnect();
-        header("Location: index.php");
-    } catch (PDOException $e){
-        Database::disconnect();
-        echo $e->getMessage();
-        die();
+<?php 
+  require_once('includes/session.php');
+  if(!$logged){
+    header("Location: index.php");
+    die(); // just in case
+  }
+  require_once('includes/database.php');
+  require_once('includes/crud.php');
+    if ($admin) {
+      require_once'includes/adminNavbar.php';
+    } else {
+      require_once'includes/navbar.php';
     }
-} else {
-    echo "failed.";
-    die();
-}
-     
-    
 
-require_once 'includes/footer.php';
-?>
+    if ( !empty($_POST['id']) && isset($_POST['id'])) {
+      try { 
+        $id = $_POST['id'];
+        $pdo = Database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "DELETE FROM `ecommerce`.`bin` WHERE `id` = ?"; //taken from SQL query on phpMyAdmin
+        $q = $pdo->prepare($sql);
+        $q->execute(array($id));
+        Database::disconnect();
+        header("Location: adminUpdate.php");
+      } catch (PDOException $e) { 
+        //echo "Syntax Error: ".$e->getMessage() . "<br />\n"; 
+        //die();
+        header("Location: adminUpdate.php?error=1");
+      }
+    }

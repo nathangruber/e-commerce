@@ -1,9 +1,11 @@
-<?php require_once('includes/session.php');?>
-<!DOCTYPE html>
-<html lang="en">
- <?php require_once 'includes/header.php';?>
-<body>
-    <?php 
+<?php 
+  require_once('includes/session.php');
+  if(!$logged){
+    header("Location: index.php");
+    die(); // just in case
+  }
+  require_once('includes/database.php');
+  require_once('includes/crud.php');
     if ($admin) {
       require_once'includes/adminNavbar.php';
     } else {
@@ -46,13 +48,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
- <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
+ <?php require_once 'includes/header.php';?>
     <title>Create Bin</title>
  </head>
   

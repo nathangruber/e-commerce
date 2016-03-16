@@ -1,52 +1,33 @@
-<?php
-    ini_set('display_errors', 'On');
-    error_reporting(E_ALL);
-    require_once 'includes/database.php';
-    require_once 'includes/navbar.php';
-     $id = $_POST['id'];
- 
-     
-    if (!empty($_POST['id']) && isset($_POST['id'])) {
-        // keep track validation errorss
-        $nameError = null;
-        $shipment_center_idError = null;
-         
-        // keep track post values
-        $name = $_POST['name'];
-        $shipment_center_id = $_POST['shipment_center_id'];
-        
-         
-        // validate input
-        $valid = true;
-        
-        if (!empty($_POST['name']) && isset($_POST['name'])) {
-            $nameError = 'Please enter Name';
-            $valid = false;
-        }
-         
-        if (!empty($_POST['shipment_center_id']) && isset($_POST['shipment_center_id'])) {
-            $shipment_center_idError = 'Please enter Shipment Center id';
-            $valid = false;
-        } 
-         
-        // update data
-        try {
-            $pdo = Database::connect();
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "UPDATE bin  set name = ?, shipment_center_id = ? WHERE id = ?";
-            $q = $pdo->prepare($sql);
-            $q->execute(array($name,$shipment_center_id,$id));
-            Database::disconnect();
-            header("Location: index.php");
-        }
-         catch (PDOException $e){
-        Database::disconnect();
-        echo $e->getMessage();
-        die();
+<?php 
+  require_once('includes/session.php');
+  if(!$logged){
+    header("Location: index.php");
+    die(); // just in case
+  }
+  require_once('includes/database.php');
+  require_once('includes/crud.php');
+    if ($admin) {
+      require_once'includes/adminNavbar.php';
+    } else {
+      require_once'includes/navbar.php';
     }
-} else {
-    echo "failed.";
-    die();
-}
-require_once 'includes/footer.php';
-?>
+    if ( !empty($_POST)) {
+      // keep track post values
+      $id = $_POST['id'];
+      $name = $_POST['name'];
+      $shipment_center_fk = $_POST['shipment_center_fk'];
+         
+      function valid($varname){
+        return ( !empty($varname) && isset($varname) );
+      }
+      if (!valid($name) || !valid($shipment_center_fk)) {
+        header("Location: adminUpdate.php");
+      }
+      $pdo = Database::connect();
+      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "UPDATE bin SET name = ?, shipment_center_fk = ? WHERE id = ?";
+        $q = $pdo->prepare($sql);
+        $q->execute(array($name,$shipment_center_fk,$id));
+      Database::disconnect();
+      header("Location: adminUpdate.php");
+    }
