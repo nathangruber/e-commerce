@@ -13,7 +13,8 @@
   <ul class="dropdown-menu" aria-labelledby="Skateboards">
     <li><a href="#"></a>Decks</li>
     <li><a href="#">Completes</a></li>
-    
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
   </ul>
 </div>
 <div class="dropdown col-sm-4">
@@ -22,8 +23,8 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu " aria-labelledby="Longboards">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
+    <li><a href="#">Decks</a></li>
+    <li><a href="#">Completes</a></li>
     <li><a href="#">Something else here</a></li>
     <li role="separator" class="divider"></li>
     <li><a href="#">Separated link</a></li>
@@ -35,9 +36,9 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="Hardware">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
+    <li><a href="#">Trucks</a></li>
+    <li><a href="#">Wheels</a></li>
+    <li><a href="#">Bearings</a></li>
     <li role="separator" class="divider"></li>
     <li><a href="#">Separated link</a></li>
   </ul>
