@@ -1,7 +1,6 @@
 <?php require_once('includes/session.php');?>
 <!DOCTYPE html>
 <html lang="en">
- <link rel="icon" type="image/x-icon" href="ms-icon-310x310.png"/>
  <?php require_once 'includes/header.php';?>
 <body>
     <?php 
@@ -32,9 +31,9 @@
 </header> 
       
  <div class="container">
-   <div class="img-responsive col-sm-4">
+   <div class="img-responsive img-rounded col-sm-4">
     <a href="productPage.php">
-    <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" class="img-rounded" alt="Skateboard" height="187" width="333">
+    <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" alt="Skateboard" height="187" width="333">
    </a>
   </div>
  
