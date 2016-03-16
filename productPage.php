@@ -1,86 +1,43 @@
-<?php 
-require_once'includes/session.php';
-require_once'includes/database.php';
-require_once'includes/crud.php';
- error_reporting(E_ALL);
- Database::connect();
-?>
+<?php  require_once 'includes/session.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
- <head>
-	 <?php require_once 'includes/header.php';?>
-	  <title>Products</title>
- </head>
+	<html lang="en">
+		<?php require_once 'includes/header.php';?>
+		<body>
 
- <body>
-	<?php 
-	     if ($admin) {
-	       require_once'includes/adminNavbar.php';
-	     } else {
-	       require_once'includes/navbar.php';
-	     }
-      ?> 
-      <div class="container">
-	    <div class="row">
-	      <h3>Products</h3>
-	    </div>
-	    <div class="row">
-	      <table class="table table-bordered">
-	        <thead>
-	          <tr>
-	            <th>Name</th>
-	            <th>Price</th>
-	            <th>Action</th>
-	            <th>Action</th>
-	          </tr>
-	        </thead>
-	         <tbody>
-	          <?php
-	          if($logged) {
-	          	  $pdo = Database::connect();
-	              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	              $sql = 'SELECT * FROM product ORDER BY id';
-	              $q = $pdo->prepare($sql);
-	              $q->execute(array());
-	              $query = $q->fetchAll(PDO::FETCH_ASSOC);
-	            foreach ($query as $row) {
-	                echo '<tr>';
-	                echo '<form method="GET" action="productInformation.php">';
-	                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-	                echo '<td><input type="text" name="product_name" value="'.$row['product_name'].'"></td>'; 
-	                echo '<td><input type="text" name="price" value="'.$row['price'].'"></td>';
-	                echo '<td><input class="btn btn-default" type="submit" value="More Details"></td>';
-	                echo '</form>';
-	                echo '<form method="POST" action="////////addToCart.php">';
-	                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-	                echo '<td><input class="btn btn-default" type="submit" value="Add to Cart"></td>';
-	                echo '</form>';
-	                echo '</tr>';
-	            }
-	          } else {
-	          	header('Location: loginpage.php');
-	          }
-	          Database::disconnect();
-	          ?>
-	         </tbody>
-	      </table>
-	    </div>
+			<?php require_once 'includes/navbar.php';?>
 
-        <div>
-          <a href="index.php">Return to BBS home page
-        <br>
-        <br>
-        <br>
-    </div> <!-- /container -->
+				<?php	
+					$id = $_GET['productid'];
+			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			        $sql = "SELECT * FROM product WHERE id = ? ";
+			        $q = $pdo->prepare($sql);
+			        $q->execute(array($id));
+			        $data = $q->fetch(PDO::FETCH_ASSOC);
+			        $name = $data['name'];
+			        $cost = $data['cost'];
+			        $description = $data['description']; 
+			        // print_r($catinfo);
+			    // echo $name;
+			?>
 
-  <?php 
-   require_once('includes/footer.php');
-   Database::disconnect();
-  ?>
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  </body>
-</html>
-<?php
-require_once('includes/footer.php');
-?>
+			<?php
+					$id = $_GET['productid'];
+					$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					$sql = "SELECT * FROM image WHERE product_id = ?";
+					$q = $pdo->prepare($sql);
+					$q->execute(array($id));
+				    $data = $q->fetch(PDO::FETCH_ASSOC);
+					$image = $data['image'];
+					$imagedescription = $data['description'];
+			?>
+					
+
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
+       <ul class="dropdown-menu">
+
+			
+
+			     	 
+			<?php require_once 'includes/footer.php';?>
+		</body>
+	</html>
