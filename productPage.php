@@ -1,49 +1,49 @@
 <?php  require_once 'includes/session.php'; ?>
 <!DOCTYPE html>
-	<html lang="en">
-		<?php require_once 'includes/header.php';?>
-		<body>
+  <html lang="en">
+    <?php require_once 'includes/header.php';?>
+    <body>
 
-			<?php require_once 'includes/navbar.php';?>
-<div class="dropdown col-sm-4">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Skateboards
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="Skateboards">
-    <li><a href="#"></a>Decks</li>
-    <li><a href="#">Completes</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="dropdown col-sm-4">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Longboards
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu " aria-labelledby="Longboards">
-    <li><a href="#">Decks</a></li>
-    <li><a href="#">Completes</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="dropdown col-sm-4">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Hardware
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="Hardware">
-    <li><a href="#">Trucks</a></li>
-    <li><a href="#">Wheels</a></li>
-    <li><a href="#">Bearings</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-				
-		</body>
-	</html>
-	<?php require_once 'includes/footer.php';?>
+      <?php require_once 'includes/navbar.php';?>
+
+        <?php 
+          $id = $_GET['productid'];
+              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+              $sql = "SELECT * FROM product WHERE id = ? ";
+              $q = $pdo->prepare($sql);
+              $q->execute(array($id));
+              $data = $q->fetch(PDO::FETCH_ASSOC);
+              $product_name = $data['product_name'];
+              $description = $data['description'];
+              $price = $data['price']; 
+              
+      ?>
+
+      <?php
+          $id = $_GET['productid'];
+          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          $sql = "SELECT * FROM image WHERE product_id = ?";
+          $q = $pdo->prepare($sql);
+          $q->execute(array($id));
+            $data = $q->fetch(PDO::FETCH_ASSOC);
+          $image = $data['image'];
+          $imagedescription = $data['description'];
+      ?>
+          <h3> Product </h3>
+
+               <h4> <?php echo $product_name; ?> </h4>
+
+              <p> <?php echo $price; ?> </p>
+
+              <p> <?php echo $description; ?> </p>
+
+            <p> <?php echo $imagedescription; ?> </p>
+
+           
+
+            <form method="post" action="add_item.php">
+                <input type="hidden" name="id" value="<?php echo $id ;?>">';
+              <button type="submit" value="add">Add to Cart</button>
+          </form> 
+
+      
