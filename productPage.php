@@ -37,13 +37,9 @@
 
               <p> <?php echo $description; ?> </p>
 
-            <p> <?php echo $imagedescription; ?> </p>
+            <p> <?php echo $image_description; ?> </p>
 
            
-
-            <form method="post" action="add_item.php">
-                <input type="hidden" name="id" value="<?php echo $id ;?>">';
-              <button type="submit" value="add">Add to Cart</button>
-          </form> 
-
+      </body>
+  </html>
       
