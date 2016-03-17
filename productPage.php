@@ -7,7 +7,7 @@ require_once('database.php');
 <html lang="en">
 <?php require_once('header.php'); ?>
  <body>
-<?php  require_once('navbartest.php'); ?>
+<?php  require_once('navbar.php'); ?>
 <br><br><br><br><br><br>
   
  <div class="container">
