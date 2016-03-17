@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-         <a class="navbar-brand" href="index.php"><img src="assets/img/bbs.png" width="50"></a>   
+         <a class="navbar-brand" href="index.php" id="black"><img src="assets/img/bbs.png" width="50"></a>   
      </div>
 
          
@@ -46,11 +46,11 @@
   
 
     <li><a href="register.php">Register</a></li>
-        
     <li><a href="loginpage.php">Login</a></li>
-
+    <li><a href="about.php" class="black">About</a></li>
+    <li><a href="contact.php" class="black">Contact Us</a></li>
+    
     <?php if( isset($_SESSION['permission']) && $_SESSION['permission'] == 0){?> 
-      <li><a href="profile.php">Profile</a></li>
       <li><a href="update.php">Update</a></li>
     <?php } ?>
 
