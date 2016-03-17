@@ -22,16 +22,15 @@
                       
               <?php 
     require_once('includes/database.php');
-    $pdo = Database::connect();
-          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql = "SELECT * FROM category ORDER BY name ASC";
+    $categories = new category();
+
          // $q = $pdo->prepare($sql);
           //$q = $pdo->execute();
          // $categories = $q->fetchAll(PDO::FETCH_ASSOC);
     echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Products<span class="caret"></span></a>';
           echo '<ul class="dropdown-menu">';
             
-            foreach ($categories as $category ) {
+            foreach ($categories->read() as $category ) {
               echo '<li id="' . $category['name'] . '">';
                 echo '<a href="category.php?id=' . $category['id'] . '">';
                 echo ' ' . $category['name'] . ' ';

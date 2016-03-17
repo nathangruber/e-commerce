@@ -329,12 +329,6 @@ class product {
 
 ////////////////////////////////////////////////////////
 class category {	
-	public $customer_id;
-	
-
-	public function __construct($customer_id){
-		$this->customer_id = $customer_id;
-	
 
 	public function create($name){
 		if (!valid($name)) {
