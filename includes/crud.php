@@ -247,7 +247,7 @@ class customerCreditcards {
 	}
 }
 /////////////////////////////////////////////
-/*class product {	
+class product {	
 
 
 	public $customer_id;
@@ -257,14 +257,14 @@ class customerCreditcards {
 		$this->customer_id = $customer_id;
 	}
 
-	public function create($name, $description, $price, $category_fk){
-		if (!valid($name) || !valid($description) || !valid($price) || !valid($category_fk)) {
+	public function create($product_name, $description, $price, $category_fk){
+		if (!valid($product_name) || !valid($description) || !valid($price) || !valid($category_fk)) {
 			return false;
 		} else {
 			$pdo = Database::connect();
-			$sql = "INSERT INTO  `E-Commerce`.`product` (`name` ,`description` ,`price` ,`category_fk`,`bin_fk`) VALUES (?, ?, ?, ?, ?);";
+			$sql = "INSERT INTO  `E-Commerce`.`product` (`product_name` ,`description` ,`price` ,`category_fk`) VALUES (?, ?, ?, ?);";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($name,$description,$price,$category_fk,$this->customer_id,$category_fk,$bin_fk));
+			$q->execute(array($product_name,$description,$price,$category_fk));
 			
 
 
@@ -293,7 +293,7 @@ class customerCreditcards {
 
     }
 
-	public function update($id,$name, $description, $price, $category_id, $bin_id){
+	public function update($id,$product_name, $description, $price, $category_id, $bin_id){
 		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_id) || !valid($bin_id)) {
 			return false;
 			} else {
@@ -325,7 +325,7 @@ class customerCreditcards {
 		}
 	}
 }
-*/
+////////////////////////////////////////////////////////
 class category {	
 
 	public function create($name){
