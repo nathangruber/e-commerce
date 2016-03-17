@@ -7,7 +7,7 @@
     if ($admin) {
       require_once'includes/adminNavbar.php';
     } else {
-      require_once'includes/navbar.php';
+      require_once'includes/navbarID.php';
     }
     ?>
       <?php
