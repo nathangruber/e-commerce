@@ -18,7 +18,12 @@
 			    
 			?>
 				<h3> Categories </h3>	
+<?php foreach ($category as $row){?>
 
+			       {?><li id="<?php echo $row['id'];?>"><a href="productPage.php.php?prodcatid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a>
+
+			       	<?php } ?>
+        							
 			<?php require_once 'includes/footer.php';?>
 		</body>
 	</html>
