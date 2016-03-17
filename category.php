@@ -1,7 +1,7 @@
 <?php  require_once 'includes/session.php'; ?>
 <!DOCTYPE html>
 	<html lang="en">
-		<?php require_once 'includes/header.php';?>
+			<?php require_once 'includes/header.php';?>
 		<body>
 			<?php require_once 'includes/navbar.php';?>
 
@@ -18,11 +18,11 @@
 			    
 			?>
 				<h3> Categories </h3>	
-<?php foreach ($category as $row){?>
+			<?php foreach ($category as $row){?>
 
-			       {?><li id="<?php echo $row['id'];?>"><a href="productPage.php.php?prodcatid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a>
+			{?><li id="<?php echo $row['id'];?>"><a href="productPage.php.php?prodcatid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a>
 
-			       	<?php } ?>
+			<?php } ?>
         							
 			<?php require_once 'includes/footer.php';?>
 		</body>
