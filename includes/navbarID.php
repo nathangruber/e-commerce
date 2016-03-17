@@ -6,14 +6,6 @@
 	        $q->execute();
 	        $categories = $q->fetchAll();
 	        Database::disconnect(); 
-     if( isset( $_SESSION['userid'] ) )
-     {
-        echo "you are logged in" ;
-     }
-   else
-     {
-        echo "create account to login";
-     }
   ?>
 	<nav class="navbar navbar-inverse">
   		<div class="container-fluid">
@@ -28,10 +20,6 @@
       		<div class="collapse navbar-collapse" id="myNavbar">
         			<ul class="nav navbar-nav">
              			
-
-
-
-
 
                   <li><a href="index.php">Blake's Board Shop</a></li>
               		<li><a href="register.php" class="black">Register</a></li>
