@@ -13,7 +13,7 @@
 			        $sql = "SELECT `id`, `product_name`, `description`, `price`, `category_fk` FROM `product` WHERE category_fk;";
 			        $q = $pdo->prepare($sql);
 			        $q->execute(array($id));
-			        $category_fk = $q->fetchAll(); //Returns an array containing all of the result set rows
+			        $product = $q->fetchAll(); //Returns an array containing all of the result set rows
 			        
 			    
 			?>
