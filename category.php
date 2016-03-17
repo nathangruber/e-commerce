@@ -42,7 +42,7 @@
                 //echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                 //echo '<td><input type="submit" value="Add to Cart"></td>';
                 //echo '</form>';
-                //echo '</tr>';
+                echo '</tr>';
               }
               ?>
            </tbody>
