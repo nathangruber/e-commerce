@@ -325,3 +325,64 @@ class customerCreditcards {
 		}
 	}
 }
+*/
+class category {	
+
+	public function create($name){
+		if (!valid($name)) {
+			return false;
+		} else {
+			$pdo = Database::connect();
+			$sql = "INSERT INTO category (name) values(?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($name)); //asks db for info array is replacing ?info
+			Database::disconnect();
+			return true;
+		}
+	}
+
+	public function read($category_id){
+		try{
+			$pdo = Database::connect();
+			$sql = 'SELECT * FROM customer WHERE id = ?';
+			$q = $pdo->prepare($sql);
+			$q->execute(array($category_id));
+			$data = $q->fetch(PDO::FETCH_ASSOC);
+	        Database::disconnect();
+	        return $data;
+		} catch (PDOException $error){
+			return NULL;
+			//header( "Location: 500.php" );
+			//echo $error->getMessage();
+			//die();
+
+		}
+
+    }
+
+	public function update($name, $category_id){
+		if (!valid($name) || !valid($category_id) ) {
+			return false;
+		} else {
+			$pdo = Database::connect();
+			$sql = "UPDATE category SET name = ? WHERE id = ?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($name,$category_id));
+				Database::disconnect();
+				return true;
+			}
+		}
+
+	public function delete($category_id){
+
+        $pdo = Database::connect();
+        $sql = "DELETE FROM category WHERE id = ?"; //taken from SQL query on phpMyAdmin
+        $q = $pdo->prepare($sql);
+        $q->execute(array($category_id));
+        Database::disconnect();
+        return true;
+
+	}
+
+}
+///////////////////////////////////
