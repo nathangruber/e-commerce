@@ -1,10 +1,10 @@
-<?php require_once('session.php'); ?>
+<?php require_once 'session.php'; ?>
 <!DOCTYPE html>
 <html>
-<?php require_once('header.php'); ?>
+<?php require_once 'header.php'; ?>
 
 <body>
-<?php require_once('navbar.php'); ?>
+<?php require_once 'navbar.php'; ?>
 <br><br><br><br><br><br>
 
 

@@ -1,13 +1,13 @@
 <?php 
-require_once('session.php');
-require_once('database.php');
+require_once 'session.php';
+require_once 'database.php';
  error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php require_once('header.php'); ?>
+<?php require_once'header.php'; ?>
  <body>
-<?php  require_once('navbar.php'); ?>
+<?php  require_once'navbar.php'; ?>
 <br><br><br><br><br><br>
   
  <div class="container">

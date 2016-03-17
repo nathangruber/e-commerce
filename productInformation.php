@@ -47,7 +47,7 @@ error_reporting(E_ALL);
                 $query = $q->fetchAll(PDO::FETCH_ASSOC);
               foreach ($query as $row) {
                   echo '<tr>';
-                  echo '<form method="POST" action="//////////addToCart.php">';
+                  echo '<form method="POST" action="addToCart.php">';
                   echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                   echo '<td><input type="text" name="product_name" value="'.$row['product_name'].'"></td>'; 
                   echo '<td><input type="text" name="description" value="'.$row['description'].'"></td>'; 
@@ -73,7 +73,7 @@ error_reporting(E_ALL);
     </div> <!-- /container -->
 
   <?php 
-   require_once('includes/footer.php');
+   require_once 'includes/footer.php';
    Database::disconnect();
   ?>
   <script src="assets/js/jquery.min.js"></script>
@@ -81,5 +81,5 @@ error_reporting(E_ALL);
   </body>
 </html>
 <?php
-require_once('includes/footer.php');
+require_once 'includes/footer.php';
 ?>
