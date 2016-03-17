@@ -261,23 +261,29 @@ class product {
 		if (!valid($product_name) || !valid($description) || !valid($price) || !valid($category_fk)) {
 			return false;
 		} else {
+			try{
 			$pdo = Database::connect();
 			$sql = "INSERT INTO  `E-Commerce`.`product` (`product_name` ,`description` ,`price` ,`category_fk`) VALUES (?, ?, ?, ?);";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($product_name,$description,$price,$category_fk));
-			
+			$product_id = $pdo->lastInsertId();
 
-
+			$sql = "INSERT INTO product_bin (product_FK,bin_FK) values(?, ?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($product_id,$bin_FK));
 
 			Database::disconnect();
-			return true;	
+			return true;
+			} catch(PDOException $error) {
+			echo $error->getMessage();	
+		}	
 	}
 }
 
 	public function read(){
 		try{
 			$pdo = Database::connect();
-			$sql = 'SELECT * FROM product WHERE category_fk = ?';
+			$sql = 'SELECT * FROM product ORDER BY id';
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->customer_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
@@ -287,25 +293,21 @@ class product {
 
 			header( "Location: 500.php" );
 			//echo $error->getMessage();
-			die();
+	
 
 		}
 
     }
 
-	public function update($id,$product_name, $description, $price, $category_id){
-		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_id)) {
+	public function update($id,$product_name, $description, $price, $category_fk, $product_id){
+		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_fk)) {
 			return false;
 			} else {
 			$pdo = Database::connect();
-			$sql = "UPDATE product SET name = ?, description = ?, price = ?, category_id = ? WHERE id = ?";
+			$sql = "UPDATE product SET product_name = ?, description = ?, price = ?, category_fk = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($product_name,$description,$price,$category_id,$id));
+			$q->execute(array($product_name,$description,$price,$category_fk,$prodcut_id));
 			
-			
-
-			
-
 			Database::disconnect();
 			return true;
 		}
@@ -314,19 +316,25 @@ class product {
 	public function delete($product_id){
 	  try{
         $pdo = Database::connect();
-        $sql = "DELETE FROM product WHERE id=? and category_fk = ?"; //taken from SQL query on phpMyAdmin
+        $sql = "DELETE FROM product WHERE id=?"; //taken from SQL query on phpMyAdmin
         $q = $pdo->prepare($sql);
-        $q->execute(array($product_id, $this->customer_id));
+        $q->execute(array($product_id));
         Database::disconnect();
         return true;
-     	}catch (PDOException $error){
-		echo $error->getMessage();
-		return false;
+     	//}catch (PDOException $error){
+		//echo $error->getMessage();
+		//return false;
 		}
 	}
-}
+
 ////////////////////////////////////////////////////////
 class category {	
+	public $customer_id;
+	
+
+	public function __construct($customer_id){
+		$this->customer_id = $customer_id;
+	
 
 	public function create($name){
 		if (!valid($name)) {
@@ -336,23 +344,23 @@ class category {
 			$sql = "INSERT INTO category (name) values(?)";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($name)); //asks db for info array is replacing ?info
+			$category_id = $pdo->lastInsertId();
 			Database::disconnect();
 			return true;
 		}
 	}
 
-	public function read($category_id){
+	public function read(){
 		try{
 			$pdo = Database::connect();
-			$sql = 'SELECT * FROM customer WHERE id = ?';
+			$sql = 'SELECT * FROM category ORDER BY id';
 			$q = $pdo->prepare($sql);
-			$q->execute(array($category_id));
+			$q->execute(array($this->category_id));
 			$data = $q->fetch(PDO::FETCH_ASSOC);
 	        Database::disconnect();
 	        return $data;
 		} catch (PDOException $error){
-			return NULL;
-			//header( "Location: 500.php" );
+			header( "Location: 500.php" );
 			//echo $error->getMessage();
 			//die();
 
@@ -361,7 +369,7 @@ class category {
     }
 
 	public function update($name, $category_id){
-		if (!valid($name) || !valid($category_id) ) {
+		if (!valid($name) ) {
 			return false;
 		} else {
 			$pdo = Database::connect();
