@@ -293,14 +293,14 @@ class product {
 
     }
 
-	public function update($id,$product_name, $description, $price, $category_id, $bin_id){
-		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_id) || !valid($bin_id)) {
+	public function update($id,$product_name, $description, $price, $category_id){
+		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_id)) {
 			return false;
 			} else {
 			$pdo = Database::connect();
-			$sql = "UPDATE product SET name = ?, description = ?, price = ?, category_id = ?, bin_id = ? WHERE id = ?";
+			$sql = "UPDATE product SET name = ?, description = ?, price = ?, category_id = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($name,$description,$price,$category_id,$id));
+			$q->execute(array($product_name,$description,$price,$category_id,$id));
 			
 			
 
