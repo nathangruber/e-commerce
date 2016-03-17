@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-         <a class="navbar-brand" href="index.php" id="black"><img src="assets/img/bbs.png" width="50"></a>   
+         <a class="navbar-brand" href="index.php" id="black"><img src="assets/img/bbs.png" height="27" width="27"></a>   
      </div>
 
          
@@ -17,7 +17,7 @@
             
     <ul class="nav navbar-nav">
             
-    <li><a href="index.php">Home</a></li>
+    <li><a href="index.php">Blake's Board Shop</a></li>
 
                       
               <?php 

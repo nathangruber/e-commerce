@@ -38,11 +38,11 @@
                 echo '<td>'.$row['price'].'</td>';
                 echo '<td><input type="submit" value="view product"></td>';
                 echo '</form>';
-                echo '<form method="POST" action="addToCart.php">';
-                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-                echo '<td><input type="submit" value="Add to Cart"></td>';
-                echo '</form>';
-                echo '</tr>';
+                //echo '<form method="POST" action="addToCart.php">';
+                //echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
+                //echo '<td><input type="submit" value="Add to Cart"></td>';
+                //echo '</form>';
+                //echo '</tr>';
               }
               ?>
            </tbody>
