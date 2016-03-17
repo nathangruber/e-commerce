@@ -26,7 +26,7 @@
           $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sql = "SELECT * FROM category ORDER BY name ASC";
     
-    echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Products<span class="caret"></span></a>';
+    echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="category.php">Products<span class="caret"></span></a>';
           echo '<ul class="dropdown-menu">';
             
             foreach ($pdo->query($sql) as $category) {
