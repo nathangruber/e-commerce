@@ -1,45 +1,75 @@
-<?php  require_once 'includes/session.php'; ?>
+<?php 
+require_once('session.php');
+require_once('database.php');
+ error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
-  <html lang="en">
-    <?php require_once 'includes/header.php';?>
-    <body>
-
-      <?php require_once 'includes/navbar.php';?>
-
-        <?php 
-          $id = $_GET['productid'];
-          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql = "SELECT * FROM product WHERE id = ? ";
-          $q = $pdo->prepare($sql);
-          $q->execute(array($id));
-          $data = $q->fetch(PDO::FETCH_ASSOC); ///returns an array indexed by column name as returned in your result set
-          $product_name = $data['product_name'];
-          $description = $data['description'];
-          $price = $data['price']; 
-              
-      ?>
-
-      <?php
-          $id = $_GET['productid'];
-          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          $sql = "SELECT * FROM image WHERE product_fk = ?";
-          $q = $pdo->prepare($sql);
-          $q->execute(array($id));
-          $data = $q->fetch(PDO::FETCH_ASSOC);
-          $image = $data['image'];
-          $image_description = $data['image_description'];
-      ?>
-          <h3> Product </h3>
-
-               <h4> <?php echo $product_name; ?> </h4>
-
-              <p> <?php echo $description; ?> </p>
-
-              <p> <?php echo $price; ?> </p>
-
-            <p> <?php echo $image_description; ?> </p>
-
-           
-      </body>
-  </html>
+<html lang="en">
+<?php require_once('header.php'); ?>
+ <body>
+<?php  require_once('navbartest.php'); ?>
+<br><br><br><br><br><br>
+  
+ <div class="container">
       
+      <div class="row">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            if($logged) {
+                $pdo = Database::connect();
+                $id = $_GET['id'];
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $sql = 'SELECT * FROM product WHERE id = ?';
+                $q = $pdo->prepare($sql);
+                $q->execute(array($id));
+                $query = $q->fetchAll(PDO::FETCH_ASSOC);
+              foreach ($query as $row) {
+                  echo '<tr>';
+                  echo '<form method="POST" action="addToCart.php">';
+                  echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
+                  echo '<td>'.$row['name'].'</td>'; 
+                  echo '<td>'.$row['description'].'</td>'; 
+                  echo '<td>'.$row['price'].'</td>';
+                  echo '<td><input type="submit" value="Add to Cart"></td>';
+                  echo '</form>';
+                  echo '</tr>';
+                }
+            }
+            Database::disconnect();
+            ?>
+          </tbody>
+        </table>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+    </div> <!-- /container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <?php require_once('footer.php');
+  ?>
+  </body>
+</html>

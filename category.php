@@ -30,7 +30,7 @@
               $q = $pdo->prepare($sql);
               $q->execute(array($category_id));
               $products = $q->fetchAll();
-              foreach ($products as $row) {
+              foreach ($product as $row) {
                 echo '<tr>';
                 echo '<form method="GET" action="productPage.php">'; 
                 echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
@@ -38,10 +38,10 @@
                 echo '<td>'.$row['price'].'</td>';
       echo '<td><input type="submit" value="view product"></td>';
     echo '</form>';
-                //echo '<form method="POST" action="addToCart.php">';
-                //echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-               // echo '<td><input type="submit" value="Add to Cart"></td>';
-               // echo '</form>';
+                echo '<form method="POST" action="addToCart.php">';
+                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
+                echo '<td><input type="submit" value="Add to Cart"></td>';
+                echo '</form>';
                 echo '</tr>';
               }
               ?>
