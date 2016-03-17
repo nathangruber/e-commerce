@@ -10,7 +10,7 @@
 			<?php	
 					$id = $_GET['catid'];
 			        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			        $sql = "SELECT * FROM `category` WHERE category_fk = ?";
+			        $sql = "SELECT `id`, `product_name`, `description`, `price`, `category_fk` FROM `product` WHERE category_fk;";
 			        $q = $pdo->prepare($sql);
 			        $q->execute(array($id));
 			        $category_fk = $q->fetchAll(); //Returns an array containing all of the result set rows
@@ -18,9 +18,9 @@
 			    
 			?>
 				<h3> Categories </h3>	
-			<?php foreach ($category as $row){?>
+			<?php foreach ($product as $row){?>
 
-			{?><li id="<?php echo $row['id'];?>"><a href="productPage.php.php?prodcatid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a>
+			{?><li id="<?php echo $row['id'];?>"><a href="productPage.php?prodcatid=<?php echo $row['id'];?>"><?php echo $row['name'];?></a>
 
 			<?php } ?>
         							
