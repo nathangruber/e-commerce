@@ -4,7 +4,7 @@
     <?php require_once 'includes/header.php';?>
     <body>
 
-      <?php require_once 'includes/navbar.php';?>
+      <?php require_once 'includes/navbarID.php';?>
 
         <?php 
           $id = $_GET['productid'];
