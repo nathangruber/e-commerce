@@ -13,11 +13,11 @@
 			        $sql = "SELECT * FROM `category` WHERE category_fk = ?";
 			        $q = $pdo->prepare($sql);
 			        $q->execute(array($id));
-			        $category_fk = $q->fetchAll();
+			        $category_fk = $q->fetchAll(); //Returns an array containing all of the result set rows
 			        
 			    
 			?>
-					
+				<h3> Categories </h3>	
 
 			<?php require_once 'includes/footer.php';?>
 		</body>
