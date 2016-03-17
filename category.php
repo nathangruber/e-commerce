@@ -3,7 +3,7 @@
 	<html lang="en">
 			<?php require_once 'includes/header.php';?>
 		<body>
-			<?php require_once 'includes/navbarID.php';?>
+			<?php require_once 'includes/navbar.php';?>
 
 				<p> <?php echo "<p>" . $_GET['catid'] . "</p>"; ?> 
 
