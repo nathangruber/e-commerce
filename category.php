@@ -36,8 +36,8 @@
                 echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                 echo '<td>'.$row['name'].'</td>'; 
                 echo '<td>'.$row['price'].'</td>';
-      echo '<td><input type="submit" value="view product"></td>';
-    echo '</form>';
+                echo '<td><input type="submit" value="view product"></td>';
+                echo '</form>';
                 echo '<form method="POST" action="addToCart.php">';
                 echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                 echo '<td><input type="submit" value="Add to Cart"></td>';
