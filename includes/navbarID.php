@@ -18,9 +18,9 @@
          <li><a href="register.php" class="black">Register</a></li>
          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
            <ul class="dropdown-menu">  
-<?php foreach ($category->listcategory() as $cat) {
+          <?php foreach ($category->listcategory() as $cat) {
           echo "<li><a href='category.php?cid=" . $cat['id'] . " '>" . $cat['name'] . "</a></li>";}?>
-         </ul>
+      
          <li><a href="about.php" class="black">About</a></li>
          <li><a href="contact.php" class="black">Contact Us</a></li>
          <li><a href=""></a></li>   
