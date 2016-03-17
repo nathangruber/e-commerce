@@ -51,19 +51,7 @@
     <li><a href="loginpage.php">Login</a></li>
     <li><a href="about.php" class="black">About</a></li>
     <li><a href="contact.php" class="black">Contact Us</a></li>
-    
-    <?php if( isset($_SESSION['permission']) && $_SESSION['permission'] == 0){?> 
-      <li><a href="update.php">Update</a></li>
-    <?php } ?>
-
-    
-    <?php if ( isset($_SESSION['permission']) && $_SESSION['permission'] == 1) {?>
-      <li><a href="update.php">Update</a></li>  
-      <li><a href="admin.php">Admin</a></li>
-    <?php } ?>
-
-     
-      </ul>
+            </ul>
           </div>
         </div>
       </nav>

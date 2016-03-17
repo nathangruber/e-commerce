@@ -1,10 +1,10 @@
-<?php require_once 'session.php'; ?>
+<?php require_once 'includes/session.php'; ?>
 <!DOCTYPE html>
 <html>
-<?php require_once 'header.php'; ?>
+<?php require_once 'includes/header.php'; ?>
 
 <body>
-<?php require_once 'navbar.php'; ?>
+<?php require_once 'includes/navbar.php'; ?>
 <br><br><br><br><br><br>
 
 
@@ -38,10 +38,10 @@
                 echo '<td>'.$row['price'].'</td>';
                 echo '<td><input type="submit" value="view product"></td>';
                 echo '</form>';
-                //echo '<form method="POST" action="addToCart.php">';
-                //echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-                //echo '<td><input type="submit" value="Add to Cart"></td>';
-                //echo '</form>';
+                echo '<form method="POST" action="addCart.php">';
+                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
+                echo '<td><input type="submit" value="Add to Cart"></td>';
+                echo '</form>';
                 echo '</tr>';
               }
               ?>
@@ -65,6 +65,6 @@
 <br><br>
 
 
-<?php require_once('footer.php'); ?>
+<?php require_once('includes/footer.php'); ?>
 </body>
 </html>
