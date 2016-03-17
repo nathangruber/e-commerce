@@ -39,7 +39,7 @@ require_once('database.php');
                   echo '<td>'.$row['name'].'</td>'; 
                   echo '<td>'.$row['description'].'</td>'; 
                   echo '<td>'.$row['price'].'</td>';
-                  echo '<td><input type="submit" value="Add to Cart"></td>';
+                  //echo '<td><input type="submit" value="Add to Cart"></td>';
                   echo '</form>';
                   echo '</tr>';
                 }
