@@ -36,7 +36,7 @@ require_once 'includes/database.php';
                   echo '<tr>';
                  /echo '<form method="POST" action="addToCart.php">';
                   echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-                  echo '<td>'.$row['name'].'</td>'; 
+                  echo '<td>'.$row['product_name'].'</td>'; 
                   echo '<td>'.$row['description'].'</td>'; 
                   echo '<td>'.$row['price'].'</td>';
                   echo '<td><input type="submit" value="Add to Cart"></td>';
