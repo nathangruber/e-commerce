@@ -16,6 +16,7 @@
             <tr>
               <th>Name</th>
               <th>Price</th>
+              <th>Description</th>
             </tr>
           </thead>
         <tbody>
@@ -34,7 +35,7 @@
                 echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                 echo '<td>'.$row['product_name'].'</td>'; 
                 echo '<td>'.$row['price'].'</td>';
-                echo '<td><input class="btn btn-default" type="submit" value="view product"></td>';
+                echo '<td><input class="btn btn-default" type="submit" value="view product details"></td>';
                 echo '</form>';
                 echo '<form method="POST" action="addCart.php">';
                 echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
