@@ -18,7 +18,7 @@
               <th>Price</th>
             </tr>
           </thead>
-           <tbody>
+        <tbody>
     
               <?php 
               $category_id = $_GET['id'];
@@ -28,7 +28,7 @@
               $q = $pdo->prepare($sql);
               $q->execute(array($category_id));
               $products = $q->fetchAll();
-              foreach ($product as $row) {
+              foreach ($products as $row) {
                 echo '<tr>';
                 echo '<form method="GET" action="productPage.php">'; 
                 echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
