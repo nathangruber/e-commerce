@@ -34,7 +34,7 @@ require_once 'includes/database.php';
                 $query = $q->fetchAll(PDO::FETCH_ASSOC);
               foreach ($query as $row) {
                   echo '<tr>';
-                 /echo '<form method="POST" action="addToCart.php">';
+                 /echo '<form method="POST" action="addCart.php">';
                   echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                   echo '<td>'.$row['product_name'].'</td>'; 
                   echo '<td>'.$row['description'].'</td>'; 
