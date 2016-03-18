@@ -9,4 +9,6 @@ session_start();
 	if (!empty($_SESSION['id']) && ($_SESSION['permission']) == 1 ) {
 		$admin = true;
 	}
-?>
+
+require_once 'includes/database.php';
+require_once 'includes/crud.php';
