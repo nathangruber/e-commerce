@@ -1,3 +1,4 @@
+<?php require_once 'includes/session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -10,7 +11,6 @@
  </head>
   
   <body>
-    <?php require_once 'includes/database.php';?>
     <?php require_once 'includes/navbar.php';?>
 
     
