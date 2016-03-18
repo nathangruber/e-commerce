@@ -282,7 +282,7 @@ class product {
 	}
 }
 
-/*
+
 class category {	
 
 	public function create($name){
@@ -342,7 +342,7 @@ class category {
 	}
 
 }
-*/
+/*
 class cart {
 	public $customer_id;
 	public $transaction_id; 
@@ -432,3 +432,4 @@ class cart {
 		return $this->createCart();
 	}
 }	
+*/
