@@ -5,7 +5,7 @@ function valid($varname){
 	return ( !empty($varname) && isset($varname) );
 }
 
-/*
+
 class customer {	
 
 	public function create($name, $birth_date, $gender, $phone_number, $email_address, $username, $password ){
@@ -282,6 +282,7 @@ class product {
 	}
 }
 
+/*
 class category {	
 
 	public function create($name){
