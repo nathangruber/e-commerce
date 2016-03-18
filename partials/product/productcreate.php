@@ -46,7 +46,7 @@
         //////////////add crud oop///////////////
          if($valid){
 
-       /*
+       
        $createProduct = new product($_SESSION['id']);
         $response = $createProduct->create($name,$description,$price,$category_fk);
         if ($response) {
@@ -58,8 +58,7 @@
       
   }
 ?>
-*/
-        if ($valid) {
+       /* if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "INSERT INTO product (name,description,price,category_fk) values(?, ?, ?, ?)";
@@ -80,7 +79,7 @@
 
 }
 ?>
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -136,7 +135,7 @@
                             <?php endif;?>
                         </div>
                       </div>
-                     <lbael class="control-label">Bin ID</label>
+                     <label class="control-label">Bin ID</label>
                       <br>
                         <select name="bin_id">
                              <?php
@@ -159,8 +158,8 @@
                 </div>
                  
     </div> <!-- /container -->
-  </body>
-</html>
 <?php
 require_once 'includes/footer.php';
 ?>
+  </body>
+</html>
