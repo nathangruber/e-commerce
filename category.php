@@ -36,10 +36,10 @@
                 echo '<td>'.$row['price'].'</td>';
                 echo '<td><input class="btn btn-default" type="submit" value="view product"></td>';
                 echo '</form>';
-                //echo '<form method="POST" action="addCart.php">';
-               // echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-                //echo '<td><input class="btn btn-default" type="submit" value="Add to Cart"></td>';
-                //echo '</form>';
+                echo '<form method="POST" action="addCart.php">';
+                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
+                echo '<td><input class="btn btn-default" type="submit" value="Add to Cart"></td>';
+                echo '</form>';
                 echo '</tr>';
               }
               ?>
