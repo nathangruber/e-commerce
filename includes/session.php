@@ -10,3 +10,5 @@ session_start();
 		$admin = true;
 	}
 
+require_once 'database.php';
+require_once 'crud.php';
