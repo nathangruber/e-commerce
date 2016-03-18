@@ -57,19 +57,6 @@ require_once 'includes/database.php';
     </div> <!-- /container -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
- <?php require_once('includes/footer.php');
-  ?>
+<?php require_once('includes/footer.php');?>
   </body>
 </html>
