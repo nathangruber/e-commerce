@@ -1,7 +1,5 @@
 <?php 
 require_once'includes/session.php';
-require_once'includes/database.php';
-require_once'includes/crud.php';
 error_reporting(E_ALL);
  Database::connect();
 ?>
@@ -26,7 +24,7 @@ error_reporting(E_ALL);
       </div>
       
       <div class="row">
-        <table class="table table-striped table-bordered">
+        <table class="table table-bordered">
           <thead>
             <tr>
               <th>Name</th>
