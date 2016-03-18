@@ -10,5 +10,5 @@ session_start();
 		$admin = true;
 	}
 
-require_once 'includes/database.php';
-require_once 'includes/crud.php';
+require_once 'database.php';
+require_once 'crud.php';
