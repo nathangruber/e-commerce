@@ -302,10 +302,8 @@ class category {
 	public function read(){
 		try{
 			$pdo = Database::connect();
-			$sql = 'SELECT * FROM category ORDER BY id';
-			$q = $pdo->prepare($sql);
-			$q->execute(array($this->category_id));
-			$data = $q->fetch(PDO::FETCH_ASSOC);
+			$sql = 'SELECT * FROM category ORDER BY name';
+			$data = $pdo->query($sql);
 	        Database::disconnect();
 	        return $data;
 		} catch (PDOException $error){

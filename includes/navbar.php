@@ -31,7 +31,7 @@
           echo '<ul class="dropdown-menu">';
             
             foreach ($cats as $category ) {
-              echo '<li id="' . $category['name'] . '">';
+              echo '<li id="' . $category['id'] . '">';
                 echo '<a href="category.php?id=' . $category['id'] . '">';
                 echo ' ' . $category['name'] . ' ';
                 echo '</a>';
