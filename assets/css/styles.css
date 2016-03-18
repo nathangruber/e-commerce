@@ -64,9 +64,11 @@ font-family:'Libre Baskerville', serif;
   color:#F8F8F8;
 }
 img.board {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
+    border-radius: 15px 50px 30px 5px;
+    background: #73AD21;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
 }
 
 
