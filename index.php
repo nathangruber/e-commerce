@@ -32,19 +32,16 @@
       
  <div class="container">
    <div class="img-responsive img-rounded col-sm-4">
-    <a href="productPage.php">
     <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" alt="Skateboard" height="187" width="333">
    </a>
   </div>
  
    <div class="img-responsive col-sm-4">
-     <a href="productPage.php">
     <img id="long" src="assets/img/18752831476_4634222c05_b.jpg" class="img-rounded" alt="Longboard" height="187" width="333">
      </a>
   </div>
  
    <div class="img-responsive col-sm-4">
-     <a href="productPage.php">
     <img id="truck" src="assets/img/maxresdefault.jpg" class="img-rounded" alt="Skate Truck" height="187" width="333">
      </a>
    </div>
