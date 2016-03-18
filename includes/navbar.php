@@ -21,9 +21,9 @@
 
                       
     <?php 
-    //$categories = new category();
-    //$cats = $categories->read();
-    $cats = array('name'=>'cat', 'id'=>1, 'name'=>'cat');
+    $categories = new category();
+    $cats = $categories->read();
+    //$cats = array('name'=>'cat', 'id'=>1, 'name'=>'cat');
          // $q = $pdo->prepare($sql);
           //$q = $pdo->execute();
          // $categories = $q->fetchAll(PDO::FETCH_ASSOC);
