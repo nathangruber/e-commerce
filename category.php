@@ -31,7 +31,7 @@
               foreach ($products as $row) {
                 echo '<tr>';
                 echo '<form method="GET" action="productPage.php">'; 
-                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
+                echo '<input name="id" value="' . $row['id'] . '">';
                 echo '<td>'.$row['name'].'</td>'; 
                 echo '<td>'.$row['price'].'</td>';
                 echo '<td><input class="btn btn-default" type="submit" value="view product"></td>';
