@@ -38,9 +38,8 @@
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
-
-  </body>
-</html>
 <?php
 require_once 'includes/footer.php';
 ?>
+  </body>
+</html>

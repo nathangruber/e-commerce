@@ -28,9 +28,8 @@
 <div class="image">
 <img src="assets/img/bbs1.png" width="144" height="126">
 </div>
-   
-    </body>
-  </html>
 <?php
 require_once('includes/footer.php');
 ?>
+    </body>
+  </html>
