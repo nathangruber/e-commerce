@@ -12,7 +12,7 @@
   ?>
     <title>Site Map</title>
   <header class="main-header" role="banner">
-  <img src="assets/img/bbs1.png" alt="Banner Image" width="300">
+  <img id="siteimage" src="assets/img/bbs1.png" alt="Banner Image" width="300">
      </header> 
 
 
@@ -30,7 +30,7 @@
         
 <p><a href="index.php">Home Page</a></p>
 <ul>
-  <li> Introduction to Blake's Butcher Shop</li>
+  <li> Introduction to Blake's Board Shop</li>
   <li> Photos</li>
  </ul>
 <p><a href="register.php">Register</a></p>
@@ -39,8 +39,8 @@
 </ul>
  <p><a href="product.php">Our Boards</a></p>
 <ul>
-  <li>Skateboards</li>
-  <li>Longboards</li>
+  <li>Blake's Skateboard Decks</li>
+  <li>Blake's Cruiser Decks</li>
   <li>Hardware</li>
 </ul>      
 <p><a href="about.php">About Blake's</a></p>

@@ -28,7 +28,7 @@ if(isset($_POST['email'])) {
         echo $error."<br /><br />";
  
         echo "Please go back and fix these errors.<br /><br />";
-        require_once('footer.php');
+        require_once('includes/footer.php');
         die();
  
     }
@@ -147,7 +147,7 @@ $headers = 'From: '.$email_from."\r\n".
  
  
  
-Thank you for contacting Blake's Butcher Shop. We will be in touch soon.
+Thank you for contacting Blake's Board Shop. We will be in touch soon.
  
  
 
