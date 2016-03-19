@@ -1,6 +1,5 @@
 <?php 
 require_once 'includes/session.php';
-require_once 'includes/database.php';
  error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
@@ -27,6 +26,7 @@ require_once 'includes/database.php';
             if($logged) {
                 $pdo = Database::connect();
                 $id = $_GET['id'];
+                echo $id;
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $sql = 'SELECT * FROM product WHERE id = ?';
                 $q = $pdo->prepare($sql);
@@ -34,7 +34,7 @@ require_once 'includes/database.php';
                 $query = $q->fetchAll(PDO::FETCH_ASSOC);
               foreach ($query as $row) {
                   echo '<tr>';
-                  echo '<form method="POST" action="productinformation.php">';
+                  echo '<form method="GET" action="productinformation.php">';
                   echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                   echo '<td>'.$row['product_name'].'</td>'; 
                   echo '<td>'.$row['description'].'</td>'; 
