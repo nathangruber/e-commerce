@@ -71,9 +71,9 @@
 
     <title>Add a Credit Card</title>
  </head>
-  
+  <?php require_once('includes/navbar.php');?>
   <body>
-    <?php require_once('includes/navbar.php');?>
+   
 
 
     <div class="container">
