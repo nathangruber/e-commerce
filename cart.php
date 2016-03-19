@@ -13,7 +13,7 @@ require_once 'includes/crud.php';
  <body id="background">
 	  <?php 
 	     if ($admin) {
-	       require_once'includes/adminNavBar.php';
+	       require_once'includes/navbar.php';
 	     } else {
 	       require_once'includes/navbar.php';
 	     }
