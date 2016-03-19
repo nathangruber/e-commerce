@@ -3,11 +3,9 @@
 <html>
 <?php require_once 'includes/header.php';?>
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-<?php require_once 'includes/navbar.php';?>
 
 <body>
-
-
+<?php require_once 'includes/navbar.php';?>
 <center>
 <h3>Successfully Registered</h3>
 <br><br><br>
