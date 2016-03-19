@@ -19,8 +19,9 @@
     <div class="container">
         <div class = "row">
          <div class="col-md-4">
-    <img src="assets/img/bbs1.png" alt="Banner Image" width="400">
-      
+    <div>    
+    <img id= 'contactlogo' src="assets/img/bbs1.png" alt="Blake's Board Shop Logo" width="350">
+  </div> 
          <h2></h2>
 <div class = "contactus">       
 <p>Contact Us</p> 
