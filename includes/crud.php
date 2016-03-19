@@ -346,7 +346,7 @@ class cart{
 	public $customer_id;
 	
 	public function __construct($customer_id){
-		$this->customer_id;
+		$this->customer_id = $customer_id;
 	}
 	
 	
@@ -357,7 +357,6 @@ class cart{
 			$pdo = Database::connect();
 			$sql = "INSERT INTO  `E-Commerce`.`cart` (`customer_fk` ,`product_fk`) VALUES (?,  ?);";
 			$q = $pdo->prepare($sql);
-			echo '<br> Inside customer id is: '.$this->customer_id."<br> and product id is: ".$product_id;
 			$q->execute(array($this->customer_id,$product_id));
 			Database::disconnect();
 			return true;

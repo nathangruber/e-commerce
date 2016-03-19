@@ -7,16 +7,13 @@ require_once 'includes/session.php';
 
 $product_id = $_GET['id'];
 
-echo '<br><br><br><br><br><br><br><br><br>Product id:'.$product_id;
-echo '<br>Session id is:'.$_SESSION['id'];
 $cart = new cart($_SESSION['id']);
 $result = $cart->addCart($product_id);
 
 if($result){
-	echo 'result true';
+	header('Location: cart.php');
 }else{
-	echo 'result false';
-}
+
  
 ?>
 <!DOCTYPE html>
@@ -31,7 +28,7 @@ if($result){
       <div class="row">
         
         <div class="span12">
-	        bla bla bla
+	        ERROR
         </div>
         
       </div>
@@ -46,3 +43,7 @@ if($result){
 <?php require_once('includes/footer.php');?>
   </body>
 </html>
+
+<?php
+}	
+?>
