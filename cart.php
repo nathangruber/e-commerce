@@ -38,11 +38,15 @@ require_once 'includes/crud.php';
 				$cart = new cart($_SESSION['id']);				
 				$products = $cart->read();
 				foreach ($products as $row) {
+					
+					$product = new product($row['product_fk']);
+					$product_details = $product->read();
+					
 	                echo '<tr>';
 	                echo '<form method="POST" action="updateQuantity.php">';
 	                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-	                echo '<td>' . $row['product_name'] . '</td>';
-	                echo '<td>' . $row['price'] . '</td>';
+	                echo '<td>' . $product_details['product_name'] . '</td>';
+	                echo '<td>' . $product_details['price'] . '</td>';
 	                echo '<td><input type="text" name="quantity" value="' . $row['quantity'] . '"></td>';
 	                echo '<td><input type="submit" value="Update Quantity"></td>';
 	                echo '</form>';
