@@ -24,8 +24,7 @@
               <?php 
               $category_id = $_GET['id'];
 
-              $products = new product();
-              $listproducts=$products->getProductsOfCategory($category_id);
+              
 
               print_r($listproducts);
 
