@@ -75,7 +75,15 @@
             }
         }
     }
-
+ //$transaction = new cart();
+    //$cart = $transaction->createCart();
+    
+   // if ($response) {
+     // if ($cart) {
+      //  header('Location: index.php');
+      //} else {
+      //  header('Location: index.php');
+     // }    
 
 ?>
 

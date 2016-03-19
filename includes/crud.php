@@ -367,7 +367,7 @@ class cart {
     public function fetchCart() {
 		$products = array();
 		$pdo = Database::connect();
-		$sql = 'SELECT * FROM product_transaction WHERE transaction_fk = ?';
+		$sql = 'SELECT * FROM transaction_products WHERE transaction_fk = ?';
 		$q = $pdo->prepare($sql);
 		$q->execute(array($this->transaction_id));
 		$product_ids = $q->fetchAll(PDO::FETCH_ASSOC);
@@ -381,7 +381,7 @@ class cart {
 		Database::disconnect();
 		return $products;
 	}
-	public function addToCart($product_fk) {
+	public function addCart($product_fk) {
 		echo $product_fk;
 		echo $this->cart_id;
 		$pdo = Database::connect();
@@ -403,7 +403,7 @@ class cart {
 			return true;
 		}
 	}
-	public function deleteFromCart($) {
+	public function deleteCart($) {
         $pdo = Database::connect();
         $sql = "DELETE FROM `ecommerce`.`transaction_products` WHERE `id` = ?";
         $q = $pdo->prepare($sql);
