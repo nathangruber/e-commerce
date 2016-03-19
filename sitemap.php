@@ -37,7 +37,7 @@
 <ul>
   <li> Register</li>
 </ul>
- <p><a href="product.php">Our Boards</a></p>
+ <p><a href="category.php">Our Boards</a></p>
 <ul>
   <li>Blake's Skateboard Decks</li>
   <li>Blake's Cruiser Decks</li>
