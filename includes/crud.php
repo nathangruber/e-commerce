@@ -200,10 +200,13 @@ class customerCreditcards {
 
 class product {	
 
-	public $customer_id;
+	public $product_id;
 
-	public function __construct($customer_id){
-		$this->customer_id = $customer_id;
+	public function __construct(){
+	}
+
+	public function __construct($product_id){
+		$this->product_id = $product_id;
 	}
 
 	public function create($product_name, $description, $price, $category_fk){
@@ -246,6 +249,23 @@ class product {
 
     }
 
+    public function getProductsOfCategory($category_id){
+		try{
+			$pdo = Database::connect();
+			$sql = 'SELECT * FROM product where category_id=? ORDER BY id';
+			$q = $pdo->prepare($sql);
+			$q->execute(array($category_id));
+			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+	        Database::disconnect();
+	        return $data;
+		} catch (PDOException $error){
+
+			header( "Location: 500.php" );
+			//echo $error->getMessage();
+		}
+
+    }
+
 	public function update($id,$product_name, $description, $price, $category_fk, $product_id){
 		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_fk)) {
 			return false;
@@ -276,7 +296,9 @@ class product {
 	}
 }
 
-class category {	
+class category {
+
+	
 
 	public function create($name){
 		if (!valid($name)) {
@@ -305,8 +327,8 @@ class category {
 			//die();
 
 		}
+	}
 
-    }
 
 	public function update($name, $category_id){
 		if (!valid($name) ) {

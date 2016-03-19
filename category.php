@@ -23,6 +23,12 @@
     
               <?php 
               $category_id = $_GET['id'];
+
+              $products = new product();
+              $listproducts->getProductsOfCategory($category_id);
+
+              print_r($listproducts);
+
               $pdo = Database::connect();
               $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               $sql = 'SELECT * FROM product WHERE category_FK = ?';
