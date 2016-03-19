@@ -163,9 +163,7 @@ class customerCreditcards {
 	        Database::disconnect();
 	        return $data;
 			} catch (PDOException $error){
-
 			header( "Location: 500.php" );
-			//echo $error->getMessage();
 			die();
 
 		}
