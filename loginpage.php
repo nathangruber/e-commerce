@@ -14,7 +14,7 @@
       <div>
         <form action="includes/login.php" method="post">
           <input type="text" name="username" placeholder="username">
-          <input type="text" name="password" placeholder="password">
+          <input type="PASSWORD" name="password" placeholder="password">
           <input class="btn btn-default" type="submit" value="Login">        
         </form>
       </div>
