@@ -28,7 +28,7 @@ require_once 'includes/crud.php';
 	            <th>Name</th>
 	            <th>Price</th>
 	            <th>Quantity</th>
-	            <th>Action</th>
+	            <th>Subtotal</th>
 	            <th>Action</th>
 	          </tr>
 	        </thead>
@@ -46,10 +46,11 @@ require_once 'includes/crud.php';
 	                echo '<form method="POST" action="updateQuantity.php">';
 	                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
 	                echo '<td>' . $product_details['product_name'] . '</td>';
-	                echo '<td>' . $product_details['price'] . '</td>';
+	                echo '<td>$' . $product_details['price'] . '$</td>';
 	                echo '<td><input type="text" name="quantity" value="' . $row['quantity'] . '"></td>';
-	                echo '<td><input type="submit" value="Update Quantity"></td>';
+	                echo '<td><input class="btn btn-default" type="submit" value="Add one more"></td>';
 	                echo '</form>';
+	                echo '<td>$'.$product_details['price']*$row['quantity'].'</td>';
 	               	echo '<form method="POST" action="deleteCart.php">';
 		            echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
 		            echo '<td><input type="submit" value="Remove From Cart"></td>';
