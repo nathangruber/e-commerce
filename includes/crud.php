@@ -355,9 +355,11 @@ class cart{
 		} else {
 			$pdo = Database::connect();
 			$sql = "INSERT INTO  `E-Commerce`.`cart` (`customer_fk` ,`product_fk`) VALUES (?,  ?);";
+			echo $sql;
 			$q = $pdo->prepare($sql);
+			echo 'here';
 			$q->execute(array($this->customer_id,$product_id));
-			$category_id = $pdo->lastInsertId();
+			echo 'here2';
 			Database::disconnect();
 			return true;
 		}
