@@ -34,15 +34,21 @@ require_once 'includes/database.php';
                 $query = $q->fetchAll(PDO::FETCH_ASSOC);
               foreach ($query as $row) {
                   echo '<tr>';
-                  echo '<form method="POST" action="addCart.php">';
+                  echo '<form method="POST" action="productinformation.php">';
                   echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                   echo '<td>'.$row['product_name'].'</td>'; 
                   echo '<td>'.$row['description'].'</td>'; 
                   echo '<td>'.$row['price'].'</td>';
+                  echo '<td><input type="submit" value="More Details"></td>';
+                  echo '</form>';
+                  echo '<form method="POST" action="addCart.php">';
+                  echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
                   echo '<td><input type="submit" value="Add to Cart"></td>';
                   echo '</form>';
                   echo '</tr>';
                 }
+            }else {
+              header('Location: loginpage.php');
             }
             Database::disconnect();
             ?>
