@@ -24,7 +24,6 @@
     $categories = new category();
     $cats = $categories->read();
 	
-	print_r($cats);
     echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Products<span class="caret"></span></a>';
           echo '<ul class="dropdown-menu">';
             
