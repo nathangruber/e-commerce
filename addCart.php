@@ -1,19 +1,31 @@
-<?php
-require_once 'includes/session.php' ;
-require_once 'includes/database.php';
-require_once 'includes/crud.php';
-error_reporting(E_ALL);
+<?php 
+require_once 'includes/session.php';
  
-    if ( !empty($_POST)) {
-        // keep track post values
-      $product_fk = $_POST['id'];
-      $addCart = new cart();
-      $add = $addCart->addCart($product_fk);
-      if ($add) {
-        header('Location: cart.php');
-      } else {
-        header('Location: cart.php');
-      }
-    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<?php require_once'includes/header.php'; ?>
+ <body>
+<?php  require_once'includes/navbar.php'; ?>
+<br><br><br><br><br><br>
+  
+ <div class="container">
+      
+      <div class="row">
+        
+        <div class="span12">
+	        bla bla bla
+        </div>
+        
+      </div>
 
-    
+      <br>
+      <br>
+      <br>
+      <br>
+    </div> <!-- /container -->
+
+
+<?php require_once('includes/footer.php');?>
+  </body>
+</html>
