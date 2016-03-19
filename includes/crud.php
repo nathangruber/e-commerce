@@ -234,9 +234,9 @@ class product {
 	public function read(){
 		try{
 			$pdo = Database::connect();
-			$sql = 'SELECT * FROM product ORDER BY id';
+			$sql = 'SELECT * FROM product where id = ?';
 			$q = $pdo->prepare($sql);
-			$q->execute(array($this->customer_id));
+			$q->execute(array($this->product_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
 	        Database::disconnect();
 	        return $data;

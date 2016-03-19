@@ -22,7 +22,14 @@ require_once 'includes/session.php';
             </tr>
           </thead>
           <tbody>
-            
+            <?php
+	          $product = new product($_GET['id']);
+	          
+	          $row = $product->read();
+	          
+	          print_r($row);
+	            
+	        ?>
           </tbody>
         </table>
       </div>
