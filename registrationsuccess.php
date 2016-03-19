@@ -3,8 +3,8 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-</head>
 <?php require_once 'includes/navbar.php';?>
+</head>
 <body>
 
 
