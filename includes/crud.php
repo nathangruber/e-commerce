@@ -347,6 +347,7 @@ class cart{
 	
 	public function __construct($customer_id){
 		$this->customer_id;
+		echo 'Hello customer';
 	}
 	
 	public function addCart($product_id){

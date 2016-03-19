@@ -10,6 +10,11 @@ $product_id = $_GET['id'];
 $cart = new cart($_SESSION['id']);
 $result = $cart->addCart($product_id);
 
+if($result){
+	echo 'result true';
+}else{
+	echo 'result false';
+}
  
 ?>
 <!DOCTYPE html>
