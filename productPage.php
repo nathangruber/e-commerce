@@ -1,6 +1,6 @@
 <?php 
 require_once 'includes/session.php';
- error_reporting(E_ALL);
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +24,11 @@ require_once 'includes/session.php';
           <tbody>
             <?php
             if($logged) {
+
+
+
+                if(!empty($myInfo)){
+
                 $pdo = Database::connect();
                 $id = $_GET['id'];
                 echo $id;
