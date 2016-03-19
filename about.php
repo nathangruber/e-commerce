@@ -17,7 +17,7 @@
 <div class = "abouttext">
 <title>About Blake's Board Shop</title>
 
-<p>Blake's Board Shop makes high quality, made in Wisconsin skateboard decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop. </p></div>
+<p>Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiser decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop. </p></div>
         </div>
       </div>
    
