@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<?php require_once 'includes/navbar.php'; ?>
+<?php require_once 'includes/navbar.php';?>
 
 <center>
 <h3>Successfully Registered</h3>
