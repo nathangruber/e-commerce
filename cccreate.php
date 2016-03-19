@@ -47,7 +47,7 @@
       if($valid){
 
         $createCC = new customerCreditcards($_SESSION['id']);
-        $response = $createCC->create($name,$cardnumber,$expiration_date,$security_code,$address_fk); //CALLING MEMBER FUNCTION, GET VALUES FROM CREATED OBJECTS
+        $response = $createCC->create($name,$cardnumber,$expiration_date,$security_code,$address_fk);
         if ($response) {
           header('Location: update.php?feedbackcreditcardadded=ok');
         } else {
