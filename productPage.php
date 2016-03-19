@@ -22,44 +22,7 @@ require_once 'includes/session.php';
             </tr>
           </thead>
           <tbody>
-            <?php
-            if($logged) {
-
-
-
-                $product = new product();
-                $myInfo = $me->read($_SESSION["id"]);
-
-                if(!empty($myInfo)){
-
-                $pdo = Database::connect();
-                $id = $_GET['id'];
-                echo $id;
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $sql = 'SELECT * FROM product WHERE id = ?';
-                $q = $pdo->prepare($sql);
-                $q->execute(array($id));
-                $query = $q->fetchAll(PDO::FETCH_ASSOC);
-              foreach ($query as $row) {
-                  echo '<tr>';
-                  echo '<form method="GET" action="productinformation.php">';
-                  echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-                  echo '<td>'.$row['product_name'].'</td>'; 
-                  echo '<td>'.$row['description'].'</td>'; 
-                  echo '<td>'.$row['price'].'</td>';
-                  echo '<td><input class="btn btn-default" type="submit" value="More Details"></td>';
-                  echo '</form>';
-                  echo '<form method="POST" action="addCart.php">';
-                  echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-                  echo '<td><input class="btn btn-default" type="submit" value="Add to Cart"></td>';
-                  echo '</form>';
-                  echo '</tr>';
-                }
-            }//else {
-              //header('Location: loginpage.php');
-           // }
-            Database::disconnect();
-            ?>
+            
           </tbody>
         </table>
       </div>
