@@ -22,9 +22,10 @@
   
          <h2></h2>
 <div class = "contactus"    
-<p>Contact Us</p> 
-</div>      
-    
+
+      
+ <p>Contact Us</p> 
+   
 <form name="contactform" method="post" action="emailform.php">
  
  
