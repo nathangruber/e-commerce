@@ -4,9 +4,9 @@
 <head>
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 </head>
-
-<body>
 <?php require_once 'includes/navbar.php';?>
+<body>
+
 
 <center>
 <h3>Successfully Registered</h3>
