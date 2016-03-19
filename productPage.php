@@ -27,6 +27,9 @@ require_once 'includes/session.php';
 
 
 
+                $product = new product();
+                $myInfo = $me->read($_SESSION["id"]);
+
                 if(!empty($myInfo)){
 
                 $pdo = Database::connect();
