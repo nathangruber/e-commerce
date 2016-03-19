@@ -199,7 +199,7 @@
             echo '<td><input class="btn btn-danger" type="submit" value="Delete"></td>';
             echo '</form>';
             echo '</tr>';
-            ?>
+          
           }
 
          
