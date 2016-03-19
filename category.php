@@ -28,14 +28,6 @@
               
               $products = $product->readAllCategory($category_id);
 
-              print_r($products);
-
-              /*$pdo = Database::connect();
-              $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-              $sql = 'SELECT * FROM product WHERE category_FK = ?';
-              $q = $pdo->prepare($sql);
-              $q->execute(array($category_id));
-              $products = $q->fetchAll();*/
               foreach ($products as $row) {
                 echo '<tr>';
                 echo '<form method="GET" action="productPage.php">'; 
