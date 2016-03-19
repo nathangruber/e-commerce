@@ -155,14 +155,14 @@ class customerCreditcards {
 
 	
 
-	public function update($id,$name, $cardnumber, $expiration_date, $security_code, $address_id){
-		if (!valid($id) ||!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_id)) {
+	public function update($id,$name, $cardnumber, $expiration_date, $security_code, $address_fk){
+		if (!valid($id) ||!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_fk)) {
 			return false;
 			} else {
 			$pdo = Database::connect();
 			$sql = "UPDATE creditcard SET name = ?, cardnumber = ?, expiration_date = ?, security_code = ?, address_fk = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($name,$cardnumber,$expiration_date,$security_code,$address_id,$id));
+			$q->execute(array($name,$cardnumber,$expiration_date,$security_code,$address_fk,$id));
 			Database::disconnect();
 			return true;
 		}
