@@ -237,7 +237,7 @@ class product {
 			$sql = 'SELECT * FROM product where id = ?';
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->product_id));
-			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+			$data = $q->fetch(PDO::FETCH_ASSOC);
 	        Database::disconnect();
 	        return $data;
 		} catch (PDOException $error){
