@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-        
+  </div>    
 <div class="image">
 <img id= "aboutimage" src="assets/img/bbs1.png" width="144" height="126">
 </div>
