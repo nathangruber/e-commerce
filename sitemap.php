@@ -54,6 +54,10 @@
 <ul>
   <li> Email Form</li>
 </ul>
+<p><a href="cart.php">Cart</a></p>
+<ul>
+  <li> Your Cart</li>
+</ul>
        </div>
        </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
