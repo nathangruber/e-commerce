@@ -245,22 +245,23 @@ class product {
 			header( "Location: 500.php" );
 			//echo $error->getMessage();
 		}
-
-    }
+	}
 
     
 
-	public function update($id,$product_name, $description, $price, $category_fk, $product_id){
-		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_fk)) {
-			return false;
-			} else {
+	public function readAllCategory($category_id){
+		try{
 			$pdo = Database::connect();
-			$sql = "UPDATE product SET product_name = ?, description = ?, price = ?, category_fk = ? WHERE id = ?";
+			$sql = 'SELECT * FROM product where category_fk = ?';
 			$q = $pdo->prepare($sql);
-			$q->execute(array($product_name,$description,$price,$category_fk,$prodcut_id));
-			
-			Database::disconnect();
-			return true;
+			$q->execute(array($category_id));
+			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+	        Database::disconnect();
+	        return $data;
+		} catch (PDOException $error){
+
+			header( "Location: 500.php" );
+			//echo $error->getMessage();
 		}
 	}
 
@@ -430,3 +431,5 @@ class cart {
 	}
 }	
 */
+
+?>
