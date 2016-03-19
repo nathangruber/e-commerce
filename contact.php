@@ -19,9 +19,7 @@
     <div class="container">
         <div class = "row">
          <div class="col-md-4">
-    <div>    
-    <img id= 'contactlogo' src="assets/img/bbs1.png" alt="Blake's Board Shop Logo" width="350">
-  </div> 
+  
          <h2></h2>
 <div class = "contactus">       
 <p>Contact Us</p> 
@@ -56,7 +54,7 @@
  
   <textarea  name="comments" maxlength="1000" cols="30" rows="5"></textarea>
  
-  <input type="submit" value="Submit">  
+  <input class="btn btn-default"  type="submit" value="Submit">  
 
  
 </form>
