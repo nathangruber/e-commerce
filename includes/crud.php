@@ -153,22 +153,7 @@ class customerCreditcards {
 		}
 	}
 
-	public function read(){
-		try{
-			$pdo = Database::connect();
-			$sql = 'SELECT * FROM creditcard WHERE customer_fk = ?';
-			$q = $pdo->prepare($sql);
-			$q->execute(array($this->customer_id));
-			$data = $q->fetchAll(PDO::FETCH_ASSOC);
-	        Database::disconnect();
-	        return $data;
-			} catch (PDOException $error){
-			header( "Location: 500.php" );
-			die();
-
-		}
-
-    }
+	
 
 	public function update($id,$name, $cardnumber, $expiration_date, $security_code, $address_id){
 		if (!valid($id) ||!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_id)) {
@@ -362,6 +347,23 @@ class cart{
 			return true;
 		}
 	}
+	
+	public function read(){
+		try{
+			$pdo = Database::connect();
+			$sql = 'SELECT product_fk, count(product_fk) as quantity FROM `cart` WHERE customer_fk=? group by product_fk';
+			$q = $pdo->prepare($sql);
+			$q->execute(array($this->customer_id));
+			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+	        Database::disconnect();
+	        return $data;
+			} catch (PDOException $error){
+			header( "Location: 500.php" );
+			die();
+
+		}
+
+    }
 	
 	
 }

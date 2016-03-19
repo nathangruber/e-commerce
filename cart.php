@@ -19,7 +19,7 @@ require_once 'includes/crud.php';
       ?>
     <div class="container">
 	    <div class="row">
-	      <h3>Cart</h3>
+	      <h3 style="margin-top: 100px">Cart</h3>
 	    </div>
 	    <div class="row">
 	      <table class="table table-bordered">
@@ -35,9 +35,9 @@ require_once 'includes/crud.php';
 	         <tbody>
 	          <?php
 	          if($logged) {
-				$fetchCart = new cart();				
-				$product = $fetchCart->fetchCart();
-				foreach ($product as $row) {
+				$cart = new cart($_SESSION['id']);				
+				$products = $cart->read();
+				foreach ($products as $row) {
 	                echo '<tr>';
 	                echo '<form method="POST" action="updateQuantity.php">';
 	                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
