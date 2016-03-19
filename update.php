@@ -141,7 +141,7 @@
 
     <div class="row">
         <div class="span12">
-          <a class="btn btn-default" href="cccreate.php">Add new credit card</a>
+          <a class="btn btn-default" href="cccreate.php">Add new Credit Card</a>
         </div>
         
       </div>
@@ -199,7 +199,7 @@
             echo '<td><input class="btn btn-danger" type="submit" value="Delete"></td>';
             echo '</form>';
             echo '</tr>';
-
+            ?>
           }
 
          
