@@ -10,7 +10,7 @@
       require_once'includes/navbar.php';
     }
     ?>
-
+<body>
       <div class="container">
         <div class = "row">
      
