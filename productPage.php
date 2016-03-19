@@ -47,9 +47,9 @@ require_once 'includes/database.php';
                   echo '</form>';
                   echo '</tr>';
                 }
-            }else {
-              header('Location: loginpage.php');
-            }
+            }//else {
+              //header('Location: loginpage.php');
+           // }
             Database::disconnect();
             ?>
           </tbody>
