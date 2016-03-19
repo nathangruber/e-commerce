@@ -2,7 +2,7 @@
   require_once('includes/session.php');
   if(!$logged){
     header("Location: index.php");
-    die(); // just in case
+    die(); 
   }
   require_once('includes/database.php');
   require_once('includes/crud.php');
@@ -73,10 +73,7 @@
  </head>
   
   <body>
-   
-
-
-    <div class="container">
+   <div class="container">
       <div class="span10 offset1">
         <div class="row">
           <h3><small>Complete All Fields</small></h3>
@@ -122,10 +119,6 @@
               <?php endif;?>
             </div>
           </div>
-
-
-
-
           <div class="control-group">
             <label class="control-label">Address</label>
             <div class="controls">
@@ -138,12 +131,7 @@
                 ?>
               </select>
              </div>
-          </div>
-
-
-          <br>
-          <br>
-          <br>
+           </div>
           <div class="form-actions">
             <button type="submit" class="btn btn-success">Add Credit Card</button>
             <a class="btn" href="update.php">Back</a>
