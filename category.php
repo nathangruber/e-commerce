@@ -29,20 +29,15 @@
               $products = $product->readAllCategory($category_id);
 
               foreach ($products as $row) {
-                echo '<tr>';
-                echo '<form method="GET" action="productPage.php">'; 
-                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-                echo '<td>'.$row['product_name'].'</td>'; 
-                echo '<td>'.$row['price'].'</td>';
-                echo '<td><input class="btn btn-default" type="submit" value="view product details"></td>';
-                echo '</form>';
-                echo '<form method="POST" action="addCart.php">';
-                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-                echo '<td><input class="btn btn-default" type="submit" value="Add to Cart"></td>';
-                echo '</form>';
-                echo '</tr>';
-              }
-              ?>
+	              
+	          ?>
+	          	<tr>
+		          	<td><?php echo $row['product_name']; ?></td>
+		          	<td><?php echo $row['price']; ?></td>
+		          	<td><a class="btn btn-default" href="productPage.php?id=<?php echo $row['id']; ?>">View product details</a></td>
+		          	<td><a class="btn btn-default" href="addCart.php?id=<?php echo $row['id']; ?>">Add to cart</a></td>
+	          	</tr>
+	          
            </tbody>
         </table>
       </div>
