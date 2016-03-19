@@ -25,11 +25,14 @@ require_once 'includes/session.php';
             <?php
 	          $product = new product($_GET['id']);
 	          
-	          $row = $product->read();
-	          
-	          print_r($row);
-	            
+	          $myproduct = $product->read();
 	        ?>
+	        
+	          <td><?php echo $myproduct['product_name']; ?></td>
+	          <td><?php echo $myproduct['description']; ?></td>
+	          <td><?php echo $myproduct['price']; ?></td>
+	          <td><a class="btn btn-default" href="addCart.php?id=<?php echo $row['id']; ?>">Add to cart</a></td>
+	            
           </tbody>
         </table>
       </div>
