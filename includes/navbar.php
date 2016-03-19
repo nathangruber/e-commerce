@@ -37,7 +37,6 @@
             }
             echo '</ul>';
            echo '</li>';  
-    Database::disconnect();
   
      ?>                         
                     
