@@ -52,7 +52,7 @@ require_once 'includes/crud.php';
 				?>
 				
 				<tr>
-					<td><?php echo $product_details['product_details']; ?></td>
+					<td><?php echo $product_details['product_name']; ?></td>
 					<td>$<?php echo $product_details['price']; ?></td>
 					<td><?php echo $row['quantity']; ?><a class="btn btn-default" style="margin-left: 30px" href="updateQuantity.php?type=more">+</a><a class="btn btn-default" href="updateQuantity.php?type=less">-</a></td>
 					<td>$<?php echo $subtotal_product; ?></td>
