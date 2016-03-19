@@ -48,7 +48,7 @@ require_once 'includes/crud.php';
 					<td>$<?php echo $product_details['price']; ?></td>
 					<td><?php echo $row['quantity']; ?><a class="btn btn-default" href="updateQuantity.php?type=more">+</a><a class="btn btn-default" href="updateQuantity.php?type=less">-</a></td>
 					<td><a class="btn btn-danger" href="removeItem.php">Remove item</a></td>
-					<td></td>
+					<td>$<?php echo $row['quantity']*$product_details['price']; ?></td>
 				</tr>
 				<?php
 	            }
