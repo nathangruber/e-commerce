@@ -1,10 +1,10 @@
 <?php require_once 'includes/session.php'; ?>
 <!DOCTYPE html>
 <html>
-<head>
+<?php require_once 'includes/header.php';?>
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 <?php require_once 'includes/navbar.php';?>
-</head>
+
 <body>
 
 
