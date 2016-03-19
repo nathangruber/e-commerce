@@ -54,7 +54,7 @@ require_once 'includes/crud.php';
 				
 				<tr>
 					<td><?php echo $product_details['product_name']; ?></td>
-					<td><?php echo money_format('$', $product_details['price']); ?></td>
+					<td><?php echo money_format('%i', $product_details['price']); ?></td>
 					<td><?php echo $row['quantity']; ?><a class="btn btn-default" style="margin-left: 30px" href="updateQuantity.php?type=more">+</a><a class="btn btn-default" href="updateQuantity.php?type=less">-</a></td>
 					<td>$<?php echo $subtotal_product; ?></td>
 					<td><a class="btn btn-danger" href="removeItem.php">Remove item</a></td>
@@ -75,19 +75,22 @@ require_once 'includes/crud.php';
 		           <td></td>
 		           <td></td>
 		           <td><strong>Subtotal</strong></td>
-		           <td><strong>$<?php echo $subtotal; ?></strong></td> 
+		           <td><strong><?php echo money_format('%i', $subtotal); ?></strong></td>
+		           <td></td>
 	            </tr>
 	            <tr>
 		           <td></td>
 		           <td></td>
 		           <td><strong>Tax</strong></td>
-		           <td><strong>$<?php echo $tax; ?></strong></td> 
+		           <td><strong><?php echo money_format('%i', $tax); ?></strong></td>
+		           <td></td>
 	            </tr>
 	           <tr>
 		           <td></td>
 		           <td></td>
 		           <td><strong>Total</strong></td>
-		           <td><strong>$<?php echo $total; ?></strong></td> 
+		           <td><strong><?php echo money_format('%i', $total); ?></strong></td>
+		           <td></td>
 	            </tr>
 	           <?php 
 		      } 
