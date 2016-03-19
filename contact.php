@@ -10,17 +10,16 @@
       require_once'includes/navbar.php';
     }
     ?>
-<header class="main-header" role="banner">
-  <img src="assets/img/bbs1.png" alt="Banner Image" width="400">
-     </header> 
 
+  
+     
 
   <body>
 
     <div class="container">
         <div class = "row">
          <div class="col-md-4">
-    
+    <img src="assets/img/bbs1.png" alt="Banner Image" width="400">
       
          <h2></h2>
 <div class = "contactus">       
