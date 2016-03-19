@@ -27,7 +27,7 @@
     </div>
         
 <div class="image">
-<img src="assets/img/bbs1.png" width="144" height="126">
+<img id= "aboutimage" src="assets/img/bbs1.png" width="144" height="126">
 </div>
 <?php
 require_once('includes/footer.php');
