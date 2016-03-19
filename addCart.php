@@ -8,7 +8,7 @@ require_once 'includes/session.php';
 $product_id = $_GET['id'];
 
 $cart = new cart($_SESSION['id']);
-$cart->addCart($product_id);
+$result = $cart->addCart($product_id);
 
  
 ?>
