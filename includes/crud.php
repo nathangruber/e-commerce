@@ -249,22 +249,7 @@ class product {
 
     }
 
-    public function getProductsOfCategory($category_id){
-		try{
-			$pdo = Database::connect();
-			$sql = 'SELECT * FROM product where category_id=? ORDER BY id';
-			$q = $pdo->prepare($sql);
-			$q->execute(array($category_id));
-			$data = $q->fetchAll(PDO::FETCH_ASSOC);
-	        Database::disconnect();
-	        return $data;
-		} catch (PDOException $error){
-
-			header( "Location: 500.php" );
-			//echo $error->getMessage();
-		}
-
-    }
+    
 
 	public function update($id,$product_name, $description, $price, $category_fk, $product_id){
 		if (!valid($id) ||!valid($name) || !valid($description) || !valid($price) || !valid($category_fk)) {
