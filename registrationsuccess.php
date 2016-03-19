@@ -1,5 +1,4 @@
 <?php require_once 'includes/session.php'; ?>
-
 <!DOCTYPE html>
 <html>
 <?php require_once 'includes/header.php';?>
@@ -7,6 +6,7 @@
 <body>
 
 <h3>Successfully Registered</h3>
+<p>You have created an account at BBS, please login.
 <p>go <a class="btn btn-default" href="index.php">back</a> or <a class="btn btn-default" href="loginpage.php">login</a>.</p>
 
 
