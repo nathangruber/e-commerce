@@ -31,22 +31,24 @@
 <p><a href="index.php">Home Page</a></p>
 <ul>
   <li> Introduction to Blake's Board Shop</li>
-  <li> Photos</li>
  </ul>
-<p><a href="register.php">Register</a></p>
-<ul>
-  <li> Register</li>
-</ul>
  <p><a href="category.php">Our Boards</a></p>
 <ul>
   <li>Blake's Skateboard Decks</li>
   <li>Blake's Cruiser Decks</li>
   <li>Hardware</li>
 </ul>      
+<p><a href="register.php">Register</a></p>
+<ul>
+  <li> Register</li>
+</ul>
+<p><a href="loginpage.php">Login</a></p>
+<ul>
+  <li> Login</li>
+</ul>
 <p><a href="about.php">About Blake's</a></p>
 <ul>
-  <li> Meet Blake's Board Shop</li>
-  <li> Photo</li>
+  <li> Blake's Board Shop's Mission</li>
   </ul>
   <p><a href="contact.php">Contact Us</a></p>
 <ul>
