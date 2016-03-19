@@ -41,21 +41,16 @@ require_once 'includes/crud.php';
 					
 					$product = new product($row['product_fk']);
 					$product_details = $product->read();
-					
-	                echo '<tr>';
-	                echo '<form method="POST" action="updateQuantity.php">';
-	                echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-	                echo '<td>' . $product_details['product_name'] . '</td>';
-	                echo '<td>$' . $product_details['price'] . '$</td>';
-	                echo '<td><input type="text" name="quantity" value="' . $row['quantity'] . '"></td>';
-	                echo '<td><input class="btn btn-default" type="submit" value="Add one more"></td>';
-	                echo '</form>';
-	                echo '<td>$'.$product_details['price']*$row['quantity'].'</td>';
-	               	echo '<form method="POST" action="deleteCart.php">';
-		            echo '<input type="hidden" name="id" value="' . $row['id'] . '">';
-		            echo '<td><input type="submit" value="Remove From Cart"></td>';
-		            echo '</form>';
-	                echo '</tr>';
+				?>
+				
+				<tr>
+					<td><?php echo $product_details['product_details']; ?></td>
+					<td>$<?php echo $product_details['price']; ?></td>
+					<td><?php echo $row['quantity']; ?><a class="btn btn-default" href="updateQuantity.php?type=more">+</a><a class="btn btn-default" href="updateQuantity.php?type=less">-</a></td>
+					<td><a class="btn btn-danger" href="removeItem.php">Remove item</a></td>
+					<td></td>
+				</tr>
+				<?php
 	            }
 	            echo '<br>';
                 echo '<tr>';
