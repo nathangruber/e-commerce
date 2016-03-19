@@ -202,8 +202,7 @@ class product {
 
 	public $product_id;
 
-	public function __construct(){
-	}
+	
 
 	public function __construct($product_id){
 		$this->product_id = $product_id;
