@@ -347,10 +347,9 @@ class cart{
 	
 	public function __construct($customer_id){
 		$this->customer_id;
-		echo 'Hello customer';
 	}
 	
-	public function addCart($product_id){
+	public function addCart2($product_id){
 		if (!valid($product_id)) {
 			return false;
 		} else {
@@ -361,6 +360,21 @@ class cart{
 			echo 'here';
 			$q->execute(array($this->customer_id,$product_id));
 			echo 'here2';
+			Database::disconnect();
+			return true;
+		}
+	}
+	
+	
+	public function addCart($product_id){
+		if (!valid($product_id)){
+				return false;
+		} else {
+			$pdo = Database::connect();
+			$sql = "INSERT INTO  `E-Commerce`.`cart` (`customer_fk` ,`product_fk`) VALUES (?,  ?);";
+			$q = $pdo->prepare($sql);
+			echo $this->customer_id." and ".$product_id;
+			$q->execute(array($this->customer_id,$product_id));
 			Database::disconnect();
 			return true;
 		}
