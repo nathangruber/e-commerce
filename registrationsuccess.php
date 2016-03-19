@@ -12,7 +12,7 @@
 <h3>Successfully Registered</h3>
 <br><br><br>
 <p>Successfully Registered</p>
-<p>go <a href="index.php">back</a> or <a class="btn btn-default"  href="loginpage.php">login</a>.</p>
+<p>go <a class="btn btn-default"  href="index.php">back</a> or <a href="loginpage.php">login</a>.</p>
 </center>
 
 
