@@ -349,22 +349,6 @@ class cart{
 		$this->customer_id;
 	}
 	
-	public function addCart2($product_id){
-		if (!valid($product_id)) {
-			return false;
-		} else {
-			$pdo = Database::connect();
-			$sql = "INSERT INTO  `E-Commerce`.`cart` (`customer_fk` ,`product_fk`) VALUES (?,  ?);";
-			echo $sql;
-			$q = $pdo->prepare($sql);
-			echo 'here';
-			$q->execute(array($this->customer_id,$product_id));
-			echo 'here2';
-			Database::disconnect();
-			return true;
-		}
-	}
-	
 	
 	public function addCart($product_id){
 		if (!valid($product_id)){
@@ -373,7 +357,7 @@ class cart{
 			$pdo = Database::connect();
 			$sql = "INSERT INTO  `E-Commerce`.`cart` (`customer_fk` ,`product_fk`) VALUES (?,  ?);";
 			$q = $pdo->prepare($sql);
-			echo $this->customer_id." and ".$product_id;
+			echo '<br> Inside customer id is: '.$this->customer_id."<br> and product id is: ".$product_id;
 			$q->execute(array($this->customer_id,$product_id));
 			Database::disconnect();
 			return true;
