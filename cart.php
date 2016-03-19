@@ -26,9 +26,9 @@ require_once 'includes/crud.php';
 	        <thead>
 	          <tr>
 	            <th>Name</th>
-	            <th>Price</th>
+	            <th>Unit Price</th>
 	            <th>Quantity</th>
-	            <th>Subtotal</th>
+	            <th>Price</th>
 	            <th>Action</th>
 	          </tr>
 	        </thead>
@@ -41,33 +41,54 @@ require_once 'includes/crud.php';
 					
 					$product = new product($row['product_fk']);
 					$product_details = $product->read();
+					
+					$subtotal_product = $row['quantity']*$product_details['price'];
+					
+					$subtotal = $subtotal + $subtotal_product;
+					
+					
+					
+					
 				?>
 				
 				<tr>
 					<td><?php echo $product_details['product_details']; ?></td>
 					<td>$<?php echo $product_details['price']; ?></td>
-					<td><?php echo $row['quantity']; ?><a class="btn btn-default" href="updateQuantity.php?type=more">+</a><a class="btn btn-default" href="updateQuantity.php?type=less">-</a></td>
+					<td><?php echo $row['quantity']; ?><a class="btn btn-default" style="margin-left: 30px" href="updateQuantity.php?type=more">+</a><a class="btn btn-default" href="updateQuantity.php?type=less">-</a></td>
+					<td>$<?php echo $subtotal_product; ?></td>
 					<td><a class="btn btn-danger" href="removeItem.php">Remove item</a></td>
-					<td>$<?php echo $row['quantity']*$product_details['price']; ?></td>
+					
 				</tr>
+				
+				
+				
 				<?php
 	            }
-	            echo '<br>';
-                echo '<tr>';
-                echo '<th>Subtotal</th>';
-                echo '<th>Tax</th>';
-                echo '</tr>';
-                echo '<tr>';
-                $cost = $cost + (($row['price']) * ($row['quantity']));
-                echo '<td>' . $cost . '</td>';
-                $tax = ($cost * .056);
-                echo '<td>' . $tax . '</td>';
-                echo '</tr>';
-                echo '<br>';
-                echo '<tr>';
-                echo '<th>Total:</th>';
-                echo '<th>' . ($cost + $tax) . '</th>';
-                echo '</tr>';
+	            
+	            $tax = $subtotal*0.056;
+	            $total = $tax + $subtotal;
+	            
+	            ?>
+	            
+	            <tr>
+		           <td></td>
+		           <td></td>
+		           <td><strong>Subtotal</strong></td>
+		           <td><strong><?php echo $subtotal; ?></strong></td> 
+	            </tr>
+	            <tr>
+		           <td></td>
+		           <td></td>
+		           <td><strong>Tax</strong></td>
+		           <td><strong><?php echo $tax; ?></strong></td> 
+	            </tr>
+	           <tr>
+		           <td></td>
+		           <td></td>
+		           <td><strong>Total</strong></td>
+		           <td><strong><?php echo $total; ?></strong></td> 
+	            </tr>
+	           <?php 
 		      } 
 	          ?>
 	         </tbody>
