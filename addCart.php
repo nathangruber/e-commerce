@@ -1,5 +1,15 @@
 <?php 
 require_once 'includes/session.php';
+
+
+
+//Add it to the cart
+
+$product_id = $_GET['id'];
+
+$cart = new cart($_SESSION['id']);
+$cart->addCart($product_id);
+
  
 ?>
 <!DOCTYPE html>

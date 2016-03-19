@@ -340,6 +340,32 @@ class category {
 	}
 }
 
+
+
+class cart{
+	public $customer_id;
+	
+	public function __construct($customer_id){
+		$this->customer_id;
+	}
+	
+	public function addCart($product_id){
+		if (!valid($product_id)) {
+			return false;
+		} else {
+			$pdo = Database::connect();
+			$sql = "INSERT INTO cart (customer_fk,product_fk) values(?,?)";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($this->customer_id,$product_id));
+			$category_id = $pdo->lastInsertId();
+			Database::disconnect();
+			return true;
+		}
+	}
+	
+	
+}
+
 /*
 class cart {
 	public $customer_id;
