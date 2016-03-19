@@ -11,15 +11,11 @@
     }
     ?>
 
-     <title>About Blake's Board Shop</title>
- 
-
-
       <div class="container">
         <div class = "row">
-        <div class="col-md-12">
+         <div class="col-md-12">
 <div class = "abouttext">
-
+<title>About Blake's Board Shop</title>
 
 <p>Blake's Board Shop makes high quality, made in Wisconsin skateboard decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop. </p></div>
         </div>
