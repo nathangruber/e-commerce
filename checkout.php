@@ -50,7 +50,6 @@ Database::connect();
 					<?php
 						$myAddresses = new customerAddress($_SESSION['id']);
 						$num_of_address=$myAddresses->getNumOfAddress();
-						echo 'num of address: '.$num_of_address;
 						if($num_of_address>0){
 					?>
 					
@@ -68,7 +67,7 @@ Database::connect();
                     <?php
 	                  	}else{
 		                ?>
-		                <br>You do not have address, please add one <a href="addycreate.php" class="btn btn-default">here</a>
+		                <br>You do not have address, please add one <a href="addycreate.php" class="btn btn-link">here</a>
 		                <?php
 	                  	}
 	                ?>
