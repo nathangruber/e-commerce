@@ -85,6 +85,8 @@ Database::connect();
 						$mycc = new customerCreditcards($_SESSION['id']);
 						$allcreditcards=$mycc->read();
 						
+						echo count($allcreditcards).' is the number credit cards';
+						
 						print_r($allcreditcards);
 						
 						if($num_of_address>0){
