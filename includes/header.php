@@ -6,6 +6,6 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
-        <link rel="shortcut icon" href="e-commerce/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="e-commerce/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="assets/css/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="assets/css/favicon.ico" type="image/x-icon">
 </head>
