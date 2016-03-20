@@ -396,7 +396,13 @@ class cart{
 					Database::disconnect();
 					return true;
 				}else{
+					$pdo = Database::connect();
+					$sql = "INSERT INTO  `E-Commerce`.`cart` (`customer_fk` ,`product_fk`) VALUES (?,  ?);";
+					$q = $pdo->prepare($sql);
+					$q->execute(array($this->customer_id,$product_id));
 					
+					Database::disconnect();
+					return true;
 				}
 			}catch(PDOException $error){
 				echo $error->getMessage();
