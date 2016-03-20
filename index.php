@@ -84,11 +84,10 @@
 
         <?php
           if ($logged) {
-            echo "You are logged in succesfully.";
-            echo '<form method="POST" action="update.php">';
-            echo '<input class="btn btn-default" type="submit" value="Update User Info">';
-            echo '</form>' ;
-          
+	    ?>
+	    
+	    	<a class="btn btn-default" href="update.php">Update User Info</a>
+          <?php
           } else {
             echo "You are logged out.";
           }

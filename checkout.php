@@ -19,8 +19,7 @@ require_once'includes/crud.php';
       ?>
     <div class="container">
 	    <div class="row">
-		    <h1 style="margin-top: 50px">Checkout</h1>
-	        <h3>Verify Shipping Information</h3>
+		    <h1 style="margin-top: 100px">Checkout</h1>
 	        <h4>Personal Information:</h4>
 				<?php
 					$customer = new customer();
@@ -36,6 +35,10 @@ require_once'includes/crud.php';
 				    echo ''.$cust['email_address'].'';
 				?>
 			<h4 style="margin-top: 100px">Select Shipping Address</h4>
+	      	
+	      	
+	      	
+	      	
 	      	<p>If you need to add a new address, please do so <a href="addycreate.php">here</a>.</p>
 		    	<?php
 					$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
