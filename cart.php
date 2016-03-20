@@ -126,7 +126,7 @@ require_once 'includes/crud.php';
         <br>
 
         <div>
-          <a href="index.php">Return to Index</a>
+          <a class="btn btn-default" href="index.php">Return to Blake's Board Shop</a>
         </div>
         <br>
         <br>
