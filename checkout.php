@@ -111,6 +111,10 @@ Database::connect();
                 </div>
                 
                 <?php
+	                
+	                echo "num cc is: ".$num_cc;
+	                echo "<br>num of address is:".$num_of_address;
+	                
 	            	if((num_cc>0)&&($num_of_address>0)){
 		        ?>
 		        		<input type="submit" class="btn btn-info" value="Pay"/>
