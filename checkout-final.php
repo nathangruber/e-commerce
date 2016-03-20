@@ -32,7 +32,11 @@ Database::connect();
 		        	$address_fk = $_POST['address_fk'];
 		        	$credit_card_fk = $_POST['credit_card_fk'];
 		        	
-		        	print_r($_POST);
+		        	$address = new customerAddress($_SESSION['id']);
+		        	$result_address=$address->readAnAddress($address_fk);
+		        	
+		        	
+		        	print_r($result_address);
 		        		
 		        ?>
 	        	Your transaction was... 

@@ -119,6 +119,25 @@ class customerAddress {
 
 		}
 	}
+	
+	public function readAnAddress($address_id){
+		try{
+			$pdo = Database::connect();
+			$sql = 'SELECT * FROM address where customer_fk = ? and id=?';
+			$q = $pdo->prepare($sql);
+			$q->execute(array($this->customer_id,$address_id));
+			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+	        Database::disconnect();
+	        return $data;
+		} catch (PDOException $error){
+
+			header( "Location: 500.php" );
+			die();
+
+		}
+	}
+	
+	
 
 	public function update($street_1, $street_2, $city, $state, $zip_code, $address_id){
 		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) || !valid($address_id) ) {
