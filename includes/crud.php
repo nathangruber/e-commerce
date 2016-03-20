@@ -378,8 +378,31 @@ class cart{
 			die();
 
 		}
-
-    }
+	}
+	
+	public function updateQuantity($type,$product_id){
+		if (!valid($type) || !valid($product_id)) {
+			return false;
+		} else {
+			
+			try{
+			
+				if($type=='less'){
+					$pdo = Database::connect();
+					$sql = "DELETE FROM cart WHERE customer_fk=? and product_fk=? limit 1";
+					$q = $pdo->prepare($sql);
+					$q->execute(array($this->customer_id,$product_id));
+					
+					Database::disconnect();
+					return true;
+				}else{
+					
+				}
+			}catch(PDOException $error){
+				echo $error->getMessage();
+			}	
+		}
+	}
 	
 	
 }

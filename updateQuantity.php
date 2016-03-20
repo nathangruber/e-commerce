@@ -1,18 +1,23 @@
 <?php
- error_reporting(E_ALL);
+ 	error_reporting(E_ALL);
     require_once 'includes/database.php';
     require_once 'includes/crud.php';
     require_once 'includes/session.php';
  
-    if ( !empty($_POST)) {
+    if ( !empty($_GET)) {
       // keep track post values
-      $quantity = $_POST['quantity'];
-      $transaction_productsID = $_POST['id'];
-      $updateQuantity = new cart();
-      $update = $updateQuantity->updateQuantity($quantity,$transaction_productsID);
+      $type = $_GET['type'];
+      $product_id = $_GET['id'];
+      
+      
+      
+      
+      $mycart = new cart($_SESSION['id']);
+      $update = $mycart->updateQuantity($type,$product_id);
       if ($update) {
-        header('Location: cart.php');
+        header('Location: cart.php?message=Product updated');
       } else {
-        header('Location: cart.php');
+        header('Location: cart.php?message=Error product not updated');
       }
     }
+?>
