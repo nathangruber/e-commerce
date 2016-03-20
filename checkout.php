@@ -50,6 +50,7 @@ Database::connect();
 					<?php
 						$myAddresses = new customerAddress($_SESSION['id']);
 						$num_of_address = count($myAddresses);
+						echo 'num of address: '.$num_of_address;
 						if($num_of_address>0){
 					?>
 					
