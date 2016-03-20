@@ -55,8 +55,11 @@ require_once 'includes/crud.php';
 				<tr>
 					<td><?php echo $product_details['product_name']; ?></td>
 					<td><?php echo money_format('%i', $product_details['price']); ?></td>
-					<td><?php echo $row['quantity']; ?><a class="btn btn-default" style="margin-left: 30px" href="updateQuantity.php?type=more">+</a><a class="btn btn-default" href="updateQuantity.php?type=less">-</a></td>
-					<td><?php echo money_format('%i', $subtotal_product); ?></td>
+					<td>
+						<?php echo $row['quantity']; ?>
+						<a class="btn btn-default" style="margin-left: 30px" href="updateQuantity.php?type=more&product_id=<?php echo $product_details['id']; ?>">+</a>
+						<a class="btn btn-default" href="updateQuantity.php?type=less&product_id=<?php echo $product_details['id']; ?>">-</a>
+					<td><?php echo money_format('%i', $subtotal_product); ?>
 					<td><a class="btn btn-danger" href="deleteCart.php">Remove item</a></td>
 					
 				</tr>
