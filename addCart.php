@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once 'includes/session.php';
 
 
@@ -14,36 +14,37 @@ if($result){
 	header('Location: cart.php');
 }else{
 
- 
+
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
 <html lang="en">
 <?php require_once'includes/header.php'; ?>
- <body>
-<?php  require_once'includes/navbar.php'; ?>
-<br><br><br><br><br><br>
-  
- <div class="container">
-      
-      <div class="row">
-        
-        <div class="span12">
-	        ERROR
-        </div>
-        
-      </div>
 
-      <br>
-      <br>
-      <br>
-      <br>
-    </div> <!-- /container -->
+<head>
+    <title></title>
+</head>
 
+<body>
+    <?php  require_once'includes/navbar.php'; ?><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-<?php require_once('includes/footer.php');?>
-  </body>
-</html>
-
-<?php
-}	
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                ERROR
+            </div>
+        </div><br>
+        <br>
+        <br>
+        <br>
+    </div><!-- /container -->
+    <?php require_once('includes/footer.php');?><?php
+}
 ?>
+</body>
+</html>
