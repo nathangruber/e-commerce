@@ -15,7 +15,7 @@
         <div class = "row">
  <div class="container" style="width: 100%;">
  <div class="theme-table-image col-sm-6">
-   <img src="assets/img/bbs1.png">
+   <img src="assets/img/194H.jpg">
  </div>
  <div class="theme-table-image col-sm-6">
    <img src="assets/img/99factory_slider_05.jpg">
@@ -23,9 +23,8 @@
 </div>    
 
 <p>Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiser decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop. </p></div>
-        </div>
+</div>
     
-   
 <?php
 require_once('includes/footer.php');
 ?>
