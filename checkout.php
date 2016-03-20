@@ -41,7 +41,7 @@ Database::connect();
             echo ''.$cust['email_address'].'';
             ?>
 			
-			<form class="form-horizontal" action="cccreate.php" method="post">
+			<form class="form-horizontal" action="checkout-final.php" method="post">
             <h4 style="margin-top: 100px">Select Shipping Address</h4>
 
             
@@ -109,6 +109,22 @@ Database::connect();
 	                  	}
 	                ?>
                 </div>
+                
+                <?php
+	            	if((num_cc>0)&&($num_of_address>0)){
+		        ?>
+		        		<input type="submit" class="btn btn-info" value="Pay"/>
+		       	<?php   	
+	            	}else{
+		        ?>
+		        		<input type="submit" class="btn btn-info" disabled="" value="Pay"/>
+		        <?php    	
+	            	}
+	            ?>  
+	               	
+                
+                
+                
             </form>
             
             
