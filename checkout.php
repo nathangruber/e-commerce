@@ -87,9 +87,11 @@ Database::connect();
 						
 						echo count($allcreditcards).' is the number credit cards';
 						
+						$num_cc=count($allcreditcards);
+						
 						print_r($allcreditcards);
 						
-						if($num_of_address>0){
+						if($num_cc>0){
 					?>
 					
 					<div class="controls">
