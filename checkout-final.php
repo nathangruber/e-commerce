@@ -35,9 +35,8 @@ Database::connect();
 		        	$address = new customerAddress($_SESSION['id']);
 		        	$the_address=$address->readAnAddress($address_fk);
 		        	
-		        	print_r($the_address);
 		        	
-		        	echo 'Your transaction will be sent to'.$the_address['street_1'].' bla bla bla '.$the_address['street_2'];
+		        	echo 'Your transaction will be sent to'.$the_address['street_1'].' , '.$the_address['street_2'];
 		        	
 		        	
 		        		
