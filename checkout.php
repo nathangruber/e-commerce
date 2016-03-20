@@ -46,7 +46,15 @@ Database::connect();
             <form class="form-horizontal" action="cccreate.php" method="post">
                 <div class="control-group">
                     <label class="control-label">Address</label>
-
+					
+					<?php
+						$myAddresses = new customerAddress($_SESSION['id']);
+						$num_of_address = count($myAddresses);
+						echo 'you have:'.$num_of_address;
+					?>
+					
+					
+					
                     <div class="controls">
                         <select name='address_fk'>
                             <?php
