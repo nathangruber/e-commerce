@@ -96,7 +96,7 @@ Database::connect();
                         <select name='credit_card_fk'>
                             <?php
                             foreach ($mycc->read() as $cc) {
-                                echo "<option value='" . $address['id'] . "'>" . $address['street_1'] . "</option>";
+                                echo "<option value='" . $cc['id'] . "'>" . $cc['cardnumber'] . "</option>";
                             }
                             ?>
                         </select>
