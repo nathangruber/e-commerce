@@ -79,17 +79,15 @@ Database::connect();
 
             <h4>Select Credit Card</h4>
 				<div class="control-group">
-                    <label class="control-label">Address</label>
+                    <label class="control-label">Credit card</label>
 					
 					<?php
 						$mycc = new customerCreditcards($_SESSION['id']);
 						$allcreditcards=$mycc->read();
 						
-						echo count($allcreditcards).' is the number credit cards';
 						
 						$num_cc=count($allcreditcards);
 						
-						print_r($allcreditcards);
 						
 						if($num_cc>0){
 					?>
