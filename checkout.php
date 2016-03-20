@@ -31,8 +31,6 @@ Database::connect();
             $customer = new customer();
             $cust = $customer->read($_SESSION['id']);
 
-            echo '<form method="POST" action="placeOrderfunction.php">';
-            echo '<input type="hidden" name="id" value="' . $cust['id'] . '">';
             echo ''.$cust['name'].'';
             echo '&nbsp;';
             echo '<br>';
@@ -135,8 +133,6 @@ Database::connect();
     <?php
     require_once('includes/footer.php');
     Database::disconnect();
-    ?><script src="assets/js/jquery.min.js" type="text/javascript">
-</script><script src="assets/js/bootstrap.min.js" type="text/javascript">
-</script>
+    ?>
 </body>
 </html>
