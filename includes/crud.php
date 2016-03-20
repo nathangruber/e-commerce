@@ -411,7 +411,7 @@ class cart{
 	}
 	
 	public function removeOneItem($product_id){
-		if (!valid($type) || !valid($product_id)) {
+		if (!valid($product_id)) {
 			return false;
 		} else {
 			
