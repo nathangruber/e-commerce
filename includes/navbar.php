@@ -47,7 +47,7 @@
     <li><a href="loginpage.php">Login</a></li>
     <li><a href="about.php" >About</a></li>
     <li><a href="contact.php">Contact Us</a></li>
-    <li><a href="cart.php">Cart</a></li>
+<li><a></a></li>
         <li><a></a></li>
         <li><a></a></li>
     <li><a></a></li>
@@ -59,11 +59,11 @@
 <li><a></a></li>
 <li><a></a></li>
 <li><a></a></li>
-
-    
+<li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
     <li><a href="update.php">My Account</a></li>
-
-
+     <li><a href="cart.php">Cart</a></li>
             </ul>
           </div>
         </div>
