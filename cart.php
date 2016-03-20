@@ -115,8 +115,12 @@ require_once 'includes/crud.php';
 	      <?php
 	      ?>
 	    </div>
-        <div>
-          <a href="checkout.php">Checkout</a>
+        <div class="row">
+	        <div class="span12 pull-right">
+		        <a class="btn btn-info" href="checkout.php">Checkout</a>
+	        </div>
+	        
+          
         </div>
         <br>
         <br>
