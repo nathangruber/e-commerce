@@ -140,7 +140,7 @@ class customerCreditcards {
 	}
 
 	public function create($name, $cardnumber, $expiration_date, $security_code, $address_id){
-		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_fk)) {
+		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_id)) {
 			return false;
 		} else {
 			echo 'php arrives here...';
