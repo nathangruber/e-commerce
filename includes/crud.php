@@ -410,6 +410,28 @@ class cart{
 		}
 	}
 	
+	public function removeOneItem($product_id){
+		if (!valid($type) || !valid($product_id)) {
+			return false;
+		} else {
+			
+			try{
+			
+				
+				$pdo = Database::connect();
+				$sql = "DELETE FROM cart WHERE customer_fk=? and product_fk=?";
+				$q = $pdo->prepare($sql);
+				$q->execute(array($this->customer_id,$product_id));
+				
+				Database::disconnect();
+				return true;
+				
+			}catch(PDOException $error){
+				echo $error->getMessage();
+			}	
+		}
+	}
+	
 	
 }
 

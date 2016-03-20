@@ -71,7 +71,7 @@ require_once 'includes/crud.php';
 						<a class="btn btn-default" style="margin-left: 30px" href="updateQuantity.php?type=more&id=<?php echo $product_details['id']; ?>">+</a>
 						<a class="btn btn-default" href="updateQuantity.php?type=less&id=<?php echo $product_details['id']; ?>">-</a>
 					<td><?php echo money_format('%i', $subtotal_product); ?>
-					<td><a class="btn btn-danger" href="deleteCart.php">Remove item</a></td>
+					<td><a class="btn btn-danger" href="removeProductCart.php?id=<?php echo $product_details['id']; ?>">Remove product</a></td>
 					
 				</tr>
 				
