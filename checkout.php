@@ -40,10 +40,11 @@ Database::connect();
             echo '<br>';
             echo ''.$cust['email_address'].'';
             ?>
-
+			
+			<form class="form-horizontal" action="cccreate.php" method="post">
             <h4 style="margin-top: 100px">Select Shipping Address</h4>
 
-            <form class="form-horizontal" action="cccreate.php" method="post">
+            
                 <div class="control-group">
                     <label class="control-label">Address</label>
 					
@@ -71,44 +72,46 @@ Database::connect();
 		                <?php
 	                  	}
 	                ?>
-                    
-                    
                 </div>
-            </form>
+            
 
             
 
             <h4>Select Credit Card</h4>
-
-            <p>If you need to add a new address, please do so <a href="cccreate.php">here</a>.</p><?php
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            //$sql = "SELECT `creditcard`.`id`, `creditcard`.`cardnumber` FROM `creditcard` WHERE `creditcard`.`id` IN (SELECT `customer_credit_card`.`creditcard_fk` FROM `customer_credit_card` WHERE `customer_credit_card`.`customer_fk` = ?) ORDER BY `credit_card`.`card_number`";
-            $q = $pdo->prepare($sql);
-            $q->execute(array($_SESSION['id']));
-            $address = $q->fetchAll(PDO::FETCH_ASSOC);
-            echo "<select method='POST' name='creditcard_fk'>";
-            foreach ($address as $row) {
-                echo "<option value='" . $row['id'] . "'>" . $row['cardnumber'] . "</option>";
-            }
-            echo "</select>";
-            ?><br>
-            <br>
-            <br>
-            <?php
-            echo '<input type="submit" value="Place Order">';
-            echo '</form';
-            ?>
+				<div class="control-group">
+                    <label class="control-label">Address</label>
+					
+					<?php
+						$mycc = new customerCreditcards($_SESSION['id']);
+						$allcreditcards=$mycc->read();
+						
+						print_r($allcreditcards);
+						
+						if($num_of_address>0){
+					?>
+					
+					<div class="controls">
+                        <select name='credit_card_fk'>
+                            <?php
+                            foreach ($mycc->read() as $cc) {
+                                echo "<option value='" . $address['id'] . "'>" . $address['street_1'] . "</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <?php
+	                  	}else{
+		                ?>
+		                <br>You do not have credit card, please add one <a href="cccreate.php" class="btn btn-link">here</a>
+		                <?php
+	                  	}
+	                ?>
+                </div>
+            </form>
+            
+            
         </div><br>
-        <br>
-
-        <div>
-            <a href="cart.php" input="" type="submit" value="Cart">Return to Cart</a>
-        </div><br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+      
     </div><!-- /container -->
     <?php
     require_once('includes/footer.php');
