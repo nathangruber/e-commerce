@@ -50,7 +50,7 @@ Database::connect();
 					<?php
 						$myAddresses = new customerAddress($_SESSION['id']);
 						$num_of_address = count($myAddresses);
-						echo 'you have:'.$num_of_address;
+						if($num_of_address>0){
 					?>
 					
 					
@@ -58,13 +58,21 @@ Database::connect();
                     <div class="controls">
                         <select name='address_fk'>
                             <?php
-                            $myAddresses = new customerAddress($_SESSION['id']);
                             foreach ($myAddresses->read() as $address) {
                                 echo "<option value='" . $address['id'] . "'>" . $address['street_1'] . "</option>";
                             }
                             ?>
                         </select>
                     </div>
+                    <?php
+	                  	}else{
+		                ?>
+		                <br>You do not have address, please add one <a href="addycreate.php" class="btn btn-default">here</a>
+		                <?php
+	                  	}
+	                ?>
+                    
+                    
                 </div>
             </form>
 
