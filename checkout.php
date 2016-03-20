@@ -114,11 +114,11 @@ Database::connect();
 	                
 	            	if(($num_cc>0)&&($num_of_address>0)){
 		        ?>
-		        		<input type="submit" class="btn btn-info" value="Pay"/>
+		        		<input style="margin-top: 50px" type="submit" class="btn btn-info" value="Pay"/>
 		       	<?php   	
 	            	}else{
 		        ?>
-		        		<input type="submit" class="btn btn-info" disabled="" value="Pay"/>
+		        		<input style="margin-top: 50px"  type="submit" class="btn btn-info" disabled="" value="Pay"/>
 		        <?php    	
 	            	}
 	            ?>  
