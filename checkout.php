@@ -36,6 +36,34 @@ require_once'includes/crud.php';
 				?>
 			<h4 style="margin-top: 100px">Select Shipping Address</h4>
 	      	
+	      	<form class="form-horizontal" action="cccreate.php" method="post"> 
+
+          
+		          <div class="control-group">
+		            <label class="control-label">Address</label>
+		            <div class="controls">
+		              <select name='address_fk'>
+		                <?php
+		                  $myAddresses = new customerAddress($_SESSION['id']);
+		                  foreach ($myAddresses->read() as $address) {
+		                    echo "<option value='" . $address['id'] . "'>" . $address['street_1'] . "</option>";
+		                  }
+		                ?>
+		              </select>
+		             </div>
+		           </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-success">Add Credit Card</button>
+            <a class="btn" href="update.php">Back</a>
+          </div>
+        </form>
+	      	
+	      	
+	      	
+	      	
+	      	
+	      	
+	      	
 	      	
 	      	
 	      	
