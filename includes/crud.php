@@ -93,9 +93,8 @@ class customerAddress {
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->customer_id));
 			$data = $q->fetch(PDO::FETCH_ASSOC);
-			print_r($data);
 			Database::disconnect();
-			return $data;
+			return $data['numaddress'];
 		} catch (PDOException $error){
 
 			header( "Location: 500.php" );
