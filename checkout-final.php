@@ -36,13 +36,13 @@ $address = new customerAddress($_SESSION['id']);
 $the_address=$address->readAnAddress($address_fk);
 
 
-echo 'Your transaction will be sent to'.$the_address['street_1'].' , '.$the_address['street_2'];
+echo 'Your transaction will be sent to &nbsp;'.$the_address['street_1'].' , '.$the_address['street_2'];
 
 echo '<br>';
 $cc = new customerCreditcards($_SESSION['id']);
 $the_cc=$cc->readACreditCard($credit_card_fk);
 
-echo 'And will be charged to'.$the_cc['name'].' , '.$the_cc['cardnumber'];
+echo 'And will be charged to &nbsp;'.$the_cc['name'].' , '.$the_cc['cardnumber'];
 
 echo '<br>';
 
