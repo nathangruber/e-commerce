@@ -190,6 +190,23 @@ class customerCreditcards {
 
 		}
 	}
+	
+	public function readACreditCard($creditcard_id){
+		try{
+			$pdo = Database::connect();
+			$sql = 'SELECT * FROM creditcard where customer_fk = ? and id=?';
+			$q = $pdo->prepare($sql);
+			$q->execute(array($this->customer_id,$creditcard_id));
+			$data = $q->fetch(PDO::FETCH_ASSOC);
+	        Database::disconnect();
+	        return $data;
+		} catch (PDOException $error){
+
+			header( "Location: 500.php" );
+			die();
+
+		}
+	}
 
 	public function create($name, $cardnumber, $expiration_date, $security_code, $address_id){
 		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_id)) {

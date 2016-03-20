@@ -38,6 +38,14 @@ Database::connect();
 		        	
 		        	echo 'Your transaction will be sent to'.$the_address['street_1'].' , '.$the_address['street_2'];
 		        	
+		        	echo '<br>';
+		        	$cc = new customerCreditcards($_SESSION['id']);
+		        	$the_cc=$cc->readACreditCard($credit_card_fk);
+		        	
+		        	echo 'And will be charged to'.$the_address['name'].' , '.$the_address['cardnumber'];
+		        	
+		        	echo '<br>';
+		        	
 		        	
 		        		
 		        ?>
