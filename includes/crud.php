@@ -143,6 +143,7 @@ class customerCreditcards {
 		if (!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_fk)) {
 			return false;
 		} else {
+			echo 'php arrives here...';
 			$pdo = Database::connect();
 			$sql = "INSERT INTO  `E-Commerce`.`creditcard` (`name` ,`cardnumber` ,`expiration_date` ,`security_code` ,`customer_fk` ,`address_fk`) VALUES (?, ?, ?, ?, ?, ?);";
 			$q = $pdo->prepare($sql);
