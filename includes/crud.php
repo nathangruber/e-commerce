@@ -87,16 +87,21 @@ class customerAddress {
 	}
 	
 	public function getNumOfAddress(){
-			
+		try{	
 			$pdo = Database::connect();
 			$sql = "SELECT count(*) as numaddress FROM address where customer_fk = ?";
 			$q = $pdo->prepare($sql);
-			$q->execute(array($$this->customer_id));
+			$q->execute(array($this->customer_id));
 			$data = $q->fetch(PDO::FETCH_ASSOC);
 			print_r($data);
 			Database::disconnect();
 			return $data;
-		
+		} catch (PDOException $error){
+
+			header( "Location: 500.php" );
+			die();
+
+		}
 	}
 
 	public function read(){
