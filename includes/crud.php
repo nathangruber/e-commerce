@@ -101,8 +101,7 @@ class customerAddress {
 			die();
 
 		}
-
-    }
+	}
 
 	public function update($street_1, $street_2, $city, $state, $zip_code, $address_id){
 		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) || !valid($address_id) ) {
@@ -137,6 +136,23 @@ class customerCreditcards {
 
 	public function __construct($customer_id){
 		$this->customer_id = $customer_id;
+	}
+	
+	public function read(){
+		try{
+			$pdo = Database::connect();
+			$sql = 'SELECT * FROM creditcard where customer_fk = ?';
+			$q = $pdo->prepare($sql);
+			$q->execute(array($this->customer_id));
+			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+	        Database::disconnect();
+	        return $data;
+		} catch (PDOException $error){
+
+			header( "Location: 500.php" );
+			die();
+
+		}
 	}
 
 	public function create($name, $cardnumber, $expiration_date, $security_code, $address_id){
