@@ -52,7 +52,7 @@
         if ($response) {
           header('Location: update.php?feedbackcreditcardadded=ok');
         } else {
-          header('Location: update.php?feedbackcreditcardadded=error');
+          //header('Location: update.php?feedbackcreditcardadded=error');
         }
       }
       
