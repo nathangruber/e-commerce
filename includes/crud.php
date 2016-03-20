@@ -126,7 +126,7 @@ class customerAddress {
 			$sql = 'SELECT * FROM address where customer_fk = ? and id=?';
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->customer_id,$address_id));
-			$data = $q->fetchAll(PDO::FETCH_ASSOC);
+			$data = $q->fetch(PDO::FETCH_ASSOC);
 	        Database::disconnect();
 	        return $data;
 		} catch (PDOException $error){
