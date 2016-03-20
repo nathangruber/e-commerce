@@ -26,7 +26,7 @@ if ($admin) {
     <div class="container">
         <div class="row">
         	<div class="span12">
-	        	<h1 style="margin-top: 100px">Thank you !!</h1>
+	        	<h1 style="margin-top: 100px">Thank you!</h1>
 
 	        	<?php
 $address_fk = $_POST['address_fk'];
