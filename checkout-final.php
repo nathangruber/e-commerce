@@ -42,7 +42,7 @@ Database::connect();
 		        	$cc = new customerCreditcards($_SESSION['id']);
 		        	$the_cc=$cc->readACreditCard($credit_card_fk);
 		        	
-		        	echo 'And will be charged to'.$the_address['name'].' , '.$the_address['cardnumber'];
+		        	echo 'And will be charged to'.$the_cc['name'].' , '.$the_cc['cardnumber'];
 		        	
 		        	echo '<br>';
 		        	
