@@ -2,7 +2,7 @@
   require_once('includes/session.php');
   if(!$logged){
     header("Location: index.php");
-    die(); // just in case
+    die(); 
   }
   require_once('includes/database.php');
   require_once('includes/crud.php');
@@ -27,4 +27,3 @@
       header('Location: update.php?feedback=error');
     }
   } 
-?>
