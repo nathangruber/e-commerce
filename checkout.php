@@ -76,20 +76,7 @@ Database::connect();
                 </div>
             </form>
 
-            <p>If you need to add a new address, please do so <a href="addycreate.php">here</a>.</p><?php
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "SELECT `address`.`id`, `address`.`street_1` FROM `address` WHERE `address`.`id` IN (SELECT `address`.`customer_fk` FROM `address` WHERE `address`.`customer_fk` = ?) ORDER BY `address`.`street_1`";
-            $q = $pdo->prepare($sql);
-            $q->execute(array($_SESSION['id']));
-            $address = $q->fetchAll(PDO::FETCH_ASSOC);
-            echo "<select method='POST' name='address_fk'>";
-            foreach ($address as $row) {
-                echo "<option value='" . $row['id'] . "'>" . $row['street_1'] . "</option>";
-            }
-            echo "</select>";
-            ?><br>
-            <br>
-            <br>
+            
 
             <h4>Select Credit Card</h4>
 
