@@ -52,7 +52,7 @@
       <div class="starter-template">
         <h1></h1>
       <center>  
-        <p class="lead"><img class="img-responsive logo" src="assets/img/bbs.png" height="27" width="27">Please Login or Click Register to set up an account with Blake's.</p>
+        <p class="lead"><img class="img-responsive logo" src="assets/img/bbs.png" height="27" width="27">Please Login or Click Register to set up an account with Blake's Board Shop.</p>
       <small>Our members get access to discounts, free shipping and free merch.</small><br>
       </center>
       </div>
