@@ -22,7 +22,7 @@ if ($admin) {
             <div class="container" style="width: 100%;">
                 
 
-                <center><div class="theme-table-image col-sm-6"><img src="assets/img/99factory_slider_05.jpg"></div></center>
+                <center><div class="theme-table-image col-sm-6"><img src="assets/img/99factory_slider_05.jpg" class="img-circle" alt="Wood Shop"></div></center>
             </div>
 
             <div class="theme-table=image col-sm-6"><p>Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiser decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p>
