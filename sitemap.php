@@ -13,7 +13,6 @@
   <br>
   <br>
   <br>
-  <br>
     <title>Site Map</title>
 <img id="siteimage" src="assets/img/bbs1.png" alt="Banner Image" width="300">
   <body>
