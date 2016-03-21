@@ -25,7 +25,6 @@
               $category_id = $_GET['id'];
 
               $product = new product();
-              
               $products = $product->readAllCategory($category_id);
 
               foreach ($products as $row) {
