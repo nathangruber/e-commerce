@@ -20,4 +20,3 @@
         header('Location: cart.php?message=Error product not updated');
       }
     }
-?>
