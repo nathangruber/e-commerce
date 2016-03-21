@@ -102,7 +102,7 @@ Database::connect();
                     <?php
 	                  	}else{
 		                ?>
-		                <br>You do not have a credit card, please add one. <a href="cccreate.php" class="btn btn-link">Credit Card Add</a>
+		                <br>You do not have a credit card, please add one. <a href="cccreate.php" class="btn btn-link">Add Credit Card</a>
 		                <?php
 	                  	}
 	                ?>
