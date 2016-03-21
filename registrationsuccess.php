@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html>
 <?php require_once 'includes/header.php';?>
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-<?php require_once 'includes/header.php'; ?>
 <body>
 <?php 
     if ($admin) {
