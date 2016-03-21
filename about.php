@@ -20,7 +20,7 @@ if ($admin) {
     <div class="container">
         <div class="row">
             <div class="container" style="width: 100%;">
-                <div class="theme-table-image col-sm-6"><img src="assets/img/0A32B0986D.jpg" alt="Skater"></div>
+                <div class="theme-table-image col-sm-6"><img src="assets/img/0A32B0986D.jpg"></div>
 
                 <div class="theme-table-image col-sm-6"><img src="assets/img/99factory_slider_05.jpg"></div>
             </div>
