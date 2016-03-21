@@ -15,8 +15,7 @@
       $update = $mycart->removeOneItem($product_id);
       if ($update) {
         header('Location: cart.php?message=Product removed');
-      } else {
+     }else {
         header('Location: cart.php?message=Error product not removed');
-      }
     }
-?>
+  }
