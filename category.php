@@ -34,7 +34,7 @@
 	          	<tr>
 		          	<td><?php echo $row['product_name']; ?></td>
 		          	<td><?php echo $row['price']; ?></td>
-		          	<td><a class="btn btn-default" href="productPage.php?id=<?php echo $row['id']; ?>">View Product Details</a></td>
+		          	<td><a class="btn btn-default" href="productPage.php?id=<?php echo $row['id']; ?>">View product details</a></td>
 		          	<td><a class="btn btn-default" href="addCart.php?id=<?php echo $row['id']; ?>">Add to cart</a></td>
 	          	</tr>
 	          <?php
