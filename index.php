@@ -32,7 +32,7 @@
       
  <div class="container">
    <div class="img-responsive col-sm-4">
-    <img id="board" src="assets/img/6796009882_074f87df69_b.jpg" alt="Skateboard" height="187" width="333">
+    <img id="board" <a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/e-commerce/category.php?id=5"> src="assets/img/6796009882_074f87df69_b.jpg" alt="Skateboard" height="187" width="333">
    </a>
   </div>
  
