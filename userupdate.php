@@ -26,10 +26,10 @@
     $response = $thecustomer->update($name,$birth_date,$gender,$phone_number,$email_address,$read_response['username'],$_SESSION['id']);
     if ($response) {
       header('Location: update.php?feedback=ok');
-    } else {
+    }else {
       header('Location: update.php?feedback=error');
     }
-  }else{
+   }else{
     header('Location: update.php');
   }  
 
