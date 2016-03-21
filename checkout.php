@@ -66,7 +66,7 @@ Database::connect();
                     <?php
 	                  	}else{
 		                ?>
-		                <br>You do not have address, please add one <a href="addycreate.php" class="btn btn-link">here</a>
+		                <br>You do not have address, please add one. <a href="addycreate.php" class="btn btn-link">here</a>
 		                <?php
 	                  	}
 	                ?>
@@ -102,7 +102,7 @@ Database::connect();
                     <?php
 	                  	}else{
 		                ?>
-		                <br>You do not have credit card, please add one <a href="cccreate.php" class="btn btn-link">here</a>
+		                <br>You do not have credit card, please add one. <a href="cccreate.php" class="btn btn-link">Credit Card Add</a>
 		                <?php
 	                  	}
 	                ?>
