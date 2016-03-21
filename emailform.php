@@ -148,7 +148,7 @@ if(isset($_POST['email'])) {
 </head>
 
 <body>
-    Thank you for contacting Blake's Board Shop. We will be in touch soon. <?php
+    <a href="index.php" class="btn btn-link">here</a>Thank you for contacting Blake's Board Shop. We will be in touch soon.<?php
 
 }
 
