@@ -10,15 +10,10 @@
       require_once'includes/navbar.php';
     }
   ?>
+  <br>
+  <br>
     <title>Site Map</title>
-  <header class="main-header" role="banner">
-  <img id="siteimage" src="assets/img/bbs1.png" alt="Banner Image" width="300">
-     </header> 
-
-
-  </head>
-
-
+<img id="siteimage" src="assets/img/bbs1.png" alt="Banner Image" width="300">
   <body>
     
 
