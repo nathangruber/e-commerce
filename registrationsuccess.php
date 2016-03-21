@@ -13,7 +13,7 @@
     ?>
 <h3>Successfully Registered</h3>
 <center><p>You have successfully created an account at BBS, please login.</center>
-<p>go <a class="btn btn-default" href="index.php">back</a> or <a class="btn btn-default" href="loginpage.php">login</a>.</p>
+<p>go <a class="btn btn-default" href="index.php">Back</a> or <a class="btn btn-default" href="loginpage.php">Login</a>.</p>
 
 
 

@@ -31,7 +31,7 @@ require_once 'includes/session.php';
 	          <td><?php echo $myproduct['product_name']; ?></td>
 	          <td><?php echo $myproduct['description']; ?></td>
 	          <td><?php echo $myproduct['price']; ?></td>
-	          <td><a class="btn btn-default" href="addCart.php?id=<?php echo $myproduct['id']; ?>">Add to cart</a></td>
+	          <td><a class="btn btn-default" href="addCart.php?id=<?php echo $myproduct['id']; ?>">Add To Cart</a></td>
 	            
           </tbody>
         </table>
