@@ -148,7 +148,10 @@ if(isset($_POST['email'])) {
 </head>
 
 <body>
-    <a href="index.php" class="btn btn-link">Blake's Board Shop&nbsp;</a>Thank you for contacting Blake's Board Shop. We will be in touch soon.
-<?php require_once('includes/footer.php');?>
+    <a href="index.php" class="btn btn-link">Blake's Board Shop&nbsp;</a>Thank you for contacting Blake's Board Shop. We will be in touch soon.<?php
+
+}
+
+?>
 </body>
 </html>
