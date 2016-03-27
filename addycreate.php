@@ -78,7 +78,13 @@ if(!empty($_POST)){
 </head>
 
 <body>
-    <?php require_once('includes/navbar.php');?>
+    <?php
+    if ($admin) {
+        require_once'includes/adminNavbar.php';
+    } else {
+        require_once'includes/navbar.php';
+    }
+    ?>
 
     <div class="container">
         <div class="span10 offset1">

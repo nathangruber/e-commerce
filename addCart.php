@@ -11,12 +11,12 @@ $cart = new cart($_SESSION['id']);
 $result = $cart->addCart($product_id);
 
 if($result){
-	header('Location: cart.php');
+    header('Location: cart.php');
 }else{
 
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html lang="en">
 <?php require_once'includes/header.php'; ?>
@@ -26,14 +26,13 @@ if($result){
 </head>
 
 <body>
-     <?php
-	if ($admin) {
-		require_once'includes/adminNavbar.php';
-	} else {
-		require_once'includes/navbar.php';
-	}
-?>
-<br>
+    <?php
+        if ($admin) {
+            require_once'includes/adminNavbar.php';
+        } else {
+            require_once'includes/navbar.php';
+        }
+    ?><br>
     <br>
     <br>
     <br>
@@ -51,7 +50,7 @@ if($result){
         <br>
     </div><!-- /container -->
     <?php require_once('includes/footer.php');?><?php
-}
-?>
+    }
+    ?>
 </body>
 </html>
