@@ -5,7 +5,7 @@
 <?php require_once 'includes/header.php';?>
 
 <head>
-    <title>BBS Home Page</title>
+    <title>Blake's Board Shop</title>
 </head>
 
 <body>
