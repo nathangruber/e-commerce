@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <?php require_once 'includes/header.php'; ?>
-
+<title>Product Categories</title>
 <body>
 <?php require_once 'includes/navbar.php'; ?>
 <br><br><br><br><br><br>
