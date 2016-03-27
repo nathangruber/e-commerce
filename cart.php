@@ -9,7 +9,7 @@ require_once 'includes/crud.php';
 <!DOCTYPE html>
 <html lang="en">
  <?php require_once 'includes/header.php';?>
-
+<title>Cart</title>
  <body id="background">
 	  <?php 
 	     if ($admin) {
