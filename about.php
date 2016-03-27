@@ -24,12 +24,12 @@
                 <br>
 
                 <center>
-                    <div class="theme-table-image col-sm-6"><img src="assets/img/99factory_slider_05.jpg" class="img-rounded" alt="Wood Shop"></div>
+                    <div class="theme-table-image col-sm-12"><img src="assets/img/99factory_slider_05.jpg" class="img-rounded" alt="Wood Shop"></div>
                 </center>
             </div>
 
             <div class="theme-table=image col-sm-6">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiser&nbsp;&nbsp;&nbsp;decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p>
+                <p>Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiserdecks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p>
             </div>
         </div><?php
                 require_once('includes/footer.php');
