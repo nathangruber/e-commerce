@@ -22,7 +22,7 @@ if($result){
 <?php require_once'includes/header.php'; ?>
 
 <head>
-    <title>Add to Cart</title>
+    <title></title>
 </head>
 
 <body>
