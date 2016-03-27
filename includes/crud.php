@@ -5,7 +5,7 @@ function valid($varname){
 	return ( !empty($varname) && isset($varname) );
 }
 
-class customer {	
+class customer {
 
 	public function create($name, $birth_date, $gender, $phone_number, $email_address, $username, $password ){
 		if (!valid($name) || !valid($birth_date) || !valid($gender) || !valid($phone_number) || !valid($email_address)|| !valid($username)|| !valid($password) ) {
@@ -27,8 +27,8 @@ class customer {
 			$q = $pdo->prepare($sql);
 			$q->execute(array($customer_id));
 			$data = $q->fetch(PDO::FETCH_ASSOC);
-	        Database::disconnect();
-	        return $data;
+			Database::disconnect();
+			return $data;
 		} catch (PDOException $error){
 			return NULL;
 			//header( "Location: 500.php" );
@@ -37,7 +37,7 @@ class customer {
 
 		}
 
-    }
+	}
 
 	public function update($name, $birth_date, $gender, $phone_number, $email_address, $username, $customer_id){
 		if (!valid($name) || !valid($birth_date) || !valid($gender) || !valid($phone_number) || !valid($email_address)|| !valid($username) || !valid($customer_id) ) {
@@ -47,24 +47,24 @@ class customer {
 			$sql = "UPDATE customer SET name = ?, birth_date = ?, gender = ?, phone_number = ?, email_address = ?, username = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($name,$birth_date,$gender,$phone_number,$email_address,$username,$customer_id));
-				Database::disconnect();
-				return true;
-			}
+			Database::disconnect();
+			return true;
 		}
+	}
 
 	public function delete($customer_id){
 
-        $pdo = Database::connect();
-        $sql = "DELETE FROM customer WHERE id = ?"; //taken from SQL query on phpMyAdmin
-        $q = $pdo->prepare($sql);
-        $q->execute(array($customer_id));
-        Database::disconnect();
-        return true;
+		$pdo = Database::connect();
+		$sql = "DELETE FROM customer WHERE id = ?"; //taken from SQL query on phpMyAdmin
+		$q = $pdo->prepare($sql);
+		$q->execute(array($customer_id));
+		Database::disconnect();
+		return true;
 
 	}
 }
 
-class customerAddress {	
+class customerAddress {
 	public $customer_id;
 
 	public function __construct($customer_id){
@@ -72,7 +72,7 @@ class customerAddress {
 	}
 
 	public function create($street_1, $street_2, $city, $state, $zip_code, $customer_id){
-		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {	
+		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) ) {
 			return false;
 		} else {
 
@@ -80,14 +80,14 @@ class customerAddress {
 			$sql = "INSERT INTO  `E-Commerce`.`address` (`street_1` ,`street_2` ,`city` ,`state` ,`zip_code` ,`customer_fk`) VALUES (?,?,?,?,?,?);";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($street_1,$street_2,$city,$state,$zip_code,$this->customer_id));
-			
+
 			Database::disconnect();
 			return true;
 		}
 	}
-	
+
 	public function getNumOfAddress(){
-		try{	
+		try{
 			$pdo = Database::connect();
 			$sql = "SELECT count(*) as numaddress FROM address where customer_fk = ?";
 			$q = $pdo->prepare($sql);
@@ -110,8 +110,8 @@ class customerAddress {
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->customer_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
-	        Database::disconnect();
-	        return $data;
+			Database::disconnect();
+			return $data;
 		} catch (PDOException $error){
 
 			header( "Location: 500.php" );
@@ -119,7 +119,7 @@ class customerAddress {
 
 		}
 	}
-	
+
 	public function readAnAddress($address_id){
 		try{
 			$pdo = Database::connect();
@@ -127,8 +127,8 @@ class customerAddress {
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->customer_id,$address_id));
 			$data = $q->fetch(PDO::FETCH_ASSOC);
-	        Database::disconnect();
-	        return $data;
+			Database::disconnect();
+			return $data;
 		} catch (PDOException $error){
 
 			header( "Location: 500.php" );
@@ -136,8 +136,8 @@ class customerAddress {
 
 		}
 	}
-	
-	
+
+
 
 	public function update($street_1, $street_2, $city, $state, $zip_code, $address_id){
 		if (!valid($street_1) || !valid($street_2) || !valid($city) || !valid($state) || !valid($zip_code) || !valid($address_id) ) {
@@ -154,17 +154,17 @@ class customerAddress {
 
 	public function delete($address_id){
 
-        $pdo = Database::connect();
-        $sql = "DELETE FROM address WHERE id = ?"; //taken from SQL query on phpMyAdmin
-        $q = $pdo->prepare($sql);
-        $q->execute(array($address_id));
-        Database::disconnect();
-        return true;
+		$pdo = Database::connect();
+		$sql = "DELETE FROM address WHERE id = ?"; //taken from SQL query on phpMyAdmin
+		$q = $pdo->prepare($sql);
+		$q->execute(array($address_id));
+		Database::disconnect();
+		return true;
 
 	}
 }
 
-class customerCreditcards {	
+class customerCreditcards {
 
 
 	public $customer_id;
@@ -173,7 +173,7 @@ class customerCreditcards {
 	public function __construct($customer_id){
 		$this->customer_id = $customer_id;
 	}
-	
+
 	public function read(){
 		try{
 			$pdo = Database::connect();
@@ -181,8 +181,8 @@ class customerCreditcards {
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->customer_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
-	        Database::disconnect();
-	        return $data;
+			Database::disconnect();
+			return $data;
 		} catch (PDOException $error){
 
 			header( "Location: 500.php" );
@@ -190,7 +190,7 @@ class customerCreditcards {
 
 		}
 	}
-	
+
 	public function readACreditCard($creditcard_id){
 		try{
 			$pdo = Database::connect();
@@ -198,8 +198,8 @@ class customerCreditcards {
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->customer_id,$creditcard_id));
 			$data = $q->fetch(PDO::FETCH_ASSOC);
-	        Database::disconnect();
-	        return $data;
+			Database::disconnect();
+			return $data;
 		} catch (PDOException $error){
 
 			header( "Location: 500.php" );
@@ -222,12 +222,12 @@ class customerCreditcards {
 		}
 	}
 
-	
+
 
 	public function update($id,$name, $cardnumber, $expiration_date, $security_code, $address_fk){
 		if (!valid($id) ||!valid($name) || !valid($cardnumber) || !valid($expiration_date) || !valid($security_code) || !valid($address_fk)) {
 			return false;
-			} else {
+		} else {
 			$pdo = Database::connect();
 			$sql = "UPDATE creditcard SET name = ?, cardnumber = ?, expiration_date = ?, security_code = ?, address_fk = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
@@ -238,25 +238,25 @@ class customerCreditcards {
 	}
 
 	public function delete($creditcard_id){
-	  try{
-        $pdo = Database::connect();
-        $sql = "DELETE FROM creditcard WHERE id=? and customer_fk = ?"; //taken from SQL query on phpMyAdmin
-        $q = $pdo->prepare($sql);
-        $q->execute(array($creditcard_id, $this->customer_id));
-        Database::disconnect();
-        return true;
-     	}catch (PDOException $error){
-		echo $error->getMessage();
-		return false;
+		try{
+			$pdo = Database::connect();
+			$sql = "DELETE FROM creditcard WHERE id=? and customer_fk = ?"; //taken from SQL query on phpMyAdmin
+			$q = $pdo->prepare($sql);
+			$q->execute(array($creditcard_id, $this->customer_id));
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
+			echo $error->getMessage();
+			return false;
 		}
 	}
 }
 
-class product {	
+class product {
 
 	public $product_id;
 
-	
+
 
 	public function __construct($product_id){
 		$this->product_id = $product_id;
@@ -280,8 +280,8 @@ class product {
 				Database::disconnect();
 				return true;
 			} catch(PDOException $error) {
-				echo $error->getMessage();	
-			}	
+				echo $error->getMessage();
+			}
 		}
 	}
 
@@ -292,8 +292,8 @@ class product {
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->product_id));
 			$data = $q->fetch(PDO::FETCH_ASSOC);
-	        Database::disconnect();
-	        return $data;
+			Database::disconnect();
+			return $data;
 		} catch (PDOException $error){
 
 			header( "Location: 500.php" );
@@ -301,7 +301,7 @@ class product {
 		}
 	}
 
-    
+
 
 	public function readAllCategory($category_id){
 		try{
@@ -310,8 +310,8 @@ class product {
 			$q = $pdo->prepare($sql);
 			$q->execute(array($category_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
-	        Database::disconnect();
-	        return $data;
+			Database::disconnect();
+			return $data;
 		} catch (PDOException $error){
 
 			header( "Location: 500.php" );
@@ -320,24 +320,24 @@ class product {
 	}
 
 	public function delete($product_id){
-	  try{
-	        $pdo = Database::connect();
-	        $sql = "DELETE FROM product WHERE id=?"; //taken from SQL query on phpMyAdmin
-	        $q = $pdo->prepare($sql);
-	        $q->execute(array($product_id));
-	        Database::disconnect();
-	        return true;
-     	}catch (PDOException $error){
+		try{
+			$pdo = Database::connect();
+			$sql = "DELETE FROM product WHERE id=?"; //taken from SQL query on phpMyAdmin
+			$q = $pdo->prepare($sql);
+			$q->execute(array($product_id));
+			Database::disconnect();
+			return true;
+		}catch (PDOException $error){
 			echo $error->getMessage();
 			die();
-		//return false;
+			//return false;
 		}
 	}
 }
 
 class category {
 
-	
+
 
 	public function create($name){
 		if (!valid($name)) {
@@ -358,8 +358,8 @@ class category {
 			$pdo = Database::connect();
 			$sql = 'SELECT * FROM category ORDER BY name';
 			$data = $pdo->query($sql);
-	        Database::disconnect();
-	        return $data;
+			Database::disconnect();
+			return $data;
 		} catch (PDOException $error){
 			header( "Location: 500.php" );
 			//echo $error->getMessage();
@@ -377,19 +377,19 @@ class category {
 			$sql = "UPDATE category SET name = ? WHERE id = ?";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($name,$category_id));
-				Database::disconnect();
-				return true;
-			}
+			Database::disconnect();
+			return true;
 		}
+	}
 
 	public function delete($category_id){
 
-        $pdo = Database::connect();
-        $sql = "DELETE FROM category WHERE id = ?"; //taken from SQL query on phpMyAdmin
-        $q = $pdo->prepare($sql);
-        $q->execute(array($category_id));
-        Database::disconnect();
-        return true;
+		$pdo = Database::connect();
+		$sql = "DELETE FROM category WHERE id = ?"; //taken from SQL query on phpMyAdmin
+		$q = $pdo->prepare($sql);
+		$q->execute(array($category_id));
+		Database::disconnect();
+		return true;
 
 	}
 }
@@ -398,15 +398,15 @@ class category {
 
 class cart{
 	public $customer_id;
-	
+
 	public function __construct($customer_id){
 		$this->customer_id = $customer_id;
 	}
-	
-	
+
+
 	public function addCart($product_id){
 		if (!valid($product_id)){
-				return false;
+			return false;
 		} else {
 			$pdo = Database::connect();
 			$sql = "INSERT INTO  `E-Commerce`.`cart` (`customer_fk` ,`product_fk`) VALUES (?,  ?);";
@@ -416,7 +416,7 @@ class cart{
 			return true;
 		}
 	}
-	
+
 	public function read(){
 		try{
 			$pdo = Database::connect();
@@ -424,28 +424,28 @@ class cart{
 			$q = $pdo->prepare($sql);
 			$q->execute(array($this->customer_id));
 			$data = $q->fetchAll(PDO::FETCH_ASSOC);
-	        Database::disconnect();
-	        return $data;
-			} catch (PDOException $error){
+			Database::disconnect();
+			return $data;
+		} catch (PDOException $error){
 			header( "Location: 500.php" );
 			die();
 
 		}
 	}
-	
+
 	public function updateQuantity($type,$product_id){
 		if (!valid($type) || !valid($product_id)) {
 			return false;
 		} else {
-			
+
 			try{
-			
+
 				if($type=='less'){
 					$pdo = Database::connect();
 					$sql = "DELETE FROM cart WHERE customer_fk=? and product_fk=? limit 1";
 					$q = $pdo->prepare($sql);
 					$q->execute(array($this->customer_id,$product_id));
-					
+
 					Database::disconnect();
 					return true;
 				}else{
@@ -453,38 +453,37 @@ class cart{
 					$sql = "INSERT INTO  `E-Commerce`.`cart` (`customer_fk` ,`product_fk`) VALUES (?,  ?);";
 					$q = $pdo->prepare($sql);
 					$q->execute(array($this->customer_id,$product_id));
-					
+
 					Database::disconnect();
 					return true;
 				}
 			}catch(PDOException $error){
 				echo $error->getMessage();
-			}	
+			}
 		}
 	}
-	
+
 	public function removeOneItem($product_id){
 		if (!valid($product_id)) {
 			return false;
 		} else {
-			
+
 			try{
-			
-				
+
+
 				$pdo = Database::connect();
 				$sql = "DELETE FROM cart WHERE customer_fk=? and product_fk=?";
 				$q = $pdo->prepare($sql);
 				$q->execute(array($this->customer_id,$product_id));
-				
+
 				Database::disconnect();
 				return true;
-				
+
 			}catch(PDOException $error){
 				echo $error->getMessage();
-			}	
+			}
 		}
 	}
-	
-	
-}
 
+
+}
