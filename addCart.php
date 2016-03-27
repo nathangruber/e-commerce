@@ -16,7 +16,7 @@ if($result){
 
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 
 <html lang="en">
 <?php require_once'includes/header.php'; ?>
@@ -26,7 +26,14 @@ if($result){
 </head>
 
 <body>
-    <?php  require_once'includes/navbar.php'; ?><br>
+     <?php
+if ($admin) {
+	require_once'includes/adminNavbar.php';
+} else {
+	require_once'includes/navbar.php';
+}
+?>
+<br>
     <br>
     <br>
     <br>
