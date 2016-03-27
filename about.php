@@ -29,7 +29,7 @@
             </div>
 
             <div class="theme-table=image col-sm-6">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiser&nbsp;&nbsp;&nbsp;&nbsp;decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiser decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p>
             </div>
         </div><?php
                 require_once('includes/footer.php');
