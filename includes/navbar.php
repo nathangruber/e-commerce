@@ -39,7 +39,7 @@ echo '</ul>';
 echo '</li>';
 Database::disconnect();
 
-?>
+
     <li><a href="register.php">Register</a></li>
     <li><a href="loginpage.php">Login</a></li>
     <li><a href="about.php" >About</a></li>
