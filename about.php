@@ -24,7 +24,7 @@
                 <br>
 
                 <center>
-                    <div class="theme-table-image col-sm-12"><img src="assets/img/99factory_slider_05.jpg" class="img-rounded" alt="Wood Shop"></div>
+                    <div class="theme-table-image col-sm-12"><img src="assets/img/99factory_slider_05.jpg" alt="Picture of decks in shop" class="img-rounded" alt="Wood Shop"></div>
                 </center>
             </div>
 
