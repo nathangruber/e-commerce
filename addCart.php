@@ -27,11 +27,11 @@ if($result){
 
 <body>
      <?php
-if ($admin) {
-	require_once'includes/adminNavbar.php';
-} else {
-	require_once'includes/navbar.php';
-}
+	if ($admin) {
+		require_once'includes/adminNavbar.php';
+	} else {
+		require_once'includes/navbar.php';
+	}
 ?>
 <br>
     <br>
