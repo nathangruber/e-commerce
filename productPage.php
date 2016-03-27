@@ -5,6 +5,7 @@ require_once 'includes/session.php';
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once'includes/header.php'; ?>
+<title>View Product Details</title>
  <body>
 <?php  require_once'includes/navbar.php'; ?>
 <br><br><br><br><br><br>
