@@ -21,8 +21,8 @@
 
     <center>
         <p>You have successfully created an account at BBS, please login.</p>
-    </center>
+    
 
-    <p>go <a class="btn btn-default" href="index.php">Back</a> or <a class="btn btn-default" href="loginpage.php">Login</a>.</p><?php require_once 'includes/footer.php'; ?>
+    <p>go <a class="btn btn-default" href="index.php">Back</a> or <a class="btn btn-default" href="loginpage.php">Login</a>.</p></center><?php require_once 'includes/footer.php'; ?>
 </body>
 </html>
