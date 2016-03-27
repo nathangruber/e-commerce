@@ -10,12 +10,12 @@
 
 <body>
     <?php
-    if ($admin) {
-        require_once'includes/adminNavbar.php';
-    } else {
-        require_once'includes/navbar.php';
-    }
-    ?>
+        if ($admin) {
+            require_once'includes/adminNavbar.php';
+        } else {
+            require_once'includes/navbar.php';
+        }
+        ?>
 
     <div class="container">
         <div class="row">
@@ -29,11 +29,11 @@
             </div>
 
             <div class="theme-table=image col-sm-6">
-                <p>Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiser decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p>
+                <p>&nbsp;&nbsp;&nbsp;Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiser decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p>
             </div>
         </div><?php
-        require_once('includes/footer.php');
-        ?>
+                require_once('includes/footer.php');
+                ?>
     </div>
 </body>
 </html>
