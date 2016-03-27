@@ -10,18 +10,20 @@
 
 <body>
     <?php
-    if ($admin) {
-        require_once'includes/adminNavbar.php';
-    } else {
-        require_once'includes/navbar.php';
-    }
-    ?>
+        if ($admin) {
+            require_once'includes/adminNavbar.php';
+        } else {
+            require_once'includes/navbar.php';
+        }
+        ?>
 
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="contactus">
                     <br>
+                    <br>
+
                     <p>Contact Us</p><br>
 
                     <form name="contactform" method="post" action="emailform.php">
@@ -32,8 +34,8 @@
                 </div>
             </div>
         </div><?php
-        require_once('includes/footer.php');
-        ?>
+                require_once('includes/footer.php');
+                ?>
     </div>
 </body>
 </html>
