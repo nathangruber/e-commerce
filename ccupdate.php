@@ -25,4 +25,3 @@
       header('Location: update.php?feedback=error');
     }
   }  
-?>
