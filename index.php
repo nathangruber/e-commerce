@@ -4,11 +4,9 @@
 <html lang="en">
 <?php require_once 'includes/header.php';?>
 
-<head>
-    <title>Blake's Board Shop</title>
-</head>
-
 <body>
+    <title>Blake's Board Shop</title>
+
     <?php
     if ($admin) {
         require_once'includes/adminNavbar.php';
