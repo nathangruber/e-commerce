@@ -19,7 +19,16 @@
         echo $_SESSION['name'];
     }
     ?>
-
+    <input type="text" name="typeahead">
+     <script>
+    $(document).ready(function(){
+    $('input.typeahead').typeahead({
+        name: 'typeahead',
+        remote:'search.php?key=%QUERY',
+        limit : 10
+    });
+});
+    </script>
     <header class="main-header" role="banner">
         <div id="container">
             <div class="leftimage"><img src="assets/img/bbs1.png" alt="BBS logo" height="154" width="168"></div>
