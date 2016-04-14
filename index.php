@@ -6,6 +6,12 @@
 
 <body>
     <title>Blake's Board Shop</title>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 <form>
 <input type="text" size="30" onkeyup="showResult(this.value)">
 <div id="livesearch"></div>
