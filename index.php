@@ -6,6 +6,9 @@
 
 <body>
     <title>Blake's Board Shop</title>
+    <br>
+    <br>
+    <br>
     <div id="search_box">
         <center>
            <p id="heading">Instant FullText Search System Using Ajax And PHP</p>
