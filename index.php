@@ -6,15 +6,18 @@
 
 <body>
     <title>Blake's Board Shop</title>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-<!-- <form>
-<input type="text" size="30" onkeyup="showResult(this.value)">
-<div id="livesearch"></div>
-</form> -->
+    <div id="search_box">
+        <center>
+           <p id="heading">Instant FullText Search System Using Ajax And PHP</p>
+           <form method='get' action='fetch.php'>
+           <input type="text" name="get_val" id="find" placeholder="Enter Your Text Here">
+           <input type="submit" name="search" id="search" value="Search">
+           </form>
+
+           <div id="search_items">
+           </div>
+        </center>
+      </div>
 
 
     <?php
@@ -29,29 +32,7 @@
         echo $_SESSION['name'];
     }
     ?>
- <!--   <script>
-function showResult(str) {
-  if (str.length==0) { 
-    document.getElementById("livesearch").innerHTML="";
-    document.getElementById("livesearch").style.border="0px";
-    return;
-  }
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp=new XMLHttpRequest();
-  } else {  // code for IE6, IE5
-    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange=function() {
-    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-      document.getElementById("livesearch").innerHTML=xmlhttp.responseText;
-      document.getElementById("livesearch").style.border="1px solid #A5ACB2";
-    }
-  }
-  xmlhttp.open("GET","livesearch.php?q="+str,true);
-  xmlhttp.send();
-}
-</script>  -->
+ 
     <header class="main-header" role="banner">
         <div id="container">
             <div class="leftimage"><img src="assets/img/bbs1.png" alt="BBS logo" height="154" width="168"></div>
