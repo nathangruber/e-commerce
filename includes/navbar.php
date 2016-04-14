@@ -63,10 +63,12 @@ function showResult(str) {
   xmlhttp.send();
 }
 </script>
+<li>
 <form>
 <input type="text" size="30" onkeyup="showResult(this.value)">
 <div id="livesearch"></div>
 </form>
+</li>
     <li><a href="register.php">Register</a></li>
     <li><a href="loginpage.php">Login</a></li>
     <li><a href="about.php" >About</a></li>
