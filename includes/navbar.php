@@ -58,9 +58,9 @@ Database::disconnect();
     <li><a></a></li>
     <li><a></a></li>
     <form>
-<input type="text" size="30" onkeyup="showResult(this.value)">
+<!-- <input type="text" size="30" onkeyup="showResult(this.value)">
 <div id="livesearch"></div>
-</form>
+</form> -->
     <li><a href="update.php">My Account</a></li>
     <li><a href="cart.php">Cart</a></li>
             </ul>
