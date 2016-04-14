@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
         </button>
          <a class="navbar-brand" href="index.php" id="black"><img src="assets/img/bbs.png" height="27" width="27"></a>
-   <li>  
+     <li>
 <form>
 <input type="text" size="30" onkeyup="showResult(this.value)">
 <div id="livesearch"></div>
