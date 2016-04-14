@@ -11,11 +11,10 @@
     <br>
     <br>
     <br>
-    <br>
-<form>
+<!-- <form>
 <input type="text" size="30" onkeyup="showResult(this.value)">
 <div id="livesearch"></div>
-</form>
+</form> -->
 
 
     <?php
@@ -30,7 +29,7 @@
         echo $_SESSION['name'];
     }
     ?>
-    <script>
+ <!--   <script>
 function showResult(str) {
   if (str.length==0) { 
     document.getElementById("livesearch").innerHTML="";
@@ -52,8 +51,7 @@ function showResult(str) {
   xmlhttp.open("GET","livesearch.php?q="+str,true);
   xmlhttp.send();
 }
-</script>
-    </script>
+</script>  -->
     <header class="main-header" role="banner">
         <div id="container">
             <div class="leftimage"><img src="assets/img/bbs1.png" alt="BBS logo" height="154" width="168"></div>
