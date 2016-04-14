@@ -63,7 +63,10 @@ function showResult(str) {
   xmlhttp.send();
 }
 </script>
-
+<form>
+<input type="text" size="30" onkeyup="showResult(this.value)">
+<div id="livesearch"></div>
+</form>
     <li><a href="register.php">Register</a></li>
     <li><a href="loginpage.php">Login</a></li>
     <li><a href="about.php" >About</a></li>
@@ -83,10 +86,6 @@ function showResult(str) {
     <li><a href="update.php">My Account</a></li>
     <li><a href="cart.php">Cart</a></li>
             </ul>
-            <form>
-<input type="text" size="30" onkeyup="showResult(this.value)">
-<div id="livesearch"></div>
-</form>
           </div>
         </div>
       </nav>
