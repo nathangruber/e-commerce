@@ -6,6 +6,10 @@
 
 <body>
     <title>Blake's Board Shop</title>
+<form>
+<input type="text" size="30" onkeyup="showResult(this.value)">
+<div id="livesearch"></div>
+</form>
 
     <?php
     if ($admin) {
@@ -19,15 +23,6 @@
         echo $_SESSION['name'];
     }
     ?>
-    <input type="text" name="typeahead">
-     <script>
-    $(document).ready(function(){
-    $('input.typeahead').typeahead({
-        name: 'typeahead',
-        remote:'search.php?key=%QUERY',
-        limit : 10
-    });
-});
     </script>
     <header class="main-header" role="banner">
         <div id="container">
