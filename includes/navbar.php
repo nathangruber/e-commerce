@@ -70,23 +70,23 @@ function showResult(str) {
     <li><a href="contact.php">Contact Us</a></li>
     <li><a></a></li>
     <li><a></a></li>
-	<li><a></a></li>
-	<li><a></a></li>
-	<li><a></a></li>
-	<li><a></a></li>
-	<li><a></a></li>
+	  <li><a></a></li>
+	  <li><a></a></li>
+	  <li><a></a></li>
+	  <li><a></a></li>
+	  <li><a></a></li>
     <li><a></a></li>
     <li><a></a></li>
     <li><a></a></li>
     <li><a></a></li>
     <li><a></a></li>
-<form>
-<input type="text" size="30" onkeyup="showResult(this.value)">
-<div id="livesearch"></div>
-</form>
     <li><a href="update.php">My Account</a></li>
     <li><a href="cart.php">Cart</a></li>
             </ul>
+            <form>
+<input type="text" size="30" onkeyup="showResult(this.value)">
+<div id="livesearch"></div>
+</form>
           </div>
         </div>
       </nav>
