@@ -52,19 +52,19 @@ echo '<br>';
 $me = new customer();
 $myInfo = $me->read($_SESSION["id"]);
 
-echo $myInfo['email_address'];
 
 
-/*$to      = '';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
+
+$to      = $myInfo['email_address'];
+$subject = 'Thanks for your purchase';
+$message = 'Thanks you here are the details:blablabla';
+$headers = 'From: Super Store' . "\r\n" .
+    'Reply-To: bbs@example.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 mail($to, $subject, $message, $headers);
 
-*/
+
 ?>
 
         	</div>
