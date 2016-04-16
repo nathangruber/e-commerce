@@ -13,7 +13,9 @@
     } else {
         require_once'includes/navbar.php';
     }
-    ?><?php
+    ?>
+<br>
+    <?php
     if ($logged) {
         echo "Welcome Back, ";
         echo $_SESSION['name'];
