@@ -9,20 +9,7 @@
     <br>
     <br>
     <br>
-    <div id="search_box">
-        <center>
-           <p id="heading">Instant FullText Search System Using Ajax And PHP</p>
-           <form method='get' action='fetch.php'>
-           <input type="text" name="get_val" id="find" placeholder="Enter Your Text Here">
-           <input type="submit" name="search" id="search" value="Search">
-           </form>
-
-           <div id="search_items">
-           </div>
-        </center>
-      </div>
-
-
+   
     <?php
     if ($admin) {
         require_once'includes/adminNavbar.php';
