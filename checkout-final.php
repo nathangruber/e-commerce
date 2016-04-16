@@ -56,9 +56,9 @@ $myInfo = $me->read($_SESSION["id"]);
 
 
 $to      = $myInfo['email_address'];
-$subject = 'Thanks for your purchase';
+$subject = 'Thank you for your purchase!';
 $message = 'Thanks you here are the details:blablabla';
-$headers = 'From: Super Store' . "\r\n" .
+$headers = 'From: BB Shop' . "\r\n" .
     'Reply-To: bbs@example.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
