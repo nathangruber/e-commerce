@@ -6,10 +6,7 @@
 
 <body>
     <title>Blake's Board Shop</title>
-    <br>
-    <br>
-    <br>
-   
+    
     <?php
     if ($admin) {
         require_once'includes/adminNavbar.php';
