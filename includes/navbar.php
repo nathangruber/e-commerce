@@ -47,11 +47,12 @@ Database::disconnect();
     <li><a href="about.php" >About</a></li>
     <li><a href="contact.php">Contact Us</a></li>
     <li><a href="update.php">My Account</a></li>
-    <li><a href="cart.php">Cart</a></li>
-                </ul>
-           <div class="pull-right">
+    <div class="col-sm-3 col-md-3 pull-right">
           <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
         </div>
+    <li><a href="cart.php">Cart</a></li>
+                </ul>
+           
           </div>
         </div>
       
