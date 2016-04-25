@@ -51,8 +51,8 @@ Database::disconnect();
              
 
       </ul>
-      <div class="container pull-right">
-<div class="col-md-3">
+      <div class="container">
+<div class="col-md-3 pull-right">
   <form class="navbar-form" role="search">
     <div class="input-group add-on">
       <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
