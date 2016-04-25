@@ -48,9 +48,9 @@ Database::disconnect();
     <li><a href="contact.php">Contact Us</a></li>
     <li><a href="update.php">My Account</a></li>
     <li><a href="cart.php">Cart</a></li>
-        <li><a       
+        <li>       
 
-          <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term"></a></li>
+          <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term"></li>
       </ul>
           </div>
         </div>
