@@ -48,14 +48,7 @@ Database::disconnect();
     <li><a href="contact.php">Contact Us</a></li>
     <li><a></a></li>
     <li><a></a></li>
-	  <li><a></a></li>
-	  <li><a></a></li>
-	  <li><a></a></li>
-	  <li><a></a></li>
-	  <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
+	
     <li><a></a></li>
     <li><a></a></li>
     <li><a href="update.php">My Account</a></li>
