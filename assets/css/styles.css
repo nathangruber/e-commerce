@@ -65,6 +65,7 @@ font-family:'Libre Baskerville', serif;
 }
 .navbar {
     background-color: #000000;
+    padding-top: 1px;
 }
 .siteimage{
  padding-top:100px;
@@ -116,7 +117,4 @@ font-family:'Libre Baskerville', serif;
 {
    background-color:#8181F7;
    color:white;
-}
-.srch-term{
-  padding-top: 10px;
 }
