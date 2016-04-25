@@ -13,5 +13,7 @@
     </center><script src="assets/js/jquery.min.js" type="text/javascript">
 </script><script src="assets/js/bootstrap.min.js" type="text/javascript">
 </script>
+<script src="searchFunction.js"></script>
+<!-- <script src="assets/js/hidden.js"></script> -->
 </body>
 </html>
