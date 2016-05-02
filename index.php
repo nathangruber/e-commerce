@@ -95,7 +95,8 @@
         echo "You are logged out.";
     }
     ?> <!-- /.container -->
-
+<br>
+<br>
      <?php require_once 'includes/footer.php'; ?>
 </body>
 </html>
