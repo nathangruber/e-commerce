@@ -60,12 +60,12 @@
 <center>
     <div class="container">
  <div class="col-sm-12">
-
+  
 
     <div>
         
             <form action="loginpage.php" method="post">
-                <input class="btn btn-default" type="submit" value="Login">
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Login">
             </form>
     </div>
     </div>
