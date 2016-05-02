@@ -57,7 +57,7 @@
             </div>
         </div>
     </div>
-<div class="container" style="width: 100%;">
+<div class="container">
  <div class="theme-table-image col-sm-4">
 
 
@@ -68,7 +68,6 @@
             </form>
     </div>
     </div>
-<div class="container" style="width: 100%;">
  <div class="theme-table-image col-sm-4">
     
         <div>
@@ -78,7 +77,6 @@
         </div>
     </div>
 
-    <div class="container" style="width: 100%;">
  <div class="theme-table-image col-sm-4">
         <div>
         
