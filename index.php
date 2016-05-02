@@ -87,6 +87,7 @@
                 <input class="btn btn-default" type="submit" value="Register">
             </form>
         </div>
+    </div>
     </center><?php
     if ($logged) {
         ?><a class="btn btn-default" href="update.php">Update User Info</a> <?php
