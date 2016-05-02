@@ -58,7 +58,7 @@
         </div>
     </div>
 <div class="container">
- <div class="theme-table-image col-sm-4">
+ <div class="col-sm-2">
 
 
     <div>
@@ -68,7 +68,7 @@
             </form>
     </div>
     </div>
- <div class="theme-table-image col-sm-4">
+ <div class="col-sm-2">
     
         <div>
             <form action="includes/logout.php" method="post">
@@ -77,7 +77,7 @@
         </div>
     </div>
 
- <div class="theme-table-image col-sm-4">
+ <div class="col-sm-2">
         <div>
         
 
