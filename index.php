@@ -87,7 +87,7 @@
         </div>
     </div>
     <div class="container">
- <div class="col-sm-12">
+ <div class="col-sm-1">
 
 <?php
     if ($logged) {
