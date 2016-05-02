@@ -57,24 +57,29 @@
             </div>
         </div>
     </div>
+<div class="container" style="width: 100%;">
+ <div class="theme-table-image col-sm-4">
+
 
     <div>
         
             <form action="loginpage.php" method="post">
                 <input class="btn btn-default" type="submit" value="Login">
             </form>
-    
     </div>
-
+    </div>
+<div class="container" style="width: 100%;">
+ <div class="theme-table-image col-sm-4">
     
         <div>
             <form action="includes/logout.php" method="post">
                 <input class="btn btn-default" type="submit" value="Logout">
             </form>
         </div>
-    
+    </div>
 
-    
+    <div class="container" style="width: 100%;">
+ <div class="theme-table-image col-sm-4">
         <div>
         
 
