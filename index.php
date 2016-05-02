@@ -86,7 +86,7 @@
             </form>
         </div>
     </div>
-    </center><?php
+<?php
     if ($logged) {
         ?><a class="btn btn-default" href="update.php">Update User Info</a> <?php
     } else {
