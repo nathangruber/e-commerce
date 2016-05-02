@@ -69,16 +69,14 @@
             </form>
     </div>
     </div>
- <div class="col-sm-1">
     
         <div>
             <form action="includes/logout.php" method="post">
                 <input class="btn btn-default" type="submit" value="Logout">
             </form>
         </div>
-    </div>
+  
 
- <div class="col-sm-1">
         <div>
         
 
@@ -86,7 +84,6 @@
                 <input class="btn btn-default" type="submit" value="Register">
             </form>
         </div>
-    </div>
     </div>
 <?php
     if ($logged) {
@@ -97,6 +94,6 @@
     ?> <!-- /.container -->
 <br>
 <br>
-     <?php require_once 'includes/footer.php'; ?>
+<?php require_once 'includes/footer.php'; ?>
 </body>
 </html>
