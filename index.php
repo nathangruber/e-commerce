@@ -57,7 +57,7 @@
             </div>
         </div>
     </div>
-<div class="container">
+<center><div class="container">
  <div class="col-sm-1">
 
 
@@ -86,6 +86,7 @@
             </form>
         </div>
     </div>
+</center>
 <div class="container">
  <div class="col-sm-12">
 
