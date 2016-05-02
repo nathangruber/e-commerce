@@ -59,24 +59,24 @@
     </div>
 
     <div>
-        <center>
+        
             <form action="loginpage.php" method="post">
                 <input class="btn btn-default" type="submit" value="Login">
             </form>
-        </center>
-    </div><br>
+    
+    </div>
 
-    <center>
+    
         <div>
             <form action="includes/logout.php" method="post">
                 <input class="btn btn-default" type="submit" value="Logout">
             </form>
         </div>
-    </center>
+    
 
-    <center>
+    
         <div>
-            <br>
+        
 
             <form action="register.php" method="post">
                 <input class="btn btn-default" type="submit" value="Register">
