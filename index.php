@@ -57,7 +57,8 @@
             </div>
         </div>
     </div>
-<center><div class="container">
+<center>
+    <div class="container">
  <div class="col-sm-1">
 
 
@@ -86,7 +87,7 @@
             </form>
         </div>
     </div>
-    
+    </div>
 <?php
     if ($logged) {
         ?><a class="btn btn-default" href="update.php">Update User Info</a> <?php
@@ -94,8 +95,7 @@
         echo "You are logged out.";
     }
     ?> <!-- /.container -->
-<br>
-<br>
+
      <?php require_once 'includes/footer.php'; ?>
 </body>
 </html>
