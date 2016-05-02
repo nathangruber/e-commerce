@@ -86,6 +86,9 @@
             </form>
         </div>
     </div>
+<div class="container">
+ <div class="col-sm-12">
+
 <?php
     if ($logged) {
         ?><a class="btn btn-default" href="update.php">Update User Info</a> <?php
