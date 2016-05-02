@@ -72,7 +72,7 @@
     
         <div>
             <form action="includes/logout.php" method="post">
-                <input class="btn btn-default" type="submit" value="Logout">
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Logout">
             </form>
         </div>
   
@@ -81,7 +81,7 @@
         
 
             <form action="register.php" method="post">
-                <input class="btn btn-default" type="submit" value="Register">
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Register">
             </form>
         </div>
     </div>
