@@ -68,7 +68,6 @@
                 <input class="btn btn-primary btn-lg btn-block" type="submit" value="Login">
             </form>
     </div>
-    </div>
     
         <div>
             <form action="includes/logout.php" method="post">
@@ -85,6 +84,7 @@
             </form>
         </div>
     </div>
+</div>
 <?php
     if ($logged) {
         ?><a class="btn btn-default" href="update.php">Update User Info</a> <?php
