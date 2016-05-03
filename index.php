@@ -77,10 +77,10 @@
   
 
         <div>
-
+        
 
             <form action="register.php" method="post">
-                <input class="btn btn-primary btn-lg btn-block-warning-outline" type="submit" value="Register">
+                <input class="btn btn-primary btn-sm btn-block" type="submit" value="Register">
             </form>
         </div>
     </div>
