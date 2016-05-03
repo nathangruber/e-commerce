@@ -49,8 +49,8 @@ Database::disconnect();
     <li><a href="update.php">My Account</a></li>
     <li><a href="cart.php">Cart</a></li>
             </ul>
-      <!--<div class="container">
-<div class="col-md-3 pull-right"> -->
+      <div class="container">
+<div class="col-md-3 pull-right">
   <form class="navbar-form" role="search">
     <div class="input-group add-on">
       <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
@@ -59,7 +59,7 @@ Database::disconnect();
       </div>
     </div>
   </form>
-       <!-- </div>
-      </div> -->
+        </div>
+      </div>
       
       </nav>
