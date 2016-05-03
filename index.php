@@ -68,13 +68,13 @@
                 <input class="btn btn-secondary btn-sm btn-block" type="submit" value="Login">
             </form>
     </div>
-    
+    <br>
         <div>
             <form action="includes/logout.php" method="post">
                 <input class="btn btn-secondary btn-sm btn-block" type="submit" value="Logout">
             </form>
         </div>
-  
+  <br>
 
         <div>
         
