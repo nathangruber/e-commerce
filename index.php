@@ -65,13 +65,13 @@
     <div>
         
             <form action="loginpage.php" method="post">
-                <input class="btn btn-primary btn-sm btn-block" type="submit" value="Login">
+                <input class="btn btn-secondary btn-sm btn-block" type="submit" value="Login">
             </form>
     </div>
     
         <div>
             <form action="includes/logout.php" method="post">
-                <input class="btn btn-primary btn-sm btn-block" type="submit" value="Logout">
+                <input class="btn btn-secondary btn-sm btn-block" type="submit" value="Logout">
             </form>
         </div>
   
