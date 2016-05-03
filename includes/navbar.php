@@ -48,9 +48,7 @@ Database::disconnect();
     <li><a href="contact.php">Contact Us</a></li>
     <li><a href="update.php">My Account</a></li>
     <li><a href="cart.php">Cart</a></li>
-             
-
-      </ul>
+            </ul>
       <div class="container">
 <div class="col-md-3 pull-right">
   <form class="navbar-form" role="search">
@@ -62,5 +60,6 @@ Database::disconnect();
     </div>
   </form>
         </div>
+      </div>
       
       </nav>
