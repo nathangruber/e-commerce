@@ -117,7 +117,7 @@ font-family:'Libre Baskerville', serif;
    background-color:#8181F7;
    color:white;
 }
-.btn.sharp:focus {
+.btn.primary.sharp:focus {
   border-radius:0;
   background-color: #8064A2;
     border-color: #8064A2;
