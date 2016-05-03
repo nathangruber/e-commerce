@@ -95,5 +95,14 @@
 <br>
 <br>
 <?php require_once 'includes/footer.php'; ?>
+
+<script>
+var detect = require('language-detect');
+
+detect(e-commerce + 'index.php', function (err, language) {
+  console.log(err);      //=> null
+  console.log(language); //=> "JavaScript"
+});
+</script>
 </body>
 </html>
