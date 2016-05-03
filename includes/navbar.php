@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-         <a class="navbar-brand" href="index.php" id="black"><img src="assets/img/bbs.png" height="27" width="27"></a>
+         <a class="navbar-brand" href="index.php" id="black"><img src="assets/img/bbs.png" height="26" width="26"></a>
      </div>
 
 
@@ -48,6 +48,7 @@ Database::disconnect();
     <li><a href="contact.php">Contact Us</a></li>
     <li><a href="update.php">My Account</a></li>
     <li><a href="cart.php">Cart</a></li>
+            </ul>
       <div class="container">
 <div class="col-md-3 pull-right">
   <form class="navbar-form" role="search">
@@ -60,6 +61,5 @@ Database::disconnect();
   </form>
         </div>
       </div>
-                  </ul>
-
+      
       </nav>
