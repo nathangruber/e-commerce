@@ -77,10 +77,10 @@
   
 
         <div>
-        
+
 
             <form action="register.php" method="post">
-                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Register">
+                <input class="btn btn-primary btn-lg btn-block-warning-outline" type="submit" value="Register">
             </form>
         </div>
     </div>
@@ -96,13 +96,6 @@
 <br>
 <?php require_once 'includes/footer.php'; ?>
 
-<script>
-var detect = require('language-detect');
 
-detect(e-commerce + 'index.php', function (err, language) {
-  console.log(err);      //=> null
-  console.log(language); //=> "JavaScript"
-});
-</script>
 </body>
 </html>
