@@ -58,8 +58,8 @@
         </div>
     </div>
 <center>
-   <!-- <div class="container">
- <div class="col-sm-12">  -->
+ <div class="container">
+ <div class="col-sm-12">  
   
 
     <div>
@@ -80,7 +80,7 @@
         
 
             <form action="register.php" method="post">
-                <input class="btn btn-primary btn-sm btn-block" type="submit" value="Register">
+                <input class="btn btn-secondary btn-sm btn-block" type="submit" value="Register">
             </form>
         </div>
     </div>
