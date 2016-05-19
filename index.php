@@ -85,7 +85,7 @@
     </div>
 </div>
 
-<a href="#" class="btn btn-your-class">Your Button Tetxt</a>
+<a href="#" class="btn btn-basecamp">Your Button Tetxt</a>
 
 
 <?php
