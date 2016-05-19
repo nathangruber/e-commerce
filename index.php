@@ -64,13 +64,13 @@
     <div>
         
             <form action="loginpage.php" method="post">
-                <input class="btn btn-secondary btn-sm btn-block" type="submit" value="Login">
+                <input class="btn btn-stripe btn-sm btn-block" type="submit" value="Login">
             </form>
     </div>
     <br>
         <div>
             <form action="includes/logout.php" method="post">
-                <input class="btn btn-secondary btn-sm btn-block" type="submit" value="Logout">
+                <input class="btn btn-stripe btn-sm btn-block" type="submit" value="Logout">
             </form>
         </div>
   <br>
@@ -88,7 +88,7 @@
 
 <?php
     if ($logged) {
-        ?><a class="btn btn-secondary btn-sm btn-block" href="update.php">Update User Info</a> <?php
+        ?><a class="btn btn-stripe btn-sm btn-block" href="update.php">Update User Info</a> <?php
     } else {
         echo "You are logged out.";
     }
