@@ -79,13 +79,11 @@
         
 
             <form action="register.php" method="post">
-                <input class="btn btn-secondary btn-sm btn-block" type="submit" value="Register">
+                <input class="btn btn-zoomshift" type="submit" value="Register">
             </form>
         </div>
     </div>
 </div>
-
-<a href="#" class="btn btn-zoomshift">Your Button Tetxt</a>
 
 
 <?php
