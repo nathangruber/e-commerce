@@ -86,7 +86,7 @@
 </div>
 <?php
     if ($logged) {
-        ?><a class="btn btn-default" href="update.php">Update User Info</a> <?php
+        ?><a class="btn btn-secondary btn-sm btn-block" href="update.php">Update User Info</a> <?php
     } else {
         echo "You are logged out.";
     }
