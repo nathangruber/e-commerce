@@ -79,7 +79,7 @@
         
 
             <form action="register.php" method="post">
-                <input class="btn btn-zoomshift" type="submit" value="Register">
+                <input class="btn btn-geckoboard" type="submit" value="Register">
             </form>
         </div>
     </div>
