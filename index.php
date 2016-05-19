@@ -74,7 +74,7 @@
             </form>
         </div>
   <br>
-
+s
         <div>
         
 
@@ -84,6 +84,10 @@
         </div>
     </div>
 </div>
+
+<a href="#" class="btn btn-your-class">Your Button Tetxt</a>
+
+
 <?php
     if ($logged) {
         ?><a class="btn btn-secondary btn-sm btn-block" href="update.php">Update User Info</a> <?php
