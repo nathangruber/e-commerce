@@ -79,7 +79,7 @@
         
 
             <form action="register.php" method="post">
-                <input class="btn btn-basecamp" type="submit" value="Register">
+                <input class="btn btn-stripe" type="submit" value="Register">
             </form>
         </div>
     </div>
