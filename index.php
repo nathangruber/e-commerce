@@ -76,13 +76,11 @@
   <br>
 
         <div>
-        
-
-            <form action="register.php" method="post">
+         <form action="register.php" method="post">
                 <input class="btn btn-stripe btn-sm btn-block" type="submit" value="Register">
             </form>
         </div>
-    
+    <br>
 
 <?php
     if ($logged) {
