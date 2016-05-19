@@ -85,7 +85,7 @@
     </div>
 </div>
 
-<a href="#" class="btn btn-geckoboard">Your Button Tetxt</a>
+<a href="#" class="btn btn-zoomshift">Your Button Tetxt</a>
 
 
 <?php
