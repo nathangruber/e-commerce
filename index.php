@@ -51,7 +51,7 @@
         <div class="container">
             <div class="starter-template">
                 <center>
-                    <p class="lead"><img class="img-responsive logo" src="assets/img/bbs.png" alt="BBS logo" height="27" width="27">Please Login or Click Register to set up an account with Blake's Board Shop.</p><small>Our members get access to discounts, free shipping and free merch.</small><br>
+                    <p class="lead">Please Login or Click Register to set up an account with Blake's Board Shop.</p><small>Our members get access to discounts, free shipping and free merch.</small><br>
                 </center>
             </div>
         </div>
@@ -82,9 +82,7 @@
                 <input class="btn btn-stripe btn-sm btn-block" type="submit" value="Register">
             </form>
         </div>
-    </div>
-</div>
-
+    
 
 <?php
     if ($logged) {
@@ -93,6 +91,9 @@
         echo "You are logged out.";
     }
     ?> <!-- /.container -->
+    </div>
+</div>
+
 <br>
 <br>
 <?php require_once 'includes/footer.php'; ?>
