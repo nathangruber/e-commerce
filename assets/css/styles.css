@@ -121,12 +121,12 @@ font-family:'Libre Baskerville', serif;
 .btn-stripe {
     color: #fff;
   background: #808080;
-  background-image: -webkit-linear-gradient(top, #6fccdd, #808080 85%, #bfbfbf);
-  background-image: -moz-linear-gradient(top, #6fccdd, #808080 85%, #bfbfbf);
-  background-image: -ms-linear-gradient(#6fccdd, #808080 85%, #bfbfbf);
-  background-image: -o-linear-gradient(#6fccdd, #808080 85%, #bfbfbf);
-  background-image: linear-gradient(#6fccdd, #808080 85%, #bfbfbf);     
-  background: linear-gradient(top, #6fccdd, #808080 85%, #bfbfbf);      
+  background-image: -webkit-linear-gradient(top, #80ffff, #808080 85%, #bfbfbf);
+  background-image: -moz-linear-gradient(top, #80ffff, #808080 85%, #bfbfbf);
+  background-image: -ms-linear-gradient(#80ffff, #808080 85%, #bfbfbf);
+  background-image: -o-linear-gradient(#80ffff, #808080 85%, #bfbfbf);
+  background-image: linear-gradient(#80ffff, #808080 85%, #bfbfbf);     
+  background: linear-gradient(top, #80ffff, #808080 85%, #bfbfbf);      
   text-shadow: 0 1px 1px rgba(0,0,0,0.53);
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
