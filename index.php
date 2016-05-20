@@ -51,7 +51,7 @@
         <div class="container">
             <div class="starter-template">
                 <center>
-                    <p class="lead">Please Login or Click Register to set up an account with Blake's Board Shop.</p><small>Our members get access to discounts, free shipping and free merch.</small><br>
+                    <p class="lead"></p><small>Please Login or Click Register to set up an account with Blake's Board Shop.</small><br>
                 </center>
             </div>
         </div>
