@@ -55,9 +55,9 @@
               <div id="meta-3" class="widget widgetFooter widget_meta">
               <h4 class="widgettitle">Login:</h4>
               <ul>
-    		  <li><a href="register.php"><i class="fa fa-home fa-fw"></i>Register</a></li>
-			  <li><a href="login.php"><i class="fa fa-link"></i>Login</a></li>
-			  <li><a href="logout.php"><i class="fa fa-envelope fa-fw"></i>Logout</a></li>
+    		  <li><a href="register.php"><i class="glyphicon glyphicon-user"></i></i>Register</a></li>
+			  <li><a href="login.php"><i class="glyphicon glyphicon-cloud"></i></i>Login</a></li>
+			  <li><a href="logout.php"><i class="glyphicon glyphicon-remove"></i></i>Logout</a></li>
              </ul>
 </div>      </div> <!-- end
  
