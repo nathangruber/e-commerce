@@ -61,6 +61,7 @@
              </ul>
 </div>      </div> 
              <div class="rightimage"><img src="assets/img/bbs1.png" alt="BBS logo" height="154" width="168"></div>
+             <hr>
 
 
 
