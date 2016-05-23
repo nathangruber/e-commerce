@@ -29,9 +29,9 @@
               <div id="meta-3" class="widget widgetFooter widget_meta">
               <h4 class="widgettitle">Links:</h4>
               <ul>
-    		  <li><a href="#"><i class="fa fa-home fa-fw"></i> Home</a></li>
-			  <li><a href="privacypolicy.php"><i class="fa fa-link"></i>Contact Us</a></li>
-			  <li><a href="#"><i class="fa fa-envelope fa-fw"></i>Site Map</a></li>
+    		  <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Home</a></li>
+			  <li><a href="about.php"><i class="fa fa-link"></i>About</a></li>
+			  <li><a href="sitemap.php"><i class="fa fa-envelope fa-fw"></i>Site Map</a></li>
              </ul>
 </div>      </div> <!-- end widget1 -->
 
@@ -83,7 +83,7 @@
              '&copy; 2016 Blake's Board Shop'
             </div>
             <div class="col-md-4 col-md-offset-4 attribution">
-             Developed by  <a target="_blank" href="#">Nathan Gruber</a> .
+             Developed by  <a target="_blank" href="#">Nathan Gruber</a>
             </div>
           </div> <!-- end .row -->
         </div>
