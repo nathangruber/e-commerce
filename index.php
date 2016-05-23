@@ -14,6 +14,8 @@
         require_once'includes/navbar.php';
     }
     ?>
+   <br>
+   <br>
     <?php
     if ($logged) {
         echo "Welcome Back, ";
