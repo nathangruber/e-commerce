@@ -59,8 +59,9 @@
 			  <li><a href="login.php"><form action="login.php" method="post"><i class="glyphicon glyphicon-cloud" type="submit" value="Login"></i></i>Login</a></li>
 			  <li><a href="logout.php"><form action="logout.php" method="post"><i class="glyphicon glyphicon-remove" type="submit" value="Logout"></i></i>Logout</a></li>
              </ul>
-</div>      </div> <!-- end
- 
+</div>      </div> 
+             <div class="rightimage"><img src="assets/img/bbs1.png" alt="BBS logo" height="154" width="168"></div>
+
 
 
           </div> <!-- end .row -->
@@ -73,7 +74,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4 copyright">
-             '&copy; 2016 Blake's Board Shop'
+             &copy; 2016 Blake's Board Shop
             </div>
             <div class="col-md-4 col-md-offset-4 attribution">
              Developed by  <a target="_blank" href="#">Nathan Gruber</a>
