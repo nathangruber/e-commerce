@@ -50,18 +50,6 @@
             <a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/e-commerce/category.php?id=12" id="black"><img id="truck" src="assets/img/maxresdefault.jpg" alt="Skate Truck" height="187" width="333"></a>
         </div>
     </div>
-
-    <div class="bbstext1">
-        <div class="container">
-            <div class="starter-template">
-                <center>
-                    <p class="lead"></p><small>Please Login or Click Register to set up an account with Blake's Board Shop.</small><br>
-                </center>
-            </div>
-        </div>
-    </div>
-<center>
-
 <?php require_once 'includes/footer.php'; ?>
 
 
