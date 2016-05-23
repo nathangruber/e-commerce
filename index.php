@@ -57,43 +57,7 @@
         </div>
     </div>
 <center>
- <div class="container">
- <div class="col-sm-12">  
-  
 
-    <div>
-        
-            <form action="loginpage.php" method="post">
-                <input class="btn btn-stripe btn-sm btn-block" type="submit" value="Login">
-            </form>
-    </div>
-    <br>
-        <div>
-            <form action="includes/logout.php" method="post">
-                <input class="btn btn-stripe btn-sm btn-block" type="submit" value="Logout">
-            </form>
-        </div>
-  <br>
-
-        <div>
-         <form action="register.php" method="post">
-                <input class="btn btn-stripe btn-sm btn-block" type="submit" value="Register">
-            </form>
-        </div>
-    <br>
-
-<?php
-    if ($logged) {
-        ?><a class="btn btn-stripe btn-sm btn-block" href="update.php">Update User Info</a> <?php
-    } else {
-        echo "You are logged out.";
-    }
-    ?> <!-- /.container -->
-    </div>
-</div>
-
-<br>
-<br>
 <?php require_once 'includes/footer.php'; ?>
 
 
