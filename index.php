@@ -26,6 +26,7 @@
                 </script>
             </div>
             <br>
+            <br>
             <?php
     if ($logged) {
         echo "Welcome Back, ";
