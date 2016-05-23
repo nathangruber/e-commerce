@@ -14,17 +14,16 @@
         require_once'includes/navbar.php';
     }
     ?>
-   <br>
-   <br>
-    <?php
+ 
+    <header class="main-header" role="banner">
+        <div id="container">
+            <?php
     if ($logged) {
         echo "Welcome Back, ";
         echo $_SESSION['name'];
     }
     ?>
  
-    <header class="main-header" role="banner">
-        <div id="container">
             <div class="leftimage"><img src="assets/img/bbs1.png" alt="BBS logo" height="154" width="168"></div>
 <br>
             <div class="righttext">
