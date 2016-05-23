@@ -19,7 +19,7 @@
 </html>  -->
 <footer id="footer" class="clearfix">
       
-      <center><div id="footer-widgets">
+ 	<div id="footer-widgets">
 
         <div class="container">
 
@@ -51,7 +51,15 @@
 				   </li>
 				</ul>
 		</div>            </div> <!-- end widget1 -->
-
+<div class="col-sm-6 col-md-2">
+              <div id="meta-3" class="widget widgetFooter widget_meta">
+              <h4 class="widgettitle">Login:</h4>
+              <ul>
+    		  <li><a href="register.php"><i class="fa fa-home fa-fw"></i>Register</a></li>
+			  <li><a href="login.php"><i class="fa fa-link"></i>Login</a></li>
+			  <li><a href="logout.php"><i class="fa fa-envelope fa-fw"></i>Logout</a></li>
+             </ul>
+</div>      </div> <!-- end
  
 
 
@@ -61,7 +69,6 @@
 
         </div> <!-- end .container -->
       </div> <!-- end #footer-widgets -->
-</center>
       <div id="sub-floor">
         <div class="container">
           <div class="row">
