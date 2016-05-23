@@ -183,7 +183,7 @@ font-family:'Libre Baskerville', serif;
 
 #footer li {
     padding: 7px 0px;
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.2);
     margin: 0px;
 }
 
