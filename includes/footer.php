@@ -27,11 +27,11 @@
           <div class="row">
             <div class="col-sm-6 col-md-2">
               <div id="meta-3" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Importent Page :</h4>
+              <h4 class="widgettitle">Links:</h4>
               <ul>
     		  <li><a href="#"><i class="fa fa-home fa-fw"></i> Home</a></li>
-			  <li><a href="privacypolicy.php"><i class="fa fa-link"></i>   Privacy Policy</a></li>
-			  <li><a href="#"><i class="fa fa-envelope fa-fw"></i> Contact Us</a></li>
+			  <li><a href="privacypolicy.php"><i class="fa fa-link"></i>Contact Us</a></li>
+			  <li><a href="#"><i class="fa fa-envelope fa-fw"></i>Site Map</a></li>
              </ul>
 </div>      </div> <!-- end widget1 -->
 
@@ -51,30 +51,7 @@
 				</ul>
 		</div>            </div> <!-- end widget1 -->
 
-            <div class="col-sm-6 col-md-4">
-              <div id="meta-4" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Subscribe :</h4>
-
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">E-mail :</span>
-                  <input class="form-control" placeholder="Write your email .." type="text">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">Phone  :</span>
-                  <input class="form-control" placeholder="+96777000000" type="text">
-                   <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">Subscribe !</button>
-                  </span>
-                </div>
-              </div>
-
-
-              </div>
-             </div> <!-- end widget1 -->
+ 
 
             <div class="col-sm-6 col-md-4">
               <div id="search-3" class="widget widgetFooter widget_search"><h4 class="widgettitle">Search in Faploo :</h4>
@@ -103,10 +80,10 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4 copyright">
-             Copy right for Faploo © 2015
+             '&copy; 2016 Blake's Board Shop'
             </div>
             <div class="col-md-4 col-md-offset-4 attribution">
-             Developer by  <a target="_blank" href="#">Faploo team</a> .
+             Developed by  <a target="_blank" href="#">Nathan Gruber</a> .
             </div>
           </div> <!-- end .row -->
         </div>

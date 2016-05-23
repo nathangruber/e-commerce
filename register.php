@@ -97,7 +97,7 @@ if ( !empty($_POST)) {
 
 <body>
     <?php require_once('includes/navbar.php');?>
-
+<br>
     <div class="container">
         <?php if(!$logged){ ?>
 
