@@ -60,7 +60,7 @@
 			  <li><a href="logout.php"><form action="logout.php" method="post"><i class="glyphicon glyphicon-remove" type="submit" value="Logout"></i></i>Logout</a></li>
              </ul>
 </div>      </div> 
-             <div class="rightimage"><img src="assets/img/bbs1.png" alt="BBS logo" height="154" width="168"></div>
+             <div class="rightimage"><img src="assets/img/bbs1.png" alt="BBS logo"></div>
 
 
 
