@@ -54,7 +54,7 @@ float: left;
 }
 .rightimage{
   float:right;
-  height:1px;
+  position:relative;
 }
 .righttext { 
 font-family: 'Libre Baskerville', serif;
