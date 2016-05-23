@@ -7,13 +7,13 @@
 <body>
     <title>Blake's Board Shop</title>
     
-    <?php
+    <center><?php
     if ($admin) {
         require_once'includes/adminNavbar.php';
     } else {
         require_once'includes/navbar.php';
     }
-    ?>
+    ?></center>
  
     <header class="main-header" role="banner">
         <div id="container">
