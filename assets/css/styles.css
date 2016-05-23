@@ -52,6 +52,9 @@ width:70%;
 float: left;
 
 }
+.rightimage{
+  float:right;
+}
 .righttext { 
 font-family: 'Libre Baskerville', serif;
 width: 50%;
