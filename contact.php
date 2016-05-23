@@ -19,23 +19,53 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="contactus">
                     <br>
+                  <p>Contact hikeMe</p>
                     <br>
-
-                    <p>Contact Us</p><br>
-
-                    <form name="contactform" method="post" action="emailform.php">
-                        <label for="first_name">First Name *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input type="text" name="first_name" maxlength="45" size="30"> <label for="last_name">Last Name     *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input type="text" name="last_name" maxlength="45" size="30"> <label for="email">Email Address *&nbsp;</label> <input type="text" name="email" maxlength="45" size="30"> <label for="telephone">Phone Number*</label> <input type="text" name="telephone" maxlength="30" size="30"> <label for="comments">Comments *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
-                        <textarea name="comments" maxlength="1000" cols="30" rows="5">
-</textarea> <input class="btn btn-default" type="submit" value="Submit">
+                </div>
+                     <form class="form-horizontal" name="contactform" method="post" action="emailform.php">
+                      <div class="form-group">
+                        <label for="first_name" class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="first_name" placeholder="First Name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="last_name" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="last_name" placeholder="Last Name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">Email Address</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="email" placeholder="Email Address">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="last_name" class="col-sm-2 control-label">Phone Number</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="telephone" placeholder="Phone Number">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="comments" class="col-sm-2 control-label">Comments<br></label>
+                        <div class="col-sm-10">
+                       <p>&nbsp;</p><textarea class="form-control" rows="3" name="comments"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                      </div>
                     </form>
                 </div>
             </div>
-        </div><?php
-                require_once('includes/footer.php');
-                ?>
-    </div>
+        </div>
+
+    <?php require_once 'includes/footer.php';?>
 </body>
 </html>
