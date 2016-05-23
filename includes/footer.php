@@ -53,7 +53,6 @@
 		</div>            </div> <!-- end widget1 -->
 <div class="col-sm-6 col-md-2">
               <div id="meta-3" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">&nbsp;&nbsp;Account:</h4>
               <ul>
     		  <li><a href="register.php"><form action="register.php" method="post"><i class="glyphicon glyphicon-user" type="submit" value="Register"></i></i>Register</a></li>
 			  <li><a href="login.php"><form action="login.php" method="post"><i class="glyphicon glyphicon-cloud" type="submit" value="Login"></i></i>Login</a></li>
