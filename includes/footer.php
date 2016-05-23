@@ -28,7 +28,7 @@
           <div class="row">
             <div class="col-sm-6 col-md-2">
               <div id="meta-3" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Links:</h4>
+              <h4 class="widgettitle">&nbsp;&nbsp;Links:</h4>
               <ul>
     		  <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Home</a></li>
 			  <li><a href="about.php"><i class="fa fa-link"></i>About</a></li>
@@ -38,7 +38,7 @@
 
             <div class="col-sm-6 col-md-2">
               		<div id="recent-posts-3" class="widget widgetFooter widget_recent_entries">
-                    <h4 class="widgettitle">Our social media :</h4>
+                    <h4 class="widgettitle">&nbsp;&nbsp;Our social media :</h4>
                     <ul>
 					<li>
 				     <a href="https://www.facebook.com/mr.dauod" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
@@ -53,7 +53,7 @@
 		</div>            </div> <!-- end widget1 -->
 <div class="col-sm-6 col-md-2">
               <div id="meta-3" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Login:</h4>
+              <h4 class="widgettitle">&nbsp;&nbsp;Account:</h4>
               <ul>
     		  <li><a href="register.php"><form action="register.php" method="post"><i class="glyphicon glyphicon-user" type="submit" value="Register"></i></i>Register</a></li>
 			  <li><a href="login.php"><form action="login.php" method="post"><i class="glyphicon glyphicon-cloud" type="submit" value="Login"></i></i>Login</a></li>
