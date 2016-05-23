@@ -167,7 +167,7 @@ if ( !empty($_POST)) {
                     <button type="submit" class="btn btn-success">Create</button> <a class="btn btn-default" href="index.php">Back</a>
                 </div>
             </form><?php }else{ ?>
-
+            	<br>
             <h3>You are currently logged in, please log out in order to create a new user.</h3><?php  } ?>
         </div>
     </div><!-- /container -->
