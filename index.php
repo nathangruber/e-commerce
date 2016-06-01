@@ -16,7 +16,7 @@
     ?>
  
     <header class="main-header" role="banner">
-       <!-- <div id="container">
+       < <div id="container">
         
             
             <div class="leftimage"><img src="assets/img/bbs1.png" alt="BBS logo" height="154" width="168"></div>
@@ -33,11 +33,10 @@
         echo "Welcome Back, ";
         echo $_SESSION['name'];
     }
-    ?>  -->
+    ?>
  
             <div class="jumbotron">
-  <h1>Blake's Board Shop</h1> 
-  <br>
+
 </div>
 <div class="container">
   <p></p> 
