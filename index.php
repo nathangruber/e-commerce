@@ -17,11 +17,11 @@
  <br>
  <br>
  <br>
- <br>
     <div class="jumbotron">
     </div>
     <div class="container">
     </div>
+    <div class="container">
 
     <div class="container">
         <div class="img-responsive col-sm-4">
