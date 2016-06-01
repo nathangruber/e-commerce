@@ -78,9 +78,9 @@
                 </div> <!-- end .row -->
               </div>
             </div>
-
-  
-
+    </div>
+  </div>
+</div>
     </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript">
 </script><!-- Latest compiled and minified JavaScript -->
