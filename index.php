@@ -17,10 +17,7 @@
  
     <header class="main-header" role="banner">
         <div id="container">
-        <div class="jumbotron">
-        </div>
-        <div class="container">
-        </div>
+        
             
             <div class="leftimage"><img src="assets/img/bbs1.png" alt="BBS logo" height="154" width="168"></div>
 
