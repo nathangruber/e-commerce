@@ -17,6 +17,10 @@
  
     <header class="main-header" role="banner">
         <div id="container">
+        <div class="jumbotron">
+        </div>
+        <div class="container">
+        </div>
             
             <div class="leftimage"><img src="assets/img/bbs1.png" alt="BBS logo" height="154" width="168"></div>
 
@@ -34,7 +38,10 @@
     }
     ?>
  
-        </div><img id="banner" src="assets/img/skatelogo.png" alt="Banner Image">
+            <div class="jumbotron">
+            </div>
+            <div class="container">
+            </div>
     </header>
 
     <div class="container">
