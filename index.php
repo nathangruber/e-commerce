@@ -22,8 +22,7 @@
   <p></p> 
 </div>
 <div class="container">
-  <p>This is some text.</p> 
-  <p>This is another text.</p> 
+  <p></p> 
 </div>
 
     <div class="container">

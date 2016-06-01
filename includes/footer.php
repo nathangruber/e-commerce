@@ -16,7 +16,7 @@
   <li><a href="##########">Link 5</a></li>
 </td>
 <td>
-<h2>Navigation</h2>
+<h2>Links</h2>
   <li><a href="##########">Link 1</a></li>
   <li><a href="##########">Link 2</a></li>
   <li><a href="##########">Link 3</a></li>
