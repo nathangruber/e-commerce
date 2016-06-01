@@ -16,7 +16,7 @@
 <script src="searchFunction.js"></script>
 <script src="assets/js/hidden.js"></script> 
 </body>
-</html>  -->
+</html>  
 
   <footer id="footer" class="clearfix">
   <div class="lefttext">
@@ -40,7 +40,7 @@
         			    <li><a href="sitemap.php"><i class="fa fa-envelope fa-fw"></i> Site Map</a></li>
              </ul>
              </div>     
-            </div> <!-- end widget1 -->
+            </div> <!-- end widget1 --
 
             <div class="col-sm-6 col-md-2">
               		<div id="recent-posts-3" class="widget widgetFooter widget_recent_entries">
@@ -56,7 +56,7 @@
             				   </li>
   				         </ul>
   		           </div>           
-               </div> <!-- end widget1 -->
+               </div> <!-- end widget1 --
            <div class="col-sm-6 col-md-2">
               <div id="meta-3" class="widget widgetFooter widget_meta">
               <ul>
@@ -64,7 +64,7 @@
         			    <li><a href="login.php"><form action="login.php" method="post"><i class="glyphicon glyphicon-cloud" type="submit" value="Login"></i></i>Login</a></li>
         			    <li><a href="logout.php"><form action="logout.php" method="post"><i class="glyphicon glyphicon-remove" type="submit" value="Logout"></i></i>Logout</a></li>
               </ul>
-             </div> <!-- end .row -->
+             </div> <!-- end .row --
             </div>
             <div id="sub-floor">
               <div class="container">
@@ -75,7 +75,7 @@
                   <div class="col-md-4 col-md-offset-4 attribution">
                    Developed by  <a target="_blank" href="#">Nathan Gruber</a>
                   </div>
-                </div> <!-- end .row -->
+                </div> <!-- end .row --
               </div>
             </div>
     </div>
@@ -83,7 +83,7 @@
 </div>
     </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript">
-</script><!-- Latest compiled and minified JavaScript -->
+</script><!-- Latest compiled and minified JavaScript --
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript">
 </script>
 
@@ -92,3 +92,27 @@
  <!--<a href="https://twitter.com/bbshop" class="twitter-follow-button" data-show-count="false">Follow @bbshop</a> <script type="text/javascript">
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
                 </script> -->
+<table><tr>
+<td width="30%">
+<h2>About</h2>
+<p>Text Please...Text Please...Text Please...Text Please...Text Please...Text Please...Text Please...Text Please...Text Please...Text Please...Text Please...Text Please...Text Please...Text Please....<a href="##########">Read More...</a></p>
+</td>
+<td width="10%"></td>
+<td width="33%">
+<h2>Navigation</h2>
+  <li><a href="##########">Link 1</a></li>
+  <li><a href="##########">Link 2</a></li>
+  <li><a href="##########">Link 3</a></li>
+  <li><a href="##########">Link 4</a></li>
+  <li><a href="##########">Link 5</a></li>
+</td>
+<td>
+<h2>Navigation</h2>
+  <li><a href="##########">Link 1</a></li>
+  <li><a href="##########">Link 2</a></li>
+  <li><a href="##########">Link 3</a></li>
+  <li><a href="##########">Link 4</a></li>
+  <li><a href="##########">Link 5</a></li>
+</td>
+</tr>
+</table>
