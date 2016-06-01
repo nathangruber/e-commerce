@@ -53,11 +53,14 @@
               <div id="meta-3" class="widget widgetFooter widget_meta">
               <ul>
     		  <li><a href="register.php"><form action="register.php" method="post"><i class="glyphicon glyphicon-user" type="submit" value="Register"></i></i>Register</a></li>
-			  <li><a href="login.php"><form action="login.php" method="post"><i class="glyphicon glyphicon-cloud" type="submit" value="Login"></i></i>Login</a></li>
-			  <li><a href="logout.php"><form action="logout.php" method="post"><i class="glyphicon glyphicon-remove" type="submit" value="Logout"></i></i>Logout</a></li>
+			    <li><a href="login.php"><form action="login.php" method="post"><i class="glyphicon glyphicon-cloud" type="submit" value="Login"></i></i>Login</a></li>
+			    <li><a href="logout.php"><form action="logout.php" method="post"><i class="glyphicon glyphicon-remove" type="submit" value="Logout"></i></i>Logout</a></li>
              </ul>
-</div>      </div> 
-             <div class="rightimage"><img src="assets/img/bbs1.png" alt="BBS logo"></div>
+                          <div class="rightimage"><img src="assets/img/bbs1.png" alt="BBS logo"></div>
+
+             </div> 
+
+
 
 
 
