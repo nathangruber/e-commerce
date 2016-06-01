@@ -16,12 +16,10 @@
     ?>
  <br>
  <br>
-    <header>
     <div class="jumbotron">
     </div>
     <div class="container">
     </div>
-    </header>
 
     <div class="container">
         <div class="img-responsive col-sm-4">
