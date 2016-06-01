@@ -14,7 +14,8 @@
         require_once'includes/navbar.php';
     }
     ?>
- 
+ <br>
+ <br>
     <header>
     <div class="jumbotron">
     </div>
