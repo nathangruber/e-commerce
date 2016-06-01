@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-         <a class="navbar-brand" href="index.php"><img src="assets/img/bbs.png" alt="BBS logo" style="float:left" height="26" width="26"></a>
+         <!--<a class="navbar-brand" href="index.php"><img src="assets/img/bbs.png" alt="BBS logo" style="float:left" height="26" width="26"></a> -->
 
      </div>
 
