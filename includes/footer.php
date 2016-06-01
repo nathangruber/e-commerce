@@ -25,6 +25,7 @@
 </td>
 </tr>
 </table>
+<br>
 <center><p><small>&copy; 2016 Blake's Board Shop. Created by Nathan Gruber. All rights reserved. <a href="sitemap.php">Site Map</a></small></p></center>
 <script src="assets/js/jquery.min.js" type="text/javascript">
 </script><script src="assets/js/bootstrap.min.js" type="text/javascript">
