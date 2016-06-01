@@ -55,7 +55,7 @@
     		  <li><a href="register.php"><form action="register.php" method="post"><i class="glyphicon glyphicon-user" type="submit" value="Register"></i></i>Register</a></li>
 			    <li><a href="login.php"><form action="login.php" method="post"><i class="glyphicon glyphicon-cloud" type="submit" value="Login"></i></i>Login</a></li>
 			    <li><a href="logout.php"><form action="logout.php" method="post"><i class="glyphicon glyphicon-remove" type="submit" value="Logout"></i></i>Logout</a></li>
-          <li><a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/e-commerce/index.php" target="_blank"><i class="assets/img/bbs1.png"></i> Blake's Board Shop makes high quality, made in Wisconsin skateboard decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</a></li>
+          <li></i> Blake's Board Shop makes high quality, made in Wisconsin skateboard decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</a></li>
  
 
 
