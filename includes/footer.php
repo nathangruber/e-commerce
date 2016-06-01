@@ -30,8 +30,8 @@
               <div id="meta-3" class="widget widgetFooter widget_meta">
               <ul>
     		  <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Home</a></li>
-			  <li><a href="about.php"><i class="fa fa-link"></i>About</a></li>
-			  <li><a href="sitemap.php"><i class="fa fa-envelope fa-fw"></i>Site Map</a></li>
+			  <li><a href="about.php"><i class="fa fa-link"></i> About</a></li>
+			  <li><a href="sitemap.php"><i class="fa fa-envelope fa-fw"></i> Site Map</a></li>
              </ul>
 </div>      </div> <!-- end widget1 -->
 
