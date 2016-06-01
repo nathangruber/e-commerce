@@ -95,7 +95,7 @@
 <table><tr>
 <td width="30%">
 <h2>About</h2>
-<p> Blake's Board Shop makes high quality, made in Wisconsin skateboard decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.<a href="##########">Read More...</a></p>
+<p> Blake's Board Shop makes high quality, made in Wisconsin skateboard decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p>
 </td>
 <td width="10%"></td>
 <td width="33%">
@@ -116,7 +116,7 @@
 </td>
 </tr>
 </table>
-<center><p><small>&copy; 2016 hikeMe. Created by Nathan Gruber. All rights reserved. <a href="sitemap.php">Site Map</a></small></p></center>
+<center><p><small>&copy; 2016 Blake's Board Shop. Created by Nathan Gruber. All rights reserved. <a href="sitemap.php">Site Map</a></small></p></center>
 <script src="assets/js/jquery.min.js" type="text/javascript">
 </script><script src="assets/js/bootstrap.min.js" type="text/javascript">
 </script>
