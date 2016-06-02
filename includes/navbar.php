@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="pull-left" href="index.php"><img src="assets/img/bbs.png"></a>     
+        <a class="pull-left" href="index.php"><img src="assets/img/bbs.png" height="26" width="26"></a>     
 
         </div>
          
