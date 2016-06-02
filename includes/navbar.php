@@ -59,9 +59,8 @@ Database::disconnect();
       </div>
     </div>
   </form>
-      <li><a href="cart.php">Cart</a></li>
 
         </div>
       </div>
-      
-      </nav>
+            <li><a href="cart.php">Cart</a></li>
+ </nav>
