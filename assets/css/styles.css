@@ -1,7 +1,7 @@
 
 body {
     
-    background-color: #FFFFFF;
+    background-color: #000000;
 }
 
 }
@@ -167,7 +167,4 @@ font-family:'Libre Baskerville', serif;
   padding: 20px 0;
   text-align: center;
 
-}
-.nav{
-  color:black;
 }
