@@ -64,15 +64,6 @@ font-family:'Libre Baskerville', serif;
   font-size: 18px;
   color:#000000;
 }
-.navbar {
-   background-color: transparent;
-   background: transparent;
-   border-color: transparent;
-}
-
-.navbar li { 
-  color: #333; 
-}
 
 .siteimage{
  padding-top:100px;
