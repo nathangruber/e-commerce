@@ -47,34 +47,16 @@ Database::disconnect();
     <li><a href="about.php" >About</a></li>
     <li><a href="contact.php">Contact Us</a></li>
     <li><a href="update.php">My Account</a></li>
+
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
     <li><a href="cart.php">Cart</a></li>
             </ul>
-<form method="post" action="index.php" class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search by city..." name="search">
-        </div>
-        <button type="submit" class="btn btn-default">Search</button>
-      </form>
-  
-  
-    <ul class="nav navbar-nav pull-right">
-      
-      
-    <?php
-    if(!$logged){
-    echo '<li><a href="register.php">Register</a></li>';
-      echo '<li><a href="loginpage.php">Login</a></li>';
-    }else{
-      echo '<li><a href="myhikes.php">' . $_SESSION['name'] . '</a></li>';
-    echo '<li><a href="logout.php">Logout</a></li>';
-    }
-    ?>
-    </ul>
-</nav>
-
-
-
- <!--     <div class="container">
+      <div class="container">
         <div class="col-md-3 pull-right">
           <form class="navbar-form" role="search">
             <div class="input-group add-on">
