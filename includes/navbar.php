@@ -48,8 +48,12 @@ Database::disconnect();
     <li><a href="contact.php">Contact Us</a></li>
     <li><a href="update.php">My Account</a></li>
 
-    <li><a href="update.php"></a></li>
-    <li><a href="update.php"></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href="">M</a></li>
+
+
 
     <li><a href="cart.php">Cart</a></li>
             </ul>
