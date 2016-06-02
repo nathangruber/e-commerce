@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
     </button>
       <!-- <a class="navbar-brand" href="index.php" id="black"><img src="assets/img/bbs.png" height="26" width="26"></a> -->
-        <a id="logo" class="navbar-brand" href="index.php"><img src="assets/img/bbs.png" height="26" width="46"></a>
+        <a id="logo" class="navbar-brand" href="index.php"><img src="assets/img/bbs.png" height="26" width="26"></a>
 
      </div>
 
