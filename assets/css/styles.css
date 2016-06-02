@@ -168,3 +168,8 @@ font-family:'Libre Baskerville', serif;
     overflow:hidden;
     color: white;
 }
+#logo {
+    margin-top: 0px;
+    padding-right: 10px;
+}
+
