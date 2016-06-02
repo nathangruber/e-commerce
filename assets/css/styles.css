@@ -158,7 +158,7 @@ font-family:'Libre Baskerville', serif;
     overflow:hidden;
     color: white;
 }
-#pull-left {
+.pull-left {
     margin-top: 10px;
 }
 
