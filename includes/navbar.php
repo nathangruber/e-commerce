@@ -17,7 +17,7 @@
             
         <ul class="nav navbar-nav">
         
-        <li><a  href="index.php">Blake's Board Shop</a></li>    
+        <li><a  href="index.php">Home</a></li>    
 
 
     <?php
