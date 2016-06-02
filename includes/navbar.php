@@ -47,7 +47,7 @@ Database::disconnect();
    <!-- <li><a href="about.php" >About</a></li> -->
     <li><a href="contact.php">Contact Us</a></li>
     <li><a href="update.php">My Account</a></li>
-    <li><a href="cart.php">Cart</a></li>
+   <!--- <li><a href="cart.php">Cart</a></li> -->
             </ul>
       <div class="container">
 <div class="col-md-3 pull-right">
@@ -57,10 +57,10 @@ Database::disconnect();
       <div class="input-group-btn">
         <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
       </div>
-          <li><a href="cart.php">Cart</a></li>
-
     </div>
   </form>
+      <li><a href="cart.php">Cart</a></li>
+
         </div>
       </div>
       
