@@ -57,6 +57,8 @@ Database::disconnect();
       <div class="input-group-btn">
         <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
       </div>
+          <li><a href="cart.php">Cart</a></li>
+
     </div>
   </form>
         </div>
