@@ -161,13 +161,7 @@ font-family:'Libre Baskerville', serif;
 .pull-left {
     margin-top: 10px;
 }
-.content {
-  padding: 30px;
-  font: 300 40px , 'Libre Baskerville' sans-serif;
-  text-align: center;
-  color: black;
-  background: #eee;
-}
+
 
 .footer {
   padding: 20px 0;
