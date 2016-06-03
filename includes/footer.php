@@ -18,7 +18,17 @@
                 </script></p>  -->
 
 
-
-<footer id="footer">
-    <p class="h5 text-muted" ><small>&copy; 2016 Blake's Board Shop. Created by Nathan Gruber. All rights reserved. <a href="sitemap.php">Site Map</a></small></p></center>
-</footer>
+<div class="container">  
+ 
+  <div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="navbar-text pull-left">&copy; 2016 Blake's Board Shop. Created by Nathan Gruber. All rights reserved. <a href="sitemap.php">Site Map</a> 
+           <a href="http://tinyurl.com/tbvalid" target="_blank" >HTML 5 Validation</a>
+      </p>
+      
+      <a href="http://youtu.be/zJahlKPCL9g" class="navbar-btn btn-danger btn pull-right">
+      <span class="glyphicon glyphicon-star"></span>  Subscribe on YouTube</a>
+    </div>
+    
+    
+  </div>

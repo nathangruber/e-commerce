@@ -165,8 +165,8 @@ font-family:'Libre Baskerville', serif;
 
 /* Set the fixed height of the footer here */
 footer {
-  height: 30px;
-  background-color: grey;
+  height: 20px;
+  background-color: black;
 }
 footer > p {
   padding: 0 125px;
