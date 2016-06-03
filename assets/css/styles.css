@@ -168,4 +168,6 @@ font-family:'Libre Baskerville', serif;
   text-align: center;
 
 }
-
+.navbar-header {
+    background-color:transparent;
+}
