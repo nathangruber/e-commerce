@@ -78,9 +78,8 @@
                 Text Caption
             </p>
         </div>
-      
+      <br>
     </div>
-    <br>
 <?php require_once 'includes/footer.php'; ?>
 
 
