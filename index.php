@@ -39,7 +39,7 @@
     </div> -->
 <div class="container-fluid">
     <div class="row text-center">
-        <h3 style="color:white;font-family:verdana;">Snap Tight Image Tiles (Responisve)</h3>
+        <h3 style="color:lightgrey;font-family:verdana;">Snap Tight Image Tiles (Responisve)</h3>
     </div>
     <div class="row">
         
