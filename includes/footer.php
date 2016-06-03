@@ -17,20 +17,7 @@
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
                 </script></p>  -->
 
-<!-- Wrap all page content here -->
-<div id="wrap">  
-  <!-- Begin page content -->
-  <div class="container">
-    <header class="page-header">
-      <h3>Sticky Footer Example</h3>
-    </header>
-    <section>
-        <p class="lead">Page Body </p>
-        <p class="lead">Page Body </p>
 
-    </section>
-  </div>
-</div>
 
 <footer id="footer">
     <p class="h5 text-muted">Sticky Footer</p>
