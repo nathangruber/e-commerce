@@ -20,5 +20,5 @@
 
 
 <footer id="footer">
-    <p class="h5 text-muted">Sticky Footer</p>
+    <p class="h5 text-muted" ><small>&copy; 2016 Blake's Board Shop. Created by Nathan Gruber. All rights reserved. <a href="sitemap.php">Site Map</a></small></p></center>
 </footer>
