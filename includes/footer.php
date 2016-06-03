@@ -1,7 +1,7 @@
 
 <!--<div class="content"><a href="https://twitter.com/bbshop" class="twitter-follow-button" data-show-count="false">Follow @bbshop</a> <script type="text/javascript">
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-                </script></p></div> -->
+                </script></p></div>
   <div class="footer">
   </div>
   <center><p><small>&copy; 2016 Blake's Board Shop. Created by Nathan Gruber. All rights reserved. <a href="sitemap.php">Site Map</a></small></p></center>
@@ -13,6 +13,25 @@
 <script src="js/bootstrap.min.js"></script>
 
 
-<!--<p> Blake's Board Shop makes high quality, made in Wisconsin skateboard decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop. <a href="https://twitter.com/bbshop" class="twitter-follow-button" data-show-count="false">Follow @bbshop</a> <script type="text/javascript">
+<p> Blake's Board Shop makes high quality, made in Wisconsin skateboard decks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop. <a href="https://twitter.com/bbshop" class="twitter-follow-button" data-show-count="false">Follow @bbshop</a> <script type="text/javascript">
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
                 </script></p>  -->
+
+<!-- Wrap all page content here -->
+<div id="wrap">  
+  <!-- Begin page content -->
+  <div class="container">
+    <header class="page-header">
+      <h3>Sticky Footer Example</h3>
+    </header>
+    <section>
+        <p class="lead">Page Body </p>
+        <p class="lead">Page Body </p>
+
+    </section>
+  </div>
+</div>
+
+<footer id="footer">
+    <p class="h5 text-muted">Sticky Footer</p>
+</footer>
