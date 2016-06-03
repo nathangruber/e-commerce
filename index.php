@@ -43,7 +43,7 @@
     </div>
     <div class="row">
         
-        <div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
+        <center><div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
             <p>
                 Text Caption
             </p>
@@ -57,7 +57,7 @@
             <p>
                 Text Caption
             </p>
-        </div>
+        </div></center>
 
      
         
