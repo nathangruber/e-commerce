@@ -16,18 +16,13 @@
     ?>
  <br>
  <br>
- <br>
     <div class="jumbotron">
-  <br>
-  <br>
-  <br>
-  <br>
   <h1>Blake's Board Shop</h1> 
   <p></p> 
-</div>
-<div class="container">
-  <p></p> 
-</div>
+    </div>
+    <div class="container">
+      <p></p> 
+    </div>
 
 <!--    <div class="container">
         <div class="img-responsive col-sm-4">
