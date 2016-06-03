@@ -43,7 +43,7 @@
     </div>
     <div class="row">
         
-        <div class="cover-card col-sm-3" style="background: url(http://lorempixel.com/300/200/nightlife/4) no-repeat center top;background-size:cover;">
+        <div class="cover-card col-sm-3" <a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/e-commerce/category.php?id=12"<img id="truck" src="assets/img/maxresdefault.jpg" alt="Skate Truck" height="187" width="333"></a> no-repeat center top;background-size:cover;">
             <p>
                 Text Caption
             </p>
