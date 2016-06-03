@@ -25,12 +25,10 @@
       <p class="navbar-text pull-left">&copy; 2016 Blake's Board Shop. Created by Nathan Gruber. All rights reserved. <a href="sitemap.php">Site Map</a> 
       </p>
       
-      <a href="https://twitter.com/bbshop"  class="twitter-follow-button pull-right">
-      <span class="glyphicon glyphicon-star"></span>  Subscribe on YouTube</a>
+      <a href="https://twitter.com/bbshop"  class="twitter-follow-button pull-right" data-show-count="false">Follow @bbshop</a> <script type="text/javascript">
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                </script></p>
     </div>
     
     
   </div>
-<a href="https://twitter.com/bbshop" class="twitter-follow-button" data-show-count="false">Follow @bbshop</a> <script type="text/javascript">
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-                </script></p>
