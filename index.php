@@ -80,6 +80,7 @@
         </div>
       
     </div>
+    <br>
 <?php require_once 'includes/footer.php'; ?>
 
 
