@@ -59,11 +59,7 @@
             </p>
         </div>
 
-        <div class="cover-card col-sm-4" style="background: url(http://lorempixel.com/600/200/city/4) no-repeat center top;background-size:cover;">
-            <p>
-                Text Caption
-            </p>
-        </div>
+     
         
        
     </div>
