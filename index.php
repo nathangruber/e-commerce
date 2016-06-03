@@ -37,79 +37,130 @@
             <a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/e-commerce/category.php?id=12" id="black"><img id="truck" src="assets/img/maxresdefault.jpg" alt="Skate Truck" height="187" width="333"></a>
         </div>
     </div> -->
-<div class="container">
-        <div class="row">
-            <div class="span12">
-                <div class="well">
-                    <div id="myCarousel" class="carousel fdi-Carousel slide">
-                     <!-- Carousel items -->
-                        <div class="carousel fdi-Carousel slide" id="eventCarousel" data-interval="0">
-                            <div class="carousel-inner onebyone-carosel">
-                                <div class="item active">
-                                    <div class="col-md-4">
-                                        <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
-                                        <div class="text-center">1</div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-4">
-                                        <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
-                                        <div class="text-center">2</div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-4">
-                                        <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
-                                        <div class="text-center">3</div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-4">
-                                        <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
-                                        <div class="text-center">4</div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-4">
-                                        <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
-                                        <div class="text-center">5</div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="col-md-4">
-                                        <a href="#"><img src="http://placehold.it/250x250" class="img-responsive center-block"></a>
-                                        <div class="text-center">6</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#eventCarousel" data-slide="prev"></a>
-                            <a class="right carousel-control" href="#eventCarousel" data-slide="next"></a>
-                        </div>
-                        <!--/carousel-inner-->
-                    </div><!--/myCarousel-->
-                </div><!--/well-->
-            </div>
-        </div>
-    </div>
-    <script>$(document).ready(function () {
-    $('#myCarousel').carousel({
-        interval: 10000
-    })
-    $('.fdi-Carousel .item').each(function () {
-        var next = $(this).next();
-        if (!next.length) {
-            next = $(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo($(this));
-
-        if (next.next().length > 0) {
-            next.next().children(':first-child').clone().appendTo($(this));
-        }
-        else {
-            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+<script>jQuery(document).ready(function($) {
+ 
+        $('#myCarousel').carousel({
+                interval: 5000
+        });
+ 
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click(function () {
+        var id_selector = $(this).attr("id");
+        try {
+            var id = /-(\d+)$/.exec(id_selector)[1];
+            console.log(id_selector, id);
+            jQuery('#myCarousel').carousel(parseInt(id));
+        } catch (e) {
+            console.log('Regex failed!', e);
         }
     });
-});</script>
+        // When the carousel slides, auto update the text
+        $('#myCarousel').on('slid.bs.carousel', function (e) {
+                 var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-'+id).html());
+        });
+}); </script>   
+<div class="container">
+    <div id="main_area">
+        <!-- Slider -->
+        <div class="row">
+            <div class="col-xs-2" id="slider-thumbs">
+                <!-- Bottom switcher of slider -->
+                <ul class="hide-bullets">
+                    <li class="col-sm-12">
+                        <a class="" id="carousel-selector-0">
+                            <img src="http://placehold.it/150x150&text=zero">
+                        </a>
+                    </li>
+
+                    <li class="col-sm-12">
+                        <a class="" id="carousel-selector-1"><img src="http://placehold.it/150x150&text=1"></a>
+                    </li>
+
+                    <li class="col-sm-12">
+                        <a class="" id="carousel-selector-2"><img src="http://placehold.it/150x150&text=2"></a>
+                    </li>
+
+                    <li class="col-sm-12">
+                        <a class="" id="carousel-selector-3"><img src="http://placehold.it/150x150&text=3"></a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <div class="col-xs-10">
+                <div class="col-xs-12" id="slider">
+                    <!-- Top part of the slider -->
+                    <div class="row">
+                        <div class="col-sm-12" id="carousel-bounding-box">
+                            <div class="carousel slide" id="myCarousel">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item" data-slide-number="0">
+                                        <img src="http://placehold.it/470x480&text=zero"></div>
+
+                                    <div class="item" data-slide-number="1">
+                                        <img src="http://placehold.it/470x480&text=1"></div>
+
+                                    <div class="item" data-slide-number="2">
+                                        <img src="http://placehold.it/470x480&text=2"></div>
+
+                                    <div class="item" data-slide-number="3">
+                                        <img src="http://placehold.it/470x480&text=3"></div>
+
+                                    <div class="item" data-slide-number="4">
+                                        <img src="http://placehold.it/470x480&text=4"></div>
+
+                                    <div class="item" data-slide-number="5">
+                                        <img src="http://placehold.it/470x480&text=5"></div>
+                                    
+                                    <div class="item" data-slide-number="6">
+                                        <img src="http://placehold.it/470x480&text=6"></div>
+                                    
+                                    <div class="item" data-slide-number="7">
+                                        <img src="http://placehold.it/470x480&text=7"></div>
+                                    
+                                    <div class="item" data-slide-number="8">
+                                        <img src="http://placehold.it/470x480&text=8"></div>
+                                    
+                                    <div class="item" data-slide-number="9">
+                                        <img src="http://placehold.it/470x480&text=9"></div>
+                                    
+                                    <div class="item" data-slide-number="10">
+                                        <img src="http://placehold.it/470x480&text=10"></div>
+                                    
+                                    <div class="item" data-slide-number="11">
+                                        <img src="http://placehold.it/470x480&text=11"></div>
+                                    
+                                    <div class="item" data-slide-number="12">
+                                        <img src="http://placehold.it/470x480&text=12"></div>
+
+                                    <div class="item" data-slide-number="13">
+                                        <img src="http://placehold.it/470x480&text=13"></div>
+
+                                    <div class="item" data-slide-number="14">
+                                        <img src="http://placehold.it/470x480&text=14"></div>
+
+                                    <div class="item" data-slide-number="15">
+                                        <img src="http://placehold.it/470x480&text=15"></div>
+                                </div>
+                                <!-- Carousel nav -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/Slider-->
+        </div>
+
+    </div>
+</div>
+    
 <?php require_once 'includes/footer.php'; ?>
 
 
