@@ -64,7 +64,6 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star-empty"></span>
                     </div>
-                    <p> Average 4.5 <small> / </small> 5 </p>
                 </div>
           </a>
           <a href="#" class="list-group-item">
@@ -89,7 +88,6 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star-empty"></span>
                     </div>
-                    <p> Average 3.9 <small> / </small> 5 </p>
                 </div>
           </a>
           <a href="#" class="list-group-item">
@@ -114,7 +112,6 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star-empty"></span>
                     </div>
-                    <p> Average 4.1 <small> / </small> 5 </p>
                 </div>
           </a>
         </div>
