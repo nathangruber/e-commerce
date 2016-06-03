@@ -42,11 +42,7 @@
         <h3 style="color:white;font-family:verdana;">Snap Tight Image Tiles (Responisve)</h3>
     </div>
     <div class="row">
-        <div class="cover-card col-sm-4" style="background: url(http://lorempixel.com/300/200/nightlife/2) no-repeat center top;background-size:cover;">
-            <p>
-                Text Caption
-            </p>
-        </div>
+        
         <div class="cover-card col-sm-8" style="background: url(http://lorempixel.com/600/200/nightlife/3) no-repeat center top;background-size:cover;">
             <p>
                 Text Caption
