@@ -39,60 +39,87 @@
     </div> -->
 <div class="container">
     <div class="row">
-        <h4>So I've worked on a new project and came up with this UI. Here you can use it. :) Follow me on twitter: <a href="https://twitter.com/AlexMahrt/">@AlexMahrt</a></h4>
-    </div>
-    <hr>
-            <div class="row row-margin-bottom">
-            <div class="col-md-5 no-padding lib-item" data-category="view">
-                <div class="lib-panel">
-                    <div class="row box-shadow">
-                        <div class="col-md-4">
-                            <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="lib-row lib-header">
-                                Example library
-                                <div class="lib-header-seperator"></div>
-                            </div>
-                            
-                        </div>
-                    </div>
+        <div class="well">
+        <h1 class="text-center">Vote for your favorite</h1>
+        <div class="list-group">
+          <a href="#" class="list-group-item active">
+                <div class="media col-md-3">
+                    <figure class="pull-left">
+                        <img class="media-object img-rounded img-responsive"  src="http://placehold.it/350x250" alt="placehold.it/350x250" >
+                    </figure>
                 </div>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-5 no-padding lib-item" data-category="ui">
-                <div class="lib-panel">
-                    <div class="row box-shadow">
-                        <div class="col-md-4">
-                            <img class="lib-img" src="http://lorempixel.com/850/850/?random=456">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="lib-row lib-header">
-                                Example library
-                                <div class="lib-header-seperator"></div>
-                            </div>
-                            
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <h4 class="list-group-item-heading"> List group heading </h4>
+                    <p class="list-group-item-text"> Qui diam libris ei, vidisse incorrupte at mel. His euismod salutandi dissentiunt eu. Habeo offendit ea mea. Nostro blandit sea ea, viris timeam molestiae an has. At nisl platonem eum. 
+                        Vel et nonumy gubergren, ad has tota facilis probatus. Ea legere legimus tibique cum, sale tantas vim ea, eu vivendo expetendis vim. Voluptua vituperatoribus et mel, ius no elitr deserunt mediocrem. Mea facilisi torquatos ad.
+                    </p>
                 </div>
-            </div>
-        <div class="col-md-1"></div>
-            <div class="col-md-5 no-padding lib-item" data-category="ui">
-                <div class="lib-panel">
-                    <div class="row box-shadow">
-                        <div class="col-md-4">
-                            <img class="lib-img" src="http://lorempixel.com/850/850/?random=456">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="lib-row lib-header">
-                                Example library
-                                <div class="lib-header-seperator"></div>
-                            </div>
-                        
-                        </div>
+                <div class="col-md-3 text-center">
+                    <h2> 14240 <small> votes </small></h2>
+                    <button type="button" class="btn btn-default btn-lg btn-block"> Vote Now! </button>
+                    <div class="stars">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
                     </div>
+                    <p> Average 4.5 <small> / </small> 5 </p>
                 </div>
+          </a>
+          <a href="#" class="list-group-item">
+                <div class="media col-md-3">
+                    <figure class="pull-left">
+                        <img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250" alt="placehold.it/350x250" >
+                    </figure>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="list-group-item-heading"> List group heading </h4>
+                    <p class="list-group-item-text"> Eu eum corpora torquatos, ne postea constituto mea, quo tale lorem facer no. Ut sed odio appetere partiendo, quo meliore salutandi ex. Vix an sanctus vivendo, sed vocibus accumsan petentium ea. 
+                        Sed integre saperet at, no nec debet erant, quo dico incorrupte comprehensam ut. Et minimum consulatu ius, an dolores iracundia est, oportere vituperata interpretaris sea an. Sed id error quando indoctum, mel suas saperet at.                         
+                    </p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h2> 12424 <small> votes </small></h2>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Vote Now!</button>
+                    <div class="stars">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p> Average 3.9 <small> / </small> 5 </p>
+                </div>
+          </a>
+          <a href="#" class="list-group-item">
+                <div class="media col-md-3">
+                    <figure class="pull-left">
+                        <img class="media-object img-rounded img-responsive" src="http://placehold.it/350x250" alt="placehold.it/350x250">
+                    </figure>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="list-group-item-heading"> List group heading </h4>
+                    <p class="list-group-item-text"> Ut mea viris eripuit theophrastus, cu ponderum accusata consequuntur cum. Suas quaestio cotidieque pro ea. Nam nihil persecuti philosophia id, nam quot populo ea. 
+                        Falli urbanitas ei pri, eu est enim volumus, mei no volutpat periculis. Est errem iudicabit cu. At usu vocibus officiis, ad ius eros tibique appellantur.                         
+                    </p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h2> 13540 <small> votes </small></h2>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Vote Now!</button>
+                    <div class="stars">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p> Average 4.1 <small> / </small> 5 </p>
+                </div>
+          </a>
         </div>
+        </div>
+    </div>
 </div>
 <?php require_once 'includes/footer.php'; ?>
 
