@@ -51,7 +51,6 @@ Database::disconnect();
     <li><a href=""></a></li>
     <li><a href=""></a></li>
     <li><a href=""></a></li>
-    <li><a href=""></a></li>
     <li><a href="cart.php">Cart</a></li>
             </ul>
       <div class="container">
