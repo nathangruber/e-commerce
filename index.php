@@ -54,9 +54,7 @@
                                 Example library
                                 <div class="lib-header-seperator"></div>
                             </div>
-                            <div class="lib-row lib-desc">
-                                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -73,9 +71,7 @@
                                 Example library
                                 <div class="lib-header-seperator"></div>
                             </div>
-                            <div class="lib-row lib-desc">
-                                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -92,9 +88,7 @@
                                 Example library
                                 <div class="lib-header-seperator"></div>
                             </div>
-                            <div class="lib-row lib-desc">
-                                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
-                            </div>
+                        
                         </div>
                     </div>
                 </div>
