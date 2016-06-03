@@ -14,11 +14,16 @@
         require_once'includes/navbar.php';
     }
     ?>
- 
+ <br>
+ <br>
+ <br>
+ <br>
     <div class="jumbotron">
-        <h1>Blake's Board Shop</h1> 
+  <h1>Blake's Board Shop</h1> 
+  <p></p> 
     </div>
     <div class="container">
+      <p></p> 
     </div>
 
 <!--    <div class="container">
