@@ -46,10 +46,10 @@
             <div class="col-md-5 no-padding lib-item" data-category="view">
                 <div class="lib-panel">
                     <div class="row box-shadow">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="lib-row lib-header">
                                 Example library
                                 <div class="lib-header-seperator"></div>
@@ -65,10 +65,10 @@
             <div class="col-md-5 no-padding lib-item" data-category="ui">
                 <div class="lib-panel">
                     <div class="row box-shadow">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <img class="lib-img" src="http://lorempixel.com/850/850/?random=456">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="lib-row lib-header">
                                 Example library
                                 <div class="lib-header-seperator"></div>
@@ -84,10 +84,10 @@
             <div class="col-md-5 no-padding lib-item" data-category="ui">
                 <div class="lib-panel">
                     <div class="row box-shadow">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <img class="lib-img" src="http://lorempixel.com/850/850/?random=456">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="lib-row lib-header">
                                 Example library
                                 <div class="lib-header-seperator"></div>
