@@ -156,7 +156,7 @@ font-family:'Libre Baskerville', serif;
     height: 335px;
     background-size:cover ;
     overflow:hidden;
-    color: grey;
+    color: lightgrey;
 }
 .pull-left {
     margin-top: 10px;
@@ -170,7 +170,4 @@ footer {
 }
 footer > p {
   padding: 0 125px;
-}
-.twitter-follow-button{
-  padding-top: 1px;
 }
