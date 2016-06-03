@@ -20,6 +20,8 @@
     <div class="jumbotron">
   <br>
   <br>
+  <br>
+  <br>
   <h1>Blake's Board Shop</h1> 
   <p></p> 
 </div>
