@@ -43,7 +43,7 @@
     </div>
     <hr>
             <div class="row row-margin-bottom">
-            <div class="col-md-4 no-padding lib-item" data-category="view">
+            <div class="col-md-5 no-padding lib-item" data-category="view">
                 <div class="lib-panel">
                     <div class="row box-shadow">
                         <div class="col-md-4">
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="col-md-1"></div>
-            <div class="col-md-4 no-padding lib-item" data-category="ui">
+            <div class="col-md-5 no-padding lib-item" data-category="ui">
                 <div class="lib-panel">
                     <div class="row box-shadow">
                         <div class="col-md-4">
@@ -81,7 +81,7 @@
                 </div>
             </div>
         <div class="col-md-1"></div>
-            <div class="col-md-4 no-padding lib-item" data-category="ui">
+            <div class="col-md-5 no-padding lib-item" data-category="ui">
                 <div class="lib-panel">
                     <div class="row box-shadow">
                         <div class="col-md-4">
