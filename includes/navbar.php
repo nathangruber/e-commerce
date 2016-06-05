@@ -42,17 +42,23 @@ Database::disconnect();
 ?>
 
 
-    <li><a href="register.php">Register</a></li>
-    <li><a href="loginpage.php">Login</a></li>
+    
     <li><a href="about.php" >About</a></li>
     <li><a href="contact.php">Contact Us</a></li>
-    <li><a href="update.php">My Account</a></li>
+    
     <?php
 	  if($logged==true){
 	  ?>
+	  <li><a href="update.php">My Account</a></li>
 	  <li><a href="cart.php">Cart</a></li>
+	  <li><a href="logout.php">Log out</a></li>
 	  <?php
-	  }  
+	  }else{
+		  ?>
+		  <li><a href="register.php">Register</a></li>
+		  <li><a href="loginpage.php">Login</a></li>
+		  <?php
+	  } 
 	?>
     
             </ul>
