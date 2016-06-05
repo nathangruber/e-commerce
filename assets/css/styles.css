@@ -157,6 +157,7 @@ font-family:'Libre Baskerville', serif;
     background-size:cover ;
     overflow:hidden;
     color: #FFFFFF;
+    text-shadow: 2px 2px 3px #000;
 }
 .pull-left {
     margin-top: 10px;
