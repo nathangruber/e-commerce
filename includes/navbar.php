@@ -51,7 +51,7 @@ Database::disconnect();
 	  ?>
 	  <li><a href="update.php">My Account</a></li>
 	  <li><a href="cart.php">Cart</a></li>
-	  <li><a href="logout.php">Log out</a></li>
+	  <li><a href="logout.php">Logout</a></li>
 	  <?php
 	  }else{
 		  ?>
