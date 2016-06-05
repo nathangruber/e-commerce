@@ -5,6 +5,8 @@ require_once 'includes/crud.php';
  error_reporting(E_ALL);
  setlocale(LC_MONETARY, 'en_US');
  
+ 
+ print_r($_SESSION);
  if($logged==false){
 	 header('Location: loginpage.php');
  }
