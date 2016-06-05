@@ -4,6 +4,10 @@ require_once 'includes/database.php';
 require_once 'includes/crud.php';
  error_reporting(E_ALL);
  setlocale(LC_MONETARY, 'en_US');
+ 
+ if($logged==false){
+	 header('Location: loginpage.php');
+ }
 
 ?>
 <!DOCTYPE html>
