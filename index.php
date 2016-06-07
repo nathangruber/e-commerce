@@ -83,10 +83,7 @@
                 </div>
             </div>
 
-           
-
-        </div>
-        <!-- /.row -->
+        
 
         <hr>
 <?php require_once 'includes/footer.php'; ?>
