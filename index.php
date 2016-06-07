@@ -38,7 +38,6 @@
         </div>
     </div> -->
 <!-- Title -->
-            <div class="col-lg-12">
                 <h3>Products</h3>
             </div>
         </div>
