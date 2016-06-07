@@ -38,11 +38,15 @@
         </div>
     </div> -->
 <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
                 <h3>Products</h3>
-           
+            </div>
+        </div>
         <!-- /.row -->
 
         <!-- Page Features -->
+        <div class="row text-center">
 
             <div class="col-md-4 col-sm-6 hero-feature">
                 <div class="thumbnail">
@@ -83,7 +87,10 @@
                 </div>
             </div>
 
-        
+           
+
+        </div>
+        <!-- /.row -->
 
         <hr>
 <?php require_once 'includes/footer.php'; ?>
