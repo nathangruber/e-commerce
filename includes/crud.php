@@ -357,9 +357,6 @@ class category {
 		try{
 			$pdo = Database::connect();
 			$sql = 'SELECT * FROM category ORDER BY name';
-			/*$q = $pdo->prepare($sql);
-			$q->execute(array());
-			$data = $q->fetchAll(PDO::FETCH_ASSOC);*/
 			$data = $pdo->query($sql);
 			Database::disconnect();
 			return $data;
