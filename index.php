@@ -39,8 +39,7 @@
     </div> -->
 <!-- Title -->
                 <h3>Products</h3>
-            </div>
-        </div>
+           
         <!-- /.row -->
 
         <!-- Page Features -->
