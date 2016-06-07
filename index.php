@@ -48,7 +48,7 @@
         <!-- Page Features -->
         <div class="row text-center">
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-4 col-sm-6 hero-feature">
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
@@ -61,7 +61,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-4 col-sm-6 hero-feature">
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-4 col-sm-6 hero-feature">
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
