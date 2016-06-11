@@ -16,24 +16,23 @@
             require_once'includes/navbar.php';
         }
         ?>
+<div class="container">
+  <div class="jumbotron">
+    <h1><strong>YouTube Opening Example</strong></h1>
+    <p class="lead">Example for "<a href="http://www.joshuawinn.com/opening-youtube-links-dynamically-in-a-twitter-bootstrap-modal-window/" target="_blank" title="View Post">Opening YouTube Links Dynamically in a Twitter Bootstrap Modal Window</a>" . Links to YouTube videos are opened automatically as an embedded video in a single modal window. No need for extra HTML or embed codes.</p>
+    
+    <!-- The HREF just points to a normal YouTube link -->
+    <p>
+      <a class="btn btn-primary btn-lg" href="http://www.youtube.com/watch?v=6w4FI0Jq0lI" role="button">Open a Video</a> 
+      
+      <a class="btn btn-primary btn-lg" href="http://www.youtube.com/watch?v=6w4FI0Jq0lI" role="button" data-width="640" data-height="360">Open Another Video</a>
+    </p>
+    
+  </div>
+</div>
 
-    <div class="container">
-        <div class="row">
-            <div class="container" style="width: 100%;">
-                <br>
-                <br>
 
-                <center>
-                    <div class="theme-table-image col-sm-12"><img src="assets/img/99factory_slider_05.jpg" alt="Picture of decks in shop" class="img-rounded" alt="Wood Shop"></div>
-                </center>
-            </div>
-
-            <div class="theme-table=image col-sm-12">
-                <center><p>Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiserdecks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p></center>
-            </div>
-        </div><?php
-                require_once('includes/footer.php');
-                ?>
-    </div>
+    
 </body>
 </html>
+                <center><p>Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiserdecks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p></center>
