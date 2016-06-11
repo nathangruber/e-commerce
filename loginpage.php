@@ -36,10 +36,11 @@
 
 <div class="container">
 
-    <form class="form-signin">
-        <h1 class="form-signin-heading text-muted">Sign In</h1>
-        <input type="text" class="form-control" placeholder="Email address" required="" autofocus="">
-        <input type="password" class="form-control" placeholder="Password" required="">
+    <form class="form-signin" action="includes/login.php" method="post">
+>
+        <h1 class="form-signin-heading text-muted">Login</h1>
+        <input type="text" class="form-control" name="Username" placeholder="Username">
+        <input type="password" class="form-control" placeholder="Password" value="login">
         <button class="btn btn-lg btn-primary btn-block" type="submit">
             Sign In
         </button>
