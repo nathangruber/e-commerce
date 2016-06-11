@@ -34,7 +34,7 @@
                     <img src="assets/img/6796009882_074f87df69_b.png" alt="skateboard deck">
                     <div class="caption">
                         <h3>Blake's Skateboard Decks</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Made in the USA. All decks come with free grip tape.</p>
                         <p>
                             <a href="../e-commerce/category.php?id=5.php" class="btn btn-primary">Buy Now!</a>
                         </p>
@@ -47,7 +47,7 @@
                     <img src="assets/img/18752831476_4634222c05_b.png" alt="cruiser deck">
                     <div class="caption">
                         <h3>Blake's Cruiser Decks</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Made in the USA. All decks come with free grip tape.</p>
                         <p>
                             <a href="../e-commerce/category.php?id=10" class="btn btn-primary">Buy Now!</a>
                         </p>
@@ -60,7 +60,7 @@
                     <img src="assets/img/maxresdefault.png" alt="hardware being put on a skateboard deck">
                     <div class="caption">
                         <h3>Hardware</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>Blake's exculsively uses Shorty's Hardware&reg;.</p>
                         <p>
                             <a href="../e-commerce/category.php?id=12" class="btn btn-primary">Buy Now!</a>
                         </p>
