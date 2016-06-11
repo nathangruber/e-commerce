@@ -106,7 +106,7 @@ if ( !empty($_POST)) {
 
         <div class="span10 offset1">
             <div class="row">
-                <h3>Register</h3>
+                <h4>Register</h4>
             </div>
 
             <form class="form-horizontal" action="register.php" method="post">
