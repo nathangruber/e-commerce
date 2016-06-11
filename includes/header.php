@@ -9,10 +9,6 @@
       <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="search_style.css">
-      
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/form-elements.css">
-
       <script type="text/javascript" src="assets/js/jquery.min.js"></script>
       <script type="text/javascript">
 
