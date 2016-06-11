@@ -211,3 +211,7 @@ a.list-group-item.active small {
     background-image: url(../img/skateboard-384194_1280.jpg);
     background-repeat:repeat;
   }
+td{
+      text-shadow: 2px 2px 3px #000;
+
+}
