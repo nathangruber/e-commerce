@@ -108,7 +108,8 @@ if ( !empty($_POST)) {
             <div class="row">
                 <h3>Register</h3>
             </div>
-
+<div class="row">
+				<div class="col-xs-12 col-md-4 col-md-offset-4">
             <form class="form-horizontal" action="register.php" method="post">
                 <div class="control-group &lt;?php echo !empty($nameError)?'error':'';?&gt;">
                     <label class="control-label">Name</label>
@@ -174,6 +175,8 @@ if ( !empty($_POST)) {
             <h3>You are currently logged in, please log out in order to create a new user.</h3><?php  } ?>
         </div>
     </div><!-- /container -->
+</div>
+</div>
     <?php
 require_once 'includes/footer.php';
 ?>
