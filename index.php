@@ -43,11 +43,7 @@
                 <h3>Products</h3>
             </div>
         </div>
-        <!-- /.row -->
-
-        <!-- Page Features -->
         <div class="row text-center">
-
             <div class="col-md-4 col-sm-6 hero-feature">
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
