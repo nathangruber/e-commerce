@@ -225,3 +225,9 @@ font-style: bold;
     background-image: url(../img/skateboard-384194_1280.jpg);
     background-repeat:repeat;
   }
+  div.about{
+  font-family:'Libre Baskerville', serif;
+  font-size: 12px;
+  color:#F8F8F8;
+  text-align:center;
+}
