@@ -17,13 +17,13 @@
  <br>
  <br>
     <div class="jumbotron">
-           <h1>Blake's Board Shop</h1> 
-           <p></p> 
-            </div>
-            <div class="container">
-              <p></p> 
-            </div>
-            <div class="row">
+  <h1>Blake's Board Shop</h1> 
+    <p></p> 
+    </div>
+    <div class="container">
+      <p></p> 
+    </div>
+        <div class="row">
             <div class="col-lg-12">
                 <h3>Products</h3>
             </div>
@@ -49,7 +49,7 @@
                         <h3>Blake's Cruiser Decks</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a>
+                            <a href="../e-commerce/category.php?id=10" class="btn btn-primary">Buy Now!</a>
                         </p>
                     </div>
                 </div>
@@ -62,13 +62,13 @@
                         <h3>Hardware</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a>
+                            <a href="../e-commerce/category.php?id=12" class="btn btn-primary">Buy Now!</a>
                         </p>
                     </div>
                 </div>
             </div>
-         </div>
-         <hr>
+        </div>
+        <hr>
 <?php require_once 'includes/footer.php'; ?>
 </body>
 </html>
