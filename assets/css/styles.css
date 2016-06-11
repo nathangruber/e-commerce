@@ -212,6 +212,5 @@ a.list-group-item.active small {
     background-repeat:repeat;
   }
 td{
-    text-shadow: 1px 1px 2px #000;
-
+font-style: bold;
 }
