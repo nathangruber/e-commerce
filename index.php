@@ -17,28 +17,13 @@
  <br>
  <br>
     <div class="jumbotron">
-  <h1>Blake's Board Shop</h1> 
-  <p></p> 
-    </div>
-    <div class="container">
-      <p></p> 
-    </div>
-
-<!--    <div class="container">
-        <div class="img-responsive col-sm-4">
-           <a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/e-commerce/category.php?id=5.php" id="black"><img id="board" src="assets/img/6796009882_074f87df69_b.jpg" alt="Skateboard" height="187" width="333"></a>
-        </div>
-
-        <div class="img-responsive col-sm-4">
-            <a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/e-commerce/category.php?id=10" id="black"><img id="long" src="assets/img/18752831476_4634222c05_b.jpg" alt="Longboard" height="187" width="333"></a>
-        </div>
-
-        <div class="img-responsive col-sm-4">
-            <a href="http://ec2-54-213-132-61.us-west-2.compute.amazonaws.com/e-commerce/category.php?id=12" id="black"><img id="truck" src="assets/img/maxresdefault.jpg" alt="Skate Truck" height="187" width="333"></a>
-        </div>
-    </div> -->
-<!-- Title -->
-        <div class="row">
+           <h1>Blake's Board Shop</h1> 
+           <p></p> 
+            </div>
+            <div class="container">
+              <p></p> 
+            </div>
+            <div class="row">
             <div class="col-lg-12">
                 <h3>Products</h3>
             </div>
@@ -51,7 +36,7 @@
                         <h3>Blake's Skateboard Decks</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <a href="../e-commerce/category.php?id=5.php" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                            <a href="../e-commerce/category.php?id=5.php" class="btn btn-primary">Buy Now!</a>
                         </p>
                     </div>
                 </div>
@@ -77,20 +62,13 @@
                         <h3>Hardware</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                            <a href="#" class="btn btn-primary">Buy Now!</a>
                         </p>
                     </div>
                 </div>
             </div>
-
-           
-
-        </div>
-        <!-- /.row -->
-
-        <hr>
+         </div>
+         <hr>
 <?php require_once 'includes/footer.php'; ?>
-
-
 </body>
 </html>
