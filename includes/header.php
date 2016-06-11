@@ -10,29 +10,5 @@
 		<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="search_style.css">
       <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-      <script type="text/javascript">
-
-   $(document).ready(function(){
-      $( "#find" ).keyup(function(){
-         fetch();
-      });
-   });
-
-   function fetch()
-   {
-   
-      var val = document.getElementById( "find" ).value;
-      $.ajax({
-         type: 'post',
-         url: 'fetch.php',
-         data: {
-            get_val:val
-         },
-         success: function (response) {
-            document.getElementById( "search_items" ).innerHTML = response; 
-         }
-      });
-
-   }
-</script>
+      <script type="text/javascript"></script>
 </head>
