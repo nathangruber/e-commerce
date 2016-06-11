@@ -6,7 +6,7 @@
 <body>
 <?php require_once 'includes/navbar.php'; ?>
 <div id="fullscreen_bg2" class="fullscreen_bg2"/>
-<div class="container" style="margin-top: 200px;">
+<div class="container" style="margin-top: 150px;">
       <div class="row">
         <table class="table table-bordered">
           <thead>
