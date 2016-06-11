@@ -102,8 +102,6 @@
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
         <![endif]-->
-
-    </body>
 <?php require_once 'includes/footer.php';?>
 </body>
 </html>
