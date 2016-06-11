@@ -75,16 +75,6 @@ if ( !empty($_POST)) {
 		}
 	}
 }
-//$transaction = new cart();
-//$cart = $transaction->createCart();
-
-// if ($response) {
-// if ($cart) {
-//  header('Location: index.php');
-//} else {
-//  header('Location: index.php');
-// }
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 
