@@ -46,9 +46,22 @@
         <div class="row text-center">
             <div class="col-md-4 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="assets/img/6796009882_074f87df69_b.png" alt="">
+                    <img src="assets/img/6796009882_074f87df69_b.png" alt="skateboard deck">
                     <div class="caption">
-                        <h3>Feature Label</h3>
+                        <h3>Blake's Skateboard Decks</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="../e-commerce/category.php?id=5.php" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="assets/img/18752831476_4634222c05_b.png" alt="cruiser deck">
+                    <div class="caption">
+                        <h3>Blake's Cruiser Decks</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
                             <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
@@ -59,22 +72,9 @@
 
             <div class="col-md-4 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="assets/img/18752831476_4634222c05_b.png" alt="">
+                    <img src="assets/img/maxresdefault.png" alt="hardware being put on a skateboard deck">
                     <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="assets/img/maxresdefault.png" alt="">
-                    <div class="caption">
-                        <h3>Feature Label</h3>
+                        <h3>Hardware</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
                             <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
