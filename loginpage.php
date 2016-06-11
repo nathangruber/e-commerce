@@ -74,7 +74,7 @@
 
                         <div>
                             <form action="register.php" method="post">
-                                <input class="btn btn-default" type="submit" value="Register">
+                                <input class="btn btn-success" type="submit" value="Register">
                             </form>
                         </div>
                     <div class="row">
