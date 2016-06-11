@@ -51,13 +51,13 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="comments" class="col-sm-12 control-label"><br></label>
+                        <label for="comments" class="col-sm-12 control-label"></label>
                         <div class="col-sm-10">
                        <p>&nbsp;</p><textarea class="form-control" rows="3" name="comments" placeholder="Comments"></textarea>
                         </div>
                       </div>
                       <div class="form-group">
-                        <div class="col-sm-12 col-sm-10">
+                        <div class="col-sm-12">
                           <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                       </div>
