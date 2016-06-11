@@ -14,7 +14,7 @@
       <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-4 col-md-offset-4">
-                <h1 style="margin-top: 100px color:#FFFFFF">Login</h1>
+                <h1 style="margin-top: 100px">Login</h1>
                 <?php
                   if($_GET['result']=='error'){
                       echo '<b class="text-danger">Username or password not valid.</b>';
