@@ -97,6 +97,8 @@ if ( !empty($_POST)) {
 
 <body>
     <?php require_once('includes/navbar.php');?>
+    <div id="fullscreen_bg" class="fullscreen_bg"/>
+
 <br>
 <br>
     <div class="container">
