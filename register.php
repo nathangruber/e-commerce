@@ -165,7 +165,7 @@ if ( !empty($_POST)) {
                         <input name="password" type="password" placeholder="Password" value="<?php echo !empty($password)?$password:'';?>"> <?php if (!empty($passwordError)): ?> <span class="help-inline"><?php echo $passwordError;?></span> <?php endif;?>
                     </div>
                 </div>
-
+<br>
                 <div class="form-actions">
                     <button type="submit" class="btn btn-success">Create</button> <a class="btn btn-default" href="index.php">Back</a>
                 </div>
