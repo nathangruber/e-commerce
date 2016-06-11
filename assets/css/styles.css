@@ -176,3 +176,14 @@ a.list-group-item.active small {
     color:#FFFFFF;
     text-shadow: 2px 2px 3px #000;
   }
+  .fullscreen_bg1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(../img/sunset-691653_1280.jpg);
+    background-repeat:repeat;
+  }
