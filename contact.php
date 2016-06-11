@@ -17,7 +17,7 @@
         }
         ?>
 
-<!--    <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="contactus">
@@ -65,52 +65,8 @@
                 </div>
             </div>
         </div>
--->
-<div class="section col-sm-12" id="section-menu-contact">
-        <div class="row section-titre">
-          <span>Contact</span>
-        </div>
-          <div class="contact" >
-            <div id="form_contact">
-              <form action="emailform.php" id="contact" method="POST">
-                  <div  class="transform-field row" id="field-name">
-                      <input id="nom" name="nom" type="text" required>
-                      <label>
-                        First Name
-                      </label>
-                  </div>
-                  <div  class="transform-field row" id="field-subject">
-                      <input id="sujet" name="sujet" type="text" required>
-                      <label>
-                        Last Name
-                      </label>
-                  </div>
-                  <div class="transform-field row" id="field-subject">
-                      <input id="sujet" name="sujet" type="text" required>
-                      <label>
-                        Phone Number
-                      </label>
-                  </div>
-                  <div class="transform-field row" id="field-email">
-                      <input id="email" name="email" type="text" required>
-                      <label>
-                        Email
-                      </label>
-                  </div>
-                  <div class="transform-field-textarea row" id="field-message">
-                      <textarea id="message" name="message" type="text" required>
-                      </textarea>
-                      <label>
-                        Message
-                      </label>
-                  </div>
-                  <div class="row transform-field" id="field-submit">
-                    <input type="submit" value="Send"/>
-                  </div>
-              </form>
-            </div><!-- end of #form_contact -->
-          </div>
-      </div>
+
+
     <?php require_once 'includes/footer.php';?>
 </body>
 </html>
