@@ -9,8 +9,15 @@
       <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="search_style.css">
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">
+      
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+      <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/css/form-elements.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+
+      <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+      <script type="text/javascript">
 
    $(document).ready(function(){
       $( "#find" ).keyup(function(){
