@@ -25,7 +25,7 @@
                     <br>
                     <br>
 
-                  <p>Contact BBS</p>
+                  <h1>Contact BBS</h1>
                     <br>
                 </div>
                      <form class="form-horizontal" name="contactform" method="post" action="emailform.php">
