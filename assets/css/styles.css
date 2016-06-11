@@ -156,3 +156,18 @@ a.list-group-item.active small {
 .stars {
     margin:20px auto 1px;    
 }
+body { 
+ background: url('/assets/example/bg_suburb.jpg') no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:30px;
+}
+.form-group.last {
+ margin-bottom:0px;
+}
