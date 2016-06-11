@@ -27,38 +27,38 @@
                 </div>
                      <form class="form-horizontal" name="contactform" method="post" action="emailform.php">
                       <div class="form-group">
-                        <label for="first_name" class="col-sm-12 control-label">First Name</label>
+                        <label for="first_name" class="col-sm-12 control-label"></label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="first_name" placeholder="First Name">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="last_name" class="col-sm-12 control-label">Last Name</label>
+                        <label for="last_name" class="col-sm-12 control-label"></label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="last_name" placeholder="Last Name">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="email" class="col-sm-12 control-label">Email Address</label>
+                        <label for="email" class="col-sm-12 control-label"></label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="email" placeholder="Email Address">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="last_name" class="col-sm-12 control-label">Phone Number</label>
+                        <label for="last_name" class="col-sm-12 control-label"></label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="telephone" placeholder="Phone Number">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="comments" class="col-sm-12 control-label">Comments<br></label>
+                        <label for="comments" class="col-sm-12 control-label"><br></label>
                         <div class="col-sm-10">
                        <p>&nbsp;</p><textarea class="form-control" rows="3" name="comments"></textarea>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-offset-12 col-sm-10">
-                          <button type="submit" class="btn btn-default">Submit</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                       </div>
                     </form>
