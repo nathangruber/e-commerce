@@ -200,4 +200,14 @@ a.list-group-item.active small {
     color:#FFFFFF;
     text-shadow: 2px 2px 3px #000;
   }
-  
+  .fullscreen_bg2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(../img/skateboarding-1081855_1280.jpg);
+    background-repeat:repeat;
+  }

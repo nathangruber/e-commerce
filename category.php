@@ -5,6 +5,8 @@
 <title>Product Categories</title>
 <body>
 <?php require_once 'includes/navbar.php'; ?>
+<div id="fullscreen_bg2" class="fullscreen_bg2"/>
+
 <br><br><br><br><br><br>
 
 
