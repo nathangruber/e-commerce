@@ -207,7 +207,7 @@ a.list-group-item.active small {
     bottom: 0;
     left: 0;
     background-size: cover;
-    background-position: 1% 1%;
+    background-position: 0% 0%;
     background-image: url(../img/skateboarding-1081855_1280.jpg);
     background-repeat:repeat;
   }
