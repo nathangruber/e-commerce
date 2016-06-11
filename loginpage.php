@@ -48,10 +48,10 @@
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <form role="form" action="includes/login.php" method="post" class="login-form">
+                                <form action="includes/login.php" method="post" class="login-form">
                                     <div class="form-group">
                                         <label class="sr-only" for="form-username">Username</label>
-                                        <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+                                        <input type="text" value="Login" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="form-password">Password</label>
