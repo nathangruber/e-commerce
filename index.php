@@ -46,7 +46,7 @@
         <div class="row text-center">
             <div class="col-md-4 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="assets/img/6796009882_074f87df69_b.jpg" alt="">
                     <div class="caption">
                         <h3>Feature Label</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
