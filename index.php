@@ -20,8 +20,6 @@
   <h1>Blake's Board Shop</h1> 
     <p></p> 
     </div>
-    <div class="container">
-    </div>
         <div class="row">
             <div class="col-lg-12">
                 <h3>Products</h3>
