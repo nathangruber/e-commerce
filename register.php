@@ -103,7 +103,7 @@ if ( !empty($_POST)) {
 
         <div class="span10 offset1">
             <div class="row">
-                <h4 style="margin-top: 100px">Register</h4>
+                <h1 style="margin-top: 100px">Register</h1>
 
             </div>
 
