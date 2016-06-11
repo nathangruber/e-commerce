@@ -98,15 +98,13 @@ if ( !empty($_POST)) {
 <body>
     <?php require_once('includes/navbar.php');?>
     <div id="fullscreen_bg" class="fullscreen_bg"/>
-<br>
-<br>
-<br>
     <div class="container">
         <?php if(!$logged){ ?>
 
         <div class="span10 offset1">
             <div class="row">
-                <h4>Register</h4>
+                <h1 style="margin-top: 100px">Register</h1>
+
             </div>
 
             <form class="form-horizontal" action="register.php" method="post">
