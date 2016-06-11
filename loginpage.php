@@ -46,7 +46,7 @@
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                             <div class="form-top">
                                 <div class="form-top-left">
-                                    <h3>Login to our site</h3>
+                                    <h3>Login into your BBS account:</h3>
                                     <p>Enter your username and password to log on:</p>
                                 </div>
                                 <div class="form-top-right">
@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <form role="form" action="" method="post" class="login-form">
+                                <form role="form" action="includes/login.php" method="post" class="login-form">
                                     <div class="form-group">
                                         <label class="sr-only" for="form-username">Username</label>
                                         <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
@@ -68,6 +68,15 @@
                             </div>
                         </div>
                     </div>
+                        <div>
+                            <p>No Account? Register below</p>
+                        </div>
+
+                        <div>
+                            <form action="register.php" method="post">
+                                <input class="btn btn-default" type="submit" value="Register">
+                            </form>
+                        </div>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                             <h3>...or login with:</h3>
