@@ -187,3 +187,7 @@ a.list-group-item.active small {
     background-image: url(../img/sunset-691653_1280.jpg);
     background-repeat:repeat;
   }
+  .form-group{
+    color:#FFFFFF;
+    text-shadow: 2px 2px 3px #000;
+  }
