@@ -16,6 +16,7 @@
             require_once'includes/navbar.php';
         }
         ?>
+<div id="fullscreen_bg4" class="fullscreen_bg4"/>
 <div class="container">
     <div class="row">
         <h2 class="text-center">BBS About</h2>
@@ -23,11 +24,11 @@
                 <div class="col-md-12 text-center">
                     <div class="box">
                         <div class="box-content">
-                            <h1 class="tag-title">About</h1>
+                            <h1 class="tag-title">About Us</h1>
                             <hr />
                             <p>Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiserdecks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p>
                             <br />
-                            <a href="ppc.html" class="btn btn-block btn-stripe-1">BBS Home Page</a>
+                            <a href="index.php" class="btn btn-block btn-stripe-1">BBS Home Page</a>
                         </div>
                     </div>
                 </div>

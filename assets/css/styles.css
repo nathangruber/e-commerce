@@ -289,3 +289,14 @@ font-style: bold;
   color:#515c66;
   text-transform:none;
 }
+.fullscreen_bg4 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(../img/99factory_slider_03.jpg);
+    background-repeat:repeat;
+  }
