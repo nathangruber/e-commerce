@@ -297,4 +297,6 @@ font-style: bold;
   }
   b{
     color:#FFFFFF;
+    text-shadow: 2px 2px 3px #000;
+
   }
