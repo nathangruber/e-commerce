@@ -123,7 +123,7 @@ require_once 'includes/crud.php';
 	    </div>
         <div class="row">
 	        <div class="span12 pull-right">
-		        <a class="btn btn-info" href="checkout.php">Checkout</a>
+		        <a class="btn btn-stripe-1" href="checkout.php">Checkout</a>
 	        </div>
 	        
           
@@ -132,7 +132,7 @@ require_once 'includes/crud.php';
         <br>
 
         <div>
-          <a class="btn btn-default" href="index.php">Return to Blake's Board Shop</a>
+          <a class="btn btn-stripe" href="index.php">Return to Blake's Board Shop</a>
         </div>
         <br>
         <br>
