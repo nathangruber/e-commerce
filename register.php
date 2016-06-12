@@ -155,7 +155,7 @@ if ( !empty($_POST)) {
                 </div>
 <br>
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-success">Create</button> <a class="btn btn-default" href="index.php">Back</a>
+                    <button type="submit" class="btn btn-stripe-1">Create</button> <a class="btn btn-stripe" href="index.php">Back</a>
                 </div>
             </form><?php }else{ ?>
             	<br>

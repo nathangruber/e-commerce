@@ -33,7 +33,7 @@
                         <h3>Blake's Skateboard Decks</h3>
                         <p>Made in the USA. All decks come with free grip tape.</p>
                         <p>
-                            <a href="../e-commerce/category.php?id=5.php" class="btn btn-stripe">Buy Now</a>
+                            <a href="../e-commerce/category.php?id=5.php" class="btn btn-stripe-1">Buy Now</a>
                         </p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                         <h3>Blake's Cruiser Decks</h3>
                         <p>Made in the USA. All decks come with free grip tape.</p>
                         <p>
-                            <a href="../e-commerce/category.php?id=10" class="btn btn-stripe">Buy Now</a>
+                            <a href="../e-commerce/category.php?id=10" class="btn btn-stripe-1">Buy Now</a>
                         </p>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                         <h3>Hardware</h3>
                         <p>Blake's exculsively uses Shorty's Hardware&reg;.</p>
                         <p>
-                            <a href="../e-commerce/category.php?id=12" class="btn btn-stripe">Buy Now</a>
+                            <a href="../e-commerce/category.php?id=12" class="btn btn-stripe-1">Buy Now</a>
                         </p>
                     </div>
                 </div>
