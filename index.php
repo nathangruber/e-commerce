@@ -22,7 +22,7 @@
     </div>
         <div class="row">
             <div class="col-lg-12">
-                <h3>Products</h3>
+                <h3>&nbsp;Products</h3>
             </div>
         </div>
         <div class="row text-center">
