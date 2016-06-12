@@ -259,7 +259,6 @@ font-style: bold;
 .box {
   background:transparent;
   transition:all 0.2s ease;
-  border:2px dashed #dadada;
   margin-top: 10px;
   box-sizing: border-box;
   border-radius: 5px;
