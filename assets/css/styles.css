@@ -267,10 +267,6 @@ font-style: bold;
   min-height:340px;
 }
 
-.box:hover {
-  border:2px solid #525C7A;
-}
-
 .box span.box-title {
     color: #fff;
     font-size: 24px;
