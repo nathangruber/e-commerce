@@ -61,7 +61,7 @@
                       </div>
                       <div class="form-group">
                         <div class="col-sm-12">
-                          <button type="submit" class="btn btn-stripe1">Submit</button>
+                          <button type="submit" class="btn btn-stripe-1">Submit</button>
                         </div>
                       </div>
                     </form>
