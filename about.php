@@ -20,7 +20,7 @@
     <div class="row">
         <h2 class="text-center">Services Blocks</h2>
             <div class="row">
-                <div class="col-md-4 text-center">
+                <div class="col-md-12 text-center">
                     <div class="box">
                         <div class="box-content">
                             <h1 class="tag-title">Heading</h1>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                
-               
+            
             </div>           
         </div>
     </div>
