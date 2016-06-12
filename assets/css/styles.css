@@ -257,7 +257,7 @@ font-style: bold;
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
 .box {
-  background:#fff;
+  background:transparent;
   transition:all 0.2s ease;
   border:2px dashed #dadada;
   margin-top: 10px;

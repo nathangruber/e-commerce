@@ -28,7 +28,6 @@
                             <hr />
                             <p>Blake's Board Shop makes high quality, made in Wisconsin skateboard and cruiserdecks. Our e-shop is committed to producing great decks at an affordbale price. Blake’s is a family-owned skateboard e-shop.</p>
                             <br />
-                            <a href="index.php" class="btn btn-block btn-stripe-1">BBS Home Page</a>
                         </div>
                     </div>
                 </div>
