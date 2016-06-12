@@ -225,7 +225,7 @@ font-style: bold;
     background-image: url(../img/skateboard-384194_1280.jpg);
     background-repeat:repeat;
   }
- .btn-stripe1 {
+ .btn-stripe-1 {
     color: #fff;
   background: #6fccdd;
   background-image: -webkit-linear-gradient(top, #000000, #6fccdd 85%, #bfbfbf);
@@ -247,11 +247,11 @@ font-style: bold;
   border-radius: 17px;
   border-color: #6fccdd;
 }
-.btn-stripe1:hover {
+.btn-stripe-1:hover {
   color: #fff;
   background-position: 0;
 }
-.btn-stripe1:active {
+.btn-stripe-1:active {
   background: #6fccdd;
 }
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
