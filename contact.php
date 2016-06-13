@@ -7,7 +7,6 @@
 <head>
     <title>Contact Us</title>
 </head>
-
 <body>
     <?php
         if ($admin) {
@@ -68,8 +67,6 @@
                 </div>
             </div>
         </div>
-
-
-    <?php require_once 'includes/footer.php';?>
+<?php require_once 'includes/footer.php';?>
 </body>
 </html>
