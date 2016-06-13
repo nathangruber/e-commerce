@@ -10,7 +10,7 @@
 
 <body>
     <?php require_once 'includes/navbar.php';?>
-    <div id="fullscreen_bg5" class="fullscreen_bg5"/>
+    <div id="fullscreen_bg1" class="fullscreen_bg1"/>
       <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-4 col-md-offset-4">
