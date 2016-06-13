@@ -295,9 +295,19 @@ font-style: bold;
     background-image: url(../img/99factory_slider_03.jpg);
     background-repeat:repeat;
   }
-  b{
+b{
     color:#FFFFFF;
     text-shadow: 2px 2px 3px #000;
     font-size: 25px;
-
+}
+.fullscreen_bg5 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(../img/youth-1350150_1280.jpg);
+    background-repeat:repeat;
   }
