@@ -5,19 +5,20 @@
 <title>Product Categories</title>
 <body>
 <?php require_once 'includes/navbar.php'; ?>
-<div id="fullscreen_bg2" class="fullscreen_bg2"/>
-<div class="container" style="margin-top: 340px;">
-      <div class="row">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Price</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-        <tbody>
-    
+  <div id="fullscreen_bg2" class="fullscreen_bg2"/>
+  <div class="container" style="margin-top: 340px;">
+        <div class="row">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Add to Cart</th>
+              </tr>
+            </thead>
+          <tbody>
+      
               <?php 
               $category_id = $_GET['id'];
 
@@ -44,11 +45,9 @@
       <br>
       <br>
       <br>
-    </div><!-- /.container -->
+  </div><!-- /.container -->
 
 <br><br>
-
-
 <?php require_once('includes/footer.php'); ?>
 </body>
 </html>
