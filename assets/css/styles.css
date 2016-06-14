@@ -311,3 +311,7 @@ b{
     background-image: url(../img/youth-1350150_1280.jpg);
     background-repeat:repeat;
   }
+th {
+    background-color: #4CAF50;
+    color: white;
+}
