@@ -57,7 +57,6 @@ Database::disconnect();
 	  }else{
 		  ?>
 		  <li><a href="register.php">Register</a></li>
-		  <li><a href="loginpage.php">Login</a></li>
       <li><a href="logout.php">Logout</a></li>
 
 		  <?php
